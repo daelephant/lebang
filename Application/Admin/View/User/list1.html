@@ -1,0 +1,166 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+
+            <h1>普通用户  
+                 <a href="{:U('User/add')}" class="btn btn-default0 pull-right">添加用户</a>
+                 </h1>
+                  <!--  <div class="row head" style="width:210px;float:left;">
+                   <div class="col-lg-12">
+                   <div class="input-group">
+                       <input type="text" class="form-control" placeholder="">
+                       <span class="input-group-btn">
+                           <button class="btn btn-info" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                       </span>
+                   </div>
+                                   </div>
+                              </div> -->
+    </section>
+
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+<style>
+    table tbody tr th{
+        background: #fbfbfb;
+        text-align: center;
+    }
+</style>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-body">
+                        <form action='{:U('User/fetch1')}' method="get">
+                            <table style="margin-top:-5px;margin-bottom:5px;"  cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                    <select  name="sosuo" style="width:80px;height:35px;" >
+                                          <option  name ="sosuo" value="1">手机号</option>
+                                          <option  name="sosuo" value="2">姓名</option>
+                                          <option  name="sosuo" value="3">昵称</option>
+                                          <option  name="sosuo" value="4">小区</option>
+                                     </select>
+                                    </td>
+
+                                    <td style="text-align:right" class="input-group">
+                             
+                                      <input type="text" class="inp_wid3" placeholder="" style="width:220px;height:35px;"  name="value"/> 
+                                        <span class="input-group-btn">
+                                      <button  class="search_btn1" type="submit" value="搜索" id="Search" type="button"  style="height:35px;">
+                                        <span class="glyphicon glyphicon-search">  
+                                        </span>
+                                        </button>
+                                        </span>
+                                   
+                                    </td>
+
+                                    <td style="text-align:right">&nbsp;&nbsp;&nbsp;
+                                   <!--  <?php
+                $starttime = date('Y-m-d',strtotime('-100 days'));//a三天前的时间
+                $endtime= date('Y-m-d');//当天时间
+
+
+            ?>    -->
+                                    <input id="starttime" name="starttime" class="inp_wid3" type="date" value="" style="width:150px;height:35px;" />
+                                    <input id="endtime"name="endtime" class="inp_wid3" type="date" value=""style="width:150px;height:35px;" />
+                                    
+                                  
+                                    </td>
+
+                                    <td>
+                                   <input class="search_btn1" type="submit" value="搜索" id="Search" style="height:35px;" />
+                                    </td>
+                                    </tr>
+                                    </table>
+                    </form>
+
+            <!--   <div class="row head" style="width:210px;float:left;">   
+                          <div class="col-lg-12">
+                              <select  name="sex" >
+                                                <option  name ="sex" value="1">男</option>
+                                                <option  name="sex" value="2">女</option>
+                              </select>
+                              <div class="input-group">
+                              <input type="text" class="form-control" placeholder=""> 
+                                  <span class="input-group-btn">
+                                      <button class="btn btn-info" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                                  </span>
+            
+                              </div>
+                          </div>
+                      </div> -->
+
+
+                        <table style="margin-left: -5px;margin-top: -4px;" class="table table-bordered">
+                            <tbody>
+                            <tr>
+                                <!-- <th style="width: 10px">#</th> -->
+                               <th>序号</th>  
+                                <th>手机号</th>
+                                <th>昵称</th>
+                                <th>性别</th>
+                                <th>年龄</th>
+                                <th>职业</th>
+                                <th>所在小区</th>
+                                <th>新鲜事</th>
+                                <th>被评论</th>
+                                <th>发任务</th>
+                                <th>评价</th>
+                                <th>操作</th>
+                            
+                            </tr>
+
+                            <!-- <volist name="order_list" id="order">
+                            <tr>
+                            <td>{$order['id']}</td> 
+                            <td>{$order['order1']}</td>
+                            </tr>
+                            </volist> -->
+                            <volist name="user_list" id="user">
+                            <tr>
+                                <td>{$user['id']}</td>
+                                <td>{$user['phone']}</td>
+                                <td>{$user['nickname']}</td>
+                               <td><if condition="$user['sex'] eq '1'">男<elseif condition="$user['sex'] eq '2'"/>女</if>
+                                </td>
+                                <td>{$user['age']}</td>
+                                <td>{$user['profession']}</td>
+                                <td>{$user['shequ']}</td>
+                                <td>{$user['xinxianshi']}</td><td>{$user['beipinglunshu']}</td>
+                                
+                                <td>{$user['order1']}</td>
+                                <td>{$user['pinglunshu']}</td>
+                               
+                                <!-- <td>{$user['caozuo']}</td> -->
+                                <!-- <td>{$User['create_at']}</td>
+                                <td>{$User['category_title']}</td> -->
+                                <td >
+                                 
+                                    <a href="{:U('bianji', ['user_id'=>$user['id']])}" class="btn btn-default1" title="编辑">查看详情</a>
+                            
+                                </td>
+                            </tr>
+                            </volist>
+
+                            </tbody>
+                        </table>
+                    </div><!-- /.box-body -->
+                </div>
+                  <!--分页的位置-->
+                    {$page_html}
+            </div>
+        </div>
+    </section><!-- /.content -->
+
+    <section class="content-footer">
+        <div class="text-center">
+            &copy;全民乐帮
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>

@@ -1,0 +1,154 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            编辑后台管理
+             <a href="{:U('Quanxian/list1')}" class="btn btn-default pull-right"><font color="black">分组管理</font></a>
+        </h1>
+        <!-- <ol class="breadcrumb">
+            <li><a href="{:U('Admin/index')}"><i class="fa fa-dashboard"></i> 管理中心</a></li>
+            <li><a href="{:U('list')}">用户管理</a></li>
+            <li class="active">添加用户</li>
+        </ol> -->
+    </section>
+<style>
+    .tree {list-style-type:none;}
+</style>
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+        <script type="text/javascript" language="javascript"> 
+
+            function confirmAct() 
+            { 
+                if(confirm('确定要执行此操作吗?')) 
+                { 
+                    return true; 
+                } 
+                return false; 
+            } 
+
+    </script>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <form action="{:U('Quanxian/edit1',array('uid'=>$us['id']))}" method="post" enctype="multipart/form-data">
+                        <!-- <div class="box-header">
+                            <h3 class="box-title"></h3>
+                            <a href="{:U('User/list')}" class="btn btn-default pull-right">用户列表</a>
+                        </div> --><!-- /.box-header -->
+
+                        <div class="box-body">
+                            <!-- <div class="form-group">
+                                <label for="inputCategoryId">用户分类</label>
+                                <select name="category_id" id="inputCategoryId" class="form-control">
+                                
+                                    <option value="0">--分类名称--</option>
+                                    <volist name="category_list" id="category">
+                                    <option value="{$category['category_id']}">{:str_repeat('----', $category['deep'])}{$category['title']}</option>
+                                    </volist>
+                                </select>
+                            </div> -->
+                            <div class="form-group">
+                                <label for="inputSubject">分类名称&nbsp;:</label>
+                                <input type="text" name="title" id="title" placeholder="" value="{$us['title']}" maxlength="20" /><br />
+                                </div>
+                            <!-- <div class="form-group">
+                                <label for="inputSubject">密&nbsp;&nbsp;码:</label>
+                                <input type="text" name="password" id="password" placeholder="" maxlength="20" /><br />
+                            </div>
+                            <div class="form-group">
+                                <label for="inputSubject">分&nbsp;&nbsp;组:</label> 
+                                <tr >
+                                    <volist name="groups" id="group">
+                                    <td>&nbsp;&nbsp;<input type="radio" name="groups" id="inputSubject"  value="{$group['id']}|{$group['title']}"></td>{$group['title']}
+                                    </volist>
+                                </tr> -->
+                                <!-- <input type="radio" name="RR" value="1">
+                                <input type="radio" name="RR" value="2"> -->
+                            </div>
+                       
+<ul id="tree" class="tree"> 
+    <li><input type=checkbox style="display:none"> 
+        <ul> 
+        <volist name="rule" id="rule1">
+         <if condition="$rule1['sid'] eq 0">
+        <elesif condition="$rule1['id'] eq 13"/>
+        <else/>
+            <if condition="$rule1['sid'] eq 52">
+             <li><input type=checkbox class="tree-parent">{$rule1['title']}
+                <ul> 
+                    <volist name="rule" id="rule2">
+                    <if condition="$rule2['sid'] eq $rule1['id']">
+                        <li>
+                            <input type=checkbox name="{$rule2['id']}" <?php if(in_array($rule2['id'], $rules))echo'checked';?>>{$rule2['title']}
+                        </li>
+                    </if>
+                    </volist>
+                </ul> 
+            </li>
+            </if>
+        </if>
+        </volist>
+        </ul> 
+    </li> 
+</ul>
+
+<script language="javascript"> 
+
+var arr = tree.getElementsByTagName('input') 
+for(var i=0; i<arr.length; i++){ 
+    var input = arr[i] 
+    if(input.type = 'checkbox'){ 
+        input.onclick = ClickInput 
+    } 
+} 
+
+function ClickInput(){ 
+    var li = this.parentElement; 
+    var arr = li.getElementsByTagName('input') 
+    for(var i=0; i<arr.length; i++){ 
+        var input = arr[i] 
+        if(input.type == 'checkbox'){ 
+            input.checked = this.checked 
+        } 
+    } 
+    var li = li.parentElement.parentElement 
+     
+    while(li.tagName.toLowerCase() == 'li'){ 
+        var input = li.childNodes[0] 
+        if(input.tagName.toLowerCase() == 'input'){ 
+            // input.checked = this.checked 
+        } 
+        li = li.parentElement.parentElement 
+    } 
+} 
+
+</script> 
+
+                        </div><!-- /.box-body -->
+                        <div class="box-footer clearfix">
+                           <!--  <a href="{:U('edit', ['user_id'=>$user['id']])}" class="btn btn-default" title="编辑"><span class="fa fa-edit"></span> 编辑</a> -->
+                            <button class="btn btn-primary" type="submit" name="submit" onclick="return confirmAct();" value="publish">保存</button>
+                            <!-- <button class="btn btn-info" type="submit" name="submit" value="save">仅保存</button> -->
+                        </div><!-- /.box-footer -->
+                    </form>
+
+                </div><!-- /.box -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+
+    </section><!-- /.content -->
+
+    <section class="content-footer">
+        <div class="text-center">
+            &copy;全民乐帮
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>

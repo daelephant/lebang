@@ -1,0 +1,156 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            管理中心
+            <small>控制台</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:U('Admin/index')}"><i class="fa fa-dashboard"></i> 管理中心</a></li>
+           
+            <!-- <li class="active">控制台</li> -->
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+    <h1>欢迎进入管理中心！</h1>
+   <!--  //这个是ajax get方式提交 -->
+
+<script type="text/javascript">
+$(function(){
+    $('#button').click(function(){
+        if(confirm("确认要清除模版缓存目录？")) {
+        var $type=$('#type').val();
+        var $mess=$('#mess');
+        $.getJSON('__ROOT__/Application/Runtime/Cache',{type:$type},function(json){
+            if(json.status==1){
+            $mess.slideDown(3000,function(){
+                $mess.css('color:red');   
+            }).html(json.info);
+            }else{
+                $mess.slideDown(3000,function(){
+                    $mess.css('color:red');   
+                }).html(json.info);
+            }
+        });
+         }else{
+                return false; 
+            }   
+    });
+});      
+</script>
+<!-- <form action="" method="get">
+                      <table border="0" cellpadding="2" cellspacing="1" style="width:100%">
+                       <tr>
+                           //关键就是这个隐藏域的默认值 就是你要删除文件夹里面内容的文件夹的名 
+                           <input type="hidden" name="type" id="type" class="text" style="width:50px" value="Cache" />
+                        <td nowrap align="left"><input type="button" id="button" class="text" style="width:100px;height:50px;" value="点击清除模版缓存目录" /></td>
+                        <td id="mess"></td>
+                      </tr>
+                      </table>
+                </form> -->
+<!-- //一键清除所有 -->
+<!-- <form action="{:U('Admin/allrun')}" method="get">
+                      <table border="0" cellpadding="2" cellspacing="1" style="width:100%">
+                       <tr> -->
+                            <!-- //默认值是几个文件夹的名字连起来 提交方式和上面的一样 -->
+                           <!-- <input type="hidden" name="type" id="type" class="text" style="width:50px" value="Cache-Data-Temp-Logs" />
+                        <td nowrap align="left"><input type="button" id="button" class="text" style="width:100px;height:50px;" value="点击一键清除所有" /></td>
+                          <td id="mess"></td>
+                      </tr>
+                      </table>
+                </form> -->
+     <!-- <a href="{:U('Admin/clearRuntime')}"><i class="fa fa-dashboard"></i> 删除缓存</a> -->
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title"></h3>
+                        <!-- a href="category_add.html" class="btn btn-default pull-right">添加分类</a> -->
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        <table class="table table-bordered">
+                            <tbody>
+                            <tr style="background: #fbfbfb;">
+                                <!-- <th style="width: 10px">#</th> -->
+                                <th style="text-align:center;">分类</th>
+                                <th style="text-align:center;">数目统计</th>
+                                <!-- <th>排序</th> -->
+                                <th style="width: 20%; text-align:center;">操作</th>
+                            </tr>
+                            
+                            <tr>
+                                <!-- <td>1</td> -->
+                                <td>普通用户</td>
+                                <td>{$list1}</td>
+                                <!-- <td>100</td> -->
+                                <td style="text-align:center;">
+                                    <a href="{:U('User/list1')}" class="btn btn-default" title="编辑"><!-- <span class="fa fa-edit"></span>  -->查看</a>
+                                    <!-- <a href="#" class="btn btn-default" title="删除" onclick="return confirm('是否删除？');"><span class="fa fa-trash-o"></span> 删除</a> -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- <td>2</td> -->
+                                <td>雷锋</td>
+                                <td>{$list3}</td>
+                                <!-- <td>100</td> -->
+                                <td style="text-align:center;">
+                                    <a href="{:U('User/list3')}" class="btn btn-default" title="编辑">查看</a>
+                                    <!-- <a href="#" class="btn btn-default" title="删除" onclick="return confirm('是否删除？');"><span class="fa fa-trash-o"></span> 删除</a> -->
+                                </td>
+                            </tr>
+                            <tr>
+                              <!--   <td>3</td> -->
+                                <td>审核未通过</td>
+                                <td>{$list4}</td>
+                                <!-- <td>100</td> -->
+                                <td style="text-align:center;">
+                                    <a href="{:U('User/list4')}" class="btn btn-default" title="编辑">查看</a>
+                                    <!-- <a href="#" class="btn btn-default" title="删除" onclick="return confirm('是否删除？');"><span class="fa fa-trash-o"></span> 删除</a> -->
+                                </td>
+                            </tr>
+                           <tr>
+                                <!-- <td>4</td> -->
+                                <td>订单</td>
+                                <td>{$list5}</td>
+                                <!-- <td>100</td> -->
+                                <td style="text-align:center;">
+                                    <a href="{:U('Order/list')}" class="btn btn-default" title="编辑">查看</a>
+                                    <!-- <a href="#" class="btn btn-default" title="删除" onclick="return confirm('是否删除？');"><span class="fa fa-trash-o"></span> 删除</a> -->
+                                </td>
+                            </tr>
+                            
+                        </tbody></table>
+                    </div><!-- /.box-body -->
+                    <div class="box-footer clearfix">
+                        <ul class="pagination pagination-bg no-margin pull-right">
+                            <li><a href="#">«</a></li>
+                            <li><a href="#">1</a></li>
+                            <!-- <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li> -->
+                            <li><a href="#">»</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section><!-- /.content -->
+    </section><!-- /.content -->
+
+    <section class="content-footer">
+        <div class="text-center">
+            &copy;全民乐帮
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>

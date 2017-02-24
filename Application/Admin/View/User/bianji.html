@@ -1,0 +1,180 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            普通用户详情
+            <a href="{:U('list')}" class="btn btn-default0 pull-right">普通用户</a>
+        </h1>
+        <!-- <ol class="breadcrumb">
+            <li><a href="{:U('Admin/index')}"><i class="fa fa-dashboard"></i> 管理中心</a></li>
+            <li><a href="{:U('list')}">用户管理</a></li>
+            <li class="active">添加用户</li>
+        </ol> -->
+    </section>
+
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+    
+   <script type="text/javascript" language="javascript"> 
+
+            function confirmAct() 
+            { 
+                if(confirm('确定要执行此操作吗?')) 
+                { 
+                    return true; 
+                } 
+                return false; 
+            } 
+     function submits()  
+     {  
+         var submitId=document.getElementById('submit');  
+         submitId.disabled=true;  
+         // document.fm.submit();  
+         // setTimeout('var submitId=document.getElementById("submit");submitId.disabled=false;',3000); //代码核心在这里，3秒还原按钮代码
+         // return false;
+    }  
+</script>
+
+<style>
+    input,select{
+        height:40px;
+        width:300px;
+        border:#ccc solid 1px;
+        font-size:16px;
+        line-height:40px;
+    }
+    /*居中*/
+    .center {
+      width: auto;
+      display: table;
+      margin-left: auto;
+      margin-right: auto;
+    }
+</style>
+
+    <section class="content-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                <div class="center"><!--/*居中*/-->
+
+                <div class='left' style='float:left'>
+
+                    <form action="{:U('User/bianji')}" method="post" enctype="multipart/form-data" onsubmit="return submits();">
+                        <input type="hidden" name="id" id="inputname" maxlength="20" value="{$user['id']}" />
+                        <div class="box-body">
+                            <!-- <div class="form-group">
+                                <label for="inputCategoryId">用户分类</label>
+                                <select name="category_id" id="inputCategoryId" class="form-control">
+                                
+                                    <option value="0">--分类名称--</option>
+                                    <volist name="category_list" id="category">
+                                    <option value="{$category['category_id']}">{:str_repeat('----', $category['deep'])}{$category['title']}</option>
+                                    </volist>
+                                </select>
+                            </div> -->
+                            <div class="form-group">
+                                <label for="inputSubject">昵&nbsp;&nbsp;称:</label>
+                                <input type="text" name="nickname" id="inputname" maxlength="20" value="{$user['nickname']}" /><br />
+                                </div>
+                             <div class="form-group">
+                                <label for="inputSubject">性&nbsp;&nbsp;别:</label>
+                                <select   name="sex">
+                                   <option  name ="sex" value="1" <if condition='$user["sex"] eq 1'>selected</if> >男</option>
+                                      <option  name="sex" value="2" <if condition='$user["sex"] eq 2'>selected</if> >女</option>
+                                </select>
+                               
+                            </div>
+                            <div class="form-group">
+                                <label for="inputSubject">年&nbsp;&nbsp;龄:</label>
+                                <input type="text" name="" id="inputname"  maxlength="20" value="{$user['age']}" readonly="true"/><br />
+                            </div>
+                            <div class="form-group">
+                                <label for="inputSubject">职&nbsp;&nbsp;业:</label>
+                                <input type="text" name="" id="inputidnumber" value="{$user['profession']}" maxlength="20" readonly="true"/><br />
+                            </div>
+                            <div class="form-group">
+                                <label for="inputSubject">所在小区:</label>
+                                <input type="text" name="" id="inputidnumber" value="{$user['shequ']}" maxlength="20" readonly="true"/><br />
+                            </div>
+                           <div class="form-group">
+                                <label for="inputSubject">注册时间:</label>
+                                <input type="text" name="" id="inputidnumber" value="{$user['regtime']}" maxlength="20" readonly="true" /><br />
+                            </div>
+                            <div class="form-group">
+                                <label for="inputSubject">最后登录:</label>
+                                <input type="text" name="" id="inputidnumber" value="{$user['logintimes']}" maxlength="20" readonly="true"/><br />
+                            </div>
+
+                        <!-- /.box-body -->
+                        <div class="boxclearfix">
+                           <!--  <a href="{:U('edit', ['user_id'=>$user['id']])}" class="btn btn-default" title="编辑"><span class="fa fa-edit"></span> 编辑</a> -->
+                            <button class="btn btn-primary0"  type="submit" id = "submit" name="submit" onclick="return confirmAct();" value="publish">保存</button>
+                            <!-- <button class="btn btn-primary0"  type="submit" id = "submit" name="submit" onclick="return confirmAct();" value="publish">禁用</button> -->
+                            <!-- <button class="btn btn-info" type="submit" name="submit" value="save">仅保存</button> -->
+                        </div><!-- /.box-footer -->
+                        </div>
+                    </form>
+                    </div>
+
+<!--弹出图片-->
+<style type="text/css">
+#tinybox{position:absolute; display:none; padding:10px;  z-index:2000;}
+#tinymask{position:absolute; display:none; top:0; left:0; height:100%; width:100%; z-index:1500;}
+#tinycontent{background:#ffffff; font-size:1.1em;}
+</style>
+<!--调用的js-->
+<script type="text/javascript" src="/lebang13/Public/Admin/js/tinybox.js"></script>
+
+    <div class='right' style="width:210px;float:left">
+    <div id="content">
+            <div id="images">
+                <a href="#" id="click_pic1"> <!--click_pic1 click_pic2-->
+                <img src="__ROOT__/photo/avatar/m_{$user['avatar']|default="avatar.png"}" id="touxiang" style="width:200px;height:200px" />
+                 <!-- <img src="/lebang13/Upload/haizi.jpg" style="width:200px;height:200px"> --> 
+                </a>
+            </div>
+                <div id="credit"></div>
+            </div>
+    <br>
+
+
+<script type="text/javascript">
+    // click_pic1
+    T$('click_pic1').onclick = function(){
+        var click_pic = "<img src='"+ this.children[0].src +"' />";
+        TINY.box.show(click_pic,0,0,0,1);
+    }
+    // click_pic2
+    T$('click_pic2').onclick = function(){
+        var click_pic = "<img src='"+ this.children[0].src +"' />";
+        TINY.box.show(click_pic,0,0,0,1);
+    }
+</script>
+
+<div class="clearfix"></div>
+
+
+
+
+
+
+
+                </div><!-- /.box -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div>
+    </section><!-- /.content -->
+
+    <section class="content-footer">
+        <div class="text-center">
+            &copy;全民乐帮
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>

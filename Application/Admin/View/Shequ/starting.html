@@ -1,0 +1,88 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            待开通的小区
+            <a href="{:U('Shequ/add')}" class="btn btn-default pull-right"><font color="black">添加社区</font></a>
+        </h1>
+       <!--  <ol class="breadcrumb">
+            <li><a href="{:U('Admin/index')}"><i class="fa fa-dashboard"></i> 管理中心</a></li>
+            <li><a href="{:U('list')}">社区管理</a></li>
+            <li class="active">社区列表</li>
+        </ol> -->
+    </section>
+
+    <!-- Main content -->
+    <!-- <section class="content">elephant9_21 -->
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                   <!--  <div class="box-header">
+                        <h3 class="box-title"></h3>
+                        <a href="{:U('Shequ/add')}" class="btn btn-default pull-right">添加社区</a>
+                    </div> --><!-- /.box-header -->
+        <!-- <form action='{:U('Order/fetch')}' method="get">
+                <td style="text-align:right">&nbsp;&nbsp;社区名： <input id="tel" name="tel"  type="text" value="{$_GET['tel']}"/></td>
+                <td style="text-align:right">社区地址：<input id="ordernum" name="ordernum"  type="text" value="{$_GET['ordernum']}"/></td>
+                <input type="submit" value="搜索" id="Search" />
+        
+        </form> -->
+                    <div class="box-body">
+                        <table style="margin-left: -5px;margin-top: -4px;" class="table table-bordered">
+                            <tbody>
+                            <tr style="background: #fbfbfb;">
+                                <!-- <th style="width: 10px">#</th> -->
+                                <th style="text-align:center;">社区名</th>
+                                <th style="text-align:center;">社区详情</th>
+                                <th style="text-align:center;">社区坐标</th>
+
+                                <!-- <th>需求</th> -->
+                                <!-- <th>下单时间</th> -->
+                                <th style="text-align:center;">状态</th>
+                               <!--  <th>完成时间</th> -->
+                               <!--  <th>金额</th> -->
+                               <!--  <th>社区号</th> -->
+                                <th style="text-align:center;  width:200px;">操作</th>
+                            </tr>
+                            
+                            <volist name="shequ_list" id="shequ">
+                            <tr>
+                                <td>{$shequ['id']}</td>
+                                <td>{$shequ['mingcheng']}</td>
+                                <td>{$shequ['weizhi']}</td>
+                                <td>{$shequ['zuobiao']}</td>
+                                <!-- <td>{$shequ['demand']}</td>
+                                <td>{$shequ['addtime']}</td>$user['status']=='雷锋'?'查看':'审核' -->
+                                <td>{$shequ['xianshi']=='1'?'启用':'待启用'}</td>
+                                <!-- <td>{$shequ['endtime']}</td>
+                                <td>{$shequ['money']}</td> -->
+                                <td style="width: 75px">
+                                    <a href="{:U('bianji', ['shequ_id'=>$shequ['id']])}" class="btn btn-default" title="编辑">编辑</a>
+                                   <!--  <a href="{:U('remove', ['order_id'=>$order['order_id']])}" class="btn btn-default" title="删除" onclick="return confirm('您确认要删除吗？');"><span class="fa fa-trash-o"></span> 删除</a> -->
+                                </td>
+                            </tr>
+                            </volist>
+
+                            </tbody>
+                        </table>
+                    </div><!-- /.box-body -->
+                </div>
+                  <!--分页的位置-->
+                    {$page_html}
+            </div>
+        </div>
+    </section><!-- /.content -->
+
+    <section class="content-footer">
+        <div class="text-center">
+             &copy;全民乐帮
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>

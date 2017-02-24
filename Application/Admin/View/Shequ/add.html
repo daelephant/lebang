@@ -1,0 +1,222 @@
+
+<extend name="Layout/Admin" />
+
+<style type="text/css">
+        body {
+            font-size: 12px;
+        }
+        #tip {
+            background-color: #ddf;
+            color: #333;
+            border: 1px solid silver;
+            box-shadow: 3px 4px 3px 0px silver;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            line-height: 20px;
+        }
+        #tip input[type="text"] {
+            height: 25px;
+            border: 0;
+            padding-left: 5px;
+            width: 280px;
+            border-radius: 3px;
+            outline: none;
+        }
+
+    </style>
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            社区添加
+            <a href="{:U('Shequ/list')}" class="btn btn-default pull-right"><font color="black">社区列表</font></a>
+        </h1>
+        <!-- <ol class="breadcrumb">
+            <li><a href="{:U('Admin/index')}"><i class="fa fa-dashboard"></i> 管理中心</a></li>
+            <li><a href="{:U('list')}">社区管理</a></li>
+            <li class="active">社区添加</li>
+        </ol> -->
+    </section>
+
+    <script type="text/javascript" language="javascript"> 
+
+            function confirmAct() 
+            { 
+                if(confirm('确定要执行此操作吗?')) 
+                { 
+                    return true; 
+                } 
+                return false; 
+            } 
+     function submits()  
+     {  
+         var submitId=document.getElementById('submit');  
+         submitId.disabled=true;  
+         // document.fm.submit();  
+         // setTimeout('var submitId=document.getElementById("submit");submitId.disabled=false;',3000); //代码核心在这里，3秒还原按钮代码
+         // return false;
+    }  
+</script>
+
+    <!-- Main content -->
+    <form action="{:U('Shequ/add')}" method="post" enctype="multipart/form-data" onsubmit="return submits();">
+                      <!-- /.box-header -->
+
+                        <div class="box-body">
+                            <div class="form-group" style="width:350px; margin-left:10px;margin-top:10px;" >
+                                <label for="inputSubject">社区名:</label>
+                                <input type="text" name="mingcheng" autocomplete="off"  class="form-control" id="keyword"  value="" placeholder="请输入关键字：(搜索)">
+                                
+                            </div>
+                            <div class="form-group" style="width:350px; margin-left:10px;">
+                                <label for="inputSubject">社区坐标:</label>
+                                <input type="text" name="zuobiao"  id="zuobiao" class="form-control">
+                            </div>
+                            <div class="form-group" style="width:350px; margin-left:10px;">
+                                <label for="inputSubject">社区详情:</label>
+                                <input type="text" name="weizhi"  id="weizhi" class="form-control">
+                            </div>
+                             <div class="form-group" style="width:350px; margin-left:10px;">
+                                <label for="inputSubject">社区图片:</label>
+                                
+                                <input type="file" name="zhaopian" id="zhaopian" >
+                                <!-- <input type="file" name="zhaopian[]" id="zhaopian" >
+                                <input type="file" name="zhaopian[]" id="zhaopian" > -->
+                                
+
+                             </div>
+                            <div class="form-group" style="width:350px; margin-left:10px;">
+                                <label for="inputSubject">是否启用:</label>
+                                <!-- <tr >
+                                    <td>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="xianshi" id="inputSubject"  value="1" >是
+                                    </td>
+                                    <td>&nbsp;&nbsp;<input type="radio" name="xianshi" id="inputSubject"  value="0" ></td>否
+                                </tr> -->
+                                <select   name="xianshi" style="height:33px; width:350px;">
+                                      <option  name ="xianshi" value="1">是</option>
+                                      <option  name="xianshi" value="2">否</option>
+                                </select>
+                               
+                            </div>
+                           <!-- /.box-body -->
+                        <div class="box-footer clearfix" style=" margin-left:10px;">
+                            <button class="btn btn-primary" style="height:40px; width:350px;" type="submit" id="submit" name="submit"  onclick="return confirmAct();"  value="publish">添加</button>
+                           
+                        </div><!-- /.box-footer -->
+                    </form>
+                    <!-- <section class="content"> -->
+                    <div  style="float: left; width:700px;height:400px;margin:-380px 0 0 400px" id="mapContainer"></div>
+                     <div id="tip" style="margin:150px 0 0 600px">
+                    <!-- <input type="text" id="keyword" name="keyword" value="请输入关键字：(选定后搜索)" onfocus='this.value=""'/> -->
+                    <tr><td class="column2">
+                    <!-- <label>左击获取经纬度：</label> --></td>
+                    <td class="column2">
+                    <input type="hidden" readonly="true" id="lnglat">
+                     </td>
+                    
+                    </tr>
+
+                    </div>
+                     <div style="width:300px;height:200px;margin:30px 0 0 40px">
+                        <script type="text/javascript">
+                            var windowsArr = [];
+                            var marker = [];
+                            var mapObj = new AMap.Map("mapContainer", {
+                                    resizeEnable: true,
+                                    center: [116.397428, 39.90923],//地图中心点
+                                    zoom: 13,//地图显示的缩放级别
+                                    keyboardEnable: false
+                            });
+                            AMap.plugin(['AMap.Autocomplete','AMap.PlaceSearch'],function(){
+                              var autoOptions = {
+                                city: "北京", //城市，默认全国
+                                input: "keyword"//使用联想输入的input的id
+                              };
+                              autocomplete= new AMap.Autocomplete(autoOptions);
+                              var placeSearch = new AMap.PlaceSearch({
+                                    city:'北京',
+                                    map:mapObj
+                              })
+                              AMap.event.addListener(autocomplete, "select", function(e){
+                                 //TODO 针对选中的poi实现自己的功能
+                                 placeSearch.search(e.poi.name)
+                                 console.log(e);
+                                 document.getElementById("zuobiao").value = e.poi.location.lng + ',' + e.poi.location.lat;
+                                 document.getElementById("weizhi").value = e.poi.district+e.poi.address;
+                                 
+                              });
+                            });
+                            //s
+                            //为地图注册click事件获取鼠标点击出的经纬度坐标
+    var clickEventListener = mapObj.on('click', function(e) {
+
+        // document.getElementById("lnglat").value = e.lnglat.getLng() + ',' + e.lnglat.getLat();
+        // document.getElementById("zuobiao").value = e.location.Lng + ',' + e.location.Lat;
+    });
+    var auto = new AMap.Autocomplete({
+        input: "tipinput"
+    });
+    AMap.event.addListener(auto, "select", select);//注册监听，当选中某条记录时会触发
+    function select(e) {
+        if (e.poi && e.poi.location) {
+            mapObj.setZoom(15);
+            mapObj.setCenter(e.poi.location);
+        }
+    }
+    //s3
+     AMap.plugin('AMap.Geocoder',function(){
+        var geocoder = new AMap.Geocoder({
+            city: "010"//城市，默认：“全国”
+        });
+        var marker = new AMap.Marker({
+            map:mapObj,//改mapObj
+            bubble:true
+        })
+        var input = document.getElementById('input');
+        var message = document.getElementById('message');
+        mapObj.on('click',function(e){
+            marker.setPosition(e.lnglat);
+            geocoder.getAddress(e.lnglat,function(status,result){
+              if(status=='complete'){
+                 input.value = result.regeocode.formattedAddress
+                 message.innerHTML = ''
+              }else{
+                 message.innerHTML = '无法获取地址'
+              }
+            })
+        })
+        
+        input.onchange = function(e){
+            var address = input.value;
+            geocoder.getLocation(address,function(status,result){
+              if(status=='complete'&&result.geocodes.length){
+                marker.setPosition(result.geocodes[0].location);
+                mapObj.setCenter(marker.getPosition())
+                message.innerHTML = ''
+              }else{
+                message.innerHTML = '无法获取位置'
+              }
+            })
+        }
+
+    });
+    //e
+
+                        </script>
+
+    </section><!-- /.content -->
+
+    <section class="content-footer">
+        <div class="text-center">
+            &copy;全民乐帮
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>
+

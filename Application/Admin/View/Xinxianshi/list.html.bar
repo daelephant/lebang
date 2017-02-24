@@ -1,0 +1,137 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            新鲜事列表
+            <small>新鲜事</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:U('Admin/index')}"><i class="fa fa-dashboard"></i> 管理中心</a></li>
+            <li><a href="{:U('list')}">新鲜事</a></li>
+            <li class="active">新鲜事列表</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title"></h3>
+                        <!-- <a href="{:U('Xinxianshi/add')}" class="btn btn-default pull-right">添加新鲜事</a> -->
+                    </div><!-- /.box-header -->
+                    
+                    <div class="box-body">
+                        <table class="table table-bordered">
+                            <tbody>
+                            <tr>
+                                <!-- <th style="width: 10px">#</th> -->
+                                <th>列表</th>
+                                <th>发帖人</th>
+                                <th>所在社区</th>
+                                <th>内容</th>
+                                <th>点赞数</th>
+                                <!-- <th>状态</th> -->
+                                <th>评论数</th>
+                                <th>状态</th>
+
+                                <th>备注</th>
+                                <th>操作</th>
+                               <!--  <th>性别</th>
+                                <th>证件号</th> -->
+                               <!--  <th style="width: 20%">操作</th> -->
+                            </tr>
+                            
+                            <volist name="xinxianshi_list" id="xinxianshi">
+                            <tr>
+                                <td>{$xinxianshi['id']}</td>
+                                <td>{$xinxianshi['name']}</td>
+                                <td>{$xinxianshi['mingcheng']}</td>
+                                <td>{$xinxianshi['neirong']}</td>
+                                <!-- <td>{$xinxianshi['status']}</td> -->
+                                <td>{$xinxianshi['dianzanshu']}</td>
+    
+                                <td><a href="{:U('pingluncheck', ['xinxianshi_id'=>$xinxianshi['id']])}" class="btn btn-default" style="width:70px" title="查看评论">{$xinxianshi['pinglunshu']}</a></td>
+                                <td>{$xinxianshi['xianshi']=='1'?'启用':'禁用'}</td>
+                                <td>{$xinxianshi['beizhu']}</td>
+                              
+                                <td >
+                                    
+                                    <!-- //s -->
+                                    <script type="text/javascript">
+                                    function add(){
+                                        var div=document.createElement("div");
+                                        div.style.position="absolute";
+                                        div.style.left="0px";
+                                        div.style.top="50px";
+                                        div.style.width="1400px";
+                                        div.style.height="800px";
+                                        div.style.backgroundColor="black";
+                                        div.style.filter="alpha(opacity=40)";
+                                        div.style.opacity=.4;
+                                        div.setAttribute("id","div");
+                                        var div2=document.createElement("div");
+                                        var input1=document.createElement("input");
+                                        input1.type="text";
+                                        input1.value="";
+                                        input1.setAttribute("id","test");
+                                        div2.appendChild(input1);
+                                        var input2=document.createElement("input");
+                                        input2.type="button";
+                                        input2.value="提交";
+                                        input2.onclick=subs;
+                                        div2.appendChild(input2);
+                                        var input3=document.createElement("input");
+                                        input3.type="button";
+                                        input3.value="取消";
+                                        input3.onclick=cancel;
+                                        div2.appendChild(input3);
+                                        var c=document.createElement("center");
+                                        c.appendChild(div2);
+                                        div.appendChild(c);
+                                        document.body.appendChild(div);
+                                    }
+                                    function subs(){
+                                        var a=document.getElementById("test").value;//['xinxianshi_id'=>$xinxianshi['id']]
+                                        // window.location.href="http://www.baidu.com/s?wd="+a;//array('id'=>$data['id'])//U('Blog/cate',array('cate_id'=>1,'status'=>1))//var array = <?=json_encode($array)?>;
+                                        var id = <?php echo $xinxianshi['id'];?>;
+                                         alert(id);
+                                        window.location.href="{:U('bianji', array('id'=>[],'beizhu'=>[]))}"+a;
+                                   
+                                    }
+                                    function cancel(){
+                                        var p=document.getElementById("div");
+                                        document.body.removeChild(p);
+                                    }
+                                    </script>
+                                    <input href="{:U('bianji', ['xinxianshi_id'=>$xinxianshi['id']])}" type="button" onclick="add({$xinxianshi['id']})" value="禁用">
+
+                                </td>
+                            </tr>
+                            </volist>
+
+                            </tbody>
+                        </table>
+                    </div><!-- /.box-body -->
+                    <!--分页的位置-->
+                    {$page_html}
+                </div>
+
+            </div>
+        </div>
+    </section><!-- /.content -->
+
+    <section class="content-footer">
+        <div class="text-center">
+            &copy;lebang，亲邻乐帮
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>

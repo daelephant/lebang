@@ -1,0 +1,179 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            待审核用户
+            <a href="{:U('User/add')}" class="btn btn-default0 pull-right">添加用户</a>
+            <!-- <small>待审核用户</small> -->
+        </h1>
+    </section>
+
+                                    <script type="text/javascript">
+                                    function add(xid){
+                                    document.getElementById("tcbg").style.display="block";
+                                    document.getElementById("tcdiv1").style.display="block";
+                                    document.getElementById("xid").value=xid;
+                                    document.getElementById("status").value='3';
+                                    }
+                                    function add2(xid){
+                                    document.getElementById("tcbg").style.display="block";
+                                    document.getElementById("tcdiv").style.display="block";
+                                    document.getElementById("xid").value=xid;
+                                    document.getElementById("status").value='4';
+                                    }
+
+
+                                    function subs(){
+                                    var beizhu=document.getElementById("beizhu").value;//
+                                    var xid=document.getElementById("xid").value;//
+                          
+                                   
+                                       
+
+                                    }
+                                    function cancel(){
+                                    var p=document.getElementById("div");
+                                    document.body.removeChild(p);
+                                    }
+                                      //9月19号修改
+                                    function removeElement(){
+                                    document.getElementById("tcbg").style.display='none';
+                                    document.getElementById("tcdiv").style.display="none";
+                                    
+                                    document.getElementById("tcdiv1").style.display="none";
+                                    }
+                                    </script>
+
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+<style>
+    table tbody tr th{
+        background: #fbfbfb;
+        text-align: center;
+    }
+</style>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-body">
+                        <table style="margin-left: -5px;margin-top: -4px;" class="table table-bordered">
+                            <tbody>
+                            <tr>
+                                <!-- <th style="width: 10px">#</th> -->
+                                <th style="width:80px;">序号{$user['id']}</th>  
+                                <th style="width:100px;">真实姓名</th>
+                                <th style="width:115px;">手机号</th>
+                                <th style="width:70px">性别</th>
+                                <th style="wihdth:90px;">生日</th>
+                                <th style="width:180px;">证件号码</th>
+                                <th style="width:360; ">证件照</th>
+                                <th style="width:150px;">操作</th>
+                               <!--  <th>性别</th>
+                                <th>证件号</th> -->
+                               <!--  <th style="width: 20%">操作</th> -->
+                            </tr>
+                            <volist name="user_list" id="user">
+                            <tr>
+                               <td>{$user['id']}</td>
+                                <td>{$user['name']}</td>
+                                <td>{$user['phone']}</td>
+                                <td><if condition="$user['sex'] eq '1'">男<elseif condition="$user['sex'] eq '2'"/>女</if>
+
+                                </td>
+                                <td>{$user['birthday']}</td>
+                                <td>{$user['idnumber']}</td>
+                                <td>{$user['idpic']}</td>
+                                <!-- <td>{$user['caozuo']}</td> -->
+                                <!-- <td>{$User['create_at']}</td>
+                                <td>{$User['category_title']}</td> -->
+                                <td >
+                                  <input type="button" class="btn btn-default1" onclick="add({$user['id']})" value="通过">
+                                 <input  type="button" class="btn btn-default2" onclick="add2({$user['id']})" value="不通过">
+                                    <!-- <button class="btn btn-default1" type="submit"  id = "submit" name="status" value="3">通过</button> -->
+                                   <!--  <a href="" class="btn btn-default1" title="审查">通过</a> -->
+                                 <!--    <input type="button"  class="btn btn-default1"   value="通过"> -->
+                                    <!-- <a href="{:U('bianji', ['user_id'=>$user['id']])}" onclick="add2" class="btn btn-default2" title="编辑"></span>不通过</a> -->
+                                       <!-- <input type="button" class="btn btn-default2"  onclick="add()" value="不通过"> -->
+                                       
+                                </td>
+                            </tr>
+                            </volist>
+                            </tbody>
+                        </table>
+                    </div><!-- /.box-body -->
+                </div>
+                  <!--分页的位置-->
+                    {$page_html}
+            </div>
+        </div>
+    </section><!-- /.content -->
+<style>
+.tcbg{  display:none;  position:fixed;  top: 0%;  left: 0%;  width: 100%;  height: 100%;  background-color:#000;   -moz-opacity: 0.5;  opacity:.50;  filter: alpha(opacity=50); z-index:5}
+
+.tcdiv{ display:none;  position:fixed;  top:200px; right:350px; margin:auto; text-align:left;   width: 100%; max-width:400px;  height: 280px;  background-color:#F8F8F8;  z-index:6; padding:10px; border-radius:5px;}
+.tcdiv1{ display:none;  position:fixed;  top:200px; right:350px; margin:auto; text-align:left;   width: 100%; max-width:400px;  height: 80px;  background-color:#F8F8F8;  z-index:6; padding:10px; border-radius:5px;}
+.tcdiv2{ display:none;  position:fixed;  top:200px; right:350px; margin:auto; text-align:left;   width: 100%; max-width:400px;  height: 280px;  background-color:#F8F8F8;  z-index:6; padding:10px; border-radius:5px;}
+
+.int{
+    width:100%;
+    }
+ #we{
+    float:right;
+    margin-top:20px;
+    
+    }
+    textarea{
+        resize:block; width:380px; height:200px; border-radius:3px;
+    }
+
+    </style>
+<div class="tcbg" id="tcbg"></div>
+<div id="tcdiv1"  class="tcdiv1">
+<form action="{:U('edit')}" method="get">
+    <input type="hidden" placeholder="备注信息" id="xid"  name="user_id" > 
+    <!-- <input  type="textarea"  class="int" placeholder="备注信息" id="beizhu"  name="beizhu" >  -->
+
+    <!-- <textarea id="beizhu"  name="beizhu" placeholder="单击此处可输入理由......"cols="30" rows="10"></textarea>
+    <input  type="hidden"  placeholder="备注信息" id="status"  name="status" > -->
+    
+     <div id="we">
+    <input type='button' class="btn btn-default0" style="background:#FFFFFF;border-color: #fbfbfb;color:black; " onclick="removeElement()" value='取消'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+     <input type="submit" class="btn btn-default0" style="background:#FF6600;" value="确认">
+    
+    </div>
+ </form>
+</div>
+<div id="tcdiv"  class="tcdiv">
+<form action="{:U('edit')}" method="get">
+    <input type="hidden" placeholder="备注信息" id="xid"  name="user_id" > 
+    <!-- <input  type="textarea"  class="int" placeholder="备注信息" id="beizhu"  name="beizhu" >  -->
+
+    <textarea id="beizhu"  name="beizhu" placeholder="单击此处可输入理由......"cols="30" rows="10"></textarea>
+    <input  type="hidden"  placeholder="备注信息" id="status"  name="status" >
+    
+     <div id="we">
+    <input type='button' class="btn btn-default0" style="background:#FFFFFF;border-color: #fbfbfb;color:black; " onclick="removeElement()" value='取消'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+     <input type="submit" class="btn btn-default0" style="background:#FF6600;" value="确认">
+    <!-- <input type='button' class="btn btn-default0" style="background:#FFFFFF;border-color: #fbfbfb;color:black; " onclick="removeElement()" value='取消'>
+
+       <input type="submit" class="btn btn-default0" style="background:#FF6600;"; value="通过"> -->
+    </div>
+ </form>
+</div>
+
+
+    <section class="content-footer">
+        <div class="text-center">
+            &copy;全民乐帮
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>

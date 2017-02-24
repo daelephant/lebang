@@ -1,0 +1,3367 @@
+[ 2016-10-10T10:11:41+08:00 ] ::1 /lebang9/admin.php/xinxianshi/fetch1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+
+[ 2016-10-10T10:11:41+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476065501953
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:11:46+08:00 ] ::1 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+ERR: 1146:Table 'lebang.lb_area' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lb_area`
+
+[ 2016-10-10T10:11:48+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476065508249
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000824s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:14:27+08:00 ] ::1 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000814s ]
+
+[ 2016-10-10T10:14:28+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476065668663
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000444s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:19:42+08:00 ] ::1 /lebang9/admin.php/Order/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000560s ]
+
+[ 2016-10-10T10:19:42+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476065982671
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000678s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:19:48+08:00 ] ::1 /lebang9/admin.php/Shequ/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000491s ]
+
+[ 2016-10-10T10:19:48+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476065988518
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:19:52+08:00 ] ::1 /lebang9/admin.php/Shequ/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000471s ]
+
+[ 2016-10-10T10:19:52+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476065992466
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:19:53+08:00 ] ::1 /lebang9/admin.php/Shequ/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+
+[ 2016-10-10T10:19:53+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476065993605
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000711s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:19:54+08:00 ] ::1 /lebang9/admin.php/Shequ/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+
+[ 2016-10-10T10:19:54+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476065994554
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001128s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:19:57+08:00 ] ::1 /lebang9/admin.php/Shequ/started.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+
+[ 2016-10-10T10:19:57+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476065997663
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000641s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:19:59+08:00 ] ::1 /lebang9/admin.php/Shequ/starting.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+
+[ 2016-10-10T10:19:59+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476065999422
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:33:15+08:00 ] ::1 /lebang9/admin.php/xinxianshi/fetch1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+
+[ 2016-10-10T10:33:16+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476066796440
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:33:19+08:00 ] ::1 /lebang9/admin.php/Shequ/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000415s ]
+
+[ 2016-10-10T10:33:19+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476066799463
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:33:20+08:00 ] ::1 /lebang9/admin.php/Shequ/started.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+
+[ 2016-10-10T10:33:20+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476066800899
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:33:22+08:00 ] ::1 /lebang9/admin.php/Shequ/starting.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+
+[ 2016-10-10T10:33:22+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476066802800
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:41:11+08:00 ] ::1 /lebang9/admin.php/User/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000420s ]
+
+[ 2016-10-10T10:41:12+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476067272131
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000394s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:41:15+08:00 ] ::1 /lebang9/admin.php/User/fetch.html?nickname=&phone=&idnumber=&starttime=2016-07-02&endtime=2016-10-10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000368s ]
+
+[ 2016-10-10T10:41:15+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476067275788
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000609s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:44:21+08:00 ] ::1 /lebang9/admin.php/User/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000419s ]
+
+[ 2016-10-10T10:44:21+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476067461455
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000379s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:45:45+08:00 ] ::1 /lebang9/admin.php/User/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+
+[ 2016-10-10T10:45:45+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476067545556
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:50:06+08:00 ] ::1 /lebang9/admin.php/User/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+
+[ 2016-10-10T10:50:07+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476067807165
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000431s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:50:11+08:00 ] ::1 /lebang9/admin.php/User/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+
+[ 2016-10-10T10:50:11+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476067811941
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:50:14+08:00 ] ::1 /lebang9/admin.php/User/bianji/user_id/69.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000421s ]
+
+[ 2016-10-10T10:50:14+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476067814607
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000605s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:51:07+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476067867690
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:51:11+08:00 ] ::1 /lebang9/admin.php/Quanxian/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+
+[ 2016-10-10T10:51:12+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476067872260
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000633s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:51:16+08:00 ] ::1 /lebang9/admin.php/Quanxian/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+
+[ 2016-10-10T10:51:16+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476067876223
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000567s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:51:20+08:00 ] ::1 /lebang9/admin.php/Quanxian/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+
+[ 2016-10-10T10:51:20+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476067880243
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000587s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:51:21+08:00 ] ::1 /lebang9/admin.php/Quanxian/list1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000420s ]
+
+[ 2016-10-10T10:51:21+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476067881697
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000467s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:51:28+08:00 ] ::1 /lebang9/admin.php/Quanxian/edit1/uid/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+
+[ 2016-10-10T10:51:28+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476067888467
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000709s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:51:35+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476067895503
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000616s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:51:48+08:00 ] ::1 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000405s ]
+
+[ 2016-10-10T10:51:53+08:00 ] ::1 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000542s ]
+
+[ 2016-10-10T10:51:58+08:00 ] ::1 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+
+[ 2016-10-10T10:52:04+08:00 ] ::1 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+
+[ 2016-10-10T10:52:05+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476067925245
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000696s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:55:49+08:00 ] ::1 /lebang9/admin.php/Master/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000419s ]
+
+[ 2016-10-10T10:56:00+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476068160524
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:56:05+08:00 ] ::1 /lebang9/admin.php/master/edit/id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000516s ]
+
+[ 2016-10-10T10:56:05+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476068165478
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000507s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:56:10+08:00 ] ::1 /lebang9/admin.php/Master/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000460s ]
+
+[ 2016-10-10T10:56:10+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476068170692
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000440s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:56:33+08:00 ] ::1 /lebang9/admin.php/master/edit/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000402s ]
+
+[ 2016-10-10T10:56:33+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476068193610
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000775s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:56:58+08:00 ] ::1 /lebang9/admin.php/master/edit/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000413s ]
+
+[ 2016-10-10T10:56:58+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476068218747
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000449s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:57:02+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476068222399
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:57:17+08:00 ] ::1 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001397s ]
+
+[ 2016-10-10T10:57:17+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476068237689
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000605s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:57:33+08:00 ] ::1 /lebang9/admin.php/Quanxian/list2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000389s ]
+
+[ 2016-10-10T10:57:34+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476068254092
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000630s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:58:07+08:00 ] ::1 /lebang9/admin.php/Quanxian/add2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000412s ]
+
+[ 2016-10-10T10:58:08+08:00 ] ::1 /lebang9/admin.php/Quanxian/list2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000828s ]
+
+[ 2016-10-10T10:58:08+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476068288276
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:58:11+08:00 ] ::1 /lebang9/admin.php/Quanxian/list2/p/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000435s ]
+
+[ 2016-10-10T10:58:11+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476068291457
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000739s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:58:35+08:00 ] ::1 /lebang9/admin.php/Quanxian/list1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000558s ]
+
+[ 2016-10-10T10:58:35+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476068315288
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000935s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:58:37+08:00 ] ::1 /lebang9/admin.php/Quanxian/edit1/uid/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+
+[ 2016-10-10T10:58:37+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476068317478
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:59:47+08:00 ] ::1 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000494s ]
+
+[ 2016-10-10T10:59:48+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476068388088
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T10:59:58+08:00 ] ::1 /lebang9/admin.php/area/edit/id/3409.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000485s ]
+
+[ 2016-10-10T10:59:58+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476068398632
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000438s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:00:18+08:00 ] ::1 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000419s ]
+
+[ 2016-10-10T11:00:18+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476068418889
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000429s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:02:11+08:00 ] ::1 /lebang9/admin.php/Quanxian/list2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000411s ]
+
+[ 2016-10-10T11:02:12+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476068532571
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000683s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:02:57+08:00 ] ::1 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+
+[ 2016-10-10T11:02:58+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476068578234
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000660s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:04:52+08:00 ] ::1 /lebang9/admin.php/Quanxian/list2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000419s ]
+
+[ 2016-10-10T11:04:52+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476068692600
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000431s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:05:28+08:00 ] ::1 /lebang9/admin.php/Quanxian/add2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000424s ]
+
+[ 2016-10-10T11:05:28+08:00 ] ::1 /lebang9/admin.php/Quanxian/list2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000694s ]
+
+[ 2016-10-10T11:05:28+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476068728379
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000425s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:05:57+08:00 ] ::1 /lebang9/admin.php/Quanxian/add2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000530s ]
+
+[ 2016-10-10T11:05:57+08:00 ] ::1 /lebang9/admin.php/Quanxian/list2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+
+[ 2016-10-10T11:05:58+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476068758188
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000731s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:06:01+08:00 ] ::1 /lebang9/admin.php/Quanxian/list2/p/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+
+[ 2016-10-10T11:06:01+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476068761652
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000634s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:10:05+08:00 ] ::1 /lebang9/admin.php/Quanxian/list2/p/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
+
+[ 2016-10-10T11:10:06+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069006074
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000645s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:10:08+08:00 ] ::1 /lebang9/admin.php/Quanxian/list2/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+
+[ 2016-10-10T11:10:08+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069008231
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000682s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:10:12+08:00 ] ::1 /lebang9/admin.php/User/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000389s ]
+
+[ 2016-10-10T11:10:12+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069012599
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000113s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001566s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:10:13+08:00 ] ::1 /lebang9/admin.php/User/bianji/user_id/69.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+
+[ 2016-10-10T11:10:13+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069013963
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000677s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:10:16+08:00 ] ::1 /lebang9/admin.php/User/bianji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+
+[ 2016-10-10T11:10:17+08:00 ] ::1 /lebang9/admin.php/User/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000828s ]
+
+[ 2016-10-10T11:10:17+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069017314
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:10:35+08:00 ] ::1 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000386s ]
+
+[ 2016-10-10T11:10:40+08:00 ] ::1 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000609s ]
+
+[ 2016-10-10T11:10:44+08:00 ] ::1 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+
+[ 2016-10-10T11:10:45+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069045212
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000516s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:11:03+08:00 ] ::1 /lebang9/admin.php/area/edit/id/3409.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000446s ]
+
+[ 2016-10-10T11:11:04+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069064124
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000447s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:11:21+08:00 ] ::1 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+
+[ 2016-10-10T11:11:22+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069082207
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:12:00+08:00 ] ::1 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+
+[ 2016-10-10T11:12:05+08:00 ] ::1 /lebang9/admin.php/area/edit/id/3409.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000435s ]
+
+[ 2016-10-10T11:12:05+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069125580
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:12:48+08:00 ] ::1 /lebang9/admin.php/User/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+
+[ 2016-10-10T11:12:49+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069168980
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000538s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:16:29+08:00 ] ::1 /lebang9/admin.php/User/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000433s ]
+
+[ 2016-10-10T11:16:29+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069389970
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:16:30+08:00 ] ::1 /lebang9/admin.php/User/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000411s ]
+
+[ 2016-10-10T11:16:30+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069390876
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001194s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:16:31+08:00 ] ::1 /lebang9/admin.php/User/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+
+[ 2016-10-10T11:16:32+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069392024
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:16:40+08:00 ] ::1 /lebang9/admin.php/User/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000429s ]
+
+[ 2016-10-10T11:16:40+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069400379
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:16:41+08:00 ] ::1 /lebang9/admin.php/User/bianji/user_id/69.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
+
+[ 2016-10-10T11:16:41+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069401891
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000485s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:18:55+08:00 ] ::1 /lebang9/admin.php/User/bianji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+
+[ 2016-10-10T11:18:56+08:00 ] ::1 /lebang9/admin.php/User/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001280s ]
+
+[ 2016-10-10T11:18:56+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069536462
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000433s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:18:59+08:00 ] ::1 /lebang9/admin.php/User/bianji/user_id/69.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000473s ]
+
+[ 2016-10-10T11:18:59+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069539353
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000441s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:19:03+08:00 ] ::1 /lebang9/admin.php/User/bianji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+
+[ 2016-10-10T11:19:03+08:00 ] ::1 /lebang9/admin.php/User/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
+
+[ 2016-10-10T11:19:03+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069543675
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000643s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:19:15+08:00 ] ::1 /lebang9/admin.php/msg/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000435s ]
+
+[ 2016-10-10T11:19:16+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069556042
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000447s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:19:17+08:00 ] ::1 /lebang9/admin.php/Msg/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000432s ]
+
+[ 2016-10-10T11:19:17+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069557800
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000815s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:20:30+08:00 ] ::1 /lebang9/admin.php/Msg/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000394s ]
+
+[ 2016-10-10T11:20:31+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069631124
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000654s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:20:35+08:00 ] ::1 /lebang9/admin.php/Msg/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+
+[ 2016-10-10T11:20:35+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069635235
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000467s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:20:37+08:00 ] ::1 /lebang9/admin.php/Msg/edit/msg_id/14.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+
+[ 2016-10-10T11:20:38+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069637985
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000509s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:20:45+08:00 ] ::1 /lebang9/admin.php/Msg/edit/msg_id/14.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+
+[ 2016-10-10T11:20:47+08:00 ] ::1 /lebang9/admin.php/msg/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000504s ]
+
+[ 2016-10-10T11:20:47+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069647884
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000745s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:21:28+08:00 ] ::1 /lebang9/admin.php/Msg/edit/msg_id/14.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+
+[ 2016-10-10T11:21:29+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069689703
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:21:31+08:00 ] ::1 /lebang9/admin.php/Msg/edit/msg_id/14.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000781s ]
+
+[ 2016-10-10T11:21:31+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069691425
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000480s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:21:39+08:00 ] ::1 /lebang9/admin.php/Msg/edit/msg_id/14.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002017s ]
+
+[ 2016-10-10T11:21:39+08:00 ] ::1 /lebang9/admin.php/Msg/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+
+[ 2016-10-10T11:21:39+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069699944
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001117s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:22:18+08:00 ] ::1 /lebang9/admin.php/msg/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000493s ]
+
+[ 2016-10-10T11:22:18+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069738763
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000447s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:22:28+08:00 ] ::1 /lebang9/admin.php/Quanxian/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000467s ]
+
+[ 2016-10-10T11:22:28+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069748566
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:22:45+08:00 ] ::1 /lebang9/admin.php/Master/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000429s ]
+
+[ 2016-10-10T11:22:45+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069765528
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000451s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:23:30+08:00 ] ::1 /lebang9/admin.php/Shequ/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+
+[ 2016-10-10T11:23:30+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069810738
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000438s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:23:33+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/3411.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000141s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000527s ]
+
+[ 2016-10-10T11:23:33+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069813852
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:23:39+08:00 ] ::1 /lebang9/admin.php/Shequ/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+
+[ 2016-10-10T11:23:39+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069819235
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000657s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:23:41+08:00 ] ::1 /lebang9/admin.php/Shequ/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+
+[ 2016-10-10T11:23:41+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069821348
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000889s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:23:44+08:00 ] ::1 /lebang9/admin.php/Shequ/started.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000467s ]
+
+[ 2016-10-10T11:23:44+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069824449
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000457s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:23:45+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/3411.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000408s ]
+
+[ 2016-10-10T11:23:46+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069826110
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000758s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:25:30+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/3411.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000415s ]
+
+[ 2016-10-10T11:25:31+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476069931080
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:28:15+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/3411.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+
+[ 2016-10-10T11:28:15+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476070095604
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:29:46+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/3411.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000431s ]
+
+[ 2016-10-10T11:29:46+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476070186513
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:29:57+08:00 ] ::1 /lebang9/admin.php/Xinxianshi/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+
+[ 2016-10-10T11:29:57+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476070197492
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000618s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:29:59+08:00 ] ::1 /lebang9/admin.php/Xinxianshi/bianji1/xinxianshi_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000365s ]
+
+[ 2016-10-10T11:30:00+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476070199978
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000411s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:30:11+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476070211626
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:30:13+08:00 ] ::1 /lebang9/admin.php/Xinxianshi/bianji1/xinxianshi_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000423s ]
+
+[ 2016-10-10T11:30:13+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476070213257
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000402s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:30:16+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476070216428
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000532s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:30:18+08:00 ] ::1 /lebang9/admin.php/Xinxianshi/bianji1/xinxianshi_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+
+[ 2016-10-10T11:30:18+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476070218460
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:30:21+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476070221523
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000590s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:30:42+08:00 ] ::1 /lebang9/admin.php/Xinxianshi/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000727s ]
+
+[ 2016-10-10T11:30:42+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476070242893
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000698s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:30:46+08:00 ] ::1 /lebang9/admin.php/Xinxianshi/bianji1/xinxianshi_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+
+[ 2016-10-10T11:30:46+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476070246518
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000717s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:30:55+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476070255039
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000767s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:32:07+08:00 ] ::1 /lebang9/admin.php/Xinxianshi/bianji1/xinxianshi_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000492s ]
+
+[ 2016-10-10T11:32:07+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476070327676
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000448s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:32:10+08:00 ] ::1 /lebang9/admin.php/Xinxianshi/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000471s ]
+
+[ 2016-10-10T11:32:10+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476070330924
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000128s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001350s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:32:23+08:00 ] ::1 /lebang9/admin.php/User/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+
+[ 2016-10-10T11:32:23+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476070343493
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000630s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:34:27+08:00 ] ::1 /lebang9/admin.php/Xinxianshi/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+
+[ 2016-10-10T11:34:28+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476070468030
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:34:28+08:00 ] ::1 /lebang9/admin.php/Xinxianshi/bianji1/xinxianshi_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000389s ]
+
+[ 2016-10-10T11:34:29+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476070469142
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000431s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:34:30+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476070470555
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000691s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:34:31+08:00 ] ::1 /lebang9/admin.php/Xinxianshi/bianji1/xinxianshi_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000390s ]
+
+[ 2016-10-10T11:34:31+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476070471482
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001023s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:34:33+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476070473336
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000556s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:36:33+08:00 ] ::1 /lebang9/admin.php/Xinxianshi/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+
+[ 2016-10-10T11:36:33+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476070593494
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000448s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:36:37+08:00 ] ::1 /lebang9/admin.php/User/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+
+[ 2016-10-10T11:36:37+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476070597895
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000670s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:36:42+08:00 ] ::1 /lebang9/admin.php/User/edit/user_id/67.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
+
+[ 2016-10-10T11:36:43+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476070603047
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000657s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:36:47+08:00 ] ::1 /lebang9/admin.php/User/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000406s ]
+
+[ 2016-10-10T11:36:47+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476070607963
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000716s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:37:07+08:00 ] ::1 /lebang9/admin.php/User/edit/user_id/69.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+
+[ 2016-10-10T11:37:08+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476070628169
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000704s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T11:37:14+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476070634276
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T12:05:22+08:00 ] ::1 /lebang9/admin.php/Xinxianshi/list6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+
+[ 2016-10-10T12:05:22+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476072322543
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000440s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T12:05:30+08:00 ] ::1 /lebang9/admin.php/Xinxianshi/list3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+
+[ 2016-10-10T12:05:31+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476072331146
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001298s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T12:05:32+08:00 ] ::1 /lebang9/admin.php/Xinxianshi/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+
+[ 2016-10-10T12:05:32+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476072332835
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000708s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T12:05:33+08:00 ] ::1 /lebang9/admin.php/Xinxianshi/bianji1/xinxianshi_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000735s ]
+
+[ 2016-10-10T12:05:34+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476072334144
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T12:05:35+08:00 ] ::1 /lebang9/admin.php/Xinxianshi/bianji1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
+
+[ 2016-10-10T12:05:35+08:00 ] ::1 /lebang9/admin.php/Xinxianshi/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000429s ]
+
+[ 2016-10-10T12:05:35+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476072335550
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000720s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T12:05:39+08:00 ] ::1 /lebang9/admin.php/Xinxianshi/bianji1/xinxianshi_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+
+[ 2016-10-10T12:05:39+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476072339678
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001770s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T12:05:42+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476072341996
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T12:13:18+08:00 ] 192.168.1.122 /lebang9/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001083s ]
+
+[ 2016-10-10T12:13:21+08:00 ] 192.168.1.122 /lebang9/admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001197s ]
+
+[ 2016-10-10T12:14:39+08:00 ] 192.168.1.137 /lebang9/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001065s ]
+
+[ 2016-10-10T12:14:43+08:00 ] 192.168.1.137 /lebang9/admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000982s ]
+
+[ 2016-10-10T12:18:58+08:00 ] 192.168.1.122 /lebang9/admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000926s ]
+
+[ 2016-10-10T12:19:01+08:00 ] 192.168.1.122 /lebang9/admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001215s ]
+
+[ 2016-10-10T12:19:08+08:00 ] 192.168.1.122 /lebang9/admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001468s ]
+
+[ 2016-10-10T12:19:11+08:00 ] 192.168.1.122 /lebang9/admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001448s ]
+
+[ 2016-10-10T12:19:25+08:00 ] 192.168.1.122 /lebang9/admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001453s ]
+
+[ 2016-10-10T12:19:28+08:00 ] 192.168.1.122 /lebang9/admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000084s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002005s ]
+
+[ 2016-10-10T12:19:46+08:00 ] 192.168.1.122 /lebang9/admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001263s ]
+
+[ 2016-10-10T12:19:50+08:00 ] 192.168.1.122 /lebang9/admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001574s ]
+
+[ 2016-10-10T12:19:57+08:00 ] ::1 /lebang9/admin.php/login/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000682s ]
+
+[ 2016-10-10T12:19:57+08:00 ] ::1 /lebang9/admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+
+[ 2016-10-10T12:20:07+08:00 ] ::1 /lebang9/admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000750s ]
+
+[ 2016-10-10T12:20:10+08:00 ] ::1 /lebang9/admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001163s ]
+
+[ 2016-10-10T12:20:35+08:00 ] 192.168.1.122 /lebang9/admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000901s ]
+
+[ 2016-10-10T12:20:38+08:00 ] 192.168.1.122 /lebang9/admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001239s ]
+
+[ 2016-10-10T13:03:16+08:00 ] ::1 /lebang9/admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000690s ]
+
+[ 2016-10-10T13:03:24+08:00 ] ::1 /lebang9/admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000655s ]
+
+[ 2016-10-10T13:03:24+08:00 ] ::1 /lebang9/admin.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000649s ]
+
+[ 2016-10-10T13:03:24+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476075804498
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000630s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:03:56+08:00 ] 192.168.1.122 /lebang9/admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000087s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002572s ]
+
+[ 2016-10-10T13:03:56+08:00 ] 192.168.1.122 /lebang9/admin.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001137s ]
+
+[ 2016-10-10T13:03:58+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476075837814
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001513s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:04:15+08:00 ] 192.168.1.122 /lebang9/admin.php/Shequ/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000886s ]
+
+[ 2016-10-10T13:04:15+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476075855380
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001433s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:04:32+08:00 ] 192.168.1.122 /lebang9/admin.php/User/list2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001391s ]
+
+[ 2016-10-10T13:04:32+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476075872157
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001303s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:04:36+08:00 ] 192.168.1.122 /lebang9/admin.php/User/edit/user_id/54.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000109s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002376s ]
+
+[ 2016-10-10T13:04:36+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476075875864
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001442s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:04:42+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476075881725
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000114s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001728s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:04:43+08:00 ] 192.168.1.122 /lebang9/admin.php/User/bianji/user_id/54.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000636s ]
+
+[ 2016-10-10T13:04:44+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476075883567
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001269s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:04:46+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476075885878
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000525s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:04:47+08:00 ] 192.168.1.122 /lebang9/admin.php/User/list3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001082s ]
+
+[ 2016-10-10T13:04:48+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476075887548
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001202s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:05:34+08:00 ] ::1 /lebang9/admin.php/User/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000651s ]
+
+[ 2016-10-10T13:05:34+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476075934720
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000883s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:06:36+08:00 ] 192.168.1.122 /lebang9/admin.php/Xinxianshi/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001514s ]
+
+[ 2016-10-10T13:06:37+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476075996716
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001313s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:06:43+08:00 ] 192.168.1.122 /lebang9/admin.php/Xinxianshi/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000093s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001446s ]
+
+[ 2016-10-10T13:06:44+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076003754
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:06:52+08:00 ] 192.168.1.122 /lebang9/admin.php/Xinxianshi/bianji1/xinxianshi_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001133s ]
+
+[ 2016-10-10T13:06:52+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076012416
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001325s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:06:56+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076015685
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000756s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:07:00+08:00 ] ::1 /lebang9/admin.php/Xinxianshi/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000687s ]
+
+[ 2016-10-10T13:07:00+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076020435
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001108s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:07:01+08:00 ] ::1 /lebang9/admin.php/Xinxianshi/bianji1/xinxianshi_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+
+[ 2016-10-10T13:07:01+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076021583
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000668s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:07:05+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076025857
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000548s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:07:10+08:00 ] ::1 /lebang9/admin.php/Xinxianshi/list3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000691s ]
+
+[ 2016-10-10T13:07:10+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076030466
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000859s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:07:11+08:00 ] ::1 /lebang9/admin.php/Xinxianshi/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+
+[ 2016-10-10T13:07:11+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076031775
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000730s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:07:20+08:00 ] 192.168.1.122 /lebang9/admin.php/Xinxianshi/list3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001864s ]
+
+[ 2016-10-10T13:07:21+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076040666
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000095s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001583s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:07:22+08:00 ] 192.168.1.122 /lebang9/admin.php/Xinxianshi/list4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001329s ]
+
+[ 2016-10-10T13:07:22+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076041853
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001047s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:07:28+08:00 ] 192.168.1.122 /lebang9/admin.php/Admin/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000270s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001944s ]
+
+[ 2016-10-10T13:07:29+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076048669
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000119s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002789s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:07:35+08:00 ] 192.168.1.122 /lebang9/admin.php/User/list4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000080s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001566s ]
+
+[ 2016-10-10T13:07:35+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076055264
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001013s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:07:40+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076059995
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000758s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:07:43+08:00 ] 192.168.1.122 /lebang9/admin.php/User/list4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000527s ]
+
+[ 2016-10-10T13:07:43+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076063104
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000742s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:07:49+08:00 ] 192.168.1.122 /lebang9/admin.php/User/edit/user_id/67.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001580s ]
+
+[ 2016-10-10T13:07:50+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076069529
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001538s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:07:57+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076077131
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001303s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:08:05+08:00 ] ::1 /lebang9/admin.php/Xinxianshi/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000709s ]
+
+[ 2016-10-10T13:08:06+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076086012
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000576s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:08:09+08:00 ] ::1 /lebang9/admin.php/Xinxianshi/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000712s ]
+
+[ 2016-10-10T13:08:09+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076089571
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000515s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:08:12+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076091711
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001623s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:12:04+08:00 ] 192.168.1.122 /lebang9/admin.php/User/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001004s ]
+
+[ 2016-10-10T13:12:04+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076324398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000080s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001910s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:12:40+08:00 ] 192.168.1.122 /lebang9/admin.php/User/list1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001476s ]
+
+[ 2016-10-10T13:12:41+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076360461
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001214s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:12:43+08:00 ] 192.168.1.122 /lebang9/admin.php/User/list2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000656s ]
+
+[ 2016-10-10T13:12:43+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076363422
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001709s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:12:50+08:00 ] 192.168.1.122 /lebang9/admin.php/Order/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001081s ]
+
+[ 2016-10-10T13:12:51+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076370630
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001540s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:12:55+08:00 ] 192.168.1.122 /lebang9/admin.php/Shequ/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001227s ]
+
+[ 2016-10-10T13:12:55+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076375043
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000080s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001947s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:13:02+08:00 ] 192.168.1.122 /lebang9/admin.php/Xinxianshi/list6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001261s ]
+
+[ 2016-10-10T13:13:03+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076383255
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000081s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001839s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:13:08+08:00 ] 192.168.1.122 /lebang9/admin.php/Master/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000921s ]
+
+[ 2016-10-10T13:13:08+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076388319
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000081s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001907s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:13:20+08:00 ] 192.168.1.122 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000090s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001854s ]
+
+[ 2016-10-10T13:13:20+08:00 ] 192.168.1.122 /lebang9/admin.php/Quanxian/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000639s ]
+
+[ 2016-10-10T13:13:20+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076400037
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000087s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001588s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:13:26+08:00 ] 192.168.1.122 /lebang9/admin.php/User/list2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000096s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002076s ]
+
+[ 2016-10-10T13:13:27+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076406706
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000144s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003029s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:13:28+08:00 ] 192.168.1.122 /lebang9/admin.php/User/list1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001549s ]
+
+[ 2016-10-10T13:13:29+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076408665
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000086s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001843s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:13:34+08:00 ] 192.168.1.122 /lebang9/admin.php/Xinxianshi/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001755s ]
+
+[ 2016-10-10T13:13:35+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076414726
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000135s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001414s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:14:25+08:00 ] 192.168.1.122 /lebang9/admin.php/Xinxianshi/bianji1/xinxianshi_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001338s ]
+
+[ 2016-10-10T13:14:26+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076465503
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001778s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:14:29+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076468785
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001711s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:14:53+08:00 ] ::1 /lebang9/admin.php/Xinxianshi/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000523s ]
+
+[ 2016-10-10T13:14:53+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076493791
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:21:19+08:00 ] 192.168.1.122 /lebang9/admin.php/Xinxianshi/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001082s ]
+
+[ 2016-10-10T13:21:19+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076878895
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001312s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:21:31+08:00 ] 192.168.1.122 /lebang9/admin.php/Xinxianshi/bianji1/xinxianshi_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001604s ]
+
+[ 2016-10-10T13:21:31+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076891041
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000559s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:21:39+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476076898477
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001755s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:25:17+08:00 ] 192.168.1.122 /lebang9/admin.php/Xinxianshi/bianji1/xinxianshi_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000078s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001354s ]
+
+[ 2016-10-10T13:25:18+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476077117773
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001622s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:25:28+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476077127707
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000080s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001894s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:25:53+08:00 ] 192.168.1.122 /lebang9/admin.php/Xinxianshi/bianji1/xinxianshi_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001799s ]
+
+[ 2016-10-10T13:25:53+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476077152870
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001166s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T13:26:01+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476077160640
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000077s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002007s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T15:57:35+08:00 ] ::1 /lebang9/admin.php/Admin/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001169s ]
+
+[ 2016-10-10T15:57:36+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476086256232
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000852s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T16:42:52+08:00 ] ::1 /lebang9/admin.php/xinxianshi/fetch1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+
+[ 2016-10-10T16:42:56+08:00 ] ::1 /lebang9/admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001273s ]
+
+[ 2016-10-10T16:49:12+08:00 ] ::1 /lebang9/admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+
+[ 2016-10-10T16:49:12+08:00 ] ::1 /lebang9/admin.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+
+[ 2016-10-10T16:49:13+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476089353076
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000757s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T17:12:40+08:00 ] ::1 /lebang9/admin.php/xinxianshi/fetch1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000385s ]
+
+[ 2016-10-10T17:12:43+08:00 ] ::1 /lebang9/admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000743s ]
+
+[ 2016-10-10T17:13:21+08:00 ] ::1 /lebang9/admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+
+[ 2016-10-10T17:13:21+08:00 ] ::1 /lebang9/admin.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000473s ]
+
+[ 2016-10-10T17:13:22+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476090802277
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T17:19:55+08:00 ] ::1 /lebang9/admin.php/Shequ/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000473s ]
+
+[ 2016-10-10T17:19:55+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476091195665
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T17:19:56+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/3412.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000389s ]
+
+[ 2016-10-10T17:19:57+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476091197286
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T17:23:43+08:00 ] ::1 /lebang9/admin.php/Quanxian/list2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+
+[ 2016-10-10T17:23:43+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476091423470
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000448s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T17:57:06+08:00 ] ::1 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000424s ]
+
+[ 2016-10-10T17:57:11+08:00 ] ::1 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000430s ]
+
+[ 2016-10-10T17:57:16+08:00 ] ::1 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000724s ]
+
+[ 2016-10-10T17:57:22+08:00 ] ::1 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000661s ]
+
+[ 2016-10-10T17:57:26+08:00 ] ::1 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000644s ]
+
+[ 2016-10-10T17:57:27+08:00 ] ::1 /lebang9/admin.php/Shequ/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000675s ]
+
+[ 2016-10-10T17:57:27+08:00 ] ::1 /lebang9/admin.php/Quanxian/list2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000633s ]
+
+[ 2016-10-10T17:57:27+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476093447381
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T17:58:35+08:00 ] ::1 /lebang9/admin.php/Shequ/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+
+[ 2016-10-10T17:58:35+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476093515595
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000815s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T17:58:37+08:00 ] ::1 /lebang9/admin.php/Shequ/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+
+[ 2016-10-10T17:58:37+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476093517330
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000679s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T17:58:41+08:00 ] ::1 /lebang9/admin.php/Shequ/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000421s ]
+
+[ 2016-10-10T17:58:41+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476093521941
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000209s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001544s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T17:58:43+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/3412.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+
+[ 2016-10-10T17:58:43+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476093523829
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T18:03:54+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/3412.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+
+[ 2016-10-10T18:03:55+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476093835732
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T18:05:16+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/3412.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+
+[ 2016-10-10T18:05:16+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476093916763
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000448s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T18:05:27+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/3412.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
+
+[ 2016-10-10T18:05:28+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476093928187
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T18:20:08+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/3412.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+
+[ 2016-10-10T18:20:08+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476094808923
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T18:29:53+08:00 ] ::1 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+
+[ 2016-10-10T18:29:58+08:00 ] ::1 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+
+[ 2016-10-10T18:30:02+08:00 ] ::1 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000417s ]
+
+[ 2016-10-10T18:30:03+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476095403930
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000451s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T18:38:39+08:00 ] ::1 /lebang9/admin.php/Shequ/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+
+[ 2016-10-10T18:38:39+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476095919606
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000686s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T18:38:40+08:00 ] ::1 /lebang9/admin.php/Shequ/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+
+[ 2016-10-10T18:38:40+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476095920833
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T18:38:44+08:00 ] ::1 /lebang9/admin.php/Shequ/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000394s ]
+
+[ 2016-10-10T18:38:44+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476095924633
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000446s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T18:38:46+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/3412.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000394s ]
+
+[ 2016-10-10T18:38:46+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476095926564
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000711s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T18:38:48+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/3412.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+
+[ 2016-10-10T18:38:48+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476095928832
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000546s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T18:41:26+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/3412.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+
+[ 2016-10-10T18:41:27+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476096087114
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000675s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T18:48:08+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/3412.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
+ERR: 1146:Table 'lebang.lb_admin/_area' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `lb_admin/_area`
+
+[ 2016-10-10T18:48:37+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/3412.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000443s ]
+
+[ 2016-10-10T18:48:37+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476096517634
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000483s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T18:56:43+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/3412.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+
+[ 2016-10-10T18:56:43+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476097003567
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000079s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001033s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T19:00:23+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/3412.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+
+[ 2016-10-10T19:00:24+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476097224176
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T19:03:36+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/3412.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000412s ]
+
+[ 2016-10-10T19:03:36+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476097416626
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000698s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T19:04:10+08:00 ] 192.168.1.122 /lebang9/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000689s ]
+
+[ 2016-10-10T19:04:13+08:00 ] 192.168.1.122 /lebang9/admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000806s ]
+
+[ 2016-10-10T19:04:21+08:00 ] 192.168.1.122 /lebang9/admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000888s ]
+
+[ 2016-10-10T19:04:21+08:00 ] 192.168.1.122 /lebang9/admin.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
+
+[ 2016-10-10T19:04:22+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476097461968
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T19:04:26+08:00 ] 192.168.1.122 /lebang9/admin.php/User/list2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001278s ]
+
+[ 2016-10-10T19:04:26+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476097465823
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001049s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T19:04:28+08:00 ] 192.168.1.122 /lebang9/admin.php/User/edit/user_id/54.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000139s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001482s ]
+
+[ 2016-10-10T19:04:29+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476097468424
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001212s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T19:04:48+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476097487838
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001382s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T19:04:50+08:00 ] 192.168.1.122 /lebang9/admin.php/User/bianji/user_id/25.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001277s ]
+
+[ 2016-10-10T19:04:51+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476097490660
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000800s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T19:04:57+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476097496858
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001179s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T19:04:59+08:00 ] 192.168.1.122 /lebang9/admin.php/User/bianji/user_id/14.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000099s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001560s ]
+
+[ 2016-10-10T19:05:01+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476097500902
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000177s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002664s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T19:05:07+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476097506713
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002170s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T19:05:09+08:00 ] 192.168.1.122 /lebang9/admin.php/User/edit/user_id/14.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001245s ]
+
+[ 2016-10-10T19:05:16+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476097515286
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000966s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T19:05:22+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476097522039
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000850s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T19:05:26+08:00 ] 192.168.1.122 /lebang9/admin.php/User/bianji/user_id/14.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000386s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001998s ]
+
+[ 2016-10-10T19:05:26+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476097525481
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T19:05:28+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476097527990
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000130s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001631s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T19:05:33+08:00 ] 192.168.1.122 /lebang9/admin.php/User/bianji/user_id/14.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000950s ]
+
+[ 2016-10-10T19:05:33+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476097532846
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000212s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001100s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T19:05:35+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476097534486
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000954s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T19:05:37+08:00 ] 192.168.1.122 /lebang9/admin.php/User/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000909s ]
+
+[ 2016-10-10T19:05:40+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476097539923
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000999s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T19:05:42+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476097542079
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001188s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T19:05:49+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/3412.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000510s ]
+
+[ 2016-10-10T19:05:49+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476097549591
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T19:05:57+08:00 ] 192.168.1.122 /lebang9/admin.php/User/edit/user_id/14.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000690s ]
+
+[ 2016-10-10T19:05:58+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476097557306
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001226s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T19:06:05+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476097564210
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000117s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002043s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T19:06:06+08:00 ] 192.168.1.122 /lebang9/admin.php/User/bianji/user_id/14.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000855s ]
+
+[ 2016-10-10T19:06:06+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476097565793
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000753s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T19:06:49+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/3412.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000367s ]
+
+[ 2016-10-10T19:06:49+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476097609423
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T19:09:44+08:00 ] 192.168.1.122 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476097783542
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001127s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T21:53:00+08:00 ] ::1 /lebang9/admin.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T21:53:03+08:00 ] ::1 /lebang9/admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-10-10T21:53:12+08:00 ] ::1 /lebang9/admin.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T21:53:12+08:00 ] ::1 /lebang9/admin.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T21:53:15+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476107595369
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T21:53:21+08:00 ] ::1 /lebang9/admin.php/Shequ/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T21:53:24+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476107604305
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T21:53:27+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T21:53:30+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476107610432
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T21:59:41+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-10T21:59:44+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476107984171
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:00:13+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:00:15+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476108015655
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:00:20+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:00:22+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476108022617
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:00:38+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-10T22:00:40+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476108040366
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:01:07+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:04:20+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:05:08+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-10T22:05:11+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476108311035
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:06:03+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:06:05+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476108365489
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:06:30+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:06:33+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476108392998
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:07:16+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:07:18+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476108438811
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:07:43+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:07:45+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476108465538
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:08:47+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-10T22:08:49+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476108529804
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:09:03+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:09:05+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476108545881
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:09:49+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:09:52+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476108592246
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:09:57+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:10:00+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476108600349
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:10:21+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:10:24+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476108624072
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:10:36+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:13:07+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:13:10+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476108790057
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:14:52+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:16:31+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:16:33+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476108993718
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:17:00+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:17:03+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476109023049
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:17:04+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:17:19+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:18:27+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:18:30+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476109110295
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:18:45+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:18:48+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476109128335
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:19:01+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:19:03+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476109143511
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:19:50+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:19:53+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476109193069
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:19:54+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:20:18+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:20:22+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:20:55+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:20:57+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476109257690
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:21:16+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:21:19+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476109279252
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:22:06+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:22:08+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476109328735
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:23:28+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:23:30+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476109410584
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:25:48+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:25:50+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476109550447
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:25:52+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:26:32+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-10T22:26:35+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476109595346
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:27:06+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:27:09+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476109629085
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:27:10+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:27:24+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:27:27+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:27:29+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476109649885
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:27:31+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:30:02+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:30:05+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476109805037
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:30:06+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:30:29+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:30:31+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476109831240
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:30:32+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-10T22:32:29+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:32:34+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:32:36+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476109956730
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:33:42+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-10T22:33:44+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476110024806
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:49:07+08:00 ] ::1 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:49:07+08:00 ] ::1 /lebang9/admin.php/Master/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:49:10+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476110950166
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:49:27+08:00 ] ::1 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:49:32+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476110972000
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:52:42+08:00 ] ::1 /lebang9/admin.php/Shequ/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:52:44+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476111164768
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T22:52:46+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T22:52:49+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476111169157
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T23:11:13+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:11:16+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476112276428
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T23:12:05+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:15:20+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:15:23+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476112523202
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T23:19:54+08:00 ] ::1 /lebang9/admin.php/Area/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:19:57+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476112797501
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T23:20:28+08:00 ] ::1 /lebang9/admin.php/Shequ/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:20:30+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476112830910
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T23:20:33+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:20:35+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476112835618
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T23:22:31+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:22:33+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476112953666
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T23:26:43+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:26:46+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:26:46+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476113206701
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T23:27:00+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:28:27+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:28:29+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476113309492
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T23:30:04+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:30:15+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:30:18+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476113418454
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T23:31:46+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:31:48+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476113508703
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T23:33:02+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:33:06+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:33:08+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476113588896
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T23:37:44+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:41:41+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:41:43+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476114103914
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T23:43:19+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:43:21+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476114201522
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T23:43:57+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:43:59+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476114239867
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T23:44:09+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:44:11+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476114251817
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T23:44:45+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:44:47+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476114287507
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T23:45:11+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:45:13+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476114313865
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T23:45:49+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:45:52+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476114352260
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T23:46:31+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-10-10T23:46:34+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476114394028
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T23:47:27+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:47:29+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476114449748
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T23:48:24+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:48:27+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476114507083
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T23:49:01+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:49:04+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476114544286
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T23:51:48+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:51:51+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476114711455
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+
+[ 2016-10-10T23:52:47+08:00 ] ::1 /lebang9/admin.php/Shequ/bianji/shequ_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-10T23:52:50+08:00 ] ::1 /lebang9/admin.php/%E6%A8%A1%E5%9D%97/%E6%8E%A7%E5%88%B6%E5%99%A8/ueditor.html?action=config&&noCache=1476114770052
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:模块
+

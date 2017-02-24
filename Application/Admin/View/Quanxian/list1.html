@@ -1,0 +1,84 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+           后台分组管理
+           <!--  <a href="{:U('Quanxian/add1')}" class="btn btn-default pull-right"><font color="black">添加后台分组</font></a>
+        </h1> -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+    <script type="text/javascript" language="javascript"> 
+
+            function confirmAct() 
+            { 
+                if(confirm('确定要执行此操作吗?')) 
+                { 
+                    return true; 
+                } 
+                return false; 
+            } 
+
+    </script>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <form action="{:U('Admin/Quanxian/add1')}" method="post">
+                     <label   style="margin-top:10px; margin-left:10px;" for="inputSubject">分类名称&nbsp;:</label>
+                                   
+                         <input type="text" name="title" id="title" placeholder="" maxlength="20" />
+                         <button class="btn btn-primary"  style="width:120px;"  type="submit" name="submit" onclick="return confirmAct();" value="publish">添加</button>
+                     </form>
+                    <div class="box-header">
+                        <h3 class="box-title"></h3>
+                        <!-- a href="category_add.html" class="btn btn-default pull-right">添加分类</a> -->
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        <table class="table table-bordered">
+                            <tbody><tr style="background: #fbfbfb;">
+                                <!-- <th style="width: 10px">#</th> -->
+                                <th style=" text-align:center;">序号</th>
+                                <th style=" text-align:center;">分组</th>
+                                <!-- <th>排序</th> -->
+                                <th style=" text-align:center; width: 20%;">操作</th>
+                            </tr>
+                            <volist name="use" id="user">
+                            <tr>
+                                <!-- <td>1</td> -->
+                                <td>{$user['id']}</td>
+                                <td>{$user['title']}</td>
+                           
+                                <!-- <td>100</td> -->
+                                <td style="text-align:center;">
+                                <if condition='$user["id"] neq 1'>
+                                    <a href="{:U('Quanxian/edit1',array('uid'=>$user['id']))}" class="btn btn-default" title="编辑">编辑</a>
+                                    <a href="{:U('Quanxian/del1',array('uid'=>$user['id']))}" class="btn btn-default" onclick="return confirmAct();" title="编辑">删除</a>
+                                    </if>
+                                    <!-- <a href="#" class="btn btn-default" title="删除" onclick="return confirm('是否删除？');"><span class="fa fa-trash-o"></span> 删除</a> -->
+                                </td>
+                            </tr>
+                            </volist>
+                        </tbody></table>
+                    </div><!-- /.box-body -->
+                </div>
+                {$page_html}
+            </div>
+        </div>
+    </section><!-- /.content -->
+    </section><!-- /.content -->
+
+    <section class="content-footer">
+        <div class="text-center">
+            &copy;全民乐帮
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>
