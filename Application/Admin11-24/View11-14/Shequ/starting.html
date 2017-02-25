@@ -1,0 +1,92 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+        <div>
+            <div style="float:left">
+            <font class="font">待开通小区</font> 
+            </div>
+        <div class="search" style="float:left;margin-left: 20px;">
+   <form id="user_search" action='{:U('shequ/fetch2')}' method="get">
+      <input type="text" id="keyword"  class="txt1"  autocomplete="off" name="mingcheng" />
+      <button type="submit" class="search_btn" id="Search" type="button" >
+      <span class="ico" id="scico"><em></em></span></button>
+</div>
+<div class="search" style="float:left;margin-left: 20px;">
+
+   </form>
+</div>
+        <div style="float:right;">
+            <if condition ="$_GET['mingcheng'] neq ''">
+            <a href= "javascript:history.back(-1);" class="btn btn-default0 pull-right">返回</a>
+            <else/>
+            <a href="{:U('Shequ/add')}" class="btn btn-default0 pull-right">新增小区</a>
+            </if>
+    
+        </div>
+            <!-- <small>待审核用户</small> -->
+        </div>
+       </h1>
+    </section>
+
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+</style>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-body">
+                        <table class="table table-bordered">
+                            <tbody>
+                            <tr>
+                                <th style="width:80px;">序号</a></th> 
+                                <th style="width:100px;">小区名称</th>
+                                <th style="width:80px;">住户</th>
+                                <th style="width:80px;">楼栋</th>
+                                <th>物业</th>
+                                <th style="width:100px;">联系人</th>
+                                <th style="width:100px;">联系电话</th>
+                                <th>小区地址</th>
+                                <th style="width:150px;">操作</th>
+                            
+                            </tr>
+                            <foreach name="shequ_list" item="shequ">
+                            <tr>
+                                <td>{$shequ['id']}</td>
+                                <td style="text-align:left;">{$shequ['mingcheng']}</td>
+                                <td>{$shequ['zhuhu']}</td>
+                                <td>{$shequ['loudong']}</td>
+                                <td style="text-align:left;">{$shequ['wuye']}</td>
+                                <td>{$shequ['lianxiren']}</td>
+                                <td>{$shequ['dianhua']}</td>
+                                <td style="text-align:left;">{$shequ['weizhi']}</td>
+                                
+                                <td >
+                                    <a href="{:U('Shequ/list', ['shequ_id'=>$shequ['id'],'s'=>'starting','p'=>$_GET['p']])}" class="btn btn-default1" title="编辑">查看详情</a>
+                            
+                                </td>
+                            </tr>
+                            </foreach>
+
+                            </tbody>
+                        </table>
+                    </div><!-- /.box-body -->
+                </div>
+                  <!--分页的位置-->
+                    {$page_html}
+            </div>
+        </div>
+    </section><!-- /.content -->
+
+    <section class="content-footer">
+        <div class="text-center">
+
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>

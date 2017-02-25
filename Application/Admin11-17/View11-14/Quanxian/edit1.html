@@ -1,0 +1,143 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+         <h1>
+        <div>
+            <div style="float:left">
+            <font class="font" >查看后台分组详情</font>  
+            <!-- <p style="width:81px;23px;">待审核用户 </p> -->
+            </div>
+        
+        <a href="javascript:history.back(-1);" class="btn btn-default0 pull-right"  style="position:relative;bottom:8px;">返回</a>
+        </div>
+    </section>
+<style>
+    .tree {list-style-type:none;}
+</style>
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+        <script type="text/javascript" language="javascript"> 
+
+            function confirmAct() 
+            { 
+                if(confirm('确定要执行此操作吗?')) 
+                { 
+                    return true; 
+                } 
+                return false; 
+            } 
+
+    </script>
+
+
+    <style>
+    .tree-parent{
+  -webkit-appearance:radio;
+  list-style: none;
+}
+
+
+    select{
+        text-indent:5px;
+    }
+    input{
+              text-indent:10px;
+    }
+
+}
+
+</style>
+
+    <section class="content-body">
+        <div class="row">
+          <div class="col-md-12">
+             <div class="div-box">
+                <!-- <div class="div-center"> -->
+                    <form action="{:U('Quanxian/edit1',array('uid'=>$us['id']))}" method="post" enctype="multipart/form-data">
+                        <div class="box-body">
+                            <div class="form-group" style="margin-left:10px;">
+                                <label for="inputSubject">分类名称&nbsp;</label>
+                                <input  class='ip' type="text" style="width:250px;" name="title" id="title" placeholder="" value="{$us['title']}" maxlength="20" /><br />
+                                </div>
+                            </div>
+                       
+<ul id="tree" class="tree"> 
+    <li><input type=checkbox style="display:none"> 
+        <ul> 
+        <volist name="rule" id="rule1">
+         <if condition="$rule1['sid'] eq 0">
+        <elesif condition="$rule1['id'] eq 13"/>
+        <else/>
+            <if condition="$rule1['sid'] eq 52">
+             <li style="list-style-type:none;"><input type=checkbox class="tree-parent">{$rule1['title']}
+                <ul> 
+                    <volist name="rule" id="rule2">
+                    <if condition="$rule2['sid'] eq $rule1['id']">
+                        <li style="list-style-type:none;">
+                            <input type=checkbox class="tree-parent" name="{$rule2['id']}" <?php if(in_array($rule2['id'], $rules))echo'checked';?>>{$rule2['title']}
+                        </li>
+                    </if>
+                    </volist>
+                </ul> 
+            </li>
+            </if>
+        </if>
+        </volist>
+        </ul> 
+    </li> 
+</ul>
+
+<script language="javascript"> 
+
+var arr = tree.getElementsByTagName('input') 
+for(var i=0; i<arr.length; i++){ 
+    var input = arr[i] 
+    if(input.type = 'checkbox'){ 
+        input.onclick = ClickInput 
+    } 
+} 
+
+function ClickInput(){ 
+    var li = this.parentElement; 
+    var arr = li.getElementsByTagName('input') 
+    for(var i=0; i<arr.length; i++){ 
+        var input = arr[i] 
+        if(input.type == 'checkbox'){ 
+            input.checked = this.checked 
+        } 
+    } 
+    var li = li.parentElement.parentElement 
+     
+    while(li.tagName.toLowerCase() == 'li'){ 
+        var input = li.childNodes[0] 
+        if(input.tagName.toLowerCase() == 'input'){ 
+            // input.checked = this.checked 
+        } 
+        li = li.parentElement.parentElement 
+    } 
+} 
+
+</script> 
+
+                       <br/>
+                        <div class="box-footer clearfix">
+                        
+                            <button class="btn btn-primary0" type="submit" name="submit" onclick="return confirmAct();" value="publish" style="margin-left:10px;">保存</button>
+                        </div>
+                            <br/>
+                     </div><!-- /.box-body -->
+                    
+                    </form>
+
+                </div><!-- /.box -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+
+    </section><!-- /.content -->
+
+</aside><!-- /.right-side -->
+</block>

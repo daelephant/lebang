@@ -1,0 +1,163 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            提现列表
+            <small>提现</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:U('Admin/index')}"><i class="fa fa-dashboard"></i> 管理中心</a></li>
+            <li><a href="{:U('list')}">提现</a></li>
+            <li class="active">提现列表</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title"></h3>
+                       <!--  <a href="{:U('User/add')}" class="btn btn-default pull-right">添加提现</a> -->
+                    </div><!-- /.box-header -->
+                    <!--  -->
+    <!-- <form action='{:U('User/fetch')}' method="get">
+        
+                <td style="text-align:right">姓名：<input id="name" name="name" class="inp_wid3" type="text" value="{$_GET['name']}"/></td>
+                <td style="text-align:right">手机号：<input id="phone" name="phone" class="inp_wid3" type="text" value="{$_GET['phone']}"/></td>
+                <td style="text-align:right">身份证号：<input id="idnumber" name="idnumber" class="inp_wid3" type="text" value="{$_GET['idnumber']}"/></td>
+                <td style="text-align:right">查询日期：<input id="starttime" placeholder="填一个即可2016-08-28" name="starttime" class="inp_wid3" type="text" value="{$_GET['starttime']}"/></td>~<input id="endtime"name="endtime" placeholder="2016-08-29" class="inp_wid3" type="text" value="{$_GET['endtime']}"/></td>
+                <input class="search_btn1" type="submit" value="搜索" id="Search" />
+      </form> -->
+                    <div class="box-body">
+                        <table class="table table-bordered">
+                            <tbody>
+                            <tr>
+                                <!-- <th style="width: 10px">#</th> -->
+                                <th>列表</th>
+                                <th>姓名</th>
+                                <th>手机号</th>
+                                <th>证件号</th>
+                                <!-- <th>状态</th> -->
+                                <th>银行</th>
+                                <th>银行卡号</th>
+                                <th>提现时间</th>
+                               <!--  <th>最后登录</th> -->
+                                <th>金额</th>
+                                <th>操作</th>
+                               <!--  <th>性别</th>
+                                <th>证件号</th> -->
+                               <!--  <th style="width: 20%">操作</th> -->
+                            </tr>
+                            
+                            <volist name="tixian_list" id="tixian">
+                            <tr>
+                                <td>{$tixian['id']}</td>
+                                <td>{$tixian['name']}</td>
+                                <td>{$tixian['phone']}</td>
+                                <td>{$tixian['idnumber']}</td>
+                                <!-- <td>{$tixian['status']}</td> -->
+                                <td>{$tixian['bank']}</td>
+                                <td>{$tixian['banknum']}</td>
+                                <td>{$tixian['addtime']}</td>
+                                <!-- <td>{$tixian['logintimes']}</td> -->
+                                <td>{$tixian['moeny']}</td>
+                                <!-- <td>{$tixian['caozuo']}</td> -->
+                                <!-- <td>{$tixian['create_at']}</td>
+                                <td>{$User['category_title']}</td> -->
+                                <td style="width: 20px">
+<!--  //start js -->
+<script type="text/javascript" language="javascript"> 
+// function openwindow(url,name,iWidth,iHeight)   {    var url;                                 //转向网页的地址;
+//       var name;                           //网页名称，可为空; 
+//       var iWidth;                          //弹出窗口的宽度;
+//       var iHeight;                        //弹出窗口的高度;    
+//       var iTop = (window.screen.availHeight-30-iHeight)/2;       //获得窗口的垂直位置;    
+//       var iLeft = (window.screen.availWidth-10-iWidth)/2;           //获得窗口的水平位置;    
+//       window.open(url,name,'height='+iHeight+',,innerHeight='+iHeight+',width='+iWidth+',innerWidth='+iWidth+',top='+iTop+',left='+iLeft+',toolbar=no,menubar=no,scrollbars=auto,resizeable=no,location=no,status=no');   }
+
+// function confirmAct() 
+// { 
+//     if(confirm('您确定要对此用户提现操作吗?')) 
+//     { 
+//         return true; 
+//     } 
+//     return false; 
+// } 
+//s
+
+
+//e
+
+</script> 
+  
+<!-- <a href="operate.php?mod=user&act=delete&id=564" onclick="return confirmAct();">执行操作</a>
+ --><!--  //e js  -->                              
+                                    <a href="{:U('edit', ['tixian_id'=>$tixian['id']])}" class="btn btn-default" title=""  onclick="return confirmAct();" ><span class="fa fa-edit"></span> 确认</a><!-- {$tixian['status']=='1'?'查看':'审核'} -->
+                                   <!-- <a href="{:U('bianji', ['user_id'=>$user['id']])}" class="btn btn-default" title="编辑"><span class="fa fa-edit" style="width:10px"></span> 编辑</a> -->
+                <!-- <form action="{:U('User/recharge')}" method="post" enctype="multipart/form-data">
+                  <input type="text" name="money" id="inputPhone" placeholder="金额" maxlength="5"/>
+                  <input type="hidden" name="user_id" value="{$user['id']}" />
+
+                  <button type="submit" value="publish" value="充值"><!-- <a href="{:U('recharge', ['user_id'=>$user['id']])}">充值</a> --><!-- 充值</button>
+                </form> --> 
+                <!-- <form action="{:U('User/recharge')}" method="get" id="tform">
+                    <input type="text" name="value">
+                    <a href="{:U('recharge', ['user_id'=>$user['id']])}" onclick="document.getElementByid('tform').submit()">充值</a>
+                </form> -->
+                                    <!-- <a href="{:U('', ['user_id'=>$user['id']])}" class="btn btn-default" title="审查"><span class="fa fa-edit"></span> 审查</a> -->
+                                    <!-- <a href="{:U('recharge', ['user_id'=>$user['id']])}" class="btn btn-default" title="充值" onclick="disp_prompt()"> 充值</a> -->
+                <!-- <form action='{:U('User/recharge')}' method="get">
+                                    <input type="button" onClick="disp_prompt()" value="充值" type="submit"/>
+
+                                    
+                                    <script type="text/javascript">
+                                      function disp_prompt()
+                                      {
+                                        var value=prompt("请输入充值金额：","");
+                                      
+                                        if (value!=null && value != "")
+                                        {
+                                         
+                                            alert("您好！\n\n您充值的金额为:"+ value +"元。");
+                                        
+                                        }
+                                      }
+                                      </script>
+                </form> -->
+                <!--  <form action='{:U('User/recharge')}' method="get">
+                <input id="name" name="name" class="inp_wid3" type="text" value="{$_GET['name']}"/></td>
+                <input class="search_btn1" type="submit" value="搜索" id="Search" />
+                </form> -->
+
+                                   
+                                    
+                                </td>
+                            </tr>
+                            </volist>
+
+                            </tbody>
+                        </table>
+                    </div><!-- /.box-body -->
+                    <!--分页的位置-->
+                    {$page_html}
+                </div>
+
+            </div>
+        </div>
+    </section><!-- /.content -->
+
+    <section class="content-footer">
+        <div class="text-center">
+            &copy;lebang，亲邻乐帮
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>

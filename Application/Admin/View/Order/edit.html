@@ -5,206 +5,288 @@
 <aside class="right-side">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1>
-            查看任务
-            <a href="{:U('Order/list')}" class="btn btn-default pull-right"><font color="black">任务列表</font></a>
-        </h1>
-        <!-- <ol class="breadcrumb">
-            <li><a href="{:U('Admin/index')}"><i class="fa fa-dashboard"></i> 管理中心</a></li>
-            <li><a href="{:U('list')}">订单管理</a></li>
-            <li class="active">查看订单</li>
-        </ol> -->
+         <h1>
+        <div>
+            <div style="float:left">
+            <font class="font" >任务详情</font>  
+            <!-- <p style="width:81px;23px;">待审核用户 </p> -->
+            </div>
+        <div class="search" style="float:left;margin-left: 20px;">
+   
+</div>
+        <a href="javascript:history.back(-1);" class="btn btn-default0 pull-right"  style="position:relative;bottom:8px;">返回</a>
+        </div>
     </section>
 
     <!-- Main content -->
     <!-- <section class="content"> -->
+    
+   <script type="text/javascript" language="javascript"> 
 
-        <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>{$CONF['shopTitle']['fieldValue']}后台管理中心</title>
-      <link href="__PUBLIC__/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-      <link href="__ROOT__/Apps/Admin/View/css/AdminLTE.css" rel="stylesheet" type="text/css" />
-      <!--[if lt IE 9]>
-      <script src="__PUBLIC__/js/html5shiv.min.js"></script>
-      <script src="__PUBLIC__/js/respond.min.js"></script>
-      <![endif]-->
-      <script src="__PUBLIC__/js/jquery.min.js"></script>
-      <script src="__PUBLIC__/plugins/bootstrap/js/bootstrap.min.js"></script>
-      <script src="__PUBLIC__/js/common.js"></script>
-      <script src="__PUBLIC__/plugins/plugins/plugins.js"></script>
-      <script src="__PUBLIC__/plugins/formValidator/formValidator-4.1.3.js"></script>
-   </head>
-   <body class="wst-page">
-       <form name="myform" method="post" id="myform">
-        <input type='hidden' id='id' value='{$order.bankId}'/>
-        <table class="table table-hover table-striped table-bordered wst-form">
-           <tr>
-             <td>
-             <span style='font-weight:bold;'>任务号：{$order['ordernum']} <!-- {$user['name']}  --></span>
-             <span style='margin-left:100px;'>
-             <form action="{:U('edit', ['order_id'=>$order['id']])}" method="post" enctype="multipart/form-data">
-                                       当前状态：
-                                         <if condition='$order["status"] eq 0'><span style="font-size:18px;color:red">未支付</span>
-                                         <elseif condition='$order["status"] eq 1'/><span style="font-size:18px;color:red">未接单</span>
-                                         <elseif condition='$order["status"] eq 2'/><span style="font-size:18px;color:red">已接单</span>
-                                         <elseif condition='$order["status"] eq 3'/><span style="font-size:18px;color:red">开始</span>
-                                         <elseif condition='$order["status"] eq 4'/><span style="font-size:18px;color:red">完成</span>
-                                         <elseif condition='$order["status"] eq 5'/><span style="font-size:18px;color:red">取消</span>
-                                         </if>
-            
-                                       &nbsp;&nbsp; <input type="radio" name = 'status' value= '0'<if condition='$order["status"] eq 0'>checked</if>>未支付
-                                       &nbsp;&nbsp; <input type="radio" name = 'status' value= '1'<if condition='$order["status"] eq 1'>checked</if>>未接单
-                                       &nbsp;&nbsp;<input type="radio" name = 'status' value= '2' <if condition='$order["status"] eq 2'>checked</if>>已接单
-                                       &nbsp;&nbsp;<input type="radio" name = 'status' value= '3' <if condition='$order["status"] eq 3'>checked</if>>开始
-                                       &nbsp;&nbsp;<input type="radio" name = 'status' value= '4' <if condition='$order["status"] eq 4'>checked</if>>完成
-                                       &nbsp;&nbsp;<input type="radio" name = 'status' value= '5' <if condition='$order["status"] eq 5'>checked</if>>取消
-                                       &nbsp;&nbsp;<button class="btn btn-primary" type="submit" name="submit" value="publish">修改状态</button><br>
-                                       <span style='font-weight:bold;'>后台最后操作时间：{$order['beizhu'] = date("Y-m-d H:s:i", $order['beizhu'])} <!-- {$user['name']}  --></span>
+            function confirmAct() 
+            { 
+                if(confirm('确定要执行此操作吗?')) 
+                { 
+                    return true; 
+                } 
+                return false; 
+            } 
+      function submits()  
+      {  
+         var submitId=document.getElementById('submit');  
+         submitId.disabled=true;  
+         // document.fm.submit();  
+         // setTimeout('var submitId=document.getElementById("submit");submitId.disabled=false;',3000); //代码核心在这里，3秒还原按钮代码
+         // return false;
+      }  
 
-                                       </form>
+      function add(xid){
+        document.getElementById("tcbg").style.display="block";
+        document.getElementById("tcdiv").style.display="block";
+        document.getElementById("xid").value=xid;
+      }
 
+      function removeElement(){
+        document.getElementById("tcbg").style.display='none';
+        document.getElementById("tcdiv").style.display="none";
+      }
+</script>
+<style>
+    select{
+        text-indent:5px;
+    }
+    input{
+              text-indent:10px;
+    }
+</style>
 
-             <!--   <if condition='$order["status"] eq 1'>未接单
-               <elseif condition='$order["status"] eq 2'>已接单
-               <elseif condition='$order["status"] eq 3'/>开始
-               <elseif condition='$order["status"] eq 4'/>完成
-               <elseif condition='$order["status"] eq 5'/>取消
-               
-               </if> -->
-             </span></td>
-           </tr>
-           <tr>
-              <td style='font-weight:bold;'>任务日志</td>
-           </tr>
-           <tr>
-              <td>
-                <table width='100%'>
-                <tr><!-- ##$user['logintimes'] = date("Y-m-d", $user['logintimes']);## -->
-                  <td width='800'>下单时间:{$order['addtime'] = date("Y-m-d H:s:i", $order['addtime'])}</td>
-                  <td width='800'>开始时间:{$order['starttime'] = date("Y-m-d H:s:i", $order['starttime'])}</td>
-                  <td width='600'>接单人:{$order1['username1']}</td>
-                  <td width='800'>接单时间:{$order['jdtime'] = date("Y-m-d H:s:i", $order['jdtime'])}</td>
-                  <td width='800'>完成时间:{$order['endtime'] = date("Y-m-d H:s:i", $order['endtime'])}</td>
-                </tr>
-                <!-- <volist name="order['log']" id="log"> -->
-                <!-- <tr> -->
-                  <!-- <td>{$order['ordernum']}</td>
-                  <td>{$order['starttime']}</td>
-                  <td>{$order['jdopenid']}<notempty name="log['shopName']">({$log['shopName']})</notempty></td>
-                  <td>111{$order['jdtime']}</td>
-                  <td>{$order['endtime']}</td>
-                </tr> -->
-                <!-- </volist> -->
-                </table>
-              </td>
-           </tr>
-           <tr>
-             <td style='font-weight:bold;'>任务信息</td>
-           </tr>
-           <tr>
-             <td>
-             <table width='100%'>
+    <section class="content-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="div-box">
+                <div class="div-center"><!--/*居中*/-->
+
+                <div class='left' style='float:left'>
+                    <form action="{:U('edit',['order_id'=>$order['id'],'p'=>$_GET['p']])}" method="post" enctype="multipart/form-data" onsubmit="return submits();">
                 
-                <tr>
-                  <td style='text-align:center'>支付成功时间：{$order['paytime'] = date("Y-m-d H:s:i", $order['paytime'])}</td>
-                  
-                </tr>
+                        <div class="box-body">
+                          <div>
+                              <div class="form-group" style="float:left; ">
+                                <label for="inputCover">任务编号</label>
+                                <input class="ip" type="text" readonly="readonly" name="ordernum" id="inputPhone" placeholder="" maxlength="11" style="width:240px;background:#f9f9f9;" value="{$order['ordernum']}" />
+                            </div>
+
+                            <div class="form-group" style="float:left; position: relative;left: -9px;">
+                                <label for="inputCover">任务状态</label>
+                                  <input class="ip" type="text" disabled="disabled" name="status" id="inputPhone" placeholder="" maxlength="11" style="width:240px;background:#f9f9f9;color:#FF9900;"
+                                   <if condition="$order['status'] eq 3"> value="进行中"/> 
+                                      <elseif  condition ="$order['status'] eq 2"/> value="进行中"/>
+                                       
+                                  </if>
+                            
+                            </div>
+                         </div>
+                            
+                            <div class="form-group">
+                                <label for="inputSubject"  style="height:80px;line-height:80px; position: relative;top: 1px; ">用户需求</label>
+                                <textarea name="demand" id="" cols="30" rows="10" style="height:80px;width:558px;position: relative;left:-8px;top: 1px;border:#dddddd solid 1px;resize: none ;color:#666;" > {$order['demand']} 
+                                </textarea>
+                            </div>
+                      <script type="text/javascript" src="/Public/Admin/js/tinybox.js"></script>
+                        
+                            <div class="form-group"style="margin:0 auto;clear:both;width:640px;height:180px; ">
+
+                            <foreach  name ="order2" item ="order2" key="k">
+
+                             <div id="preview{$k+1}"
+                            <if condition="$k eq 0 OR $k eq 3 OR $k eq 6">
+                            style="margin-top:10px; float:left; margin-left:100px;"
+                            <a href="javascript:void(0)" id="click_pic{$k+1}" onclick="click_pic({$k+1})">
+                            <else/>
+                            style="margin-top:10px; float:left; margin-left:10px;">
+                            </if>
+                            <a href="javascript:void(0)" id="click_pic{$k+1}" onclick="click_pic({$k+1})">
+                            <img id="imghead{$k+1}" width=140px; height=140px; border=0 src='__ROOT__/photo/{$path}/{$order2["zhaopian"]|default="dingdan.png"}'>
+                            </a>
+                            </div>
                 
-             </td>
-           </tr>
-           <if condition='$order["tk"] eq 1'>
-           <tr>
-             <td style='font-weight:bold;'>原路退回</td>
-           </tr>
-          
-           <elseif condition='$order["tk"] eq 2'>退款到余额
-           </if>
-          
-           <tr>
-             <td style='font-weight:bold;'>下单人信息</td>
-           </tr>
-           <tr>
-             <td>
-                <table width='700'>
-                <tr>
-                  <!-- <a href="{echo $order_list}">测试</a> -->
-                  <td width='350' style='text-align:right'>下单用户：</td>
-                  <td>{$order['username']}</td>
-                </tr>
-                <!-- <tr>
-                  <td width='350' style='text-align:right'>用户名：{$order['openid']}</td>
-                  <td>{$order['oname']}</td>
-                </tr> -->
-               <!--  <tr>
-                  <td style='text-align:right'>地址：</td>
-                  <td>{$order['address']}</td>
-                </tr> -->
-                <tr>
-                  <td style='text-align:right'>联系电话：</td>
-                  <td>{$order['tel']}</td>
-                 <!--  <td>
-                  <notmpty name='order['userPhone']'>
-                  {$order['userPhone']}
-                  </notmpty>
-                  <notmpty name='order['userTel']'>
-                  {$order['userTel']}
-                  </notmpty>
-                  </td> -->
-                </tr>
-                </table>
-             </td>
-           </tr>
-           <tr>
-              <td style='font-weight:bold;'>需求信息</td>
-           </tr>
-           <tr>
-              <td>
-                <table width='100%'>
-                <tr>
-                  <td width='100%' colspan='2'>需求:{$order['demand']}</td>
-                  
-                </tr>
-                <tr>
-                  <td width='350'>赏金:{$order['reward']}</td>
-                  <!-- <td width='130'>数量:</td> -->
-                  
-                </tr>
-                <tr>
-                  <td width='130'>总金额:{$order['money']}</td>
-                </tr>
-               <!--  <volist name="order['goodslist']" id="goods">
-                <tr>
-                  <td width='50'><img src='__ROOT__/{$goods["goodsThums"]}' style='margin:2px;' width='50' height='50'/></td>
-                  <td width='120'>{$goods["goodsName"]}</td>
-                  <td width='350'>￥{$goods["goodsPrice"]}</td>
-                  <td width='130'>{$goods["goodsNums"]}</td>
-                  <td width='130'>￥{$goods["goodsPrice"]*$goods["goodsNums"]}</td>
-                </tr>
-                </volist> -->
-                </table>
-              </td>
-           </tr>
-           <!-- <tr>
-              <td style='text-align:right;padding-right:10px;'>商品总金额：￥{$order['totalMoney']}<br/>+ 运费：￥{$order['deliverMoney']}<br/><span style='font-weight:bold;font-size:20px'>订单金额：</span><span style='font-weight:bold;font-size:20px;color:red;'>￥{$order['totalMoney']+$order['deliverMoney']}</span></td>
-           </tr> -->
-           <tr>
-             <td colspan='2' align='center'>
-                 <!-- <button type="button" class="btn btn-primary" onclick='javascript:location.href="{$referer}"'>返&nbsp;回</button> -->
-                 <a href="{:U('Order/list')}" class="btn btn-primary">返&nbsp;回</a>
-             </td>
-           </tr>
-        </table>
-       </form>
-   </body>
-    </section><!-- /.content -->
+                            </if>
+                            </foreach>
+ 
+                           
+                          </div>
 
-    <section class="content-footer">
-        <div class="text-center">
-            &copy;全民乐帮
-        </div>
-    </section><!-- /.content-footer -->
+      <div style="clear: both; margin-bottom: 20px;"></div>
 
+
+<script type="text/javascript" >                       
+        function click_pic(id){
+                var a1 = document.getElementById('click_pic'+id);
+                var click_pic = "<img src='"+ a1.children[0].src +"' />";
+              TINY.box.show(click_pic,0,0,0,1);
+             }
+
+ 
+</script> 
+                          <div>
+                              <div class="form-group" style="float:left; ">
+                                <label for="inputCover">感谢金</label>
+                                <input class="ip" type="text" readonly="readonly" name="" id="inputPhone" placeholder="" maxlength="11" style="width:240px;background:#f9f9f9;color:#FF9900;" value="￥{$order['reward']}"/>
+                            </div>
+
+                            <div class="form-group" style="float:left; position: relative;left: -9px;">
+                                <label for="inputCover">商品价格</label>
+                                <input class="ip" type="text" disabled="disabled" name="" id="inputPhone" placeholder="凭购物小票结算" maxlength="11" style="width:240px;background:#f9f9f9;" />
+                            </div>
+                         </div>
+                          
+                           <div>
+                              <div class="form-group" style="float:left; ">
+                                <label for="inputCover">任务时间</label>
+                                <input class="ip" type="text" readonly="readonly" name="" id="inputPhone" placeholder="" maxlength="11" style="width:240px;background:#f9f9f9;" value="{$order['starttime'] = date("Y-m-d H:s:i", $order['starttime'])}"/>
+                            </div>
+
+                            <div class="form-group" style="float:left; position: relative;left: -9px;">
+                                <label for="inputCover">下单时间</label>
+                                <input class="ip" type="text" disabled="disabled" name="" id="inputPhone" placeholder="" maxlength="11" style="width:240px;background:#f9f9f9;" value="{$order['addtime'] = date("Y-m-d H:s:i", $order['addtime'])}" />
+                            </div>
+                         </div>
+
+                          <div>
+                              <div class="form-group" style="float:left; ">
+                                <label for="inputCover">任务地点</label>
+                                <input class="ip" type="text" readonly="readonly" name="" id="inputPhone" placeholder="" maxlength="11" style="width:240px;background:#f9f9f9;" value="{$order['location']}"/>
+                            </div>
+
+                            <div class="form-group" style="float:left; position: relative;left: -9px;">
+                                <label for="inputCover">具体地址</label>
+                                <input class="ip" type="text" disabled="disabled" name="" id="inputPhone" placeholder="" maxlength="11" style="width:240px;background:#f9f9f9;" value="{$order['address']}" />
+                            </div>
+                         </div>
+
+                          <div>
+                              <div class="form-group" style="float:left; ">
+                                <label for="inputCover">发布人</label>
+                                <input class="ip" type="text" readonly="readonly" name="" id="inputPhone" placeholder="" maxlength="11" style="width:240px;background:#f9f9f9;" value ="{$order['username']}"/>
+                            </div>
+
+                            <div class="form-group" style="float:left; position: relative;left: -9px;">
+                                <label for="inputCover">手机号</label>
+                                <input class="ip" type="text" disabled="disabled" name="" id="inputPhone" placeholder="" maxlength="11" style="width:240px;background:#f9f9f9;" value="{$order['tel']}" />
+                            </div>
+                         </div>
+                         
+                           <div>
+                             <font style="font-size:20px;font-color:#333;">接单人信息</font><br><br>
+                           </div>
+
+                      <div  style="float:left;">
+                          <div  style="float:left;">
+                             <div class="form-group">
+                                <label for="inputbirthday">接单人</label>
+                                <input class="ip" type="text" disabled="disabled" name="phone" id="inputPhone" placeholder="" maxlength="11" style="width:240px;background:#f9f9f9;" value="{$order1['name']}" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputSubject">手机号码</label>
+                                <input class="ip" type="text" disabled="disabled" name="phone" id="inputPhone" placeholder="" maxlength="11" style="width:240px;background:#f9f9f9;" value="{$order1['phone']}" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputSubject">接单时间</label>
+                                <input class="ip" type="text" disabled="disabled" name="phone" id="inputPhone" placeholder="" maxlength="11" style="width:240px;background:#f9f9f9;" value="{$order['jdtime'] = date("Y-m-d H:s:i", $order['jdtime'])}" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputSubject">评价星级</label>
+
+                             <div class="ip" style="display:inline-block;top:-2px;text-align:center;width:240px;height:42px;background:#f9f9f9;text-align: left;
+text-indent: 10px;">{$pfs} {:number_format($order3['fen'],1)}</div>
+
+
+                            </div>
+
+                            
+                      </div>
+
+                          <div style="float:left;margin-left:-95px;margin-top:-9px;">
+                            <div id="preview4" style="margin-top:10px; float:left; margin-left:100px;">
+                            <a href="javascript:void(0)" id="click_pic4" onclick="click_pic(4)">
+                            <img id="imghead1" width=140px; height=140px; border=0 src='__ROOT__/photo/avatar/b_{$order1["avatar"]|default="avatar.png"}'>
+                            </a>
+                            </div>
+                          </div>
+                       </div>
+
+                        <div style="clear:both;margin-bottom:10px;"></div>
+                        <!-- /.box-body -->
+                        <div class="boxclearfix">
+                          <input type="button" class="btn btn-default2" onclick="add({:I('get.order_id')})" value="强制取消" style="width:150px;height:40px">
+                          <input type="hidden" name ="id" value="{$shanghu['id']}">
+                        
+                          <button class="btn btn-primary0"  type="submit" id = "submit" name="submit" onclick="return confirmAct();" value="publish" style="width:490px;">保存</button>
+
+                        </div>
+
+
+
+                        <br>
+                        </div>
+                 
+                    </div>
+
+<!--弹出图片-->
+<style type="text/css">
+#tinybox{position:absolute; display:none; padding:10px;  z-index:2000;}
+#tinymask{position:absolute; display:none; top:0; left:0; height:100%; width:100%; z-index:1500;background:#000000;}
+#tinycontent{background:#ffffff; font-size:1.1em;}
+</style>
+
+<style>
+.tcbg{  display:none;  position:fixed;  top: 0%;  left: 0%;  width: 100%;  height: 100%;  background-color:#000;   -moz-opacity: 0.5;  opacity:.50;  filter: alpha(opacity=50); z-index:5}
+.tcdiv{ display:none;  position:fixed;  top:200px; right:350px; margin:auto; text-align:left;   width: 100%; max-width:400px;  height: 280px;  background-color:#F8F8F8;  z-index:6; padding:10px; border-radius:5px;}
+.cccc{
+    display:none;  position:fixed;  top:200px; right:350px; margin:auto; text-align:left;   width: 100%; max-width:600px;  height: 300px;  background-color:#F8F8F8;  z-index:6; border-radius:5px;}
+
+.int{
+    width:100%;
+    }
+ #we{
+    float:right;
+    margin-top:20px;
+    
+    }
+    textarea{
+        resize:block; width:380px; height:200px; border-radius:3px;
+    }
+
+    </style>
+<div class="tcbg" id="tcbg"></div>
+<form action="{:U('shanghu/ytuijian')}" method="post" id="tongguo">
+</form>
+<div id="tcdiv"  class="tcdiv">
+  <form action="{:U('order/yjinyong')}" method="post" onsubmit="return check();">
+    <input type="hidden" id="xid"  name="xid" > 
+    <textarea name="beizhu" id="beizhu" placeholder="输入强制取消的理由......"cols="30" rows="10"></textarea>
+     <div id="we">
+    <input type='button' class="btn btn-default0" style="background:#FFFFFF;border-color: #fbfbfb;color:black; " onclick="removeElement()" value='返回'>&nbsp;&nbsp;
+       <input type="submit" class="btn btn-default0" style="background:#FF6600;"; value="强制取消">
+    </div>
+  </form>
+</div>
+
+
+<script>
+        function check(){
+            var beizhu =  $('#beizhu').val();
+            if( beizhu!= ''){
+                return true;
+            }
+            alert('亲,输入强制取消的理由!!!');
+            return false;
+
+        }
+</script>
+</section>
 </aside><!-- /.right-side -->
 </block>

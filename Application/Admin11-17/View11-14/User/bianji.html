@@ -1,0 +1,275 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+           <font class="font"> 普通用户详情</font>
+            <a href="javascript:history.back(-1);" class="btn btn-default0 pull-right"  style="position:relative;bottom:8px;">返回普通用户</a>
+        </h1>
+        <!-- <ol class="breadcrumb">
+            <li><a href="{:U('Admin/index')}"><i class="fa fa-dashboard"></i> 管理中心</a></li>
+            <li><a href="{:U('list')}">用户管理</a></li>
+            <li class="active">添加用户</li> 
+        </ol> -->
+    </section>
+     <script type="text/javascript">
+                                    function add(xid){
+                                    document.getElementById("tcbg").style.display="block";
+                                    document.getElementById("tcdiv1").style.display="block";
+                                    document.getElementById("xid").value=xid;
+                                    document.getElementById("status").value='3';
+                                    }
+                                    function add2(xid){
+                                    document.getElementById("tcbg").style.display="block";
+                                    document.getElementById("tcdiv").style.display="block";
+                                    document.getElementById("xid").value=xid;
+                                    document.getElementById("status").value='4';
+                                    }
+
+
+                                    function subs(){
+                                    var beizhu=document.getElementById("beizhu").value;//
+                                    var xid=document.getElementById("xid").value;//
+                          
+                                   
+                                       
+
+                                    }
+                                    function cancel(){
+                                    var p=document.getElementById("div");
+                                    document.body.removeChild(p);
+                                    }
+                                      //9月19号修改
+                                    function removeElement(){
+                                    document.getElementById("tcbg").style.display='none';
+                                    document.getElementById("tcdiv").style.display="none";
+                                    
+                                    document.getElementById("tcdiv1").style.display="none";
+                                    }
+                                    </script>
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+   
+   <script type="text/javascript" language="javascript"> 
+
+            function confirmAct() 
+            { 
+                if(confirm('确定要执行此操作吗?')) 
+                { 
+                    return true; 
+                } 
+                return false; 
+            } 
+     function submits()  
+     {  
+         var submitId=document.getElementById('submit');  
+         submitId.disabled=true;  
+         // document.fm.submit();  
+         // setTimeout('var submitId=document.getElementById("submit");submitId.disabled=false;',3000); //代码核心在这里，3秒还原按钮代码
+         // return false;
+    }  
+</script>
+
+<style>
+      select{
+        text-indent:10px;
+    }
+    input{
+              text-indent:10px;
+    }
+
+</style>
+
+    <section class="content-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="div-box">
+                <div class="div-center"><!--/*居中*/-->
+
+                <div class='left' style='float:left'>
+
+                    <form action="{:U('User/bianji',array('p'=>I('get.p')))}" method="post" enctype="multipart/form-data" onsubmit="return submits();">
+                        <input type="hidden" name="id" id="inputname" maxlength="20" value="{$user['id']}" />
+                        <div class="box-body">
+                            <div class="form-group">
+                                <label for="inputSubject">手机号码</label>
+                              <input  class="ip" type="text" name="phone" id="inputname" maxlength="20" value="{$user['phone']}" /><br />
+                                </div>
+                            <div class="form-group">
+                                <label for="inputSubject">昵称</label>
+                                <input  class="ip" type="text" name="nickname" id="inputname" maxlength="20" value="{$user['nickname']}" /><br />
+                                </div>
+                             <div class="form-group">
+                                <label for="inputSubject">性别</label>
+                                <select class="ip"   name="sex">
+                                   <option  name ="sex" value="1" <if condition='$user["sex"] eq 1'>selected</if> >男</option>
+                                      <option  name="sex" value="2" <if condition='$user["sex"] eq 2'>selected</if> >女</option>
+                                </select>
+                               
+                            </div>
+                                    <?php
+                                $birthday = date("Y-m-d", $user['birthday']);
+                                list($year,$month,$day) = explode("-",$birthday);
+                                $year_diff = date("Y") - $year;
+                                
+                                $user['age']=$year_diff;
+                                if(empty($birthday)){
+                                    $user['age']='年龄不祥';
+                                }
+
+                                ?>
+
+                            <div class="form-group">
+                                <label for="inputSubject">年龄</label>
+                                <input class="ip" type="text" name="" id="inputname"  maxlength="20" value="{$user['age']}" readonly="true"/><br />
+                            </div>
+                            <div class="form-group">
+                                <label for="inputSubject">职业</label>
+                                <select class="ip" name="profession">
+                                      <option value="">请选择</option>
+                                      <foreach name="master_list" item="vo">
+                                      <if condition='$vo["id"] eq $user["profession"]'>
+                                        <option name="profession" value="{$vo.id}" selected>{$vo.mname}</option>
+                                      <else/>
+                                        <option name="profession" value="{$vo.id}">{$vo.mname}</option>
+                                      </if>
+                                      </foreach>
+                                      </select>
+                                <br />
+                            </div>
+                            <div class="form-group">
+                                <label for="inputSubject">所在小区</label>
+                               <select class="ip" name="shequid">
+                                      <option value="">请选择</option>
+                                      <foreach name="shequ_list" item="vo">
+                                      <if condition="$vo['id'] eq $user['shequid'] ">
+                                      <option name="shequid" value="{$vo.id}" selected>{$vo.mingcheng}</option>
+                                      <else/>
+                                      <option name="shequid" value="{$vo.id}">{$vo.mingcheng}</option>
+                                      </if>
+                                      </foreach>
+                                      </select>
+                                <br />
+                            </div>
+                           <div class="form-group">
+                                <label for="inputSubject">注册时间</label>
+                                <input class="ip" type="text" name="" id="inputidnumber" value="{:date('Y-m-d H:i:s',$user['regtime'])}" maxlength="20" readonly="true" /><br />
+                            </div>
+                            <div class="form-group">
+                                <label for="inputSubject">最后登录</label>
+                                <input class="ip" type="text" name="" id="inputidnumber" value="{:date('Y-m-d H:i:s',$user['logintimes'])}" maxlength="20" readonly="true"/><br />
+                            </div>
+
+                        <!-- /.box-body -->
+                    
+                        <div class="boxclearfix">
+                            <button class="btn btn-primary0"  type="submit" id = "submit" name="submit" onclick="return confirmAct();" value="publish">保存</button></br></br>
+                            <input  type="button" class="btn btn-primary1" onclick="add2({$user['id']})" value="禁用">
+                        </div><!-- /.box-footer -->
+                        <br>
+                        <br>
+                        </div>
+                    </form>
+                    </div>
+
+<!--弹出图片-->
+<style type="text/css">
+#tinybox{position:absolute; display:none; padding:10px;  z-index:2000;}
+#tinymask{position:absolute; display:none; top:0; left:0; height:100%; width:100%; z-index:1500;}
+#tinycontent{background:#ffffff; font-size:1.1em;}
+</style>
+<!--调用的js-->
+<script type="text/javascript" src="/Public/Admin/js/tinybox.js"></script>
+
+    <div class='right' style="width:210px;float:left">
+    <div id="content">
+            <div id="images">
+                <a href="javascript:void(0)" id="click_pic1"> <!--click_pic1 click_pic2-->
+                <img src="__ROOT__/photo/avatar/m_{$user['avatar']|default="avatar.png"}" id="touxiang" style="width:200px;height:200px" />
+                 <!-- <img src="/lebang13/Upload/haizi.jpg" style="width:200px;height:200px"> --> 
+                </a>
+            </div>
+                <div id="credit"></div>
+            </div>
+    <br>
+
+
+<script type="text/javascript">
+    // click_pic1
+    T$('click_pic1').onclick = function(){
+        var click_pic = "<img src='"+ this.children[0].src +"' />";
+        TINY.box.show(click_pic,0,0,0,1);
+    }
+</script>
+
+<div class="clearfix"></div>
+
+
+
+
+
+
+
+                </div><!-- /.box -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div>
+    </section><!-- /.content -->
+<style>
+.tcbg{  display:none;  position:fixed;  top: 0%;  left: 0%;  width: 100%;  height: 100%;  background-color:#000;   -moz-opacity: 0.5;  opacity:.50;  filter: alpha(opacity=50); z-index:5}
+
+.tcdiv{ display:none;  position:fixed;  top:200px; right:350px; margin:auto; text-align:left;   width: 100%; max-width:400px;  height: 280px;  background-color:#F8F8F8;  z-index:6; padding:10px; border-radius:5px;}
+.tcdiv1{ display:none;  position:fixed;  top:200px; right:350px; margin:auto; text-align:left;   width: 100%; max-width:400px;  height: 80px;  background-color:#F8F8F8;  z-index:6; padding:10px; border-radius:5px;}
+.tcdiv2{ display:none;  position:fixed;  top:200px; right:350px; margin:auto; text-align:left;   width: 100%; max-width:400px;  height: 280px;  background-color:#F8F8F8;  z-index:6; padding:10px; border-radius:5px;}
+
+.int{
+    width:100%;
+    }
+ #we{
+    float:right;
+    margin-top:20px;
+    
+    }
+    textarea{
+        resize:block; width:380px; height:200px; border-radius:3px;
+    }
+
+    </style>
+<div class="tcbg" id="tcbg"></div>
+<div id="tcdiv1"  class="tcdiv1">
+<form action="{:U('edit')}" method="get">
+    <input type="hidden" placeholder="备注信息" id="xid"  name="user_id" >
+     <div id="we">
+    <input type='button' class="btn btn-default0" style="background:#FFFFFF;border-color: #fbfbfb;color:black; " onclick="removeElement()" value='取消'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+     <input type="submit" class="btn btn-default0" style="background:#FF6600;" value="确认">
+    
+    </div>
+ </form>
+</div>
+<div id="tcdiv"  class="tcdiv">
+<form action="{:U('edit')}" method="get">
+    <input type="hidden" placeholder="备注信息" id="xid"  name="user_id"  value="{$user['id']}"  > 
+    <!-- <input  type="textarea"  class="int" placeholder="备注信息" id="beizhu"  name="beizhu" >  -->
+
+    <textarea id="beizhu"  name="beizhu" placeholder="单击此处可输入理由......"cols="30" rows="10"></textarea>
+    <input  type="hidden"  placeholder="备注信息" id="status"  name="status" >
+    
+     <div id="we">
+    <input type='button' class="btn btn-default0" style="background:#FFFFFF;border-color: #fbfbfb;color:black; " onclick="removeElement()" value='取消'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+     <input type="submit" class="btn btn-default0" style="background:#FF6600;" value="确认">
+    </div>
+ </form>
+</div>
+    <section class="content-footer">
+        <div class="text-center">
+            <!-- &copy;全民乐帮 -->
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>

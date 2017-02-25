@@ -1,0 +1,416 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            <font class="font">认证商户</font>
+             <a href= "javascript:history.back(-1);" class="btn btn-default0 pull-right"  style="position:relative;bottom:8px;">返回商户列表</a>
+        </h1>
+      
+    </section>
+
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+    
+   <script type="text/javascript" language="javascript"> 
+
+            function confirmAct() 
+            { 
+                if(confirm('确定要执行此操作吗?')) 
+                { 
+                    return true; 
+                } 
+                return false; 
+            } 
+     function submits()  
+     {  
+         var submitId=document.getElementById('submit');  
+         submitId.disabled=true;  
+         // document.fm.submit();  
+         // setTimeout('var submitId=document.getElementById("submit");submitId.disabled=false;',3000); //代码核心在这里，3秒还原按钮代码
+         // return false;
+    }  
+</script>
+<script type="text/javascript">
+                          /*  弹出禁用框*/
+                                 function add(xid){
+                                    document.getElementById("tcbg").style.display="block";
+                                    document.getElementById("tcdiv").style.display="block";
+                                    document.getElementById("xid").value="xid";
+                                    document.getElementById("status").value='1';
+                                    }
+                                    
+
+
+                                    function subs(){
+                                    var beizhu=document.getElementById("beizhu").value;
+                                    var xid=document.getElementById("xid").value;//
+                          
+                                   
+                                       
+
+                                    }
+                                    function cancel(){
+                                    var p=document.getElementById("div");
+                                    document.body.removeChild(p);
+                                    }
+                                      //9月19号修改
+                                    function removeElement1(){
+                                    document.getElementById("tcbg").style.display='none';
+                                    document.getElementById("tcdiv").style.display="none";
+                                    }
+     </script>
+
+
+<style>
+    select{
+        text-indent:5px;
+    }
+    input{
+              text-indent:10px;
+    }
+</style>
+
+    <section class="content-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="div-box">
+                <div class="div-center"><!--/*居中*/-->
+
+                <div class='left' style='float:left'>
+                    <form action="{:U('Shanghu/add')}" method="post" enctype="multipart/form-data" onsubmit="return submits();">
+                        <div class="box-body">
+                            
+                             <div class="form-group">
+                                <label for="inputCover">用户手机</label>
+                                <input class="ip" type="text" name="phone" id="inputPhone" placeholder="请输入手机号码" maxlength="11" />
+                            </div>
+                      
+                            <div class="form-group">
+                                <label for="inputSubject">昵称</label>
+                                <input class="ip" type="text" name="nickname" id="inputname" placeholder="请输入昵称" maxlength="" />
+                           </div>
+
+                            <div class="form-group">
+                                <label for="inputSubject">职业</label>
+                                      <select class="ip" name="profession">
+
+                                      <option name="profession" value="">请选择职业</option>
+                                      <foreach name="master_list" item="vo">  
+                                      <option name="profession" value="{$vo.id}">{$vo.mname}</option>
+                                      </foreach>
+                                      </select>
+                            </div>
+
+                             <div class="form-group">
+                                <label for="inputSubject">所在小区</label>
+                                <select class="ip" name="mingcheng">
+
+                                      <option name="profession" value="">请选择所在小区</option>
+                                      <foreach name="master_list" item="vo">  
+                                      <option name="profession" value="{$vo.id}">{$vo.mname}</option>
+                                      </foreach>
+                                      </select>
+                           </div>
+
+
+
+                   
+                        <div class="form-group" style="margin-top:10px;">
+                                <label for="inputCover">真实姓名</label>
+                                <input class="ip" type="text" name="name" id="inputPhone" placeholder="请输入真实姓名" maxlength="" />
+                            </div>
+
+                         <div class="form-group">
+                                <label for="inputCover">性别</label>
+                                <select name="" id="" class='ip'>
+                                  <option value="0">请选择</option>
+                                  <option value="1">男</option>
+                                  <option value="2">女</option>
+                                </select>
+                            </div>
+
+                          <div class="form-group" style="margin-top:5px;">
+                                <label for="inputCover">生日</label>
+                                <input class="ip" type="date" name="name" id="inputPhone" placeholder="" maxlength="" />
+                            </div>
+
+                          <div class="form-group" style="margin-top:10px;">
+                                <label for="inputCover">身份证号</label>
+                                <input class="ip" type="text" name="" id="inputPhone" placeholder="请输入身份证号" maxlength="" />
+                            </div>
+  
+    
+
+                        <div class="form-group" style="margin-top:20px;">
+                                <label for="inputCover">店铺名称</label>
+                                <input class="ip" type="text" name="name" id="inputPhone" placeholder="请输入店铺名称" maxlength="" />
+                            </div>
+                        <div class="form-group" style="margin-top:5px;">
+                                <label for="inputCover">客服电话</label>
+                                <input class="ip" type="text" name="name" id="inputPhone" placeholder="请输入客服电话" maxlength="" />
+                            </div>
+
+                        <div class="form-group" style="margin-top:5px;">
+                                <label for="inputCover">服务时间</label>
+                                <input class="ip" type="text" name="name" id="inputPhone" placeholder="请选择服务时间" maxlength="" />
+                            </div>
+
+                        </div>
+                   </div>
+                  
+  
+<!-- 调用的js--> 
+ <script type="text/javascript" src="/Public/Admin/js/tinybox.js"></script>
+
+    <div class='right' style="width:450px;float:left">
+    <div id="content">
+           
+
+            <div id="preview1" style="margin-top:1px; ">
+                <a href="javascript:void(0)" id="click_pic1" onclick="click_pic(1)">
+                <img id="imghead" style="width:140px; height:140px;"  border=0 src='/img/haizi.jpg'>
+                </a>
+            </div>
+            上传头像
+             <input type="file" class="tou-input" onchange="previewImage(this,1) " style="width:200px" />
+            <br>
+            <br>
+            
+             <div id="preview2" style="margin-top:30px; ">
+                <a href="javascript:void(0)" id="click_pic2" onclick="click_pic(2)">
+                <img id="imghead" style="width:140px; height:140px;" border=0 src='/img/haizi.jpg'>
+                </a>
+            </div>
+            上传身份证照
+            <input type="file" class="tou-input" onchange="previewImage(this,2)"  style="width:200px"/> 
+
+            <br>
+            <br>
+                    
+            <div style="margin-top:35px;">
+            <div id="preview3" style="float: left;width:200px;">
+                <a href="javascript:void(0)" id="click_pic3" onclick="click_pic(3)">
+                <img id="imghead" style="width:140px; height:140px;" border=0 src='/img/haizi.jpg'>
+                </a><br>
+                上传店铺封面
+                <input type="file" class="tou-input" onchange="previewImage(this,3)" class="input" style="width:200px"/>
+            </div>
+            
+
+       
+              <div id="preview4" style="float: left;width:200px;padding-left:5px">
+                <a href="javascript:void(0)" id="click_pic4" onclick="click_pic(4)">
+                <img id="imghead" style="width:140px; height:140px;" border=0 src='/img/haizi.jpg'>
+                </a><br>
+                上传营业执照
+                <input type="file" class="tou-input" onchange="previewImage(this,4)" class="input" style="width:200px"/>
+            </div>
+
+            </div>
+            
+          </div>
+       </div>
+      <div style="clear: both;"></div>
+  
+          <div class="form-group" style="margin-top:5px;">
+                                <label for="inputCover">服务项目</label>
+                                <select name="" id="" class='ip' style="width:655px;">
+                                  
+                                  <option value="">请选择服务项目</option>
+                                  </select>
+                            </div>
+          <div class="form-group" style="margin-top:5px;">
+                                <label for="inputCover">服务区域</label>
+                                <select name="" id="" class='ip' style="width:655px;"> 
+                                  <option value="">请选择服务区域</option>
+                                </select>
+                            </div>
+          <div class="form-group" style="margin-top:5px;">
+                                <label for="inputCover">店铺地址</label>
+                                <input class="ip" type="text" name="name" id="inputPhone" placeholder="请输入店铺地址" maxlength="" style="width:655px;"/>
+                            </div>
+          <div class="form-group">
+                                <label for="inputSubject"  style="height:80px;line-height:80px; position: relative;top: 1px; ">店铺简介</label>
+                                <!-- <input class="ip" type="text" name="nickname" id="inputname" placeholder="请输入昵称" maxlength=""   style="height:80px;width:558px;"/> -->
+                                <textarea name="" id="" cols="30" rows="10" style="height:80px;width:655px;position: relative;left:-8px;top: 1px;border:#dddddd solid 1px;resize: none ;color:#666;" placeholder="请输入店铺地址"> 
+                                </textarea>
+                            </div>
+
+                            <div class="boxclearfix">
+
+                            <button class="btn btn-primary0"  type="button" onclick="add();" style="width:150px;background:#ff6600;border:#ff6600;">禁用</button>
+
+                            <button class="btn btn-primary0"  type="button" id = "submit" name="submit"  value="publish" style="width:150px; background:#0099ff;;border:#0099ff;margin-left:10px;">取消推荐</button>
+                            
+                              <input type="hidden" name="xinxianshi_id" value="{$xinxianshi['id']}"> 
+                            <button class="btn btn-primary0"  type="submit" id = "submit" name="submit" onclick="return confirmAct();" value="publish" style="width:400px;margin-left:10px; ">保存</button>
+                            </div>
+                       
+
+
+<script type="text/javascript">
+
+    function click_pic(id){
+        var a1 = document.getElementById('click_pic'+id);
+        var click_pic = "<img src='"+ a1.children[0].src +"' />";
+        TINY.box.show(click_pic,0,0,0,1);
+    }
+
+
+</script> 
+                        
+                        
+
+
+
+<!--弹出图片-->
+<style type="text/css">
+#tinybox{position:absolute; display:none; padding:10px;  z-index:2000;}
+#tinymask{position:absolute; display:none; top:0; left:0; height:100%; width:100%; z-index:1500;}
+#tinycontent{background:#ffffff; font-size:1.1em;}
+</style>
+
+
+
+
+
+<style type="text/css">
+#preview{/* width:260px;height:190px; *//*border:1px solid #000;*/overflow:hidden;}
+#imghead {filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);}
+</style>
+<script type="text/javascript">
+      //图片上传预览    IE是用了滤镜。
+        function previewImage(file,id)
+        {
+          var MAXWIDTH  = 260; 
+          var MAXHEIGHT = 180;
+          var div = document.getElementById('preview'+id);
+          if (file.files && file.files[0])
+          {
+              div.innerHTML ='<a href="javascript:void(0)" id="click_pic'+id+'" onclick="click_pic('+id+')"><img id=imghead></a>';
+              var img = document.getElementById('imghead');
+              img.onload = function(){
+                var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+                img.width  =  rect.width;
+                img.height =  rect.height;
+//                 img.style.marginLeft = rect.left+'px';
+                img.style.marginTop = rect.top+'px';
+              }
+              var reader = new FileReader();
+              reader.onload = function(evt){img.src = evt.target.result;}
+              reader.readAsDataURL(file.files[0]);
+          }
+          else //兼容IE
+          {
+            var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+            file.select();
+            var src = document.selection.createRange().text;
+            div.innerHTML = '<img id=imghead>';
+            var img = document.getElementById('imghead');
+            img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
+            var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+            status =('rect:'+rect.top+','+rect.left+','+rect.width+','+rect.height);
+            div.innerHTML = "<div id=divhead style='width:"+rect.width+"px;height:"+rect.height+"px;margin-top:"+rect.top+"px;"+sFilter+src+"\"'></div>";
+          }
+        }
+        function clacImgZoomParam( maxWidth, maxHeight, width, height ){
+            var param = {top:0, left:0, width:width, height:height};
+            if( width>maxWidth || height>maxHeight )
+            {
+                rateWidth = width / maxWidth;
+                rateHeight = height / maxHeight;
+                 
+                if( rateWidth > rateHeight )
+                {
+                    param.width =  maxWidth;
+                    param.height = Math.round(height / rateWidth);
+                }else
+                {
+                    param.width = Math.round(width / rateHeight);
+                    param.height = maxHeight;
+                }
+            }
+            param.left = Math.round((maxWidth - param.width) / 2);
+            param.top = Math.round((maxHeight - param.height) / 2);
+            return param;
+        }
+</script>  
+
+
+<script type="text/javascript">
+
+    function click_pic(id){
+        var a1 = document.getElementById('click_pic'+id);
+        var click_pic = "<img src='"+ a1.children[0].src +"' />";
+        TINY.box.show(click_pic,0,0,0,1);
+    }
+
+ 
+</script> 
+
+<div class="clearfix"></div>
+
+                </div><!-- /.box -->
+                        <br>
+                        <br>
+                        <br>
+                   </form>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div>
+    </section><!-- /.content -->
+
+<style>
+.tcbg{  display:none;  position:fixed;  top: 0%;  left: 0%;  width: 100%;  height: 100%;  background-color:#000;   -moz-opacity: 0.5;  opacity:.50;  filter: alpha(opacity=50); z-index:5}
+.tcdiv{ display:none;  position:fixed;  top:200px; right:350px; margin:auto; text-align:left;   width: 100%; max-width:400px;  height: 280px;  background-color:#F8F8F8;  z-index:6; padding:10px; border-radius:5px;}
+
+.int{
+    width:100%;
+    }
+ #we{
+    float:right;
+    margin-top:20px;
+    
+    }
+    textarea{
+        resize:block; width:380px; height:160px; border-radius:3px;
+    }
+  /*  select{
+        width:380px;height:35px;margin-top:5px; border-radius:3px;
+    }*/
+
+    </style>
+<div class="tcbg" id="tcbg"></div>
+<div id="tcdiv"  class="tcdiv">
+<form action="" method="get">
+    <input type="hidden" placeholder="备注信息" id="xid"  name="tixian_id" > 
+    <textarea name="" id="beizhu" name=" " placeholder="输入不禁用的理由......"cols="30" rows="10"></textarea>
+     <select id="zhuqi" name=" " style="width:380px;height:35px;margin-top:5px; border-radius:3px;  color:#a9a9a9">
+       <option  name =" " value="" >选择禁用周期</option>
+       <option  name ="" value="1">&nbsp;24小时</option>
+       <option  name="" value="2">&nbsp;3天</option>
+       <option  name="" value="3">&nbsp;7天</option>
+       <option  name="" value="4">&nbsp;1个月</option>
+       <option  name="" value="5">&nbsp;永久禁用</option>
+     </select>
+    <input  type="hidden"  placeholder="备注信息" id="status"  name="status" >
+     <div id="we">
+    <input type='button' class="btn btn-default0" style="background:#FFFFFF;border-color: #fbfbfb;color:black; " onclick="removeElement1()" value='取消'>&nbsp;&nbsp;
+
+       <input type="submit" class="btn btn-default0" style="background:#FF6600;"; value="确定禁用">
+    </div>
+ </form>
+</div>
+
+<section class="content-footer">
+        <div class="text-center">
+        </div>
+    </section><!-- /.content-footer -->
+  
+
+</aside><!-- /.right-side -->
+</block>

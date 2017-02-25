@@ -1,0 +1,175 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+       <h1>
+        <div>
+            <div style="float:left">
+            <font class="font" >新鲜事评论</font>  
+            <!-- <p style="width:81px;23px;">待审核用户 </p> -->
+            </div>
+        <div class="search" style="float:left;margin-left: 20px;">
+   <form id="user_search" action='{:U('Xinxianshi/fetch1')}' method="get">
+    <select name="sosuo" id="" class="sosuo">
+                                          <option  name="sosuo" value="1">&nbsp;手机号</option>
+                                          <option  name="sosuo" value="2">&nbsp;小区名称</option>
+                                          
+        </select>
+      <input type="text" id="keyword" name="value" class="txt"  autocomplete="off" name="value" />
+      <button type="submit" class="search_btn" id="Search" type="button" >
+      <span class="ico" id="scico"><em></em></span>
+      </button>
+   </form>
+</div>
+      <div style="float:right;">
+            <if condition ="$_GET['sosuo'] neq ''">
+            <a href= "javascript:history.back(-1);" class="btn btn-default0 pull-right">返回</a>
+            </if>
+        </div>
+        </div>
+       </h1>
+    </section>
+
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+
+<script type="text/javascript" language="javascript"> 
+
+            function confirmAct() 
+            { 
+                if(confirm('确定要执行此操作吗?')) 
+                { 
+                    return true; 
+                } 
+                return false; 
+            } 
+     function submits()  
+     {  
+         var submitId=document.getElementById('submit');  
+         submitId.disabled=true;  
+    
+    }  
+/*  弹出禁用框*/ 
+
+                                    function add(xid){
+                                    document.getElementById("tcbg").style.display="block";
+                                    document.getElementById("tcdiv").style.display="block";
+                                    document.getElementById("xid").value=xid;
+                                    }
+
+
+                                    function subs(){
+                                    var beizhu=document.getElementById("beizhu").value;//
+                                    var xid=document.getElementById("xid").value;//
+                          
+                                   
+                                       
+
+                                    }
+                                    function cancel(){
+                                    var p=document.getElementById("div");
+                                    document.body.removeChild(p);
+                                    }
+                                      //9月19号修改
+                                    function removeElement1(){
+                                    document.getElementById("tcbg").style.display='none';
+                                    document.getElementById("tcdiv").style.display="none";
+                                    }
+</script>
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-body">
+                        <table class="table table-bordered" >
+                            <tbody>
+                            <tr style="background: #fbfbfb;">
+                                <!-- <th style="width: 10px">#</th> -->
+                                <th style="width: 80px;">序号</th>
+                                <th>新鲜事评论</th>
+                                <th style="width:150px;">发布人</th>
+                                <th style="width:100px;">手机号码</th>
+                                <th style="width:80px;">点赞</th>
+                                <th style="width:150px;">发布时间</th>
+                                <th style="width:150px;">操作</th>
+                            </tr>
+                            
+                            <volist name="xinxianshi" id="xinxianshi" key='k'>
+                            <tr>
+                                <td>{$xinxianshi['id']}</td>
+                                <td style="text-align:left;">{$xinxianshi['neirong']}</td>
+                                <td>{$xinxianshi['name']}</td>                                
+                                <td>{$xinxianshi['phone']}</td>
+                                <td>{$xinxianshi['dianzanshu']}</td>
+                                <td>{:date('Y-m-d H:i:s',$xinxianshi['shijian'])}</a></td>  
+                                <td > 
+                                   <if condition="$xinxianshi['xianshi']== 1" ><input type="button" onclick="add({$xinxianshi['id']})" class="btn btn-default2" style="width:100px;" value="禁用"><else /> 已禁用</if>
+                                </td> 
+                            </tr>
+                            </volist>
+
+                            </tbody>
+                        </table>
+                    </div><!-- /.box-body -->
+                </div>
+                  <!--分页的位置-->
+                    {$page_html}
+            </div>
+        </div>
+
+
+
+        <!--     js禁用框 -->
+<style>
+.tcbg{  display:none;  position:fixed;  top: 0%;  left: 0%;  width: 100%;  height: 100%;  background-color:#000;   -moz-opacity: 0.5;  opacity:.50;  filter: alpha(opacity=50); z-index:5}
+.tcdiv{ display:none;  position:fixed;  top:200px; right:350px; margin:auto; text-align:left;   width: 100%; max-width:400px;  height: 280px;  background-color:#F8F8F8;  z-index:6; padding:10px; border-radius:5px;}
+
+.int{
+    width:100%;
+    }
+ #we{
+    float:right;
+    margin-top:20px;
+    
+    }
+    textarea{
+        resize:block; width:380px; height:200px; border-radius:3px;
+    }
+  /*  select{
+        width:380px;height:35px;margin-top:5px; border-radius:3px;
+    }*/
+
+    </style>
+<div class="tcbg" id="tcbg"></div>
+<div id="tcdiv"  class="tcdiv">
+<form action="{:U('bianji',array('p'=>I('get.p')))}" method="get" onsubmit="return check()">
+<input type="hidden" placeholder="备注信息" id="xid"  name="xinxianshi_id" > 
+     <input type="hidden" name="pingbizhouqi"> 
+    <textarea id="beizhu"  name="beizhu" placeholder="输入不禁用的理由......"cols="30" rows="10"></textarea>
+     <div id="we">
+    <input type='button' class="btn btn-default0" style="background:#FFFFFF;border-color: #fbfbfb;color:black; ;" onclick="removeElement1()" value='返回'>&nbsp;&nbsp;&nbsp;&nbsp;
+
+       <input type="submit" class="btn btn-default0" style="background:#FF6600;"; value="确定禁用">
+    </div>
+ </form>
+</div>
+
+<script>
+        function check(){
+            var beizhu =  $('#beizhu').val();
+            if( beizhu!= ''){
+                return true;
+            }
+            alert('亲,输禁用理由啦!!!');
+            return false;
+
+        }
+</script>
+    </section><!-- /.content -->
+
+</aside><!-- /.right-side -->
+</block>

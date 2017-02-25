@@ -1,0 +1,165 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            被举报新鲜事
+        </h1>
+        <ol class="breadcrumb">
+             <form action='{:U('Xinxianshi/fetch')}' method="get">
+                <tr>
+                <td style='margin-bottom: 20px'>发帖人：<input id="name" name="name" class="inp_wid3" type="text" value=""/></td>
+                <td style='margin-bottom: 20px'>内容：<input id="neirong" name="neirong" class="inp_wid3" type="text" value=""/></td>
+                <td>
+                &nbsp;<input class="search_btn1" type="submit" value="搜索" id="Search" />
+                </td>
+                </tr>    
+            </form>
+        </ol>
+    </section>
+                             <!-- //s -->
+                                    <script type="text/javascript">
+                                    function add(xid){
+                                    document.getElementById("tcbg").style.display="block";
+                                    document.getElementById("tcdiv").style.display="block";
+                                    document.getElementById("xid").value=xid;
+                                    }
+
+
+                                    function subs(){
+                                    var beizhu=document.getElementById("beizhu").value;//
+                                    var xid=document.getElementById("xid").value;//
+                          
+                                   
+                                       
+
+                                    }
+                                    function cancel(){
+                                    var p=document.getElementById("div");
+                                    document.body.removeChild(p);
+                                    }
+                                    //9月19号修改
+                                    function removeElement(){
+                                    document.getElementById("tcbg").style.display='none';
+                                    document.getElementById("tcdiv").style.display="none";
+                                    }
+                                    </script>
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title"></h3>
+                        <!-- <a href="{:U('Xinxianshi/add')}" class="btn btn-default pull-right">添加新鲜事</a> -->
+                    </div><!-- /.box-header -->
+                    
+                    <div class="box-body">
+                        <table style="margin-left: -5px;margin-top: -25px;" class="table table-bordered">
+                            <tbody>
+                            <tr style="background: #fbfbfb;">
+                                <!-- <th style="width: 10px">#</th> -->
+                                <th style="text-align:center; width: 60px">列表</th>
+                                <th style="text-align:center;width: 80px">发帖人</th>
+                                <th style="text-align:center;width: 120px">所在社区</th>
+                                <th style="text-align:center;">内容</th>
+                                <!-- <th>点赞数</th> -->
+                                <!-- <th>状态</th> -->
+                                <!-- <th style="text-align:center;width: 80px" ><a href="{:U('list10')}" class="btn btn-default" >评论数</a></th> -->
+                                <!-- <th style="text-align:center;width: 60px">状态</th> -->
+
+                                <th style="text-align:center;width: 120px">备注</th>
+                                <th style="text-align:center;width: 100px">被举报类型</th>
+                                <!-- <th style="text-align:center;width: 80px"><a href="{:U('list1')}" class="btn btn-default" >点赞数</a></th>
+ -->                                <!-- <th style="text-align:center;width: 80px"><a href="{:U('list2')}" class="btn btn-default" >转发数</a></th> -->
+                                <th style="text-align:center;width: 80px"><a href="{:U('list11')}" class="btn btn-default" >举报数</a></th>
+                                <th style="text-align:center;width: 130px">操作</th>
+
+                               <!--  <th>性别</th>
+                                <th>证件号</th> -->
+                               <!--  <th style="width: 20%">操作</th> -->
+                            </tr>
+                            
+                            <volist name="xinxianshi_list" id="xinxianshi">
+                            <tr>
+                                <td>{$xinxianshi['id']}</td>
+                                <td>{$xinxianshi['name']}</td>
+                                <td><if condition="empty($xinxianshi['mingcheng'])">体验小区<else /> 
+                                {$xinxianshi['mingcheng']}</if></td>
+                                <td>{$xinxianshi['neirong']}</td>
+                                <!-- <td>{$xinxianshi['status']}</td> -->
+                                <!-- <td>{$xinxianshi['dianzanshu']}</td> -->
+    
+                                <!-- <td><a href="{:U('pingluncheck', ['xinxianshi_id'=>$xinxianshi['id']])}" class="btn btn-default" style="width:70px" title="查看评论">{$xinxianshi['pinglunshu']}</a></td> -->
+                                <!-- <td>{$xinxianshi['xianshi']=='1'?'启用':'禁用'}</td> -->
+                                
+                                 <td>{$xinxianshi['beizhu']}</td>
+                                <td>{$xinxianshi['jubaoid']}</td>
+                                 <!-- <td>{$xinxianshi['dianzanshu']}</td>
+                                <td>{$xinxianshi['zhuanfashu']}</td> -->
+                                <td>{$xinxianshi['xinxiid']}</td>
+                                <td >
+                                     <if condition="$xinxianshi['xianshi']== 1"><input type="button" onclick="add({$xinxianshi['id']})" value="禁用"><else /> 已禁用</if>                                   
+                                    
+                                    <a href="{:U('bianji1', ['xinxianshi_id'=>$xinxianshi['id']])}" class="btn btn-default"  title="编辑">编辑</a>
+                                    <!-- <a href="{:U('top', ['xinxianshi_id'=>$xinxianshi['id']])}" class="btn btn-default"  style="float: right">置顶</a> -->
+                                </td>
+
+                            </tr>
+                            </volist>
+
+                            </tbody>
+               
+                        </table>
+                    </div><!-- /.box-body -->
+                    <a style="margin-left: 500px;"
+class="btn btn-primary" href="javascript:history.go(-1);location.reload()">返&nbsp;回</a>
+                </div>
+                  <!--分页的位置-->
+                    {$page_html} 
+            </div>
+        </div>
+
+<style>
+.tcbg{  display:none;  position:fixed;  top: 0%;  left: 0%;  width: 100%;  height: 100%;  background-color:#000;   -moz-opacity: 0.5;  opacity:.50;  filter: alpha(opacity=50); z-index:5}
+.tcdiv{ display:none;  position:fixed;  top:200px; right:350px; margin:auto; text-align:left;   width: 100%; max-width:300px;  height: 100px;  background-color:#ffffff;  z-index:6; padding:10px;}
+
+.int{
+    width:100%;
+    }
+ #we{
+    float:right;
+    margin-top:20px;
+    }
+
+</style>
+<div class="tcbg" id="tcbg"></div>
+<div id="tcdiv"  class="tcdiv">
+<form action="{:U('bianji')}" method="get">
+<input type="hidden" placeholder="备注信息" id="xid"  name="xinxianshi_id" > 
+    <input type="text" class="int" placeholder="备注信息" id="beizhu"  name="beizhu" >
+    <div id="we">
+    <input type="submit" class="btn btn-primary" value="确认">
+    &nbsp;<input type='button' class="btn btn-primary" onclick="removeElement()" value='取消'>
+    </div>
+
+ </form>
+
+</div>
+
+               <!--  <a href="javascript:history.go(-1);location.reload()">返回上一页重载页面，本地刷新</a> -->
+                
+    </section><!-- /.content -->
+
+    <section class="content-footer">
+        <div class="text-center">
+             &copy;全民乐帮
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>

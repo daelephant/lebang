@@ -10,22 +10,22 @@
     <head>
     <meta charset="UTF-8">
     <title>管理中心_全民乐帮</title>
-    <!-- <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'> -->
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- 地图 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
     <!-- bootstrap 3.0.2 -->
-    <link href="/lebang18/Public/Admin/css/bootstrap.min.css" rel="stylesheet" type="text/css" /><!-- 一般 -->
+    <link href="/lebang11-29/Public/Admin/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- font Awesome -->
-    <link href="/lebang18/Public/Admin/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="/lebang11-29/Public/Admin/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <!-- Ionicons -->
-    <link href="/lebang18/Public/Admin/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <link href="/lebang11-29/Public/Admin/css/ionicons.min.css" rel="stylesheet" type="text/css" />
     <!-- Theme style -->
-    <link href="/lebang18/Public/Admin/css/AdminLTE.css" rel="stylesheet" type="text/css" /><!-- 1 -->
+    <link href="/lebang11-29/Public/Admin/css/AdminLTE.css" rel="stylesheet" type="text/css" />
     
-     <script type="text/javascript" src="/lebang18/Public/js/jquery-2.0.2.js"></script>
-    <script type="text/javascript" src="/lebang18/Public/ueditor/ueditor.config.js"></script>    
-    <script type="text/javascript" src="/lebang18/Public/ueditor/ueditor.all.min.js"></script>
+     <script type="text/javascript" src="/lebang11-29/Public/js/jquery-2.0.2.js"></script>
+    <script type="text/javascript" src="/lebang11-29/Public/ueditor/ueditor.config.js"></script>    
+    <script type="text/javascript" src="/lebang11-29/Public/ueditor/ueditor.all.min.js"></script>
     <script>
     $(function(){
         var ue = UE.getEditor('container',{
@@ -52,7 +52,7 @@
         
         <!-- header logo: style can be found in header.less -->
 <header class="header" >
-    <a href="" class="logo" style="background:#FF6600;"  >
+    <a href="" class="logo" style="background:#FF6600;font-family: 'Microsoft YaHei',! important;"  >
         <!-- Add the class icon to your logo image or logo icon to add the margining -->
         全民乐帮
     </a>
@@ -78,7 +78,7 @@
                         <i class="glyphicon glyphicon-user"></i>
                         <span>lebang <i class="caret"></i></span>
                     </a><?php endif; ?>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" style="min-width: 0px;">
                         <!-- User image -->
                        <!--  <li class="user-header bg-light-blue">
                            <img src="avatar3.png" class="img-circle" alt="User Image" />
@@ -89,7 +89,7 @@
                            </p>
                        </li> -->
                         <!-- Menu Footer-->
-                        <li class="user-footer" style=" width:135px; float:right;">
+                        <li class="user-footer" style=" width:122px; float:right;">
                             <div class="pull-left">
                                 <!-- <a href="#" class="btn btn-default btn-flat">用户信息</a> -->
                             </div>
@@ -107,7 +107,7 @@
         <div class="wrapper row-offcanvas row-offcanvas-left">
             
             <?php
- $url = CONTROLLER_NAME.'/'.ACTION_NAME; echo "$url"; ?>
+ $url = CONTROLLER_NAME.'/'.ACTION_NAME; ?>
 <!-- Left side column. contains the logo and sidebar -->
 <aside class="left-side sidebar-offcanvas">
     <!-- sidebar: style can be found in sidebar.less -->
@@ -115,7 +115,7 @@
         <!-- Sidebar user panel -->
         <!-- div class="user-panel">
             <div class="pull-left image">
-                <img src="/lebang18/Public/Admin/img/avatar3.png" class="img-circle" alt="User Image" />
+                <img src="/lebang11-29/Public/Admin/img/avatar3.png" class="img-circle" alt="User Image" />
             </div>
             <?php if($_SESSION['user']['username']!= null): ?><div class="pull-left info">
                 <p>Hello, <?php echo ($_SESSION['user']['username']); ?></p>
@@ -140,8 +140,8 @@
                     <i class="fa fa-msg"></i> <span>控制台</span>
                 </a>
             </li>
-             <li class="treeview <?php if($url == "User/list" OR $url == "User/list1" OR $url == "User/list2" OR $url == "User/list3" OR $url == "User/list4" OR $url == "User/fetch" OR $url == "User/add" OR $url == "User/bianji" OR $url == "User/edit" OR $url == "User/recharge"): ?>active<?php endif; ?>">
-                <a href="<?php echo U('User/list');?>">
+             <li class="treeview <?php if($url == "User/list" OR $url == "User/list1" OR $url == "User/list2" OR $url == "User/list3" OR $url == "User/list4" OR $url == "User/fetch" OR $url == "User/add" OR $url == "User/bianji" OR $url == "User/edit" OR $url == "User/recharge" OR $url == "User/fetch2" OR $url == "User/fetch3" OR $url == "User/fetch1" OR $url == "User/fetch4"): ?>active<?php endif; ?>">
+                <a href="<?php echo U('User/list2');?>">
                     <i class="fa fa-file"></i> <span>用户管理</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
@@ -166,19 +166,64 @@
                     <!-- <li><a href="<?php echo U('Category/add');?>"><i class="fa fa-edit"></i>分类添加</a></li> -->
                 <!-- </ul>
             </li>  --> 
-             <!-- <li class="treeview <?php if($url == "Order/list" OR $url == "Order/nopay" OR $url == "Order/liushi" OR $url == "Order/edit" OR $url == "Order/cancel"OR $url == "Order/fetch"): ?>active<?php endif; ?>"> -->
-             <li class="treeview active">
+            <li class="treeview <?php if($url == "Order/list" OR $url == "Order/nopay" OR $url == "Order/liushi" OR $url == "Order/edit" OR $url == "Order/cancel" OR $url == "Order/fetch" OR $url == "Order/finish" OR $url == "Order/finishk" OR $url == "Order/nopayk" OR $url == "Order/liushik"OR $url == "Order/cancelk" OR $url == "Order/fetch" OR $url == "Order/fetch1" OR $url == "Order/fetch2" OR $url == "Order/fetch3" OR $url == "Order/fetch4"): ?>active<?php endif; ?>">
                 <a href="<?php echo U('Order/list');?>">
                     <i class="fa fa-file"></i> <span>任务管理</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="<?php echo U('Order/list');?>"><i class="fa fa-list"></i>任务列表</a></li>
-                    <li><a href="<?php echo U('Order/liushi');?>"><i class="fa fa-list"></i>流失的任务</a></li>
-                    <li><a href="<?php echo U('Order/nopay');?>"><i class="fa fa-list"></i>未支付的任务</a></li>
+                    <li><a href="<?php echo U('Order/list');?>"><i class="fa fa-list"></i>进行中任务</a></li>
+                    <li><a href="<?php echo U('Order/nopay');?>"><i class="fa fa-list"></i>未支付任务</a></li>
+                    <li><a href="<?php echo U('Order/liushi');?>"><i class="fa fa-list"></i>流单的任务</a></li>
                     <li><a href="<?php echo U('Order/cancel');?>"><i class="fa fa-list"></i>取消的任务</a></li>
+                    <li><a href="<?php echo U('Order/finish');?>"><i class="fa fa-list"></i>完成的任务</a></li>
                 </ul>
             </li>
+            
+            <li class="treeview <?php if($url == "Shequ/list" OR $url == "Shequ/add" OR $url == "Shequ/bianji" OR $url == "Shequ/started" OR $url == "Shequ/starting" OR $url == "Shequ/qyadd" OR $url == "Shequ/qylist" OR $url == "Shequ/qybianji" OR $url == "Shequ/fetch1" OR $url == "Shequ/fetch2" OR $url == "Shequ/fetch3"): ?>active<?php endif; ?>">
+                <a href="<?php echo U('Shequ/started');?>">
+                    <i class="fa fa-file"></i> <span>社区管理</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <!-- <li><a href="<?php echo U('Shequ/list');?>"><i class="fa fa-list"></i>社区列表</a></li> -->
+                    <li><a href="<?php echo U('Shequ/started');?>"><i class="fa fa-list"></i>启用的小区</a></li>
+                    <li><a href="<?php echo U('Shequ/starting');?>"><i class="fa fa-list"></i>待开通小区</a></li>
+                    <li><a href="<?php echo U('Shequ/qylist');?>"><i class="fa fa-list"></i>区域管理</a></li>
+                    <!-- <li><a href="<?php echo U('Shequ/add');?>"><i class="fa fa-edit"></i>添加社区</a></li> -->
+                </ul>
+            </li>
+             <li class="treeview <?php if($url == "Xinxianshi/list" OR $url == "Xinxianshi/list2" OR $url == "Xinxianshi/list3"OR $url == "Xinxianshi/list4" OR $url == "Xinxianshi/list5" OR $url == "Xinxianshi/list6" OR $url == "Xinxianshi/fetch" OR $url == "Xinxianshi/pingluncheck" OR $url == "Xinxianshi/fetch1" OR $url == "Xinxianshi/fetch2" OR $url == "Xinxianshi/fetch3"OR $url == "Xinxianshi/fetch4" OR $url == "Xinxianshi/zhiding" OR $url == "Xinxianshi/zhidingk" OR $url == "Xinxianshi/pingbik" OR $url == "Xinxianshi/dianzanlist" OR $url == "Xinxianshi/pinglunlist" OR $url == "Xinxianshi/bianji1"): ?>active<?php endif; ?>">
+                <a href="<?php echo U('Xinxianshi/list');?>">
+                    <i class="fa fa-file"></i> <span>新鲜事管理</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="<?php echo U('Xinxianshi/list3');?>"><i class="fa fa-list"></i>在线的新鲜事</a></li>
+                    <li><a href="<?php echo U('Xinxianshi/list6');?>"><i class="fa fa-list"></i>新鲜事评论</a></li>
+                     <li><a href="<?php echo U('Xinxianshi/zhiding');?>"><i class="fa fa-list"></i>置顶新鲜事</a></li>
+                    <li><a href="<?php echo U('Xinxianshi/list4');?>"><i class="fa fa-list"></i>屏蔽新鲜事</a></li>
+                     
+                     <li><a href="<?php echo U('Xinxianshi/list5');?>"><i class="fa fa-list"></i>屏蔽的评论</a></li>
+
+                   <!--  <li><a href="<?php echo U('Xinxianshi/listx');?>"><i class="fa fa-list"></i>置顶的新鲜事</a></li> -->
+                </ul>
+            </li>
+
+           <!--  <li class="treeview <?php if($url == "Xinxianshi/list" OR $url == "Xinxianshi/list2" OR $url == "Xinxianshi/list3"OR $url == "Xinxianshi/list4" OR $url == "Xinxianshi/add" OR $url == "Xinxianshi/fetch" OR $url == "Xinxianshi/pingluncheck"): ?>active<?php endif; ?>">
+                <a href="<?php echo U('Xinxianshi/list');?>">
+                    <i class="fa fa-file"></i> <span>新鲜事管理</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="<?php echo U('Xinxianshi/list');?>"><i class="fa fa-list"></i>所有新鲜事</a></li>
+                  
+                    <li><a href="<?php echo U('Xinxianshi/list3');?>"><i class="fa fa-list"></i>在线的新鲜事</a></li>
+                    <li><a href="<?php echo U('Xinxianshi/list4');?>"><i class="fa fa-list"></i>屏蔽的新鲜事</a></li>
+                  
+                </ul>
+            </li> -->
+
             <li class="treeview <?php if($url == "Msg/list" OR $url == "Msg/add" OR $url == "Msg/edit"): ?>active<?php endif; ?>">
                 <a href="<?php echo U('msg/list');?>">
                     <i class="fa fa-file"></i> <span>运营消息管理</span>
@@ -189,46 +234,58 @@
                     <!-- <li><a href="<?php echo U('msg/add');?>"><i class="fa fa-edit"></i>消息添加</a></li> -->
                 </ul>
             </li>
-            <li class="treeview <?php if($url == "Shequ/list" OR $url == "Shequ/add" OR $url == "Shequ/bianji" OR $url == "Shequ/started" OR $url == "Shequ/starting"): ?>active<?php endif; ?>">
-                <a href="<?php echo U('Shequ/list');?>">
-                    <i class="fa fa-file"></i> <span>社区管理</span>
+
+            <li class="treeview <?php if($url == "Shanghu/add" OR $url == "Shanghu/daishenhe" OR $url == "Shanghu/jinyong"OR $url == "Shanghu/renzheng" OR $url == "Shanghu/rzxq" OR $url == "Shanghu/weitongguo" OR $url == "Shanghu/tuijian" OR $url == "Shanghu/edit" OR $url == "Shanghu/rbianji" OR $url == "Shanghu/rtuijian" OR $url == "Shanghu/fetch" OR $url == "Shanghu/fetch1" OR $url == "Shanghu/fetch2" OR $url == "Shanghu/fetch3" OR $url == "Shanghu/fetch4"): ?>active<?php endif; ?>">
+                <a href="<?php echo U('Shanghu/daishenhe');?>">
+                    <i class="fa fa-file"></i> <span>商户管理</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="<?php echo U('Shequ/list');?>"><i class="fa fa-list"></i>社区列表</a></li>
-                    <li><a href="<?php echo U('Shequ/started');?>"><i class="fa fa-list"></i>启用的小区</a></li>
-                    <li><a href="<?php echo U('Shequ/starting');?>"><i class="fa fa-list"></i>待开通小区</a></li>
-                    <!-- <li><a href="<?php echo U('Shequ/add');?>"><i class="fa fa-edit"></i>添加社区</a></li> -->
+                    <li><a href="<?php echo U('Shanghu/daishenhe');?>"><i class="fa fa-list"></i>待审核商户</a></li>
+                    <li><a href="<?php echo U('Shanghu/weitongguo');?>"><i class="fa fa-list"></i>审核未通过</a></li>
+                    <li><a href="<?php echo U('Shanghu/renzheng');?>"><i class="fa fa-list"></i>认证商户</a></li>
+                    <li><a href="<?php echo U('Shanghu/tuijian');?>"><i class="fa fa-list"></i>推荐商户</a></li>
+                    <li><a href="<?php echo U('Shanghu/jinyong');?>"><i class="fa fa-list"></i>禁用商户</a></li>
+                 
                 </ul>
             </li>
-             <li class="treeview <?php if($url == "Xinxianshi/list" OR $url == "Xinxianshi/list2" OR $url == "Xinxianshi/list3"OR $url == "Xinxianshi/list4" OR $url == "Xinxianshi/add" OR $url == "Xinxianshi/fetch" OR $url == "Xinxianshi/pingluncheck"): ?>active<?php endif; ?>">
-                <a href="<?php echo U('Xinxianshi/list');?>">
-                    <i class="fa fa-file"></i> <span>新鲜事管理</span>
+
+
+
+
+
+            <li class="treeview <?php if($url == "Fuwu/zaixian" OR $url == "Fuwu/list" OR $url == "Fuwu/list1"OR $url == "Fuwu/list2" OR $url == "fu/add" OR $url == "fuwu/fetch" OR $url == "fuwu/pingluncheck" OR $url == "Fuwu/edit" OR $url == "Fuwu/shanghufuwu" OR $url == "Fuwu/jinyongsh" OR $url == "Fuwu/add1" OR $url == "Fuwu/chak" OR $url == "Fuwu/chak1" OR $url == "Fuwu/chaksh" OR $url == "Fuwu/add" OR $url == "Fuwu/fetchlist" OR $url == "Fuwu/fetchlist1" OR $url == "Fuwu/fetchlist2" OR $url == "Fuwu/jinyongfetch" OR $url == "Fuwu/shnaghufetch"): ?>active<?php endif; ?>">
+                <a href="<?php echo U('Fuwu/shanghufuwu');?>">
+                    <i class="fa fa-file"></i> <span>服务项目</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="<?php echo U('Xinxianshi/list');?>"><i class="fa fa-list"></i>所有新鲜事</a></li>
-                   <!--  <li><a href="<?php echo U('Xinxianshi/list1');?>"><i class="fa fa-list"></i>待审核</a></li> -->
-                    <li><a href="<?php echo U('Xinxianshi/list3');?>"><i class="fa fa-list"></i>在线的新鲜事</a></li>
-                    <li><a href="<?php echo U('Xinxianshi/list4');?>"><i class="fa fa-list"></i>屏蔽的新鲜事</a></li>
-                   <!--  <li><a href="<?php echo U('Xinxianshi/listx');?>"><i class="fa fa-edit"></i>置顶的新鲜事</a></li> -->
+                    <li><a href="<?php echo U('Fuwu/shanghufuwu');?>"><i class="fa fa-list"></i>商户服务项目</a></li>
+                    <li><a href="<?php echo U('Fuwu/jinyongsh');?>"><i class="fa fa-list"></i>禁用服务项目</a></li>
+                    <li><a href="<?php echo U('Fuwu/list');?>"><i class="fa fa-list"></i>服务项目模版</a></li>
+                    <li><a href="<?php echo U('Fuwu/list1');?>"><i class="fa fa-list"></i>服务项目草稿</a></li>
+                    <li><a href="<?php echo U('Fuwu/list2');?>"><i class="fa fa-list"></i>服务项目类别</a></li>
+                 
                 </ul>
             </li>
-             <li class="treeview <?php if($url == "Xinxianshi/list6" OR $url == "Xinxianshi/fetch1" OR $url == "Xinxianshi/list7" OR $url == "Xinxianshi/list5"): ?>active<?php endif; ?>">
+
+
+
+             <!-- <li class="treeview <?php if($url == "Xinxianshi/list6" OR $url == "Xinxianshi/fetch1" OR $url == "Xinxianshi/list7" OR $url == "Xinxianshi/list5"): ?>active<?php endif; ?>">
                 <a href="<?php echo U('Xinxianshi/list');?>">
                     <i class="fa fa-file"></i> <span>评论管理</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
-                <ul class="treeview-menu">
+                <ul class="treeview-menu"> -->
                     <!-- <li><a href="<?php echo U('Xinxianshi/list');?>"><i class="fa fa-list"></i>所有新鲜事</a></li> -->
                    <!--  <li><a href="<?php echo U('Xinxianshi/list1');?>"><i class="fa fa-list"></i>待审核</a></li> -->
                     <!-- <li><a href="<?php echo U('Xinxianshi/list3');?>"><i class="fa fa-list"></i>启用的新鲜事</a></li> -->
-                    <li><a href="<?php echo U('Xinxianshi/list6');?>"><i class="fa fa-list"></i>所有评论</a></li>
+                   <!--  <li><a href="<?php echo U('Xinxianshi/list6');?>"><i class="fa fa-list"></i>所有评论</a></li>
                     <li><a href="<?php echo U('Xinxianshi/list7');?>"><i class="fa fa-list"></i>在线的评论</a></li>
-                    <li><a href="<?php echo U('Xinxianshi/list5');?>"><i class="fa fa-list"></i>已屏蔽的评论</a></li>
+                    <li><a href="<?php echo U('Xinxianshi/list5');?>"><i class="fa fa-list"></i>已屏蔽的评论</a></li> -->
                    <!--  <li><a href="<?php echo U('Xinxianshi/add');?>"><i class="fa fa-edit"></i>用户添加</a></li> -->
-                </ul>
-            </li>
+             <!--    </ul>
+            </li> -->
             <li class="treeview <?php if($url == "Xinxianshi/listx" OR $url == "Xinxianshi/listx"): ?>active<?php endif; ?>">
                <a href="<?php echo U('Xinxianshi/list');?>">
                     <i class="fa fa-file"></i> <span>举报管理</span>
@@ -252,10 +309,26 @@
                 <ul class="treeview-menu">
                     <li><a href="<?php echo U('Tixian/list1');?>"><i class="fa fa-list"></i>提现申请</a></li>
                     <li><a href="<?php echo U('Tixian/list');?>"><i class="fa fa-list"></i>交易记录</a></li>
+                    <li><a href="<?php echo U('Tixian/jilu');?>"><i class="fa fa-list"></i>交易记录11</a></li>
                    <!--  <li><a href="<?php echo U('Xinxianshi/list3');?>"><i class="fa fa-list"></i>体现记录</a></li>
                     <li><a href="<?php echo U('Xinxianshi/list4');?>"><i class="fa fa-list"></i>屏蔽的新鲜事</a></li> -->
                    <!--  <li><a href="<?php echo U('Xinxianshi/add');?>"><i class="fa fa-edit"></i>用户添加</a></li> -->
                 </ul>
+
+                </li>
+
+                <li class="treeview <?php if($url == "Banben/andlist" OR $url == "Banben/ioslist" OR $url == "Banben/hlist" OR $url == "Banben/andadd" OR $url == "Banben/andedit" OR $url == "Banben/iosadd" OR $url == "Banben/iosedit" OR $url == "Banben/hadd" OR $url == "Banben/hedit" OR $url == "Banben/fetch" OR $url == "Banben/fetch1" OR $url == "Banben/fetch2"): ?>active<?php endif; ?>">
+                <a href="<?php echo U('Quanxian/list');?>">
+                    <i class="fa fa-file"></i> <span>版本管理</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="<?php echo U('Banben/andlist');?>"><i class="fa fa-list"></i>Android</a></li>
+                    <li><a href="<?php echo U('Banben/ioslist');?>"><i class="fa fa-list"></i>ios</a></li>
+                    <li><a href="<?php echo U('Banben/hlist');?>"><i class="fa fa-list"></i>H5</a></li>
+                    
+                </ul>
+            </li>
 
                 <li class="treeview <?php if($url == "Master/list"): ?>active<?php endif; ?>">
                 <a href="<?php echo U('Master/list');?>">
@@ -269,13 +342,14 @@
                    <!--  <li><a href="<?php echo U('Xinxianshi/add');?>"><i class="fa fa-edit"></i>用户添加</a></li> -->
                 </ul>
             </li>
-            <li class="treeview <?php if($url == "Quanxian/list" OR $url == "Quanxian/list1" OR $url == "Quanxian/list2"): ?>active<?php endif; ?>">
+            <li class="treeview <?php if($url == "Quanxian/list" OR $url == "Quanxian/list1" OR $url == "Quanxian/list2" OR $url == "Quanxian/list3" OR $url == "Quanxian/add" OR $url == "Quanxian/edit" OR $url == "Quanxian/edit1" OR $url == "Quanxian/edit2" ): ?>active<?php endif; ?>">
                 <a href="<?php echo U('Quanxian/list');?>">
                     <i class="fa fa-file"></i> <span>权限管理</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="<?php echo U('Quanxian/list');?>"><i class="fa fa-list"></i>后台用户</a></li>
+                    <li><a href="<?php echo U('Quanxian/list3');?>"><i class="fa fa-list"></i>禁用用户</a></li>
                     <li><a href="<?php echo U('Quanxian/list1');?>"><i class="fa fa-list"></i>分组管理</a></li>
                     <li><a href="<?php echo U('Quanxian/list2');?>"><i class="fa fa-list"></i>权限管理</a></li>
                 </ul>
@@ -290,211 +364,293 @@
 <aside class="right-side">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1>
-            查看任务
-            <a href="<?php echo U('Order/list');?>" class="btn btn-default pull-right"><font color="black">任务列表</font></a>
-        </h1>
-        <!-- <ol class="breadcrumb">
-            <li><a href="<?php echo U('Admin/index');?>"><i class="fa fa-dashboard"></i> 管理中心</a></li>
-            <li><a href="<?php echo U('list');?>">订单管理</a></li>
-            <li class="active">查看订单</li>
-        </ol> -->
+         <h1>
+        <div>
+            <div style="float:left">
+            <font class="font" >任务详情</font>  
+            <!-- <p style="width:81px;23px;">待审核用户 </p> -->
+            </div>
+        <div class="search" style="float:left;margin-left: 20px;">
+   
+</div>
+        <a href="javascript:history.back(-1);" class="btn btn-default0 pull-right"  style="position:relative;bottom:8px;">返回</a>
+        </div>
     </section>
 
     <!-- Main content -->
     <!-- <section class="content"> -->
+    
+   <script type="text/javascript" language="javascript"> 
 
-        <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title><?php echo ($CONF['shopTitle']['fieldValue']); ?>后台管理中心</title>
-      <link href="/lebang18/Public/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-      <link href="/lebang18/Apps/Admin/View/css/AdminLTE.css" rel="stylesheet" type="text/css" />
-      <!--[if lt IE 9]>
-      <script src="/lebang18/Public/js/html5shiv.min.js"></script>
-      <script src="/lebang18/Public/js/respond.min.js"></script>
-      <![endif]-->
-      <script src="/lebang18/Public/js/jquery.min.js"></script>
-      <script src="/lebang18/Public/plugins/bootstrap/js/bootstrap.min.js"></script>
-      <script src="/lebang18/Public/js/common.js"></script>
-      <script src="/lebang18/Public/plugins/plugins/plugins.js"></script>
-      <script src="/lebang18/Public/plugins/formValidator/formValidator-4.1.3.js"></script>
-   </head>
-   <body class="wst-page">
-       <form name="myform" method="post" id="myform">
-        <input type='hidden' id='id' value='<?php echo ($order["bankId"]); ?>'/>
-        <table class="table table-hover table-striped table-bordered wst-form">
-           <tr>
-             <td>
-             <span style='font-weight:bold;'>任务号：<?php echo ($order['ordernum']); ?> <!-- <?php echo ($user['name']); ?>  --></span>
-             <span style='margin-left:100px;'>
-             <form action="<?php echo U('edit', ['order_id'=>$order['id']]);?>" method="post" enctype="multipart/form-data">
-                                       当前状态：
-                                         <?php if($order["status"] == 0): ?><span style="font-size:18px;color:red">未支付</span>
-                                         <?php elseif($order["status"] == 1): ?><span style="font-size:18px;color:red">未接单</span>
-                                         <?php elseif($order["status"] == 2): ?><span style="font-size:18px;color:red">已接单</span>
-                                         <?php elseif($order["status"] == 3): ?><span style="font-size:18px;color:red">开始</span>
-                                         <?php elseif($order["status"] == 4): ?><span style="font-size:18px;color:red">完成</span>
-                                         <?php elseif($order["status"] == 5): ?><span style="font-size:18px;color:red">取消</span><?php endif; ?>
-            
-                                       &nbsp;&nbsp; <input type="radio" name = 'status' value= '0'<?php if($order["status"] == 0): ?>checked<?php endif; ?>>未支付
-                                       &nbsp;&nbsp; <input type="radio" name = 'status' value= '1'<?php if($order["status"] == 1): ?>checked<?php endif; ?>>未接单
-                                       &nbsp;&nbsp;<input type="radio" name = 'status' value= '2' <?php if($order["status"] == 2): ?>checked<?php endif; ?>>已接单
-                                       &nbsp;&nbsp;<input type="radio" name = 'status' value= '3' <?php if($order["status"] == 3): ?>checked<?php endif; ?>>开始
-                                       &nbsp;&nbsp;<input type="radio" name = 'status' value= '4' <?php if($order["status"] == 4): ?>checked<?php endif; ?>>完成
-                                       &nbsp;&nbsp;<input type="radio" name = 'status' value= '5' <?php if($order["status"] == 5): ?>checked<?php endif; ?>>取消
-                                       &nbsp;&nbsp;<button class="btn btn-primary" type="submit" name="submit" value="publish">修改状态</button><br>
-                                       <span style='font-weight:bold;'>后台最后操作时间：<?php echo ($order['beizhu'] = date("Y-m-d H:s:i", $order['beizhu'])); ?> <!-- <?php echo ($user['name']); ?>  --></span>
+            function confirmAct() 
+            { 
+                if(confirm('确定要执行此操作吗?')) 
+                { 
+                    return true; 
+                } 
+                return false; 
+            } 
+      function submits()  
+      {  
+         var submitId=document.getElementById('submit');  
+         submitId.disabled=true;  
+         // document.fm.submit();  
+         // setTimeout('var submitId=document.getElementById("submit");submitId.disabled=false;',3000); //代码核心在这里，3秒还原按钮代码
+         // return false;
+      }  
 
-                                       </form>
+      function add(xid){
+        document.getElementById("tcbg").style.display="block";
+        document.getElementById("tcdiv").style.display="block";
+        document.getElementById("xid").value=xid;
+      }
 
+      function removeElement(){
+        document.getElementById("tcbg").style.display='none';
+        document.getElementById("tcdiv").style.display="none";
+      }
+</script>
+<style>
+    select{
+        text-indent:5px;
+    }
+    input{
+              text-indent:10px;
+    }
+</style>
 
-             <!--   <?php if($order["status"] == 1): ?>未接单
-               <elseif condition='$order["status"] eq 2'>已接单
-               <?php elseif($order["status"] == 3): ?>开始
-               <?php elseif($order["status"] == 4): ?>完成
-               <?php elseif($order["status"] == 5): ?>取消<?php endif; ?> -->
-             </span></td>
-           </tr>
-           <tr>
-              <td style='font-weight:bold;'>任务日志</td>
-           </tr>
-           <tr>
-              <td>
-                <table width='100%'>
-                <tr><!-- ##$user['logintimes'] = date("Y-m-d", $user['logintimes']);## -->
-                  <td width='800'>下单时间:<?php echo ($order['addtime'] = date("Y-m-d H:s:i", $order['addtime'])); ?></td>
-                  <td width='800'>开始时间:<?php echo ($order['starttime'] = date("Y-m-d H:s:i", $order['starttime'])); ?></td>
-                  <td width='600'>接单人:<?php echo ($order1['username1']); ?></td>
-                  <td width='800'>接单时间:<?php echo ($order['jdtime'] = date("Y-m-d H:s:i", $order['jdtime'])); ?></td>
-                  <td width='800'>完成时间:<?php echo ($order['endtime'] = date("Y-m-d H:s:i", $order['endtime'])); ?></td>
-                </tr>
-                <!-- <?php if(is_array($order['log'])): $i = 0; $__LIST__ = $order['log'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$log): $mod = ($i % 2 );++$i;?>-->
-                <!-- <tr> -->
-                  <!-- <td><?php echo ($order['ordernum']); ?></td>
-                  <td><?php echo ($order['starttime']); ?></td>
-                  <td><?php echo ($order['jdopenid']); if(!empty($log['shopName'])): ?>(<?php echo ($log['shopName']); ?>)<?php endif; ?></td>
-                  <td>111<?php echo ($order['jdtime']); ?></td>
-                  <td><?php echo ($order['endtime']); ?></td>
-                </tr> -->
-                <!--<?php endforeach; endif; else: echo "" ;endif; ?> -->
-                </table>
-              </td>
-           </tr>
-           <tr>
-             <td style='font-weight:bold;'>任务信息</td>
-           </tr>
-           <tr>
-             <td>
-             <table width='100%'>
+    <section class="content-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="div-box">
+                <div class="div-center"><!--/*居中*/-->
+
+                <div class='left' style='float:left'>
+                    <form action="<?php echo U('edit',['order_id'=>$order['id'],'p'=>$_GET['p']]);?>" method="post" enctype="multipart/form-data" onsubmit="return submits();">
                 
-                <tr>
-                  <td style='text-align:center'>支付成功时间：<?php echo ($order['paytime'] = date("Y-m-d H:s:i", $order['paytime'])); ?></td>
-                  
-                </tr>
+                        <div class="box-body">
+                          <div>
+                              <div class="form-group" style="float:left; ">
+                                <label for="inputCover">任务编号</label>
+                                <input class="ip" type="text" readonly="readonly" name="ordernum" id="inputPhone" placeholder="" maxlength="11" style="width:240px;background:#f9f9f9;" value="<?php echo ($order['ordernum']); ?>" />
+                            </div>
+
+                            <div class="form-group" style="float:left; position: relative;left: -9px;">
+                                <label for="inputCover">任务状态</label>
+                                  <input class="ip" type="text" disabled="disabled" name="status" id="inputPhone" placeholder="" maxlength="11" style="width:240px;background:#f9f9f9;color:#FF9900;"
+                                   <?php if($order['status'] == 3): ?>value="进行中"/> 
+                                      <?php elseif($order['status'] == 2): ?> value="进行中"/><?php endif; ?>
+                            
+                            </div>
+                         </div>
+                            
+                            <div class="form-group">
+                                <label for="inputSubject"  style="height:80px;line-height:80px; position: relative;top: 1px; ">用户需求</label>
+                                <textarea name="demand" id="" cols="30" rows="10" style="height:80px;width:558px;position: relative;left:-8px;top: 1px;border:#dddddd solid 1px;resize: none ;color:#666;" > <?php echo ($order['demand']); ?> 
+                                </textarea>
+                            </div>
+                      <script type="text/javascript" src="/Public/Admin/js/tinybox.js"></script>
+                        
+                            <div class="form-group"style="margin:0 auto;clear:both;width:640px;height:180px; ">
+
+                            <?php if(is_array($order2)): foreach($order2 as $k=>$order2): ?><div id="preview<?php echo ($k+1); ?>"
+                            <?php if($k == 0 OR $k == 3 OR $k == 6): ?>style="margin-top:10px; float:left; margin-left:100px;"
+                            <a href="javascript:void(0)" id="click_pic<?php echo ($k+1); ?>" onclick="click_pic(<?php echo ($k+1); ?>)">
+                            <?php else: ?>
+                            style="margin-top:10px; float:left; margin-left:10px;"><?php endif; ?>
+                            <a href="javascript:void(0)" id="click_pic<?php echo ($k+1); ?>" onclick="click_pic(<?php echo ($k+1); ?>)">
+                            <img id="imghead<?php echo ($k+1); ?>" width=140px; height=140px; border=0 src='/lebang11-29/photo/<?php echo ($path); ?>/<?php echo ((isset($order2["zhaopian"]) && ($order2["zhaopian"] !== ""))?($order2["zhaopian"]):"dingdan.png"); ?>'>
+                            </a>
+                            </div>
                 
-             </td>
-           </tr>
-           <?php if($order["tk"] == 1): ?><tr>
-             <td style='font-weight:bold;'>原路退回</td>
-           </tr>
-          
-           <elseif condition='$order["tk"] eq 2'>退款到余额<?php endif; ?>
-          
-           <tr>
-             <td style='font-weight:bold;'>下单人信息</td>
-           </tr>
-           <tr>
-             <td>
-                <table width='700'>
-                <tr>
-                  <!-- <a href="{echo $order_list}">测试</a> -->
-                  <td width='350' style='text-align:right'>下单用户：</td>
-                  <td><?php echo ($order['username']); ?></td>
-                </tr>
-                <!-- <tr>
-                  <td width='350' style='text-align:right'>用户名：<?php echo ($order['openid']); ?></td>
-                  <td><?php echo ($order['oname']); ?></td>
-                </tr> -->
-               <!--  <tr>
-                  <td style='text-align:right'>地址：</td>
-                  <td><?php echo ($order['address']); ?></td>
-                </tr> -->
-                <tr>
-                  <td style='text-align:right'>联系电话：</td>
-                  <td><?php echo ($order['tel']); ?></td>
-                 <!--  <td>
-                  <notmpty name='order['userPhone']'>
-                  <?php echo ($order['userPhone']); ?>
-                  </notmpty>
-                  <notmpty name='order['userTel']'>
-                  <?php echo ($order['userTel']); ?>
-                  </notmpty>
-                  </td> -->
-                </tr>
-                </table>
-             </td>
-           </tr>
-           <tr>
-              <td style='font-weight:bold;'>需求信息</td>
-           </tr>
-           <tr>
-              <td>
-                <table width='100%'>
-                <tr>
-                  <td width='100%' colspan='2'>需求:<?php echo ($order['demand']); ?></td>
-                  
-                </tr>
-                <tr>
-                  <td width='350'>赏金:<?php echo ($order['reward']); ?></td>
-                  <!-- <td width='130'>数量:</td> -->
-                  
-                </tr>
-                <tr>
-                  <td width='130'>总金额:<?php echo ($order['money']); ?></td>
-                </tr>
-               <!--  <?php if(is_array($order['goodslist'])): $i = 0; $__LIST__ = $order['goodslist'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$goods): $mod = ($i % 2 );++$i;?><tr>
-                  <td width='50'><img src='/lebang18/<?php echo ($goods["goodsThums"]); ?>' style='margin:2px;' width='50' height='50'/></td>
-                  <td width='120'><?php echo ($goods["goodsName"]); ?></td>
-                  <td width='350'>￥<?php echo ($goods["goodsPrice"]); ?></td>
-                  <td width='130'><?php echo ($goods["goodsNums"]); ?></td>
-                  <td width='130'>￥<?php echo ($goods["goodsPrice"]*$goods["goodsNums"]); ?></td>
-                </tr><?php endforeach; endif; else: echo "" ;endif; ?> -->
-                </table>
-              </td>
-           </tr>
-           <!-- <tr>
-              <td style='text-align:right;padding-right:10px;'>商品总金额：￥<?php echo ($order['totalMoney']); ?><br/>+ 运费：￥<?php echo ($order['deliverMoney']); ?><br/><span style='font-weight:bold;font-size:20px'>订单金额：</span><span style='font-weight:bold;font-size:20px;color:red;'>￥<?php echo ($order['totalMoney']+$order['deliverMoney']); ?></span></td>
-           </tr> -->
-           <tr>
-             <td colspan='2' align='center'>
-                 <!-- <button type="button" class="btn btn-primary" onclick='javascript:location.href="<?php echo ($referer); ?>"'>返&nbsp;回</button> -->
-                 <a href="<?php echo U('Order/list');?>" class="btn btn-primary">返&nbsp;回</a>
-             </td>
-           </tr>
-        </table>
-       </form>
-   </body>
-    </section><!-- /.content -->
+                            </if><?php endforeach; endif; ?>
+ 
+                           
+                          </div>
 
-    <section class="content-footer">
-        <div class="text-center">
-            &copy;全民乐帮
-        </div>
-    </section><!-- /.content-footer -->
+      <div style="clear: both; margin-bottom: 20px;"></div>
 
+
+<script type="text/javascript" >                       
+        function click_pic(id){
+                var a1 = document.getElementById('click_pic'+id);
+                var click_pic = "<img src='"+ a1.children[0].src +"' />";
+              TINY.box.show(click_pic,0,0,0,1);
+             }
+
+ 
+</script> 
+                          <div>
+                              <div class="form-group" style="float:left; ">
+                                <label for="inputCover">感谢金</label>
+                                <input class="ip" type="text" readonly="readonly" name="" id="inputPhone" placeholder="" maxlength="11" style="width:240px;background:#f9f9f9;color:#FF9900;" value="￥<?php echo ($order['reward']); ?>"/>
+                            </div>
+
+                            <div class="form-group" style="float:left; position: relative;left: -9px;">
+                                <label for="inputCover">商品价格</label>
+                                <input class="ip" type="text" disabled="disabled" name="" id="inputPhone" placeholder="凭购物小票结算" maxlength="11" style="width:240px;background:#f9f9f9;" />
+                            </div>
+                         </div>
+                          
+                           <div>
+                              <div class="form-group" style="float:left; ">
+                                <label for="inputCover">任务时间</label>
+                                <input class="ip" type="text" readonly="readonly" name="" id="inputPhone" placeholder="" maxlength="11" style="width:240px;background:#f9f9f9;" value="<?php echo ($order['starttime'] = date("Y-m-d H:s:i", $order['starttime'])); ?>"/>
+                            </div>
+
+                            <div class="form-group" style="float:left; position: relative;left: -9px;">
+                                <label for="inputCover">下单时间</label>
+                                <input class="ip" type="text" disabled="disabled" name="" id="inputPhone" placeholder="" maxlength="11" style="width:240px;background:#f9f9f9;" value="<?php echo ($order['addtime'] = date("Y-m-d H:s:i", $order['addtime'])); ?>" />
+                            </div>
+                         </div>
+
+                          <div>
+                              <div class="form-group" style="float:left; ">
+                                <label for="inputCover">任务地点</label>
+                                <input class="ip" type="text" readonly="readonly" name="" id="inputPhone" placeholder="" maxlength="11" style="width:240px;background:#f9f9f9;" value="<?php echo ($order['location']); ?>"/>
+                            </div>
+
+                            <div class="form-group" style="float:left; position: relative;left: -9px;">
+                                <label for="inputCover">具体地址</label>
+                                <input class="ip" type="text" disabled="disabled" name="" id="inputPhone" placeholder="" maxlength="11" style="width:240px;background:#f9f9f9;" value="<?php echo ($order['address']); ?>" />
+                            </div>
+                         </div>
+
+                          <div>
+                              <div class="form-group" style="float:left; ">
+                                <label for="inputCover">发布人</label>
+                                <input class="ip" type="text" readonly="readonly" name="" id="inputPhone" placeholder="" maxlength="11" style="width:240px;background:#f9f9f9;" value ="<?php echo ($order['username']); ?>"/>
+                            </div>
+
+                            <div class="form-group" style="float:left; position: relative;left: -9px;">
+                                <label for="inputCover">手机号</label>
+                                <input class="ip" type="text" disabled="disabled" name="" id="inputPhone" placeholder="" maxlength="11" style="width:240px;background:#f9f9f9;" value="<?php echo ($order['tel']); ?>" />
+                            </div>
+                         </div>
+                         
+                           <div>
+                             <font style="font-size:20px;font-color:#333;">接单人信息</font><br><br>
+                           </div>
+
+                      <div  style="float:left;">
+                          <div  style="float:left;">
+                             <div class="form-group">
+                                <label for="inputbirthday">接单人</label>
+                                <input class="ip" type="text" disabled="disabled" name="phone" id="inputPhone" placeholder="" maxlength="11" style="width:240px;background:#f9f9f9;" value="<?php echo ($order1['name']); ?>" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputSubject">手机号码</label>
+                                <input class="ip" type="text" disabled="disabled" name="phone" id="inputPhone" placeholder="" maxlength="11" style="width:240px;background:#f9f9f9;" value="<?php echo ($order1['phone']); ?>" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputSubject">接单时间</label>
+                                <input class="ip" type="text" disabled="disabled" name="phone" id="inputPhone" placeholder="" maxlength="11" style="width:240px;background:#f9f9f9;" value="<?php echo ($order['jdtime'] = date("Y-m-d H:s:i", $order['jdtime'])); ?>" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputSubject">评价星级</label>
+
+                             <div class="ip" style="display:inline-block;top:-2px;text-align:center;width:240px;height:42px;background:#f9f9f9;text-align: left;
+text-indent: 10px;"><?php echo ($pfs); ?> <?php echo number_format($order3['fen'],1);?></div>
+
+
+                            </div>
+
+                            
+                      </div>
+
+                          <div style="float:left;margin-left:-95px;margin-top:-9px;">
+                            <div id="preview4" style="margin-top:10px; float:left; margin-left:100px;">
+                            <a href="javascript:void(0)" id="click_pic4" onclick="click_pic(4)">
+                            <img id="imghead1" width=140px; height=140px; border=0 src='/lebang11-29/photo/avatar/b_<?php echo ((isset($order1["avatar"]) && ($order1["avatar"] !== ""))?($order1["avatar"]):"avatar.png"); ?>'>
+                            </a>
+                            </div>
+                          </div>
+                       </div>
+
+                        <div style="clear:both;margin-bottom:10px;"></div>
+                        <!-- /.box-body -->
+                        <div class="boxclearfix">
+                          <input type="button" class="btn btn-default2" onclick="add(<?php echo I('get.order_id');?>)" value="强制取消" style="width:150px;height:40px">
+                          <input type="hidden" name ="id" value="<?php echo ($shanghu['id']); ?>">
+                        
+                          <button class="btn btn-primary0"  type="submit" id = "submit" name="submit" onclick="return confirmAct();" value="publish" style="width:490px;">保存</button>
+
+                        </div>
+
+
+
+                        <br>
+                        </div>
+                 
+                    </div>
+
+<!--弹出图片-->
+<style type="text/css">
+#tinybox{position:absolute; display:none; padding:10px;  z-index:2000;}
+#tinymask{position:absolute; display:none; top:0; left:0; height:100%; width:100%; z-index:1500;background:#000000;}
+#tinycontent{background:#ffffff; font-size:1.1em;}
+</style>
+
+<style>
+.tcbg{  display:none;  position:fixed;  top: 0%;  left: 0%;  width: 100%;  height: 100%;  background-color:#000;   -moz-opacity: 0.5;  opacity:.50;  filter: alpha(opacity=50); z-index:5}
+.tcdiv{ display:none;  position:fixed;  top:200px; right:350px; margin:auto; text-align:left;   width: 100%; max-width:400px;  height: 280px;  background-color:#F8F8F8;  z-index:6; padding:10px; border-radius:5px;}
+.cccc{
+    display:none;  position:fixed;  top:200px; right:350px; margin:auto; text-align:left;   width: 100%; max-width:600px;  height: 300px;  background-color:#F8F8F8;  z-index:6; border-radius:5px;}
+
+.int{
+    width:100%;
+    }
+ #we{
+    float:right;
+    margin-top:20px;
+    
+    }
+    textarea{
+        resize:block; width:380px; height:200px; border-radius:3px;
+    }
+
+    </style>
+<div class="tcbg" id="tcbg"></div>
+<form action="<?php echo U('shanghu/ytuijian');?>" method="post" id="tongguo">
+</form>
+<div id="tcdiv"  class="tcdiv">
+  <form action="<?php echo U('order/yjinyong');?>" method="post" onsubmit="return check();">
+    <input type="hidden" id="xid"  name="xid" > 
+    <textarea name="beizhu" id="beizhu" placeholder="输入强制取消的理由......"cols="30" rows="10"></textarea>
+     <div id="we">
+    <input type='button' class="btn btn-default0" style="background:#FFFFFF;border-color: #fbfbfb;color:black; " onclick="removeElement()" value='返回'>&nbsp;&nbsp;
+       <input type="submit" class="btn btn-default0" style="background:#FF6600;"; value="强制取消">
+    </div>
+  </form>
+</div>
+
+
+<script>
+        function check(){
+            var beizhu =  $('#beizhu').val();
+            if( beizhu!= ''){
+                return true;
+            }
+            alert('亲,输入强制取消的理由!!!');
+            return false;
+
+        }
+</script>
+</section>
 </aside><!-- /.right-side -->
 
             
         </div><!-- ./wrapper -->
 
         <!-- jQuery 2.0.2 -->
-        <script src="/lebang18/Public/Admin/js/jquery.min.js"></script>
+        <!-- <script src="/lebang11-29/Public/Admin/js/jquery.min.js"></script> -->
         <!-- Bootstrap -->
-        <script src="/lebang18/Public/Admin/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="/lebang11-29/Public/Admin/js/bootstrap.min.js" type="text/javascript"></script>
         <!-- AdminLTE App -->
-        <script src="/lebang18/Public/Admin/js/app.js" type="text/javascript"></script>
+        <script src="/lebang11-29/Public/Admin/js/app.js" type="text/javascript"></script>
 
 
     </body>

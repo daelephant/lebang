@@ -1,0 +1,146 @@
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="left-side sidebar-offcanvas">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src="__PUBLIC__/Admin/img/avatar3.png" class="img-circle" alt="User Image" />
+            </div>
+            <div class="pull-left info">
+                <p>Hello, Lebang</p>
+
+                <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
+            </div>
+        </div>
+        <!-- search form -->
+        <!-- <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="操作"/>
+                <span class="input-group-btn">
+                    <button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </form> -->
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+            <li class="active">
+                <a href="{:U('Admin/index')}">
+                    <i class="fa fa-dashboard"></i> <span>控制台</span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href="{:U('User/list')}">
+                    <i class="fa fa-file"></i> <span>用户管理</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{:U('User/list')}"><i class="fa fa-list"></i>所有用户</a></li>
+                    <li><a href="{:U('User/list1')}"><i class="fa fa-list"></i>待审核</a></li>
+                    <li><a href="{:U('User/list3')}"><i class="fa fa-list"></i>审核过</a></li>
+                    <li><a href="{:U('User/list4')}"><i class="fa fa-list"></i>审核未通过</a></li>
+                   <!--  <li><a href="{:U('User/add')}"><i class="fa fa-edit"></i>用户添加</a></li> -->
+                </ul>
+            </li>
+            <!-- <li class="treeview">
+                <a href="{:U('Category/list')}">
+                    <i class="fa fa-th-large"></i> <span>分类</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{:U('Category/read')}"><i class="fa fa-list"></i>分类</a></li>
+                    <!-- <li><a href="{:U('Category/add')}"><i class="fa fa-edit"></i>分类添加</a></li> -->
+                <!-- </ul>
+            </li>  --> 
+            <li class="treeview">
+                <a href="{:U('Order/list')}">
+                    <i class="fa fa-msg"></i> <span>订单管理</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{:U('Order/list')}"><i class="fa fa-list"></i>订单列表</a></li>
+                    <li><a href="{:U('Order/liushi')}"><i class="fa fa-edit"></i>流失的订单</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="{:U('msg/list')}">
+                    <i class="fa fa-msg"></i> <span>消息管理</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{:U('msg/list')}"><i class="fa fa-list"></i>消息列表</a></li>
+                    <li><a href="{:U('msg/add')}"><i class="fa fa-list"></i>消息添加</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="{:U('Shequ/list')}">
+                    <i class="fa fa-msg"></i> <span>社区管理</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{:U('Shequ/list')}"><i class="fa fa-list"></i>社区列表</a></li>
+                    <li><a href="{:U('Shequ/add')}"><i class="fa fa-edit"></i>添加社区</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="{:U('Xinxianshi/list')}">
+                    <i class="fa fa-msg"></i> <span>新鲜事管理</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{:U('Xinxianshi/list')}"><i class="fa fa-list"></i>所有新鲜事</a></li>
+                   <!--  <li><a href="{:U('Xinxianshi/list1')}"><i class="fa fa-list"></i>待审核</a></li> -->
+                    <li><a href="{:U('Xinxianshi/list3')}"><i class="fa fa-list"></i>启用的新鲜事</a></li>
+                    <li><a href="{:U('Xinxianshi/list4')}"><i class="fa fa-list"></i>屏蔽的新鲜事</a></li>
+                   <!--  <li><a href="{:U('Xinxianshi/add')}"><i class="fa fa-edit"></i>用户添加</a></li> -->
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="{:U('Xinxianshi/list')}">
+                    <i class="fa fa-msg"></i> <span>评论管理</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <!-- <li><a href="{:U('Xinxianshi/list')}"><i class="fa fa-list"></i>所有新鲜事</a></li> -->
+                   <!--  <li><a href="{:U('Xinxianshi/list1')}"><i class="fa fa-list"></i>待审核</a></li> -->
+                    <!-- <li><a href="{:U('Xinxianshi/list3')}"><i class="fa fa-list"></i>启用的新鲜事</a></li> -->
+                    <li><a href="{:U('Xinxianshi/list6')}"><i class="fa fa-list"></i>所有评论</a></li>
+                    <li><a href="{:U('Xinxianshi/list7')}"><i class="fa fa-list"></i>启用的评论</a></li>
+                    <li><a href="{:U('Xinxianshi/list5')}"><i class="fa fa-list"></i>被举报的评论</a></li>
+                   <!--  <li><a href="{:U('Xinxianshi/add')}"><i class="fa fa-edit"></i>用户添加</a></li> -->
+                </ul>
+            </li>
+
+            <li class="treeview">
+                <a href="{:U('Xinxianshi/list')}">
+                    <i class="fa fa-msg"></i> <span>举报管理</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <!-- <li><a href="{:U('Xinxianshi/list')}"><i class="fa fa-list"></i>所有新鲜事</a></li> -->
+                   <!--  <li><a href="{:U('Xinxianshi/list1')}"><i class="fa fa-list"></i>待审核</a></li> -->
+                    <!-- <li><a href="{:U('Xinxianshi/list3')}"><i class="fa fa-list"></i>启用的新鲜事</a></li> -->
+                    <li><a href="{:U('Xinxianshi/list4')}"><i class="fa fa-list"></i>被举报的新鲜事</a></li>
+                    <li><a href="{:U('Xinxianshi/list5')}"><i class="fa fa-list"></i>被举报的评论</a></li>
+                   <!--  <li><a href="{:U('Xinxianshi/add')}"><i class="fa fa-edit"></i>用户添加</a></li> -->
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="{:U('Tixian/list')}">
+                    <i class="fa fa-msg"></i> <span>财务管理</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{:U('Tixian/list')}"><i class="fa fa-list"></i>提现交易</a></li>
+                   <!--  <li><a href="{:U('Xinxianshi/list1')}"><i class="fa fa-list"></i>待审核</a></li> -->
+                   <!--  <li><a href="{:U('Xinxianshi/list3')}"><i class="fa fa-list"></i>体现记录</a></li>
+                    <li><a href="{:U('Xinxianshi/list4')}"><i class="fa fa-list"></i>屏蔽的新鲜事</a></li> -->
+                   <!--  <li><a href="{:U('Xinxianshi/add')}"><i class="fa fa-edit"></i>用户添加</a></li> -->
+                </ul>
+            </li>
+
+        </ul>
+    </section>
+    <!--  /.sidebar -->
+</aside>

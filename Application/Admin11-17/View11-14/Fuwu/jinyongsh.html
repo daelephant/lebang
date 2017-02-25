@@ -1,0 +1,106 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        <div>
+            <div style="float:left">
+            <font class="font" >禁用商户服务</font>  
+            <!-- <p style="width:81px;23px;">待审核用户 </p> -->
+            </div>
+        <div class="search" style="float:left;margin-left: 20px;">
+   <form id="shse_search" action='{:U('Fuwu/jinyongfetch')}' method="get">
+      <input type="text" id="keyword"  class="txt1"  autocomplete="off" name="mingcheng" placeholder=""  />
+      <button type="submit" class="search_btn" value="" >
+      <span class="ico" id="scico"><em></em></span></button>
+      </form>
+</div>
+    <div style="float:right;">
+            <if condition ="$_GET['mingcheng'] neq ''">
+            <a href= "javascript:history.back(-1);" class="btn btn-default0 pull-right">返回</a>
+            <else/>
+            <a href="{:U('Fuwu/add')}" class="btn btn-default0 pull-right">新增服务</a>
+            </if>
+        </div>
+        </div>
+       </h1>
+    </section>
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+<script type="text/javascript" language="javascript"> 
+
+            function confirmAct(id,p) 
+            { 
+                if(confirm('确定要执行此操作吗?')) 
+                { 
+                    $('#xinid').val(id);
+                    $('#p').val(p);
+                    $('#ping').submit();
+                    return true; 
+                } 
+                return false; 
+            } 
+     function submits()  
+     {  
+         var submitId=document.getElementById('submit');  
+         submitId.disabled=true;  
+    
+    }  
+
+ </script>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-body">
+                         <table class="table table-bordered" >
+                            <tbody>
+                            <tr style="background: #fbfbfb;">
+                                <!-- <th style="width: 10px">#</th> -->
+                                <th style="80px;">序号</th>
+                                <th style="120px;">服务项目名称</th>
+                                <th style="200px;">商户名称</th>
+                                <th style="100px;">联系人</th>
+                                <th style="100px;">手机号码</th>
+                                <th>禁用理由</th>
+                                <th style="100px;">禁用时间</th>
+                                <th style="width:150px">操作</th> 
+                            </tr>
+                            <volist name="leibie" id="leibie" key="k">
+                            <tr>
+                                <td>{$leibie['id']}</td>
+                                <td style="text-align:left;">{$leibie['name']}</td>
+                                <td>{$shanghu[$k-1]['username']} </td>
+                                <td>{$shanghu[$k-1]['phone']}</td>
+                                <!-- <td>{$xinxianshi['status']}</td> -->
+                                <td>{$leibie['danwei']}</td>
+                                <td>{$leibie['beizhu']}</td>        
+                                <td>{:date('Y-m-d H:i:s',$leibie['jinyongshijian'])}</td>
+                                <td>
+                                     <input type="button" onclick='confirmAct({$leibie['id']},{:I('get.p')|1})' class="btn btn-default2" style="width:100px;background: #009900;" value="启用">
+                                </td>
+                            </tr>
+                            </volist>
+
+
+                            </tbody>
+                        </table>
+                    </div><!-- /.box-body -->
+                </div>
+                  <!--分页的位置-->
+                    {$page_html}
+            </div>
+        </div>
+<form action="" method="post" id="ping">
+  <input type="hidden" id="xinid" name="xinid">
+  <input type="hidden" id="p" name="p">
+</form>
+    </section><!-- /.content -->
+
+   
+
+</aside><!-- /.right-side -->
+</block>

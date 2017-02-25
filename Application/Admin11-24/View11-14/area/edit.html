@@ -1,0 +1,65 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            地区编辑
+             <a href="{:U('Area/list')}" class="btn btn-default pull-right"><font color="black">地区设置</font></a>
+        </h1>
+    </section>
+
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+       <script language="javascript">  
+     function submits()  
+     {  
+         var submitId=document.getElementById('submit');  
+         submitId.disabled=true;  
+         // document.fm.submit();  
+         // setTimeout('var submitId=document.getElementById("submit");submitId.disabled=false;',3000); //代码核心在这里，3秒还原按钮代码
+         // return false;
+    }  
+</script>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                     <form action="{:U('Admin/area/edit',array('id'=>$row['id']))}" method="post"  onsubmit="return submits();">
+                    <select class="xiala" style= "margin-top:10px; margin-left:10px; margin-bottom:10px;" name="sid">
+                        <foreach name = "cats" item = "c">
+                        <if condition="$row['sid'] eq $c['id']">
+                        <option value ="{$c['id']}" selected>{$c['lev']|str_repeat="&nbsp",###}{$c['mingcheng']}</option>
+                        <else/>
+                         <option value ="{$c['id']}">{$c['lev']|str_repeat="&nbsp",###}{$c['mingcheng']}</option>
+                        </if>
+                      
+                        </foreach>
+        
+                      </select>
+                 <!-- <select class="xiala" name="mid">
+                      <option value="1">{$row['mid']}</option>
+                         <option value="1">1</option>
+                    
+                      </select> -->
+                <input type="text" name="mingcheng" class="text" value="{$row['mingcheng']}" placeholder="参数名称"/>
+
+                <input type="submit"  class="btn btn-primary"  id ="submit" style="width:120px;" value="保存" class="sub_090" style="width:80px;"/>
+                 </form>
+
+                </div><!-- /.box -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+
+    </section><!-- /.content -->
+
+    <section class="content-footer">
+        <div class="text-center">
+            &copy;全民乐帮
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>

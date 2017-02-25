@@ -6,15 +6,45 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            任务列表
-            <!-- <small>订单</small> -->
-        </h1>
-        <!-- <ol class="breadcrumb">
-            <li><a href="{:U('Admin/index')}"><i class="fa fa-dashboard"></i> 管理中心</a></li>
-            <li><a href="{:U('list')}">订单管理</a></li>
-            <li class="active">订单列表</li>
-        </ol> -->
+        <div>
+            <div style="float:left">
+            <font class="font" >进行中任务</font>  
+            <!-- <p style="width:81px;23px;">待审核用户 </p> -->
+            </div>
+        <div class="search" style="float:left;margin-left: 20px;">
+   <form id="user_search" action='{:U('Order/fetch')}' method="get" onsubmit="return check()">
+    <select name="sosuo" id="sosuo" class="sosuo">
+                                          <option  name="sosuo" value="1">&nbsp;手机号</option>
+                                          <option  name="sosuo" value="2">&nbsp;任务编号</option>
+                                          
+        </select>
+      <input type="text" id="text" name="value" class="txt"  autocomplete="off" name="value" />
+      <button type="submit" class="search_btn" id="Search" type="button" >
+      <span class="ico" id="scico"><em></em></span>
+      </button>
+   </form>
+</div>
+      <div style="float:right;">
+            <if condition ="$_GET['sosuo'] neq ''">
+            <a href= "javascript:history.back(-1);" class="btn btn-default0 pull-right">返回</a>
+            </if>
+        </div>
+  
+        </div>
+       </h1>
     </section>
+
+    <script>
+        function check(){
+            var text =  $('#text').val();
+           
+            if( text == ''){
+                alert('亲,请输入搜索内容!!!');
+               return false;
+            }
+
+        }
+</script>
 
     <!-- Main content -->
     <!-- <section class="content"> -->
@@ -22,68 +52,49 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="box">
-                   <!--  <div class="box-header">
-                       <h3 class="box-title"></h3>
-                       <a href="{:U('Order/add')}" class="btn btn-default pull-right">添加订单</a>
-                   </div>/.box-header -->
-        <form action='{:U('Order/fetch')}' method="get">
-                <table style="margin-left:10px;margin-top:5px;margin-bottom: 5px;" border="0" cellpadding="0" cellspacing="0">
-                <td style="text-align:right">&nbsp;手机号： <input id="tel" name="tel"  type="text" value="{$_GET['tel']}"/></td>
-                <td style="text-align:right">&nbsp;任务号：<input id="ordernum" name="ordernum"  type="text" value="{$_GET['ordernum']}"/>
-                &nbsp;<input type="submit" value="搜索" id="Search" /></td>
-                </table>
-        
-        </form>
                     <div class="box-body">
-                        <table style="margin-left: -5px;margin-top: -11px;" class="table table-bordered">
+                        <table class="table table-bordered" >
                             <tbody>
-                            <tr style="background: #fbfbfb;">
+                            <tr>
                                 <!-- <th style="width: 10px">#</th> -->
-                                <th style=" text-align:center;">列表</th>
-                                <th style="width:100px; text-align:center;">任务号</th>
-                                <th style=" text-align:center;">需求</th>
-                                <th style="width:100px;  text-align:center;">手机号</th>
-                                <th style="width:60px;  text-align:center;">金额</th>
-                                <th style=" text-align:center;">地址</th>
-                                <th style="width:150px;  text-align:center;">下单时间</th>
-                                <th style="width:150px; text-align:center;">完成时间</th>
-                                <th style=" text-align:center;">操作</th>
-                            </tr>      
+                                <th style="width:80px;">序号</th>  
+                                <th style="width:100px;">任务编号</th>
+                                <th>用户需求</th>
+                                <th style="width:70px; ">发布人</th>
+                                <th style="width:100px;">手机号码</th>
+                                <th style="width:100px;">金额</th>
+                                <th style="width:150px; ">下单时间</th>
+                                <th style="width:110px;">操作</th>
+                             
+                            </tr>
                             <volist name="order_list" id="order">
                             <tr>
-                                <td>{$order['id']}</td>
-                               <!--  <td>{$order['location']}</td> -->
-                                
+                               <td>{$order['id']}</td>
                                 <td>{$order['ordernum']}</td>
-                                <td>{$order['demand']}</td>
-                                <td>{$order['tel']}</td>
+                                <td style="text-align:left;">{$order['demand']}</td>
+                                <td>{$order['username']}</td>
+                                <td>{$order['phone']}</td>
                                 <td>{$order['money']}</td>
-                                <td>{$order['location']}</td> 
                                 <td>{$order['addtime']}</td>
-                                <!-- <td>{$order['status']}</td> -->
-                                <td>{$order['endtime']}</td>
-                                
-                                <td style="width: 75px">
-                                    <a href="{:U('edit', ['order_id'=>$order['id']])}" class="btn btn-default" title="查看">查看</a>
-                                    <!-- <a href="{:U('remove', ['order_id'=>$order['order_id']])}" class="btn btn-default" title="删除" onclick="return confirm('您确认要删除吗？');"><span class="fa fa-trash-o"></span> 删除</a> -->
+                                <td>
+                                   <a href="{:U('edit', ['order_id'=>$order['id'],'p'=>$_GET['p']])}" class="btn btn-default1" title="编辑">查看详情</a> 
                                 </td>
                             </tr>
                             </volist>
-
                             </tbody>
                         </table>
+                        
                     </div><!-- /.box-body -->
-                   
+                      
                 </div>
-                 <!--分页的位置-->
-                    {$page_html}
+                  <!--分页的位置-->
+                          {$page_html}
             </div>
         </div>
     </section><!-- /.content -->
-
     <section class="content-footer">
         <div class="text-center">
-            &copy;全民乐帮
+          <!--   &copy;全民乐帮 -->
         </div>
     </section><!-- /.content-footer -->
 

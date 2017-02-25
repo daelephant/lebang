@@ -1,0 +1,126 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+     <section class="content-header">
+         <h1>
+        <div>
+            <div style="float:left">
+            <font class="font" >后台用户详情</font>  
+            <!-- <p style="width:81px;23px;">待审核用户 </p> -->
+            </div>
+        <div class="search" style="float:left;margin-left: 20px;">
+   
+</div>
+        <a href="javascript:history.back(-1);" class="btn btn-default0 pull-right"  style="position:relative;bottom:8px;">返回</a>
+        </div>
+    </section>
+      <script type="text/javascript" language="javascript"> 
+
+            function confirmAct() 
+            { 
+                if(confirm('确定要执行此操作吗?')) 
+                { 
+                    return true; 
+                } 
+                return false; 
+            } 
+
+    </script>
+<style>
+    .radio{
+  -webkit-appearance:radio;
+
+}
+
+
+.checkbox, .radio {
+    padding-left: 0;
+}
+.radio, .checkbox {
+    display:inline; 
+     min-height: 20px; 
+     /*padding-left: 10px; */
+     margin-top: 10px; 
+    margin-bottom: 10px;
+     vertical-align: middle; 
+}
+
+    select{
+        text-indent:10px;
+    }
+    input{
+              text-indent:10px;
+    }
+
+
+</style>
+    <section class="content-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="div-box">
+                <div class="div-center">
+                    <form action="{:U('Quanxian/edit',array('uid'=>$msg['id']))}" method="post" enctype="multipart/form-data">
+                        <div class="box-body">
+
+                            <div class="form-group">
+                                <label for="inputCover">用户名</label>
+                                    <input class="ip" type="text" style="width:700px;" name="username" id="inputPhone" placeholder=""  value="{$msg['username']}" />
+                                </div>
+
+                        <div class="form-group">
+                                <label for="inputCover">姓名</label>
+                                <input type="text" class="ip" style="width:700px;" name="realname" id="username" placeholder="" maxlength="" value="{$msg['realname']}" /><br />
+                                </div>
+
+                        <div class="form-group">
+                                <label for="inputCover">密码</label>
+                                <input type="password" class="ip"style="width:700px;"name="password" id="password" placeholder="密码为空不修改" maxlength="20" /><br />
+                            </div>
+                        
+                       <div class="form-group" styel="margin-top:20px;" style="float:left;">
+                                <label for="inputSubject" style="float:left;">启用</label> 
+                            
+                                <div class='ip' style="float:left;width:700px;position:relative;left:-1px;top: 0px;">
+                                    &nbsp;<input class="radio" type="radio" name="qiyong" value ="1" <if condition="$msg['qiyong'] eq 1">checked</if>>启用
+                                    &nbsp;<input class="radio" type="radio" name="qiyong" value ="0" <if condition="$msg['qiyong'] eq 0">checked</if>>禁用
+                                </div>
+
+                        </div>
+
+                   
+
+                        <div class="form-group">
+                                <label for="inputSubject" style="float:left;line-height:100px;  height:100px;">分组</label> 
+                                <div class='ip' style="float:left;width:700px;position:relative;left:-1px;top:0px;height:100px;"> 
+                                    <volist name="mgr" id="group">
+                                    <if condition='$mcc["group_id"] eq $group["id"]'>
+                                    <td>&nbsp;<input class="radio" type="radio" name="groups" id="inputSubject"  value="{$group['id']}|{$group['title']}" checked=""></td>{$group['title']}
+                                    <else />
+                                    <td>&nbsp;<input class="radio" type="radio" name="groups" id="inputSubject"  value="{$group['id']}|{$group['title']}"></td>{$group['title']}
+                                    </if>
+                                    </volist>
+                                 </div>   
+                            </div>
+
+                        <div class="form-group" style="clear:both;"></div>
+
+                        <div class="boxclearfix" >
+                          
+                            <button class="btn btn-primary0"  type="submit" style="width:780px;" name="submit" onclick="return confirmAct();" value="publish">保存</button>
+                          
+                        </div><br/>
+
+                    </div>
+                    </form>
+
+                </div><!-- /.box -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div>
+    </section><!-- /.content -->
+
+</aside><!-- /.right-side -->
+</block>

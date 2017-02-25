@@ -1,0 +1,126 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            新鲜事列表
+            <small>新鲜事</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:U('Admin/index')}"><i class="fa fa-dashboard"></i> 管理中心</a></li>
+            <li><a href="{:U('list')}">新鲜事</a></li>
+            <li class="active">新鲜事列表</li>
+        </ol>
+    </section>
+                             <!-- //s -->
+                                    <script type="text/javascript">
+                                    function add(xid){
+                                    document.getElementById("tcbg").style.display="block";
+                                    document.getElementById("tcdiv").style.display="block";
+                                    document.getElementById("xid").value=xid;
+                                    }
+
+
+                                    function subs(){
+                                    var beizhu=document.getElementById("beizhu").value;//
+                                    var xid=document.getElementById("xid").value;//
+                                    //alert(beizhu);
+                                  //alert(xid);
+                                   window.location.href="{:U('bianji', array('id'=>[],'beizhu'=>[]))}"+xid;
+
+                                    //window.location.href="__ROOT__/Application/Admin/Controller/XinxianshiController.class.php";
+
+                                        
+                                    }
+                                    function cancel(){
+                                    var p=document.getElementById("div");
+                                    document.body.removeChild(p);
+                                    }
+                                    </script>
+    <!-- Main content -->
+    <section class="content">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title"></h3>
+                        <!-- <a href="{:U('Xinxianshi/add')}" class="btn btn-default pull-right">添加新鲜事</a> -->
+                    </div><!-- /.box-header -->
+                    
+                    <div class="box-body">
+                        <table class="table table-bordered">
+                            <tbody>
+                            <tr>
+                                <!-- <th style="width: 10px">#</th> -->
+                                <th>列表</th>
+                                <th>发帖人</th>
+                                <th>所在社区</th>
+                                <th>内容</th>
+                                <th>点赞数</th>
+                                <!-- <th>状态</th> -->
+                                <th>评论数</th>
+                                <th>状态</th>
+
+                                <!-- <th>照片数</th> -->
+                                <th>操作</th>
+                               <!--  <th>性别</th>
+                                <th>证件号</th> -->
+                               <!--  <th style="width: 20%">操作</th> -->
+                            </tr>
+                            
+                            <volist name="xinxianshi_list" id="xinxianshi">
+                            <tr>
+                                <td>{$xinxianshi['id']}</td>
+                                <td>{$xinxianshi['name']}</td>
+                                <td>{$xinxianshi['mingcheng']}</td>
+                                <td>{$xinxianshi['neirong']}</td>
+                                <!-- <td>{$xinxianshi['status']}</td> -->
+                                <td>{$xinxianshi['dianzanshu']}</td>
+    
+                                <td><a href="{:U('pingluncheck', ['xinxianshi_id'=>$xinxianshi['id']])}" class="btn btn-default" style="width:70px" title="查看评论">{$xinxianshi['pinglunshu']}</a></td>
+                                <td>{$xinxianshi['xianshi']=='1'?'启用':'禁用'}</td>
+                              
+                                <td >
+                                    
+       
+                                    <input type="button" onclick="add({$xinxianshi['id']})" value="禁用">
+
+                                </td>
+                            </tr>
+                            </volist>
+
+                            </tbody>
+                        </table>
+                    </div><!-- /.box-body -->
+                    <!--分页的位置-->
+                    {$page_html}
+                </div>
+
+            </div>
+        </div>
+
+<style>
+.tcbg{  display:none;  position:fixed;  top: 0%;  left: 0%;  width: 100%;  height: 100%;  background-color:#000;   -moz-opacity: 0.5;  opacity:.50;  filter: alpha(opacity=50); z-index:5}
+.tcdiv{ display:none;  position:fixed;  top:100; left:auto; margin:auto; text-align:left;   width: 100%; max-width:740px;  height: 50%;  background-color:#FFF;  z-index:6; padding:10px;}
+</style>
+<div class="tcbg" id="tcbg"></div>
+<div id="tcdiv"  class="tcdiv">
+<input type="text" placeholder="备注信息" id="xid"  > 
+    <input type="text" placeholder="备注信息" id="beizhu"  > 
+    <input type="submit" value="tj" onclick="subs()">
+</div>
+
+    </section><!-- /.content -->
+
+    <section class="content-footer">
+        <div class="text-center">
+            &copy;lebang，亲邻乐帮
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>

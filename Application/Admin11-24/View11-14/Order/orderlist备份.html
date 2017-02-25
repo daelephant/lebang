@@ -1,0 +1,83 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            订单列表
+            <small>订单</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:U('Admin/index')}"><i class="fa fa-dashboard"></i> 管理中心</a></li>
+            <li><a href="{:U('list')}">订单</a></li>
+            <li class="active">订单列表</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title"></h3>
+                        <a href="{:U('Order/add')}" class="btn btn-default pull-right">添加订单</a>
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        <table class="table table-bordered">
+                            <tbody>
+                            <tr>
+                                <th style="width: 10px">#</th>
+                                <th>列表</th>
+                                <th>用户名</th>
+                                <th>手机号</th>
+                                <th>订单号</th>
+                                <th>需求</th>
+                                <th>下单时间</th>
+                                <th>状态</th>
+                                <th>完成时间</th>
+                                <th>金额</th>
+                               <!--  <th>订单号</th> -->
+                                <th style="width: 20%">操作</th>
+                            </tr>
+                            
+                            <volist name="order_list" id="order">
+                            <tr>
+                                <td>{$order['id']}</td>
+                                <td>{$order['oname']}</td>
+                                <td>{$order['tel']}</td>
+                                <td>{$order['ordernum']}</td>
+                                <td>{$order['demand']}</td>
+                                <td>{$order['addtime']}</td>
+                                <td>{$order['status']}</td>
+                                <td>{$order['endtime']}</td>
+                                <td>{$order['money']}</td>
+                                <td>
+                                    <a href="{:U('edit', ['order_id'=>$order['order_id']])}" class="btn btn-default" title="编辑"><span class="fa fa-edit"></span> 编辑</a>
+                                    <a href="{:U('remove', ['order_id'=>$order['order_id']])}" class="btn btn-default" title="删除" onclick="return confirm('您确认要删除吗？');"><span class="fa fa-trash-o"></span> 删除</a>
+                                </td>
+                            </tr>
+                            </volist>
+
+                            </tbody>
+                        </table>
+                    </div><!-- /.box-body -->
+                    <!--分页的位置-->
+                    {$page_html}
+                </div>
+
+            </div>
+        </div>
+    </section><!-- /.content -->
+
+    <section class="content-footer">
+        <div class="text-center">
+            &copy;qinlinlebang，乐帮
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>

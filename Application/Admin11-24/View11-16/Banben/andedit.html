@@ -1,0 +1,129 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+         <h1>
+        <div>
+            <div style="float:left">
+            <font class="font" >Android版详情</font>  
+            <!-- <p style="width:81px;23px;">待审核用户 </p> -->
+            </div>
+        <div class="search" style="float:left;margin-left: 20px;">
+   
+</div>
+        <a href="javascript:history.back(-1);" class="btn btn-default0 pull-right"  style="position:relative;bottom:8px;">返回</a>
+        </div>
+    </section>
+
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+    
+   <script type="text/javascript" language="javascript"> 
+
+            function confirmAct() 
+            { 
+                if(confirm('确定要执行此操作吗?')) 
+                { 
+                    return true; 
+                } 
+                return false; 
+            } 
+     function submits()  
+     {  
+         var submitId=document.getElementById('shuomings').value; 
+        submitId =  submitId.replace(/\n|\r\n/g,"<br>");  
+        document.getElementById('shuoming').value = submitId;
+    }  
+ 
+
+</script>
+<style>
+    select{
+        text-indent:5px;
+    }
+    input{
+              text-indent:10px;
+    }
+    textarea{
+         padding-left:10px;
+         font-size:16px;
+    }
+</style>
+
+    <section class="content-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="div-box">
+                <div class="div-center"><!--/*居中*/-->
+
+                <div class='left' style='float:left'>
+                    <form action="{:U('andedit',['id'=>$ban['id'],'p'=>$_GET['p']])}" method="post" enctype="multipart/form-data" onsubmit="return submits();">
+                        <!-- <div class="box-header">
+                            <h3 class="box-title"></h3>
+                            <a href="{:U('User/list')}" class="btn btn-default pull-right">用户列表</a>
+                        </div> --><!-- /.box-header -->
+                
+                        <div class="box-body">
+
+                          <div class="form-group" style="float:left; ">
+                                <label for="inputCover">版本号</label>
+                                <input class="ip" type="text"  name="banbenhao" id="inputPhone" placeholder="请输入版本号" maxlength="11" style="width:558px;" value="{$ban['banbenhao']}"/>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="inputSubject"  style="height:140px;line-height:140px; position: relative;top: 1px; ">版本说明</label>
+                        <textarea name="" id="shuomings"   cols="XX" rows="XX" style="height:140px;width:558px;position: relative;left:-8px;top: 1px;border:#dddddd solid 1px;resize: none ;color:#666;" ></textarea> 
+                                <input type="hidden" id="shuoming" name="shuoming">
+                            </div>
+ <script>
+         var reg = new RegExp("<br>","g");
+        var str = '{$ban['shuoming']}';
+        str = str.replace(reg,"\n");
+        document.getElementById('shuomings').value = str;
+ </script>
+                   
+                          <div class="form-group">
+                                <label for="inputSubject"  style="height:140px;line-height:140px; position: relative;top: 1px; float: left;">团队成员</label>
+                                <div id="" cols="30" rows="10" style="height:140px;width:558px;position: relative;left:-1px;top: 1px;border:#dddddd solid 1px; resize: none ;color:#666; text-align:left;font-size:16px; float: left;" >
+
+                                    &nbsp;产品:<input type="text"  name="cname" value="{$ban['cname']}" style="border:#ffffff solid 1px; "><br>
+
+                                    &nbsp;设计:<input type="text" name="sname" value="{$ban['sname']}" style="border:#ffffff solid 1px; "></br>
+                                    &nbsp;研发:<input type="text" name="yname" value="{$ban['yname']}" style="border:#ffffff solid 1px; "><br>
+                                    &nbsp;后端:<input type="text" name="hname" value="{$ban['hname']}" style="border:#ffffff solid 1px; "><br>
+                                    &nbsp;测试:<input type="text" name="shiname" value="{$ban['shiname']}" style="border:#ffffff solid 1px; "><br>
+                                    
+                                </div>
+                            </div>
+                         <div style="clear:both;"></div>
+                         
+                        <div class="form-group" >
+                                <label for="inputCover">文件地址</label>
+                               <input class="ip"  type="text"  name="app" id="inputPhone" placeholder="请输入文件地址" maxlength="" style="width:558px;" value="{$ban['app']}"/>
+                            </div>
+
+
+                    <div style="clear:both;"></div>
+                        <div class="form-group" >
+                                <label for="inputCover">上线时间</label>
+                                <input class="ip"  type="text" disabled="true" name="" id="inputPhone" placeholder="" maxlength="11" style="width:558px;background:#f9f9f9" value="{:date('Y-m-d',$ban['shijian'])}"/>
+                            </div>
+                    
+                        <!-- /.box-body -->
+                        <div class="boxclearfix">
+
+                            <button class="btn btn-primary0"  type="submit" id = "submit" name="submit" onclick="return confirmAct();" value="publish" style="width:640px;">保存</button>
+
+                        </div>
+             
+                        </div>
+                      </form>
+                 
+                    </div>
+
+</style>
+</aside><!-- /.right-side -->
+</block>

@@ -1,0 +1,113 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <if condition="$user['status'] neq '3'">
+        <h1>
+            用户审核
+             <a href="{:U('list')}" class="btn btn-default pull-right"><font color="black">用户列表</font></a>
+        </h1>
+       <!--  <ol class="breadcrumb">
+           <li><a href="{:U('Admin/index')}"><i class="fa fa-dashboard"></i> 管理中心</a></li>
+           <li><a href="{:U('list')}">用户管理</a></li>
+           <li class="active">用户审核</li>
+       </ol> -->
+        <elseif condition= "$user['status'] eq '3'"/>
+        <h1>
+            查看用户
+            <a href="{:U('list')}" class="btn btn-default pull-right"><font color="black">用户列表</font></a>
+        </h1>
+       <!--  <ol class="breadcrumb">
+           <li><a href="{:U('Admin/index')}"><i class="fa fa-dashboard"></i> 管理中心</a></li>
+           <li><a href="{:U('list')}">用户管理</a></li>
+           <li class="active">查看用户</li>
+       </ol> -->
+        <else/>
+        </if>
+    </section>
+
+    <!-- Main content -->
+
+    <!-- <section class="content"> -->
+ <!--  <script language="javascript">  
+     function submits()  
+     {  
+         var submitId=document.getElementById('submit');  
+         submitId.disabled=true;  
+         // document.fm.submit();  
+         // setTimeout('var submitId=document.getElementById("submit");submitId.disabled=false;',3000); //代码核心在这里，3秒还原按钮代码
+         // return false;
+    }  
+</script> -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <form id="myForm" action="{:U('User/edit')}" method="post">
+                    <input type="hidden" name="id" value="<?=$user['id']?>"
+                        <div class="box-body">
+                        <div class="form-group">
+                         <label for="inputSubject"></label>
+                            <img src="__ROOT__/photo/avatar/{$user['avatar']|default="avatar.png"}" height="120px;" id="touxiang" style="margin: 7px 0 0 5px" /><br/>
+                            </div>
+                                <div style="margin-left: 10px" class="form-group">
+                            
+                                <label for="inputSubject">姓&nbsp;&nbsp;名:</label>
+                                <input readonly="true" value="{$user['name']}" type="text" name="name" id="inputname"  maxlength="20"  /><br />
+                            </div>
+                            <div style="margin-left: 10px" class="form-group">
+                           
+                                <label for="inputSubject">昵&nbsp;&nbsp;称:</label>
+                                <input readonly="true" value="{$user['nickname']}" type="text" name="nickname" id="inputname"  maxlength="20"  /><br />
+                            </div>
+                            <div style="margin-left: 10px" class="form-group">
+                                <label for="inputCover">用户手机:</label>
+                                <input readonly="true" value="{$user['phone']}"  type="text" name="phone" id="inputPhone" placeholder="11位手机号" maxlength="11" /><br />
+                                <!-- <input type="" name="phone" id="inputCover" class=""> -->
+                            </div>
+                          <!--   <?php
+                                $birthday = date('Y-m-d',$user['birthday']);//a三天前的时间
+                            ?> -->
+                           
+                            <div style="margin-left: 10px" class="form-group">
+                                <label for="inputbirthday">出生日期:</label>
+                                <input readonly="true" value="{$birthday}" type="text" style="height:26px; width:151px;" name="birthday" placeholder="实例格式：1999-10-14" id="inputbirthday" >
+                            </div>
+                            <div style="margin-left: 10px"class="form-group">
+                                <label for="inputSubject">&nbsp;证件号:</label>
+                                <input readonly="true" value="{$user['idnumber']}"  type="text" name="idnumber" id="inputidnumber" placeholder="max<20位" maxlength="20" /><br />
+                            </div>
+                            <div style="margin-left: 10px"class="form-group">
+                                <label for="inputSubject">备&nbsp;&nbsp;注:</label>
+                                <input value="{$user['beizhu']}"  type="text" name="beizhu" id="inputidnumber" placeholder="请填写备注信息" /><br />
+                            </div>
+                           
+                            <div style="margin-left: 10px"class="form-group">
+                             <label for="inputSubject">&nbsp;证件照:</label>
+                             </div>
+                            
+                            <img src="__ROOT__/photo/idpic/{$user['idpic']|default="idpic.png"}" style="margin-left: 10px;margin-top: -15px;"/>
+                            <img src="__ROOT__/photo/idpic/{$user['idpic']|default="idpic.png"}"style="margin-top: -15px;"/><br/>
+ 
+                    <if condition="$user['status'] neq '3'"><button class="btn btn-primary" type="submit" style="margin-left: 10px;width:100px;" id = "submit" name="status" value="3">通过</button>
+                    <button class="btn btn-primary" type="submit" style= "height:33px; width:100px;" id = "submit" name="status" value="4">不通过</button>  
+                    <else /> </if>
+</form>
+
+
+                </div><!-- /.box -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+
+    </section><!-- /.content -->
+
+    <section class="content-footer">
+        <div class="text-center">
+            &copy;全民乐帮
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>

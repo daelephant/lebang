@@ -61,7 +61,7 @@ class XinxianshiController extends AuthController
 					->table('lb_xinxianshi')
 					->join("LEFT JOIN lb_user ON lb_xinxianshi.openid = lb_user.openid")
 					->join("LEFT JOIN lb_shequ ON lb_xinxianshi.shequid = lb_shequ.id")
-					->field('lb_xinxianshi.*,lb_user.name as name,lb_shequ.mingcheng as mingcheng')
+					->field('lb_xinxianshi.*,lb_user.nickname as name,lb_shequ.mingcheng as mingcheng')
 					->where($cond)
 					->order('dianzanshu desc')
 					->page($page, $pagesize)
@@ -93,7 +93,7 @@ class XinxianshiController extends AuthController
 					->table('lb_xinxianshi')
 					->join("LEFT JOIN lb_user ON lb_xinxianshi.openid = lb_user.openid")
 					->join("LEFT JOIN lb_shequ ON lb_xinxianshi.shequid = lb_shequ.id")
-					->field('lb_xinxianshi.*,lb_user.name as name,lb_shequ.mingcheng as mingcheng')
+					->field('lb_xinxianshi.*,lb_user.nickname as name,lb_shequ.mingcheng as mingcheng')
 					->where($cond)
 					->order('zhuanfashu desc')
 					->page($page, $pagesize)
@@ -226,7 +226,7 @@ class XinxianshiController extends AuthController
 					->table('lb_xinxianshi')
 					->join("LEFT JOIN lb_user ON lb_xinxianshi.openid = lb_user.openid")
 					->join("LEFT JOIN lb_shequ ON lb_xinxianshi.shequid = lb_shequ.id")
-					->field('lb_xinxianshi.*,lb_user.name as name,lb_shequ.mingcheng as mingcheng')
+					->field('lb_xinxianshi.*,lb_user.nickname as name,lb_shequ.mingcheng as mingcheng')
 					->where($cond)
 					->order('pinglunshu desc')
 					->page($page, $pagesize)
@@ -252,66 +252,76 @@ class XinxianshiController extends AuthController
 	 */
 	public function bianji1Action($xinxianshi_id=0)
 	{	
+     	$m_xinxianshi = M('Xinxianshi');
+     	$m_xinxianshizhaopian = M('Xinxianshizhaopian');
 
-     				$m_xinxianshi = M('Xinxianshi');
-     				$m_xinxianshizhaopian = M('Xinxianshizhaopian');
-					// 通用查询条件
-					$cond['beipinglunid'] = '0';
-					$cond['lb_xinxianshi.id'] = $xinxianshi_id;
-					$date['xinxianshiid'] = $xinxianshi_id;
-					//$Model->join('t2 on t1.id = t2.uid', 'left')->join('t3 on t2.uid = t3.sid', 'left')->select();
-					$xinxianshi = $m_xinxianshi
+		if (IS_POST)
+		{
+			$m_xinxianshi = D('Xinxianshi');
+ 			if(isset($_POST['pingbizhouqi'])){
+ 				$_POST['pingbizhouqi'] = time();
+ 			}
+ 			if(isset($_POST['zhidings'])){
+ 				$_POST['starttime'] = strtotime($_POST['starttime']);
+ 				$_POST['endtime'] = strtotime($_POST['endtime']);
+ 			}
+ 			
+			// var_dump($_POST);exit;
+			// 处理提交的数据
+			$m_xinxianshi->create(); // 默认去post中获取数据
+			$m_xinxianshi->where('id='.I('post.xinxianshi_id'))->save();
+
+ 			if(isset($_POST['pingbizhouqi'])){
+ 				$xinxianshi = $m_xinxianshi->find($xinxianshi_id);
+				Vendor('Em.Easemob');
+				$options['client_id']='YXA6n3WzwEdHEeaolsEc6zzXXg';
+				$options['client_secret']='YXA62F44DWR5WNPAol3-0lTPHcKs5K8';
+				$options['org_name']='lebang'; //appkey
+				$options['app_name']='lebang';  //app名称
+				$h = new\Easemob($options);
+				$from='quanminlebang';
+				$target_type="users";
+				//$target_type="chatgroups";
+				// $target=array("351cbc6274ee1d4942901544a4a21504");
+				$target=array($xinxianshi['openid']);
+				//$target=array("122633509780062768");
+				$content="啊,你说什么?帮帮听不懂诶~~说点跟小区生活服务有关的事儿吧~~".$xinxianshi['beizhu'];
+				// $ext['xinxianshiid']="a";
+				$ext['xinxianshiid']=$xinxianshi_id;
+				$meg = $h->sendText($from,$target_type,$target,$content,$ext);
+ 			}
+
+			$this->redirect('Xinxianshi/list3/p/'.I('get.p'));
+			
+		}
+
+
+
+
+
+     	$cond['leixing'] = '1';
+		$cond['lb_xinxianshi.xianshi'] = '1';
+		$cond['lb_xinxianshi.id'] = $xinxianshi_id;
+		$xinxianshi = $m_xinxianshi
 					->table('lb_xinxianshi')
 					->join("LEFT JOIN lb_user ON lb_xinxianshi.openid = lb_user.openid")
 					->join("LEFT JOIN lb_shequ ON lb_xinxianshi.shequid = lb_shequ.id")
-					->field('lb_xinxianshi.*,lb_user.name as name,lb_shequ.mingcheng as mingcheng')
+					// ->join('LEFT JOIN lb_xinxianshizhaopian ON lb_xinxianshi.id = lb_xinxianshizhaopian.xinxianshiid')
+					->field('lb_xinxianshi.*,lb_user.nickname as name,lb_user.phone,lb_shequ.mingcheng as mingcheng')
 					->where($cond)
 					->order('id desc')
 					->page($page, $pagesize)
 					->group('id')
 					->find();
 
-					$xinxianshizhaopian = $m_xinxianshizhaopian
-					->field('zhaopian')
-					->where($date)
-					->order('id desc')
-					->select();
-					$xinxianshi['zhaopian0']=$xinxianshizhaopian[0][zhaopian];
-					$xinxianshi['zhaopian1']=$xinxianshizhaopian[1][zhaopian];
-					$xinxianshi['zhaopian2']=$xinxianshizhaopian[2][zhaopian];
-					$xinxianshi['zhaopian3']=$xinxianshizhaopian[3][zhaopian];
-					$xinxianshi['zhaopian4']=$xinxianshizhaopian[4][zhaopian];
-					$xinxianshi['zhaopian5']=$xinxianshizhaopian[5][zhaopian];
-					$xinxianshi['zhaopian6']=$xinxianshizhaopian[6][zhaopian];
-					$xinxianshi['zhaopian7']=$xinxianshizhaopian[7][zhaopian];
-					$xinxianshi['zhaopian8']=$xinxianshizhaopian[8][zhaopian];
-					//var_dump($xinxianshizhaopian);
-					//var_dump($xinxianshi);
-					//var_dump($xinxianshi_list);
-					//echo $xinxianshi_list;
-					//var_dump($xinxianshi_list);exit;
-					$this->assign('xinxianshi', $xinxianshi);
-					 //echo $m_xinxianshi->getLastSQL();
-					 
-			//$this->display();
 
-			//更新	
-			// 判断当前是post还是get
-		if (IS_POST)
-		{
-			$m_xinxianshi = D('Xinxianshi');
 
-			var_dump($_POST);
-			// 处理提交的数据
-			$m_xinxianshi->create(); // 默认去post中获取数据
-			$m_xinxianshi->save();
-				
-			// 数据插入或者验证无存在问题
-			//$this->success('OK：' , U('Xinxianshi/list'), 2);
-			$this->redirect('Xinxianshi/list');
-		}
-		else
-		{
+			$this->assign('xinxianshi',$xinxianshi);
+
+			$zhaopian = $m_xinxianshizhaopian->where('xinxianshiid='.$xinxianshi_id)->select();
+			$this->assign('zhaopian',$zhaopian);
+		
+					
 			// 展示添加表单
 			// 把分类分配给表单
 			$m_category = D('Category');
@@ -319,47 +329,136 @@ class XinxianshiController extends AuthController
 			$this->assign('category_list', $category_list);
 
 			$this->display();
-		}
+
+
 	}
-//end
-	//
+
+	/**
+	 * 查看屏蔽新鲜事
+	 */
+
+	public function pingbikAction($xinxianshi_id= 0)
+	{
+
+		$m_xinxianshi = M('Xinxianshi');
+     	$m_xinxianshizhaopian = M('Xinxianshizhaopian');
+
+     		if (IS_POST)
+		{
+			$m_xinxianshi = D('Xinxianshi');
+			$m_xinxianshi->neirong = $_POST['neirong'];
+			$m_xinxianshi->xianshi = $_POST['xianshi'];
+
+			// var_dump( $_POST['neirong']);exit;
+			// var_dump($_POST['xianshi']);exit;
+			$m = $m_xinxianshi->where('id='.I('post.xinxianshi_id'))->save();
+
+
+			$this->redirect('Xinxianshi/list4/p/'.I('get.p'));
+			// var_dump($m);exit;
+		}
+
+     	$cond['leixing'] = '1';
+		$cond['lb_xinxianshi.xianshi'] = '0';
+		$cond['lb_xinxianshi.id'] = $xinxianshi_id;
+		$xinxianshi = $m_xinxianshi
+					->table('lb_xinxianshi')
+					->join("LEFT JOIN lb_user ON lb_xinxianshi.openid = lb_user.openid")
+					->join("LEFT JOIN lb_shequ ON lb_xinxianshi.shequid = lb_shequ.id")
+					->field('lb_xinxianshi.*,lb_user.nickname as name,lb_user.phone,lb_shequ.mingcheng as mingcheng')
+					->where($cond)
+					->order('id desc')
+					->page($page, $pagesize)
+					->group('id')
+					->find();
+
+					// var_dump($xinxianshi);exit;
+			$this->assign('xinxianshi',$xinxianshi);
+
+			$zhaopian = $m_xinxianshizhaopian->where('xinxianshiid='.$xinxianshi_id)->select();
+			$this->assign('zhaopian',$zhaopian);
+
+
+			$this->display();
+		
+	}
+
+	/**
+	 * 查看置顶新鲜事
+	 */
+
+
+	public function zhidingkAction($xinxianshi_id= 0)
+	{
+
+		$m_xinxianshi = M('Xinxianshi');
+     	$m_xinxianshizhaopian = M('Xinxianshizhaopian');
+
+     	if (IS_POST)
+		{
+			// echo '<pre>';
+			// print_r($_POST);exit;
+			$m_xinxianshi->zhiding = $_POST['zhiding'];
+			$m = $m_xinxianshi->where('id='.I('post.xinxianshi_id'))->save();
+			
+			$this->redirect('Xinxianshi/zhiding/p/'.I('get.p'));
+		}
+
+					$cond['lb_xinxianshi.id'] = $xinxianshi_id;
+					$cond['lb_xinxianshi.leixing'] = '1';
+					$cond['_string'] = 'lb_xinxianshi.zhiding !=0';
+                    $m_xinxianshi = D('Xinxianshi');
+                    $xinxianshi = $m_xinxianshi
+                    ->table('lb_xinxianshi')
+                    ->join("LEFT JOIN lb_user ON lb_xinxianshi.openid = lb_user.openid")
+                    ->join("LEFT JOIN lb_shequ ON lb_xinxianshi.shequid = lb_shequ.id")
+                    ->field('lb_xinxianshi.*,lb_user.nickname as name,lb_user.phone,lb_shequ.mingcheng as mingcheng')
+                    ->where($cond)
+                    ->order('id desc')
+                    ->page($page, $pagesize)
+                    ->group('id')
+                    ->find();
+
+					// var_dump($xinxianshi);exit;
+			$this->assign('xinxianshi',$xinxianshi);
+
+			$zhaopian = $m_xinxianshizhaopian->where('xinxianshiid='.$xinxianshi_id)->select();
+			$this->assign('zhaopian',$zhaopian);
+
+
+			$this->display();
+		
+	}
+
+
+
+
 	//
 	/**
 	 * 展示xinxianshi待审核列表list1
 	 */
-	public function list1Actionbar()
+	public function dianzhanlistAction()
 	{
 		// 考虑分页
 		$pagesize = 10;
-		$page = I('get.p', '1');
+				$page = I('get.p', '1');
 
-		$m_xinxianshi = M('Xinxianshi');
-		// 通用查询条件
-		$cond['is_deleted'] = '0';
-		$cond['status'] = '1';
-		$xinxianshi_list = $m_xinxianshi
-			->field('id,name,phone,idnumber,status,status,regtime,logintimes')
-			->where($cond)
-			->order('id desc')
-			->page($page, $pagesize)
-			->group('id')
-			->select();
-		
-		// 将日期格式化
-		foreach ($xinxianshi_list as &$xinxianshi) 
-		{	
-			$xinxianshi['moneys'] = sprintf("%.2f", $xinxianshi['moneys']);//将金额设置为两位浮点型
-			$xinxianshi['regtime'] = date("Y-m-d H:s:i", $xinxianshi['regtime']);
-			$xinxianshi['logintimes'] = date("Y-m-d H:s:i", $xinxianshi['logintimes']);
-			$number=$xinxianshi['status'];
-			if ($number==1) {
-				$xinxianshi['status']="新事";
-			}elseif ($number==2) {
-				$xinxianshi['status']="审核中";
-			}else {
-				$xinxianshi['status']="雷锋";
-			}
-		}
+					$m_xinxianshi = M('Xinxianshi');
+
+					$cond['leixing'] = '1';
+
+					$cond['lb_xinxianshi.xianshi'] = '1';
+					$xinxianshi_list = $m_xinxianshi
+					->table('lb_xinxianshi')
+					->join("LEFT JOIN lb_user ON lb_xinxianshi.openid = lb_user.openid")
+					->join("LEFT JOIN lb_shequ ON lb_xinxianshi.shequid = lb_shequ.id")
+					->field('lb_xinxianshi.*,lb_user.nickname as name,lb_user.phone,lb_shequ.mingcheng as mingcheng')
+					->where($cond)
+					->order('dianzanshu desc')
+					->page($page, $pagesize)
+					->group('id')
+					->select();
+
 		$this->assign('xinxianshi_list', $xinxianshi_list);
 
 		$total = $m_xinxianshi->where($cond)->count();
@@ -367,8 +466,43 @@ class XinxianshiController extends AuthController
 		$this->assign('page_html', $t_page->show());
 
 		$this->display();
+		//var_dump($xinxianshi_list);exit;
 
 	}
+
+	public function pinglunlistAction()
+	{
+		// 考虑分页
+		$pagesize = 10;
+				$page = I('get.p', '1');
+
+					$m_xinxianshi = M('Xinxianshi');
+
+					$cond['leixing'] = '1';
+
+					$cond['lb_xinxianshi.xianshi'] = '1';
+					$xinxianshi_list = $m_xinxianshi
+					->table('lb_xinxianshi')
+					->join("LEFT JOIN lb_user ON lb_xinxianshi.openid = lb_user.openid")
+					->join("LEFT JOIN lb_shequ ON lb_xinxianshi.shequid = lb_shequ.id")
+					->field('lb_xinxianshi.*,lb_user.nickname as name,lb_user.phone,lb_shequ.mingcheng as mingcheng')
+					->where($cond)
+					->order('pinglunshu desc')
+					->page($page, $pagesize)
+					->group('id')
+					->select();
+
+		$this->assign('xinxianshi_list', $xinxianshi_list);
+
+		$total = $m_xinxianshi->where($cond)->count();
+		$t_page = new Page($total, $pagesize);
+		$this->assign('page_html', $t_page->show());
+
+		$this->display();
+		//var_dump($xinxianshi_list);exit;
+
+	}
+
 	/**
 	 * 展示xinxianshi待审核列表list3
 	 */
@@ -379,40 +513,22 @@ class XinxianshiController extends AuthController
 				$page = I('get.p', '1');
 
 					$m_xinxianshi = M('Xinxianshi');
-					// 通用查询条件
-					// $cond['is_deleted'] = '0';
-					//$Model->join('t2 on t1.id = t2.uid', 'left')->join('t3 on t2.uid = t3.sid', 'left')->select();
-					$cond['beipinglunid'] = '0';
+
+					$cond['leixing'] = '1';
 
 					$cond['lb_xinxianshi.xianshi'] = '1';
 					$xinxianshi_list = $m_xinxianshi
 					->table('lb_xinxianshi')
 					->join("LEFT JOIN lb_user ON lb_xinxianshi.openid = lb_user.openid")
 					->join("LEFT JOIN lb_shequ ON lb_xinxianshi.shequid = lb_shequ.id")
-					->field('lb_xinxianshi.*,lb_user.name as name,lb_shequ.mingcheng as mingcheng')
+					->field('lb_xinxianshi.*,lb_user.nickname as name,lb_user.phone,lb_shequ.mingcheng as mingcheng')
 					->where($cond)
 					->order('id desc')
 					->page($page, $pagesize)
 					->group('id')
 					->select();
-					//echo $m_xinxianshi->getLastSQL();
-					//var_dump($xinxianshi_list);exit;
-		// 将日期格式化
-		// foreach ($xinxianshi_list as &$xinxianshi) 
-		// {	
-		// 	//$moneys=sprintf("%.2f", $money);
-		// 	$xinxianshi['moneys'] = sprintf("%.2f", $xinxianshi['moneys']);//将金额设置为两位浮点型
-		// 	$xinxianshi['regtime'] = date("Y-m-d H:s:i", $xinxianshi['regtime']);
-		// 	$xinxianshi['logintimes'] = date("Y-m-d H:s:i", $xinxianshi['logintimes']);
-		// 	$number=$xinxianshi['status'];
-		// 	if ($number==1) {
-		// 		$xinxianshi['status']="新事";
-		// 	}elseif ($number==2) {
-		// 		$xinxianshi['status']="审核中";
-		// 	}else {
-		// 		$xinxianshi['status']="雷锋";
-		// 	}
-		// }
+
+				// echo $m_xinxianshi->getLastSQL();exit;
 		$this->assign('xinxianshi_list', $xinxianshi_list);
 
 		$total = $m_xinxianshi->where($cond)->count();
@@ -437,38 +553,20 @@ class XinxianshiController extends AuthController
 					// 通用查询条件
 					// $cond['is_deleted'] = '0';
 					//$Model->join('t2 on t1.id = t2.uid', 'left')->join('t3 on t2.uid = t3.sid', 'left')->select();
-					$cond['lb_xinxianshi.beipinglunid'] = '0';
+					$cond['lb_xinxianshi.leixing'] = '1';
 					$cond['lb_xinxianshi.xianshi'] = '0';
 					$cond['_logic'] = 'and';
 					$xinxianshi_list = $m_xinxianshi
 					->table('lb_xinxianshi')
 					->join("LEFT JOIN lb_user ON lb_xinxianshi.openid = lb_user.openid")
 					->join("LEFT JOIN lb_shequ ON lb_xinxianshi.shequid = lb_shequ.id")
-					->field('lb_xinxianshi.*,lb_user.name as name,lb_shequ.mingcheng as mingcheng')
+					->field('lb_xinxianshi.*,lb_user.nickname as name,lb_user.phone,lb_shequ.mingcheng as mingcheng')
 					->where($cond)
-					->order('id desc')
+					->order('pingbizhouqi desc')
 					->page($page, $pagesize)
 					->group('id')
 					->select();
-					//echo $m_xinxianshi->getLastSQL();exit;
-					//echo $m_xinxianshi->getLastSQL();
-					//var_dump($xinxianshi_list);exit;
-		// 将日期格式化
-		// foreach ($xinxianshi_list as &$xinxianshi) 
-		// {	
-		// 	//$moneys=sprintf("%.2f", $money);
-		// 	$xinxianshi['moneys'] = sprintf("%.2f", $xinxianshi['moneys']);//将金额设置为两位浮点型
-		// 	$xinxianshi['regtime'] = date("Y-m-d H:s:i", $xinxianshi['regtime']);
-		// 	$xinxianshi['logintimes'] = date("Y-m-d H:s:i", $xinxianshi['logintimes']);
-		// 	$number=$xinxianshi['status'];
-		// 	if ($number==1) {
-		// 		$xinxianshi['status']="新事";
-		// 	}elseif ($number==2) {
-		// 		$xinxianshi['status']="审核中";
-		// 	}else {
-		// 		$xinxianshi['status']="雷锋";
-		// 	}
-		// }
+					
 		$this->assign('xinxianshi_list', $xinxianshi_list);
 
 		$total = $m_xinxianshi->where($cond)->count();
@@ -483,26 +581,34 @@ class XinxianshiController extends AuthController
 	//list5被举报的评论列表：
 	public function list5Action($xinxianshi_id=0)
 		{	
+			$m_xinxianshi = M('Xinxianshi');
+
+
+			// 屏蔽新鲜事
+			if(IS_POST){
+				$m_xinxianshi->xianshi = 1;
+				$xin = $m_xinxianshi->where('id = ' . I('post.xinid'))->save();
+				$this->redirect( 'Xinxianshi/list5/p/' . I('post.p') );
+			}
 					
 			// 考虑分页
 				$pagesize = 10;
 				$page = I('get.p', '1');
-
-					 $m_xinxianshi = M('Xinxianshi');
+					 
             //匹配xinxianshiid并展示：
              //var_dump($xinxianshi_id);exit;s
                     //$cond['beipinglunid'] = $xinxianshi_id;
                     $cond['lb_xinxianshi.xianshi'] = '0';
-                    $cond['_string'] = 'lb_xinxianshi.beipinglunid !=0';
+                    $cond['lb_xinxianshi.leixing'] = '0';
                     // $cond['lb_xinxianshi.beipinglunid'] >= '1';
                     $m_xinxianshi = D('Xinxianshi');
                     $xinxianshi = $m_xinxianshi
                    ->table('lb_xinxianshi')
                     ->join("LEFT JOIN lb_user ON lb_xinxianshi.openid = lb_user.openid")
                     ->join("LEFT JOIN lb_shequ ON lb_xinxianshi.shequid = lb_shequ.id")
-                    ->field('lb_xinxianshi.*,lb_user.name as name,lb_shequ.mingcheng as mingcheng')
+                    ->field('lb_xinxianshi.*,lb_user.nickname as name, lb_user.phone,lb_shequ.mingcheng as mingcheng')
                     ->where($cond)
-                    ->order('id desc')
+                    ->order('pingbizhouqi desc')
                     ->page($page, $pagesize)
                     ->group('id')
                     ->select();
@@ -537,7 +643,7 @@ class XinxianshiController extends AuthController
                    ->table('lb_xinxianshi')
                     ->join("LEFT JOIN lb_user ON lb_xinxianshi.openid = lb_user.openid")
                     ->join("LEFT JOIN lb_shequ ON lb_xinxianshi.shequid = lb_shequ.id")
-                    ->field('lb_xinxianshi.*,lb_user.name as name,lb_shequ.mingcheng as mingcheng')
+                    ->field('lb_xinxianshi.*,lb_user.nickname as name,lb_shequ.mingcheng as mingcheng')
                     ->where($cond)
                     ->order('id desc')
                     ->page($page, $pagesize)
@@ -567,15 +673,15 @@ class XinxianshiController extends AuthController
             //匹配xinxianshiid并展示：
              //var_dump($xinxianshi_id);exit;s
                     //$cond['beipinglunid'] = $xinxianshi_id;
-                    //$cond['lb_xinxianshi.xianshi'] = '0';
-					$cond['_string'] = 'lb_xinxianshi.beipinglunid !=0';
+                    $cond['lb_xinxianshi.xianshi'] = '1';
+					$cond['lb_xinxianshi.leixing'] = '0';
                    // $cond['lb_xinxianshi.beipinglunid'] = '1';
                     $m_xinxianshi = D('Xinxianshi');
                     $xinxianshi = $m_xinxianshi
-                   ->table('lb_xinxianshi')
+                    ->table('lb_xinxianshi')
                     ->join("LEFT JOIN lb_user ON lb_xinxianshi.openid = lb_user.openid")
                     ->join("LEFT JOIN lb_shequ ON lb_xinxianshi.shequid = lb_shequ.id")
-                    ->field('lb_xinxianshi.*,lb_user.name as name,lb_shequ.mingcheng as mingcheng')
+                    ->field('lb_xinxianshi.*,lb_user.nickname as name,lb_user.phone,lb_shequ.mingcheng as mingcheng')
                     ->where($cond)
                     ->order('id desc')
                     ->page($page, $pagesize)
@@ -660,13 +766,27 @@ class XinxianshiController extends AuthController
      				//var_dump($_GET);
      				$data['id']=$_GET['xinxianshi_id'];
      				$data['beizhu'] =$_GET['beizhu'];
+     				$data['pingbizhouqi'] = time();
      				$data['xianshi'] = 0;	
 			$m_xinxianshi->save($data);
+
+
+
+   //       // $cid="7269143c199f568a2e9e1c996fc77885";
+			// if(!empty($cid)){
+			// 	Vendor('Igetui.igts');
+			// 	$igt = new\igts();
+			// 	$content=json_encode(array('code'=>1008,"obj"=>array('id'=>$_GET['xinxianshiid'])));
+	 	// 		$refg=$igt->pushMessageToSingle($cid,$content,"管理员屏蔽了您的新鲜事"); 
+	 	// 		// print_r($refg);
+	 	// 		// exit;
+			// }
+
 			//echo $m_xinxianshi->getLastSQL();exit;
 				
 			// 数据插入或者验证无存在问题
 			//$this->success('OK：' , U('Xinxianshi/list'), 0);
-			$this->redirect('Xinxianshi/list');
+			$this->redirect('Xinxianshi/list6/p/'.I('get.p'));
 		}
 		else
 		{
@@ -687,16 +807,23 @@ class XinxianshiController extends AuthController
 		{
 			$m_xinxianshi = M("Xinxianshi");
 
-					
      				//var_dump($_GET);
      				$data['id']=$_GET['xinxianshi_id'];
      				$data['beizhu'] =$_GET['beizhu'];
      				$data['xianshi'] = 0;	
 			$m_xinxianshi->save($data);
-			//echo $m_xinxianshi->getLastSQL();exit;
-				
-			// 数据插入或者验证无存在问题
-			//$this->success('OK：' , U('Xinxianshi/list6'), 0);
+
+
+			// $cid="7269143c199f568a2e9e1c996fc77885";
+			if(!empty($cid)){
+				Vendor('Igetui.igts');
+				$igt = new\igts();
+				$content=json_encode(array('code'=>1008,"obj"=>array('id'=>$_GET['xinxianshiid'])));
+	 			$refg=$igt->pushMessageToSingle($cid,$content,"管理员屏蔽了您的新鲜事"); 
+	 			// print_r($refg);
+	 			// exit;
+			}
+			
 			
 			$this->redirect('Xinxianshi/list6');
 		}
@@ -818,19 +945,22 @@ class XinxianshiController extends AuthController
 		$page = I('get.p', '1');
 
 		$m_xinxianshi = M('Xinxianshi');
+		$m_user = M('User');
+		$m_shequ = M('Shequ');
 		
-		if ($_GET['name']) {
-			$where['nickname']=$_GET['name'];
+		if ($_GET['sosuo']==1) {
+			$where['phone']=$_GET['value'];
 		}
-		if ($_GET['neirong']) {//$where['title']  = array('like','%thinkphp%');
-			$where['neirong']= array('like','%'.$_GET['neirong'].'%');
+		if ($_GET['sosuo'] ==2) {//$where['title']  = array('like','%thinkphp%');
+			$where['mingcheng']= $_GET['value'];
 		}
-		$where['beipinglunid'] = '0';
+		$where['lb_xinxianshi.xianshi'] = '1';
+		$where['lb_xinxianshi.leixing'] = '1';
 			$xinxianshi_list = $m_xinxianshi
 					->table('lb_xinxianshi')
 					->join("LEFT JOIN lb_user ON lb_xinxianshi.openid = lb_user.openid")
 					->join("LEFT JOIN lb_shequ ON lb_xinxianshi.shequid = lb_shequ.id")
-					->field('lb_xinxianshi.*,lb_user.name as name,lb_shequ.mingcheng as mingcheng')
+					->field('lb_xinxianshi.*,lb_user.nickname as name,lb_user.phone,lb_shequ.mingcheng as mingcheng')
 					->where($where)
 					->order('id desc')
 					->page($page, $pagesize)
@@ -839,15 +969,22 @@ class XinxianshiController extends AuthController
 		//s
 		$this->assign('xinxianshi_list', $xinxianshi_list);
 
-				$total = $m_xinxianshi->where($where)->count();
-				$t_page = new Page($total, $pagesize);
+			$total = $m_xinxianshi
+					->table('lb_xinxianshi')
+					->join("LEFT JOIN lb_user ON lb_xinxianshi.openid = lb_user.openid")
+					->join("LEFT JOIN lb_shequ ON lb_xinxianshi.shequid = lb_shequ.id")
+					->field('count(lb_xinxianshi.id) as total')
+					->where($where)
+					->find();	
+				
+				$t_page = new Page($total['total'], $pagesize);
 				$this->assign('page_html', $t_page->show());
 
-				$this->display();
+				$this->display('Xinxianshi/list3');
 		//e						
 	}
 	/**
-	 * 查询评论人和内容
+	 * 搜索新鲜事评论
 	 */
 	public function fetch1Action()
 	{	
@@ -859,35 +996,211 @@ class XinxianshiController extends AuthController
 		$page = I('get.p', '1');
 
 		$m_xinxianshi = M('Xinxianshi');
-		
-		if ($_GET['name']) {
-			$where['name']=$_GET['name'];
+		$m_user = M('User');
+		$m_shequ = M('Shequ');
+		if ($_GET['sosuo']==1) {
+			$cond['phone']=$_GET['value'];
 		}
-		if ($_GET['neirong']) {//$where['title']  = array('like','%thinkphp%');
-			$where['neirong']= array('like','%'.$_GET['neirong'].'%');
+		if ($_GET['sosuo']==2) {//$where['title']  = array('like','%thinkphp%');
+			$cond['mingcheng']=$_GET['value'] ;
 		}
-		//$where['beipinglunid'] = '1';
-		$where['_string'] = 'lb_xinxianshi.beipinglunid !=0';
-			$xinxianshi_list = $m_xinxianshi
+			$cond['lb_xinxianshi.xianshi'] = '1';
+			$cond['lb_xinxianshi.leixing'] = '0';
+			$xinxianshi = $m_xinxianshi
 					->table('lb_xinxianshi')
 					->join("LEFT JOIN lb_user ON lb_xinxianshi.openid = lb_user.openid")
 					->join("LEFT JOIN lb_shequ ON lb_xinxianshi.shequid = lb_shequ.id")
-					->field('lb_xinxianshi.*,lb_user.name as name,lb_shequ.mingcheng as mingcheng')
-					->where($where)
+					->field('lb_xinxianshi.*,lb_user.nickname as name,lb_user.phone,lb_shequ.mingcheng as mingcheng')
+					->where($cond)
 					->order('id desc')
 					->page($page, $pagesize)
 					->group('id')
 					->select();			
 		//s
-		$this->assign('xinxianshi_list', $xinxianshi_list);
-
-				$total = $m_xinxianshi->where($where)->count();
-				$t_page = new Page($total, $pagesize);
+		$this->assign('xinxianshi', $xinxianshi);
+			$total = $m_xinxianshi
+					->table('lb_xinxianshi')
+					->join("LEFT JOIN lb_user ON lb_xinxianshi.openid = lb_user.openid")
+					->join("LEFT JOIN lb_shequ ON lb_xinxianshi.shequid = lb_shequ.id")
+					->field('count(lb_xinxianshi.id) as total')
+					->where($cond)
+					->find();	
+				$t_page = new Page($total['total'], $pagesize);
 				$this->assign('page_html', $t_page->show());
 
-				$this->display();
+				$this->display('Xinxianshi/list6');
 		//e						
 	}
+
+	/**
+	 * 搜索置顶新鲜事
+	 */
+	public function fetch2Action()
+	{	
+		
+		//var_dump($_GET['name']);exit;ok
+		//var_dump($_GET['neirong']);exit;
+		// 考虑分页
+		$pagesize = 10;
+		$page = I('get.p', '1');
+
+		$m_xinxianshi = M('Xinxianshi');
+		$m_user = M('User');
+		$m_shequ = M('Shequ');
+		if ($_GET['sosuo']==1) {
+			$cond['phone']=$_GET['value'];
+		}
+		if ($_GET['sosuo']==2) {
+			$cond['mingcheng']=$_GET['value'] ;
+		}
+					$cond['lb_xinxianshi.leixing'] = '1';
+					$cond['_string'] = 'lb_xinxianshi.zhiding !=0';
+                   // $cond['lb_xinxianshi.beipinglunid'] = '1';
+                   // var_dump($cond);exit;
+                    $m_xinxianshi = D('Xinxianshi');
+                    $xinxianshi_list = $m_xinxianshi
+                    ->table('lb_xinxianshi')
+                    ->join("LEFT JOIN lb_user ON lb_xinxianshi.openid = lb_user.openid")
+                    ->join("LEFT JOIN lb_shequ ON lb_xinxianshi.shequid = lb_shequ.id")
+                    ->field('lb_xinxianshi.*,lb_user.nickname as name,lb_user.phone,lb_shequ.mingcheng as mingcheng')
+                    // ->where('lb_xinxianshi.leixing =1 and lb_xinxianshi.zhiding != 0')
+                    ->where($cond)
+                    ->order('id desc')
+                    ->page($page, $pagesize)
+                    ->group('id')
+                    ->select();
+                    // var_dump($xinxianshi_list);exit;
+		$this->assign('xinxianshi_list', $xinxianshi_list);
+
+                    $total = $m_xinxianshi
+                    ->table('lb_xinxianshi')
+                    ->join("LEFT JOIN lb_user ON lb_xinxianshi.openid = lb_user.openid")
+                    ->join("LEFT JOIN lb_shequ ON lb_xinxianshi.shequid = lb_shequ.id")
+                    ->field('count(lb_xinxianshi.id) as total')
+                    // ->where('lb_xinxianshi.leixing =1 and lb_xinxianshi.zhiding != 0')
+                    ->where($cond)
+                    ->find();
+
+		// $total = $m_xinxianshi->where($cond)->count();
+
+		$t_page = new Page($total['total'], $pagesize);
+		$this->assign('page_html', $t_page->show());
+
+				$this->display('Xinxianshi/zhiding');
+		//e						
+	}
+
+
+
+
+
+
+	/*
+	*搜索屏蔽的新鲜事
+	*
+	 */
+
+	public function fetch3Action()
+	{
+		$pagesize = 10;
+		$page = I('get.p', '1');
+
+		$m_xinxianshi = M('Xinxianshi');
+		$m_user = M('User');
+		$m_shequ = M('Shequ');
+		if ($_GET['sosuo']==1) {
+			$where['phone']=$_GET['value'];
+		}
+		if ($_GET['sosuo']==2) {
+			$where['mingcheng']=$_GET['value'] ;
+		}
+			$where['lb_xinxianshi.leixing'] = '1';
+			$where['lb_xinxianshi.xianshi'] = '0';
+			// $cond['_logic'] = 'and';
+					$xinxianshi_list = $m_xinxianshi
+					->table('lb_xinxianshi')
+					->join("LEFT JOIN lb_user ON lb_xinxianshi.openid = lb_user.openid")
+					->join("LEFT JOIN lb_shequ ON lb_xinxianshi.shequid = lb_shequ.id")
+					->field('lb_xinxianshi.*,lb_user.nickname as name,lb_user.phone,lb_shequ.mingcheng as mingcheng')
+					->where($where)
+					->order('id desc')
+					->page($page, $pagesize)
+					->group('id')
+					->select();
+					
+		$this->assign('xinxianshi_list', $xinxianshi_list);
+
+		$total = $m_xinxianshi
+					->table('lb_xinxianshi')
+					->join("LEFT JOIN lb_user ON lb_xinxianshi.openid = lb_user.openid")
+					->join("LEFT JOIN lb_shequ ON lb_xinxianshi.shequid = lb_shequ.id")
+					->field('count(lb_xinxianshi.id) as total')
+					->where($where)
+					->find();
+		$t_page = new Page($total['total'], $pagesize);
+		$this->assign('page_html', $t_page->show());
+
+		$this->display('Xinxianshi/list4');
+
+	}
+
+
+	/*
+	*搜索屏蔽的评论
+	*
+	 */
+	
+	public function fetch4Action()
+	{
+		$pagesize = 10;
+		$page = I('get.p', '1');
+
+		$m_xinxianshi = M('Xinxianshi');
+		$m_user = M('User');
+		$m_shequ = M('Shequ');
+		if ($_GET['sosuo']==1) {
+			$where['phone']=$_GET['value'];
+		}
+		if ($_GET['sosuo']==2) {
+			$where['mingcheng']=$_GET['value'] ;
+		}
+			$where['lb_xinxianshi.xianshi'] = '0';
+            $where['lb_xinxianshi.leixing'] = '0';
+                    // $cond['lb_xinxianshi.beipinglunid'] >= '1';
+            $m_xinxianshi = D('Xinxianshi');
+            $xinxianshi = $m_xinxianshi
+                    ->table('lb_xinxianshi')
+                    ->join("LEFT JOIN lb_user ON lb_xinxianshi.openid = lb_user.openid")
+                    ->join("LEFT JOIN lb_shequ ON lb_xinxianshi.shequid = lb_shequ.id")
+                    ->field('lb_xinxianshi.*,lb_user.nickname as name, lb_user.phone,lb_shequ.mingcheng as mingcheng')
+                    ->where($where)
+                    ->order('id desc')
+                    ->page($page, $pagesize)
+                    ->group('id')
+                    ->select();
+                    //var_dump($xinxianshi);exit;
+		$this->assign('xinxianshi', $xinxianshi);
+
+
+			$total = $m_xinxianshi
+                    ->table('lb_xinxianshi')
+                    ->join("LEFT JOIN lb_user ON lb_xinxianshi.openid = lb_user.openid")
+                    ->join("LEFT JOIN lb_shequ ON lb_xinxianshi.shequid = lb_shequ.id")
+                    ->field('count(lb_xinxianshi.id) as total')
+                    ->where($where)
+                    ->find();
+		$t_page = new Page($total['total'], $pagesize);
+		$this->assign('page_html', $t_page->show());
+
+		$this->display('xinxianshi/list5');
+
+
+
+	}
+
+
+
+
 	/**
 	 * 充值事
 	 */
@@ -1001,7 +1314,7 @@ class XinxianshiController extends AuthController
                    ->table('lb_xinxianshi')
                     ->join("LEFT JOIN lb_user ON lb_xinxianshi.openid = lb_user.openid")
                     ->join("LEFT JOIN lb_shequ ON lb_xinxianshi.shequid = lb_shequ.id")
-                    ->field('lb_xinxianshi.*,lb_user.name as name,lb_shequ.mingcheng as mingcheng')
+                    ->field('lb_xinxianshi.*,lb_user.nickname as name,lb_user.phone,lb_shequ.mingcheng as mingcheng')
                     ->where($cond)
                     ->order('id desc')
                     ->page($page, $pagesize)
@@ -1081,5 +1394,58 @@ class XinxianshiController extends AuthController
 		$this->display();
 	}
 
+	public function xpinglunAction()
+	{
+
+		$this->display();
+	}
+
+	public function zhidingAction()
+	{ 
+		// 考虑分页
+				$pagesize = 10;
+				$page = I('get.p', '1');
+
+					 $m_xinxianshi = M('Xinxianshi');
+            //匹配xinxianshiid并展示：
+             //var_dump($xinxianshi_id);exit;s
+                    //$cond['beipinglunid'] = $xinxianshi_id;
+                    // $cond['lb_xinxianshi.xianshi'] = '1';
+					$cond['lb_xinxianshi.leixing'] = '1';
+					$cond['_string'] = 'lb_xinxianshi.zhiding !=0';
+                   // $cond['lb_xinxianshi.beipinglunid'] = '1';
+                   // var_dump($cond);exit;
+                    $m_xinxianshi = D('Xinxianshi');
+                    $xinxianshi_list = $m_xinxianshi
+                    ->table('lb_xinxianshi')
+                    ->join("LEFT JOIN lb_user ON lb_xinxianshi.openid = lb_user.openid")
+                    ->join("LEFT JOIN lb_shequ ON lb_xinxianshi.shequid = lb_shequ.id")
+                    ->field('lb_xinxianshi.*,lb_user.nickname as name,lb_user.phone,lb_shequ.mingcheng as mingcheng')
+                    // ->where('lb_xinxianshi.leixing =1 and lb_xinxianshi.zhiding != 0')
+                    ->where($cond)
+                    ->order('starttime desc')
+                    ->page($page, $pagesize)
+                    ->group('id')
+                    ->select();
+                    // var_dump($xinxianshi_list);exit;
+		$this->assign('xinxianshi_list', $xinxianshi_list);
+
+		$total = $m_xinxianshi->where($cond)->count();
+		$t_page = new Page($total, $pagesize);
+		$this->assign('page_html', $t_page->show());
+
+		$this->display();
+		
+
+		}
+
+
+
+
 	
 }
+
+
+
+
+

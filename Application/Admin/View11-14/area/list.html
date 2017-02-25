@@ -1,0 +1,99 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+     <section class="content-header">
+        <h1>
+            地区设置
+             <!-- <a href="{:U('Area/list')}" class="btn btn-default pull-right"><font color="black">参数管理</font></a> -->
+        </h1>
+    </section>
+   <!--  //这个是ajax get方式提交 -->
+    <!-- <section class="content"> -->
+<script type="text/javascript"  language="javascript">  
+       function confirmAct() 
+            { 
+                if(confirm('确定要执行此操作吗?')) 
+                { 
+                    return true; 
+                } 
+                return false; 
+            } 
+     function submits()   
+     {  
+         var submitId=document.getElementById('submit');  
+         submitId.disabled=true;  
+    }  
+</script>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                <form action="{:U('Admin/Area/add')}" method="post" onsubmit="return submits();">
+             <select class="xiala"  style="margin-top:10px; margin-left:10px;" name="sid"> 
+                <option value="0">选择地区</option>
+                      <foreach name = "cats" item = "c">
+                            <option value ="{$c.id}">{$c.lev|str_repeat="&nbsp",###}{$c.mingcheng}</option>
+                      </foreach>
+        
+                 </select>
+                <!--  <select class="xiala" name="mid">
+                     <option value="1">参数标示</option>
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                         <option value="4">4</option>
+                      </select> -->
+                <input type="text" name="mingcheng" class="text"  placeholder="参数名称"/>
+                <input class="btn btn-primary" style="width:120px;" type="submit" id="submit" onclick="return confirmAct();" value="添加" class="sub_090" style="width:80px;"/>
+                 </form>
+
+                    <div class="box-body">
+                        <table class="table table-bordered" style="margin-left: -5px;margin-top: -1px;">
+                            <tbody>
+                            <tr style="background: #fbfbfb;">
+                                <!-- <th style="width: 10px">#</th> -->
+                                <!-- <th>序号</th>
+                                <th>上级id</th> -->
+                                <!-- <th>排序</th> -->
+                                <!-- <th>标示id</th> -->
+                                <th style="text-align:center;">参数名</th>
+                                <th style="text-align:center;">操作</th>
+                            </tr>
+                            <volist name='ct' id='cat'>
+                            <tr>
+                                <!-- <td>{$cat['id']}</td>
+                                <td>{$cat['sid']}</td> -->
+                                <!-- <td>{$cat['mid']}</td> -->
+                                <td>{$cat['mingcheng']}</td>
+                                <td style="text-align:center;"><a href="{:U('Admin/area/edit',array('id'=>$cat['id']))}" class="btn btn-default"  title="编辑">编辑
+                                </a>
+                                <!-- <a href="{:U('Admin/area/edit',array('id'=>$c['id']))}">
+                                编辑
+                                </a> -->
+                                </td>
+                            </tr>
+                           
+                            </volist>
+                            
+                        </tbody>
+                        </table>
+                    </div><!-- /.box-body -->
+                    
+                </div>
+              
+                {$page_html}
+            </div>
+        </div>
+  
+    </section><!-- /.content -->
+
+    <section class="content-footer">
+        <div class="text-center">
+            &copy;全民乐帮
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>

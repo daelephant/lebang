@@ -1,0 +1,113 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            编辑消息
+            <a href="{:U('Msg/list')}" class="btn btn-default pull-right"><font color="black">消息列表</font></a>
+        </h1>
+        <!-- <ol class="breadcrumb">
+            <li><a href="{:U('Admin/index')}"><i class="fa fa-dashboard"></i> 管理中心</a></li>
+            <li><a href="{:U('list')}">运营消息管理</a></li>
+            <li class="active">编辑消息</li>
+        </ol> -->
+    </section>
+
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+     <script type="text/javascript" language="javascript"> 
+
+            function confirmAct() 
+            { 
+                if(confirm('确定要执行此操作吗?')) 
+                { 
+                    return true; 
+                } 
+                return false; 
+            }  
+     function submits()  
+     {  
+         var submitId=document.getElementById('submit');  
+         submitId.disabled=true;  
+         // document.fm.submit();  
+         // setTimeout('var submitId=document.getElementById("submit");submitId.disabled=false;',3000); //代码核心在这里，3秒还原按钮代码
+         // return false;
+    }  
+</script>
+
+        <div class="row">
+            <div class="col-md-12">
+               <!--  <div class="box"><a href="{:U('edit', ['msg_id'=>$msg['id']])}" class="btn btn-default" title="编辑"><span class="fa fa-edit"></span> 编辑</a> -->
+                    <form action="{:U('edit', ['msg_id'=>$msg['id']])}" method="post" enctype="multipart/form-data" onsubmit="return submits();">
+                        <div class="box-header">
+                            <h3 class="box-title"></h3>
+                           <!--  <a href="{:U('Msg/list')}" class="btn btn-default pull-right">列表</a> -->
+                        </div><!-- /.box-header -->
+
+                        <div style="margin-left:8px;"
+                            class="box-body">
+                            <!-- <div class="form-group">
+                                <label for="inputCategoryId">分类</label>
+                                <select name="category_id" id="inputCategoryId" class="form-control">
+                                
+                                    <option value="0">--分类名称--</option>
+                                    <volist name="category_list" id="category">
+                                    <option value="{$category['category_id']}">{:str_repeat('----', $category['deep'])}{$category['title']}</option>
+                                    </volist>
+                                </select>
+                            </div> -->
+                            <div class="form-group">
+                                <label style="width: 30%;" for="inputSubject">标&nbsp;&nbsp;题：</label>
+                                <input style="margin-left: -277px;width: 595px;" type="text" name="title" value = "{$msg['title']}">
+                            </div>
+                             <div class="form-group">
+                                <label for="inputCover">消息封面：</label>
+                                <img style="" src="__ROOT__/photo/msg/m_{$msg['pic']|default="msg.png"}"/>
+                                </br><span style="margin-left: 75px;font-size:15px;color:red">更改封面:</span><input style="margin-left: 137px;margin-top: -21px;" type="file" name="pic" value = "{$msg['pic']}" id="inputCover" class="">
+                                <input type="hidden" name="pic" value = "{$msg['pic']}" id="inputSubject" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputSubject">简&nbsp;&nbsp;介：</label>
+                                <input style="width: 595px;" type="text" name="brief" value = "{$msg['brief']}">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputSubject">内&nbsp;&nbsp;容：</label>
+                                
+                                <p style="width:600px;margin-left: 75px; margin-top: -18px;"><script id="container" name="content" type="text/plain">{$msg['content']}</script></p>
+                                
+ 
+                        </div>
+                         <div class="form-group">
+                         <?php
+                            $starttime = date('Y-m-d',$msg['starttime']);//当天时间
+                            $endtime= date('Y-m-d',$msg['endtime']);//a三天前的时间
+                         
+                         
+                         ?>
+                                <label for="inputSubject">在该时期内显示此条消息：</label>
+                                <input id="starttime" placeholder="填一个即可2016-08-28" name="starttime" class="inp_wid3" type="date" value="{$starttime}"/></td>~<input id="endtime"name="endtime" placeholder="2016-08-29" class="inp_wid3" type="date" value="{$endtime}"/>
+                            </div>
+                        <!-- /.box-body -->
+                        <div class="box-footer clearfix">
+                            <button style="margin-left: 180px; width:292px; height:33px;" class="btn btn-primary" type="submit" id = "submit" name="submit"  onclick="return confirmAct();"  value="publish">保存</button>
+                            <!-- <button class="btn btn-info" type="submit" name="submit" value="save">仅保存</button> -->
+                        </div><!-- /.box-footer -->
+                    </form>
+
+                </div><!-- /.box -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+
+   <!--  </section> --><!-- /.content -->
+
+    <section class="content-footer">
+        <div class="text-center">
+            &copy;lebang，全民乐帮
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>

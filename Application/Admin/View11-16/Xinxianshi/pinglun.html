@@ -1,0 +1,78 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+       <h1>
+        <div>
+            <div style="float:left">
+            <font class="font" >新鲜事评论</font>  
+            <!-- <p style="width:81px;23px;">待审核用户 </p> -->
+            </div>
+        <div class="search" style="float:left;margin-left: 20px;">
+   <form id="user_search" action='{:U('Xinxianshi/fetch1')}' method="get">
+    <select name="sosuo" id="" class="sosuo">
+                                          <option  name="sosuo" value="1">&nbsp;手机号</option>
+                                          <option  name="sosuo" value="2">&nbsp;小区名称</option>
+                                          
+        </select>
+      <input type="text" id="keyword" name="value" class="txt"  autocomplete="off" name="value" />
+      <button type="submit" class="search_btn" id="Search" type="button" >
+      <span class="ico" id="scico"><em></em></span>
+      </button>
+   </form>
+</div>
+  
+        </div>
+       </h1>
+    </section>
+
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-body">
+                        <table class="table table-bordered" >
+                            <tbody>
+                            <tr style="background: #fbfbfb;">
+                                <!-- <th style="width: 10px">#</th> -->
+                                <th>序号</th>
+                                <th>新鲜事评论</th>
+                                <th>发布人</th>
+                                <th>手机号码</th>
+                                <th>点赞</th>
+                                <th>发布时间</th>
+                                <th>操作</th>
+                            </tr>
+                            
+                            <volist name="xinxianshi_list" id="xinxianshi">
+                            <tr>
+                                <td>{$xinxianshi['id']}</td>
+                                <td>{$xinxianshi['neirong']}</td>
+                                <td>{$xinxianshi['name']}</td>
+                                <td></td>
+                                <td><if condition="empty($xinxianshi['mingcheng'])">体验小区<else /> other 
+                                {$xinxianshi['mingcheng']}</if></td>
+                                <!-- <td>{$xinxianshi['status']}</td> -->
+                                <td>{$xinxianshi['dianzanshu']}</td>
+                               <td><!-- <a href="{:U('pingluncheck', ['xinxianshi_id'=>$xinxianshi['id']])}" class="btn btn-default" style="width:70px" title="查看评论"> -->{$xinxianshi['pinglunshu']}</a></td>
+
+                            </tr>
+                            </volist>
+
+                            </tbody>
+                        </table>
+                    </div><!-- /.box-body -->
+                </div>
+                  <!--分页的位置-->
+                    {$page_html}
+            </div>
+        </div>
+    </section><!-- /.content -->
+
+</aside><!-- /.right-side -->
+</block>

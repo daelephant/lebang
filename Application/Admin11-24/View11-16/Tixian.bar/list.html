@@ -1,0 +1,137 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            提现列表
+            <small>提现</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:U('Admin/index')}"><i class="fa fa-dashboard"></i> 管理中心</a></li>
+            <li><a href="{:U('list')}">提现</a></li>
+            <li class="active">提现列表</li>
+        </ol>
+    </section>
+<!-- //s -->
+                                    <script type="text/javascript">
+                                    function add(xid){
+                                    document.getElementById("tcbg").style.display="block";
+                                    document.getElementById("tcdiv").style.display="block";
+                                    document.getElementById("xid").value=xid;
+                                    }
+
+
+                                    function subs(){
+                                    var beizhu=document.getElementById("beizhu").value;//
+                                    var xid=document.getElementById("xid").value;//
+                          
+                                   
+                                       
+
+                                    }
+                                    function cancel(){
+                                    var p=document.getElementById("div");
+                                    document.body.removeChild(p);
+                                    }
+                                    </script>
+    <!-- Main content -->
+    <section class="content">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title"></h3>
+                       <!--  <a href="{:U('User/add')}" class="btn btn-default pull-right">添加提现</a> -->
+                    </div><!-- /.box-header -->
+                    <!--  -->
+    <!-- <form action='{:U('User/fetch')}' method="get">
+        
+                <td style="text-align:right">姓名：<input id="name" name="name" class="inp_wid3" type="text" value="{$_GET['name']}"/></td>
+                <td style="text-align:right">手机号：<input id="phone" name="phone" class="inp_wid3" type="text" value="{$_GET['phone']}"/></td>
+                <td style="text-align:right">身份证号：<input id="idnumber" name="idnumber" class="inp_wid3" type="text" value="{$_GET['idnumber']}"/></td>
+                <td style="text-align:right">查询日期：<input id="starttime" placeholder="填一个即可2016-08-28" name="starttime" class="inp_wid3" type="text" value="{$_GET['starttime']}"/></td>~<input id="endtime"name="endtime" placeholder="2016-08-29" class="inp_wid3" type="text" value="{$_GET['endtime']}"/></td>
+                <input class="search_btn1" type="submit" value="搜索" id="Search" />
+      </form> -->
+                    <div class="box-body">
+                        <table class="table table-bordered">
+                            <tbody>
+                            <tr>
+                                <!-- <th style="width: 10px">#</th> -->
+                                <th>列表</th>
+                                <th>姓名</th>
+                                <th>手机号</th>
+                                <th>证件号</th>
+                                <!-- <th>状态</th> -->
+                                <th>银行</th>
+                                <th>银行卡号</th>
+                                <th>提现时间</th>
+                               <!--  <th>最后登录</th> -->
+                                <th>金额</th>
+                                <th>状态</th>
+                                <th>备注</th>
+
+                                <th>操作</th>
+                               
+                            </tr>
+                            
+                            <volist name="tixian_list" id="tixian">
+                            <tr>
+                                <td>{$tixian['id']}</td>
+                                <td>{$tixian['name']}</td>
+                                <td>{$tixian['phone']}</td>
+                                <td>{$tixian['idnumber']}</td>
+                                <td>{$tixian['bank']}</td>
+                                <td>{$tixian['banknum']}</td>
+                                <td>{$tixian['addtime']}</td>
+                                <td>{$tixian['moeny']}</td>
+                                <td>
+                                <if condition='$tixian["status"] eq 0'>待审核
+                                   <elseif condition='$tixian["status"] eq 1'/>提现成功
+                                   <elseif condition='$tixian["status"] eq 2'/>提现失败
+                                   </if>
+                                </td>
+                                <td>{$tixian['beizhu']}</td>
+                                <td>
+                                 <input type="button" _type="1" onclick="add({$tixian['id']})" value="确认">
+                                 <input type="button" _type="0" onclick="add({$tixian['id']})" value="拒绝">     
+                                </td>
+                            </tr>
+                            </volist>
+
+                            </tbody>
+                        </table>
+                    </div><!-- /.box-body -->
+                    <!--分页的位置-->
+                    {$page_html}
+                </div>
+
+            </div>
+        </div>
+        <style>
+.tcbg{  display:none;  position:fixed;  top: 0%;  left: 0%;  width: 100%;  height: 100%;  background-color:#000;   -moz-opacity: 0.5;  opacity:.50;  filter: alpha(opacity=50); z-index:5}
+.tcdiv{ display:none;  position:fixed;  top:200px; right:350px; margin:auto; text-align:left;   width: 100%; max-width:300px;  height: 200px;  background-color:#CC0066;  z-index:6; padding:10px;}
+</style>
+<div class="tcbg" id="tcbg"></div>
+<div id="tcdiv"  class="tcdiv">
+<form action="{:U('bianji')}" method="get">
+<input type="hidden" placeholder="备注信息" id="xid"  name="tixian_id" > 
+    <input  type="text" placeholder="备注信息" id="beizhu"  name="beizhu" > 
+    <input type="submit" value="备注">
+
+ </form>
+
+</div>
+    </section><!-- /.content -->
+
+    <section class="content-footer">
+        <div class="text-center">
+            &copy;lebang，亲邻乐帮
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>

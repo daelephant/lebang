@@ -1,0 +1,86 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            用户列表
+            <small>用户</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:U('Admin/index')}"><i class="fa fa-dashboard"></i> 管理中心</a></li>
+            <li><a href="{:U('list')}">用户</a></li>
+            <li class="active">用户列表</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title"></h3>
+                        <a href="{:U('User/add')}" class="btn btn-default pull-right">添加用户</a>
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        <table class="table table-bordered">
+                            <tbody>
+                            <tr>
+                                <!-- <th style="width: 10px">#</th> -->
+                                <th>列表</th>
+                                <th>姓名</th>
+                                <th>手机号</th>
+                                <th>证件号</th>
+                                <th>状态</th>
+                                <th>用户类型</th>
+                                <th>注册时间</th>
+                                <th>最后登录</th>
+                                <th>操作</th>
+                               <!--  <th>性别</th>
+                                <th>证件号</th> -->
+                               <!--  <th style="width: 20%">操作</th> -->
+                            </tr>
+                            
+                            <volist name="user_list" id="user">
+                            <tr>
+                                <td>{$user['id']}</td>
+                                <td>{$user['name']}</td>
+                                <td>{$user['phone']}</td>
+                                <td>{$user['idnumber']}</td>
+                                <td>{$user['status']}</td>
+                                <td>{$user['status']}</td>
+                                <td>{$user['regtime']}</td>
+                                <td>{$user['logintimes']}</td>
+                                <!-- <td>{$user['caozuo']}</td> -->
+                                <!-- <td>{$User['create_at']}</td>
+                                <td>{$User['category_title']}</td> -->
+                                <td>
+                                    <a href="{:U('edit', ['user_id'=>$user['id']])}" class="btn btn-default" title="编辑"><span class="fa fa-edit"></span> 编辑</a>
+                                    <!-- <a href="{:U('remove', ['User_id'=>$User['User_id']])}" class="btn btn-default" title="删除" onclick="return confirm('您确认要删除吗？');"><span class="fa fa-trash-o"></span> 删除</a> -->
+                                </td>
+                            </tr>
+                            </volist>
+
+                            </tbody>
+                        </table>
+                    </div><!-- /.box-body -->
+                    <!--分页的位置-->
+                    {$page_html}
+                </div>
+
+            </div>
+        </div>
+    </section><!-- /.content -->
+
+    <section class="content-footer">
+        <div class="text-center">
+            &copy;lebang，亲邻乐帮
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>

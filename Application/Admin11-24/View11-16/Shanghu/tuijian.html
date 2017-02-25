@@ -1,0 +1,112 @@
+
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+        <div>
+            <div style="float:left">
+            <font class="font">推荐商户</font> 
+            </div>
+        <div class="search" style="float:left;margin-left: 20px;">
+   <form id="user_search" action='{:U('Shanghu/fetch3')}' method="get">
+    <select name="sosuo" class="sosuo" >
+                                          <option name="sosuo" value="1">&nbsp;手机号</option>
+                                          <option  name="sosuo" value="2">&nbsp;姓名</option>
+                                          <option  name="sosuo" value="3">&nbsp;商户名称</option>
+        </select>
+      <input type="text" id="keyword" name="value" class="txt"  autocomplete="off" value="" />
+      <button type="submit" class="search_btn" value="" >
+      <span class="ico" id="scico"><em></em></span></button>
+      </form>
+</div>
+
+
+       <div style="float:right;">
+            <if condition ="$_GET['sosuo'] neq ''">
+            <a href= "javascript:history.back(-1);" class="btn btn-default0 pull-right">返回</a>
+            <else/>
+            <a href="{:U('Shanghu/add')}" class="btn btn-default0 pull-right">添加商户</a>
+            </if>
+        </div>
+
+        </div>
+       </h1>
+    </section>
+
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-body">
+         
+
+
+                        <table class="table table-bordered">
+                            <tbody>
+                            <tr>
+                                <!-- <th style="width: 10px">#</th> -->
+                               <th style="width:80px;"><a href="{:U('list1')}" >序号</a></th> 
+                                <th style="width:100px;">真实姓名</th>
+                                <th style="width:100px;">手机号</th>
+                                <th style="width:80px;">性别</th>
+                                <th style="width:100px;">商户名称</th>
+                                <th style="width:100px;">客服电话</th>
+                                <th style="width:70px;">订单</th>
+                                <th style="width:70px;">完成任务</th>
+                                <th style="width:70px;">新鲜事</th>
+                                <th style="width:70px;">评论</th>
+                                <th style="width:70px;">发任务</th>
+                                <th style="width:70px;">评价</th>
+                                <th style="width:150px;">操作</th>
+                            
+                            </tr>
+
+
+                            <volist name="shanghu" id="user" key="k">
+                            <tr>
+                                <td>{$k}</td>
+                                <td>{$user['name']}</td>
+                                <td>{$user['phone']}</td>
+                               <td><if condition="$user['sex'] eq '1'">男<elseif condition="$user['sex'] eq '2'"/>女</if>
+                                </td>
+                                <td>{$user['mingcheng']}</td>
+                                <td>{$user['dianhua']}</td>
+                                <td>{:$order[$user['id']]|0}</td>
+                                <td>{:$renwu[$user['id']]|0}</td>
+                                <td>{$user['xinxianshi']}</td>
+                                
+                                <td>{$user['pinglunshu']}</td>
+                                <td>{$user['renwu']}</td>
+                               
+                                <td></td>
+                                <td>
+                                   <a href="{:U('rtuijian', array('user_id'=>$user['id'],'p'=>$_GET['p']))}" class="btn btn-default1" title="编辑">查看详情</a> 
+                                </td>
+                            </tr>
+                            </volist>
+
+                            </tbody>
+                        </table>
+                    </div><!-- /.box-body -->
+                </div>
+                  <!--分页的位置-->
+                    {$page_html}
+            </div>
+        </div>
+    </section><!-- /.content -->
+
+    <section class="content-footer">
+        <div class="text-center">
+
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+
+</block>

@@ -1,0 +1,100 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+         <h1>
+        <div>
+            <div style="float:left">
+            <font class="font" >后台权限详情</font>  
+            <!-- <p style="width:81px;23px;">待审核用户 </p> -->
+            </div>
+        <div class="search" style="float:left;margin-left: 20px;">
+   
+</div>
+        <a href="javascript:history.back(-1);" class="btn btn-default0 pull-right"  style="position:relative;bottom:8px;">返回</a>
+        </div>
+    </section>
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+      <script type="text/javascript" language="javascript"> 
+
+            function confirmAct() 
+            { 
+                if(confirm('确定要执行此操作吗?')) 
+                { 
+                    return true; 
+                } 
+                return false; 
+            } 
+
+    </script>
+<style>
+    .radio{
+  -webkit-appearance:radio;
+}
+
+
+.checkbox, .radio {
+    padding-left: 0;
+}
+.radio, .checkbox {
+    display:inline; 
+     min-height: 20px; 
+     /*padding-left: 20px; */
+     /*margin-top: 10px; */
+    margin-bottom: 10px;
+    /* vertical-align: middle; */
+}
+
+
+    select{
+        text-indent:5px;
+    }
+    input{
+              text-indent:10px;
+    }
+</style>
+     <section class="content-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="div-box">
+                <div class="div-center">
+                    <form action="{:U('Quanxian/edit2',array('uid'=>$rul['id']))}" method="post" enctype="multipart/form-data">
+                     
+                        <div class="box-body">
+                         
+
+                            <div class="form-group">
+                                <label for="inputSubject">权限</label>
+                                        <input type="text" class ='ip' name="name" id="username" placeholder="" maxlength="" value="{$access['name']}" /><br/>
+                                </div>
+                        <div class="form-group">
+                                <label for="inputSubject">权限名称</label>
+                                <input type="text" name="title" class ='ip'  id="username" placeholder="" maxlength="" value="{$access['title']}" /><br />
+                                </div>
+
+
+                      
+                        <div class="box-footer clearfix">
+                         
+                            <input type="hidden" name="id" value="{$access['id']}">
+                            <button class="btn btn-primary0"  style="width:380px;"  type="submit" name="submit" onclick="return confirmAct();" value="publish">保存</button>
+                     
+                        </div>
+                        <br/>
+                     </div>
+                    </form>
+                    
+                    </div>
+                </div><!-- /.box -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+
+    </section><!-- /.content -->
+
+
+</aside><!-- /.right-side -->
+</block>

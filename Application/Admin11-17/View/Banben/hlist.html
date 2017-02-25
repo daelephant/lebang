@@ -1,0 +1,118 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+        <div>
+            <div style="float:left">
+            <font class="font">H5版</font> 
+            </div>
+        <div class="search" style="float:left;margin-left: 20px;">
+   <form id="shse_search" action='{:U('Banben/fetch2')}' method="get">
+      <input type="text" id="keyword"  class="txt1"  autocomplete="off" name="banbenhao" />
+      <button type="submit" class="search_btn" value="" >
+      <span class="ico" id="scico"><em></em></span></button>
+</div>
+<div class="search" style="float:left;margin-left: 20px;">
+
+   </form>
+</div>
+
+<style>
+  
+  table tbody tr th{
+        background: #fbfbfb;
+        
+        margin-right: 7px;
+    }
+     table{
+        margin-top:10px;
+        font-size: 13px;
+    }
+    table tbody tr{
+      background: #ffffff;
+    }
+    table td{
+           
+         
+    }
+</style>
+         <div style="float:right;">
+            <if condition ="$_GET['banbenhao'] neq ''">
+            <a href= "javascript:history.back(-1);" class="btn btn-default0 pull-right">返回</a>
+            <else/>
+            <a href="{:U('Banben/hadd')}" class="btn btn-default0 pull-right">新增版本</a>
+            </if>
+    
+        </div>
+            <!-- <small>待审核用户</small> -->
+        </div>
+       </h1>
+    </section>
+
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+</style>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-body">
+                        <table class="table table-bordered">
+                            <tbody>
+                            <tr>
+                                <th style="width:80px;">序号</th> 
+                                <th style="width:80px;">版本号</th>
+                                <th style="width:650px;">版本说明</th>
+                                <th style="width:150px;">团队成员</th>
+                                <th style="width:150px;">上线时间</th>
+                                <th style="width:150px;">操作</th>
+                            
+                            </tr>
+                          <foreach name="ban" item="ban" key="k">
+                            <tr>
+                                <td>{$ban['id']}</td>
+                                <td>{$ban['banbenhao']}</td>
+                                <td style="vertical-align: super;text-align:left;">{$ban['shuoming']}</td>
+                                <td style="text-align:left; font-size:14px;line-height:24px;">
+                                  产品: {$ban['cname']}
+                                  <br>
+                                  设计: {$ban['sname']}
+                                  <br>
+                                  研发: {$ban['yname']}
+                                  <br>
+                                  后台: {$ban['hname']}
+                                  <br>
+                                  测试: {$ban['shiname']}
+                                </td>
+                                <td>{:date('Y-m-d',$ban['shijian'])}</td>
+                              
+                                <td >
+                                    <a href="{:U('Banben/hedit', ['id'=>$ban['id'],'p'=>$_GET['p']])}" class="btn btn-default1" title="编辑" style="width:100px;">编辑</a><br>
+                          
+                                    <a href="{$ban['app']}" class="btn btn-default1" style="width:100px; margin-top:10px;">查看</a>
+                            
+                                </td>
+                            </tr>
+                        
+                          </foreach>
+                            </tbody>
+                        </table>
+                    </div><!-- /.box-body -->
+                </div>
+                  <!--分页的位置-->
+                    {$page_html}
+            </div>
+        </div>
+    </section><!-- /.content -->
+
+    <section class="content-footer">
+        <div class="text-center">
+
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>

@@ -25,8 +25,10 @@ class TixianController extends AuthController
 					->table('lb_tixian')
 					->join("LEFT JOIN lb_user ON lb_tixian.openid = lb_user.openid")
 					->join("LEFT JOIN lb_bank ON lb_tixian.bankid = lb_bank.id")
+
 					->field('lb_tixian.*,lb_user.name as name,lb_user.phone as phone,lb_user.idnumber as idnumber,lb_bank.bank as bank,lb_bank.banknum as banknum')
-					->order('id desc')
+					->order('beizhu desc')
+					->where('lb_tixian.status != 0')
 					->page($page, $pagesize)
 					->group('id')
 					->select();
@@ -38,15 +40,7 @@ class TixianController extends AuthController
 			//$moneys=sprintf("%.2f", $money);
 			$tixian['money'] = sprintf("%.2f", $tixian['money']);//将金额设置为两位浮点型
 			$tixian['addtime'] = date("Y-m-d H:s:i", $tixian['addtime']);
-			// $tixian['logintimes'] = date("Y-m-d", $tixian['logintimes']);
-			//$number=$tixian['status'];
-			// if ($number==1) {
-			// 	$tixian['status']="新用户";
-			// }elseif ($number==2) {
-			// 	$tixian['status']="审核中";
-			// }else {
-			// 	$tixian['status']="雷锋";
-			// }
+		
 		}
 		$this->assign('tixian_list', $tixian_list);
 
@@ -63,7 +57,7 @@ class TixianController extends AuthController
 	 */
 	public function list1Action()
 		{	
-		//////三表联合查询$Model = M('T1');$Model->join('t2 on t1.id = t2.uid', 'left')->join('t3 on t2.uid = t3.sid', 'left')->select();					
+		
 					// 考虑分页
 					$pagesize = 10;
 					$page = I('get.p', '1');
@@ -94,15 +88,7 @@ class TixianController extends AuthController
 			//$moneys=sprintf("%.2f", $money);
 			$tixian['money'] = sprintf("%.2f", $tixian['money']);//将金额设置为两位浮点型
 			$tixian['addtime'] = date("Y-m-d H:s:i", $tixian['addtime']);
-			// $tixian['logintimes'] = date("Y-m-d", $tixian['logintimes']);
-			//$number=$tixian['status'];
-			// if ($number==1) {
-			// 	$tixian['status']="新用户";
-			// }elseif ($number==2) {
-			// 	$tixian['status']="审核中";
-			// }else {
-			// 	$tixian['status']="雷锋";
-			// }
+		
 		}
 		$this->assign('tixian_list', $tixian_list);
 
@@ -119,98 +105,79 @@ class TixianController extends AuthController
 	 */
 
     public function bianjiAction($id=0)
-	{	//s
+	{	
+
+			$jine = M('money');
+			$Tixian = M("Tixian"); 
+
 		if (IS_GET)
 		{	
-			//var_dump($_GET);exit;
-			// $m_tixian = M('Tixian');
-   //   				$a['id']=$_GET['tixian_id'];
-   //   				$a['beizhu'] =$_GET['beizhu'];
-   //   				$a['status']=1;
 
-			// $m_tixian->save($a);
-			// $tixian = M("Tixian"); // 实例化User对象// 要修改的数据对象属性赋值
-			// $date['status']= '1';
-			// $data['beizhu'] = $_GET['beizhu'];
-			// //$date['status']= '1';
+			$xian = $Tixian->where('id='.I('get.tixian_id'))->find();
 
-			// $tixian->where('id=12')->save($data); // 根据条件更新记录sql="select * from biao where o='"+a+"'"
-
-			$Tixian = M("Tixian"); // 实例化User对象// 要修改的数据对象属性赋值
+			$money = $xian['moeny'];
+			$beizhu = $xian['beizhu'];
+			$ordernum = $xian['ordernum'];
+			$openid = $xian['openid'];
+         
+			
 			$map['id'] = $_GET['tixian_id'];
 			//$a=$_GET['tixian_id'];var_dump($a);
 			//var_dump($_GET);exit;
 			$Tixian->status = $_GET['status'];
-			//
-$time = time(); //当前时间戳
+
+			if($_GET['status'] = 2){
+
+		   $jine->openid = $openid;
+		   $jine->type = 3;
+		   $jine->pays = 3;
+		   $jine->addtime = time();
+		   $jine->ordernum = $ordernum;
+		   $jine->beizhu = $beizhu;
+		   $jine->money = $money;
+		   $jine->moneys = $money;
+		   $jin = $jine->add();
+
+		   if($jin){
+
+				Vendor('Em.Easemob');
+				$options['client_id']='YXA6n3WzwEdHEeaolsEc6zzXXg';
+				$options['client_secret']='YXA62F44DWR5WNPAol3-0lTPHcKs5K8';
+				$options['org_name']='lebang'; //appkey
+				$options['app_name']='lebang';  //app名称
+				$h = new\Easemob($options);
+				$from='quanminlebang';
+				$target_type="users";
+				// $target=array("5050ee2f04a8af5d841f911d218701da");
+				$target = array($openid);
+				//$target=array("122633509780062768");
+				$content = $beizhu."提现失败";
+				$ext['id']=$jin;
+				$meg = $h->sendText($from,$target_type,$target,$content,$ext);
+			
+ 			}
+		  
+		}
+			
+			$time = time(); //当前时间戳
 			$date = date('Y',$time). '-' . date('m-d H:i:s');//一年前日期
-			//
 			$Tixian->beizhu = $date.$_GET['beizhu'];
 			$Tixian->where($map)->save(); // 根据条件更新记录
 			// echo $Tixian->getLastSQL();exit;
-			//$this->success('OK：' , U('Tixian/list'), 2);
+
+
+			
 			$this->redirect('Tixian/list');
 		}
-		else
-		{
-			// 展示添加表单
-			// 把分类分配给表单
-			$m_category = D('Category');
-			$category_list = $m_category->getTree();
-			$this->assign('category_list', $category_list);
+
 
 			$this->display();
-		}
+		
 	}
 
 	/**
-	 * 展示user待审核列表list1
-	 */
-	// public function list1Action()
-	// {
-	// 	// 考虑分页
-	// 	$pagesize = 10;
-	// 	$page = I('get.p', '1');
-
-	// 	$m_user = M('User');
-	// 	// 通用查询条件
-	// 	$cond['is_deleted'] = '0';
-	// 	$cond['status'] = '1';
-	// 	$user_list = $m_user
-	// 		->field('id,name,phone,idnumber,status,status,regtime,logintimes')
-	// 		->where($cond)
-	// 		->order('id desc')
-	// 		->page($page, $pagesize)
-	// 		->group('id')
-	// 		->select();
-		
-	// 	// 将日期格式化
-	// 	foreach ($user_list as &$user) 
-	// 	{	
-	// 		$user['moneys'] = sprintf("%.2f", $user['moneys']);//将金额设置为两位浮点型
-	// 		$user['regtime'] = date("Y-m-d", $user['regtime']);
-	// 		$user['logintimes'] = date("Y-m-d", $user['logintimes']);
-	// 		$number=$user['status'];
-	// 		if ($number==1) {
-	// 			$user['status']="新用户";
-	// 		}elseif ($number==2) {
-	// 			$user['status']="审核中";
-	// 		}else {
-	// 			$user['status']="雷锋";
-	// 		}
-	// 	}
-	// 	$this->assign('user_list', $user_list);
-
-	// 	$total = $m_user->where($cond)->count();
-	// 	$t_page = new Page($total, $pagesize);
-	// 	$this->assign('page_html', $t_page->show());
-
-	// 	$this->display();
-
-	// }
-	/**
 	 * 展示user待审核列表list3
-	 */
+	 **/
 	public function list3Action()
 	{
 		// 考虑分页
@@ -600,23 +567,7 @@ $time = time(); //当前时间戳
 			$ordernum = date("YmdHis",$addtime).$rand;    // 格式化时间戳,拼接起来生成订单
 			//var_dump($ordernum);
 			$Model->execute("INSERT INTO `lebang`.`lb_money` (`id`, `openid`, `money`, `type`, `pays`, `beizhu`, `moneys`, `addtime`, `ordernum`) VALUES (NULL, '$openid', '$moneys', '4', '4', '0', '$moneys', '$addtime', '$ordernum')");
-		  	
-		   //var_dump($user_id);
-		   //var_dump($_POST['money']);
-		    //echo $Model->getLastSQL();
-		   // var_dump($list);exit;
-		//
-		// $Dao = M("money");
-		// $list = $Dao->find();
-
-
-		// $Model = new \Think\Model(); // 实例化一个model对象 没有对应任何数据表
-		// $text=$Model->query("find openid from lb_money on id=1");
-		// var_dump($text);exit;
-		//$openid='270b708fee661d82f8e58407752bb755';
-        //$Model->execute("insert into lb_money (moneys) values (1994) where id=1");
-        
-		//
+	
 		// 考虑分页
 						$pagesize = 10;
 						$page = I('get.p', '1');
@@ -653,16 +604,12 @@ $time = time(); //当前时间戳
 
 		$this->display();
 
-		//
+
 		$m_money = M('money');
 
-		// if (false === $m_user->delete($user_id))
-		// {
-		// 	$this->error('删除数据失败：'.$m_user->getError(), U('list'), 2);
-		// }
-		// else
-		// {
-		// 	$this->redirect('list', [], 0);
-		// }
+	
 	}
+
+
+	
 }

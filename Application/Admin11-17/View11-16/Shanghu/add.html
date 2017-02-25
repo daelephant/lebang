@@ -1,0 +1,613 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+
+    <!-- <script src="__PUBLIC__/Admin/time/script/jquery-1.9.1.js"></script> -->
+    <script src="__PUBLIC__/Admin/time/script/mobiscroll.2.13.2.js"></script>
+
+    <link href="__PUBLIC__/Admin/time/style/mobiscroll.2.13.2.css" rel="stylesheet" />
+    <script src="__PUBLIC__/Admin/time/time.js"></script>
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            <font class="font">新增商户</font>
+             <a href= "javascript:history.back(-1);" class="btn btn-default0 pull-right"  style="position:relative;bottom:8px;">返回商户列表</a>
+        </h1>
+      
+    </section>
+
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+    
+   <script type="text/javascript" language="javascript"> 
+
+            function confirmAct() 
+            { 
+                if(confirm('确定要执行此操作吗?')) 
+                { 
+                    return true; 
+                } 
+                return false; 
+            } 
+     function submits()  
+     {  
+         var submitId=document.getElementById('submit');  
+         submitId.disabled=true;  
+         // document.fm.submit();  
+         // setTimeout('var submitId=document.getElementById("submit");submitId.disabled=false;',3000); //代码核心在这里，3秒还原按钮代码
+         // return false;
+    }  
+</script>
+
+
+<style>
+    select{
+        padding-left:10px;
+    }
+    input{
+              text-indent:10px;
+    }
+    option{
+      text-indent:10px;
+    }
+    textarea{
+      padding-left: 10px;
+    }
+
+     .radio{
+  -webkit-appearance:checkbox;
+}
+</style>
+
+    <section class="content-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="div-box">
+                <div class="div-center"><!--/*居中*/-->
+
+                <div class='left' style='float:left'>
+                    <form action="{:U('Shanghu/add')}" method="post" enctype="multipart/form-data" onsubmit="return submits();">
+                        <div class="box-body">
+
+                             <div class="form-group">
+                                <label for="inputCover">用户手机</label>
+                                <input class="ip" type="text" name="phone" id="inputPhone" placeholder="请输入手机号码"  oninput="getUser(this)"  onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" onafterpaste="this.value=this.value.replace(/[^0-9]/g,'')" onpropertychange="getUser(this)" list="country"/>
+                                <datalist id="country">
+                                </datalist>
+                            </div>
+
+
+
+    <link href="__PUBLIC__/Admin/add/zyzn_1.css" rel="stylesheet" />
+    <script>
+            var znhycode={$area};
+    </script>
+    <script src="__PUBLIC__/Admin/add/hgz_zncode.js"></script>
+
+<script>
+    function getUser(addr){
+            var xhr = new XMLHttpRequest();
+            var user_data = '';
+            if(xhr != null){
+                var data = 'addr='+addr.value;
+                xhr.open('POST',"{:U('Shanghu/getUser')}",false);
+                xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+                xhr.onreadystatechange = function(){
+                    if(this.readyState ==4){
+                        var user = JSON.parse(this.responseText);
+                        user_data = user;
+                        if(user.length>0){
+                            $('#country').empty();
+                            for (var i = 0;i <= user.length - 1; i++) {
+                                $('#country').append('<option value="'+user[i].phone+'">');
+                            }
+                        }
+                    }
+                }
+                xhr.send(data);
+            }
+
+            if(user_data.length>0){
+                $("#profession option").attr("selected", false);
+                // $("#suozaixiaoqu option").attr("selected", false);
+                $("#sex option").attr("selected", false);
+                for (var i = 0;i <= user_data.length - 1; i++) {
+                    if(addr.value == user_data[i].phone){
+                        $('#nickname').val(user_data[i].nickname);
+                        if(user_data[i].profession!=''){
+                          $("#profession option[value='"+user_data[i].profession+"']").attr("selected", true);
+                        }
+                        if(user_data[i].sex!=''){
+                          $("#sex option[value='"+user_data[i].sex+"']").attr("selected", true);
+                        }
+                        if(user_data[i].shequid!=0){
+                          // $("#suozaixiaoqu option[value='"+user_data[i].shequid+"']").attr("selected", true);
+                          appendhyznbar($('#suozaixiaoqutxt'),'duoxuan','suozaixiaoqu');
+                          $('.data-result').append("<span class=\"svae_box aui-titlespan\" data-code=\""+user_data[i].shequid+"\"  data-name=\""+user_data[i].location+"\" onclick=\"removespan(this)\">"+user_data[i].location+"<i>×<\/i><\/span>");
+                          svae_znitem();
+                        }
+                        $('#name').val(user_data[i].name);
+                        $("#sex option[value='"+user_data[i].sex+"']").attr("selected", true);
+                        if(user_data[i].birthday!=''){
+                          var d = new Date(parseInt(user_data[i].birthday)*1000);
+                          var mon = (d.getMonth()+1);
+                          var day = d.getDate();
+                          var str = d.getFullYear()+'-'+(mon<10?"0"+mon:mon)+'-'+(day<10?"0"+day:day);
+                          $('#birthday').attr('value',str);
+                        }
+
+                        $('#idnumber').val(user_data[i].idnumber);
+                        if(user_data[i].avatar != ''){
+                          $('#imghead1').attr('src','__ROOT__/photo/avatar/'+user_data[i].avatar);
+                        }
+                        if(user_data[i].idpic != ''){
+                          $('#imghead2').attr('src','__ROOT__/photo/idpic/'+user_data[i].idpic);
+                        }
+                    }
+                }
+            }
+    }
+</script>
+
+                            <div class="form-group">
+                                <label for="inputSubject">昵称</label>
+                                <input class="ip" type="text" name="nickname" id="nickname" placeholder="请输入昵称" maxlength="" />
+                           </div>
+
+                            <div class="form-group">
+                                <label for="inputSubject">职业</label>
+                                      <select class="ip" name="profession" id="profession">
+
+                                      <option value="">请选择职业</option>
+                                      <foreach name="master" item="vo">  
+                                      <option value="{$vo.id}">{$vo.mname}</option>
+                                      </foreach>
+                                      </select>
+                            </div>
+
+<!--                              <div class="form-group">
+                                <label for="inputSubject">所在小区</label>
+                                <select class="ip" name="suozaixiaoqu" id="suozaixiaoqu">
+                                      <option value="">请选择所在小区</option>
+                                      <foreach name="shequ" item="vo">  
+                                      <option value="{$vo.id}">{$vo.mingcheng}</option>
+                                      </foreach>
+                                      </select>
+                           </div> -->
+
+                      <div class="form-group">
+                                <label for="inputCover">所在小区</label>
+                                <input type="text" class="nation ip" value="" placeholder="请选择服务小区" data-value="" id="suozaixiaoqutxt" onclick="appendhyznbar(this,'duoxuan','suozaixiaoqu')" name="suozaixiaoqutxt"/>
+                                <input type="hidden" name="suozaixiaoqu" id="suozaixiaoqu">
+                            </div>
+                   
+                        <div class="form-group" style="margin-top:30px;">
+                                <label for="inputCover">真实姓名</label>
+                                <input class="ip" type="text" name="name" id="name" placeholder="请输入真实姓名" maxlength="" />
+                            </div>
+
+                         <div class="form-group">
+                                <label for="inputCover">性别</label>
+                                <select name="sex" id="sex" class='ip'>
+                                  <option value="0">请选择</option>
+                                  <option value="1">男</option>
+                                  <option value="2">女</option>
+                                </select>
+                            </div>
+
+                          <div class="form-group" style="margin-top:5px;">
+                                <label for="inputCover">生日</label>
+                                <input class="ip" type="date" name="birthday" id="birthday" placeholder="" maxlength="" style="text-indent:4px;" />
+                            </div>
+
+                          <div class="form-group" style="margin-top:10px;">
+                                <label for="inputCover">身份证号</label>
+                                <input class="ip" type="text" name="idnumber" id="idnumber" placeholder="请输入身份证号" maxlength="" />
+                            </div>
+  
+    
+
+                        <div class="form-group" style="margin-top:30px;">
+                                <label for="inputCover">店铺名称</label>
+                                <input class="ip" type="text" name="mingcheng" id="mingcheng" placeholder="请输入店铺名称" maxlength="" />
+                            </div>
+                        <div class="form-group" style="margin-top:5px;">
+                                <label for="inputCover">客服电话</label>
+                                <input class="ip" type="text" name="dianhua" id="dianhua" placeholder="请输入客服电话" maxlength="" />
+                            </div>
+
+                        <div class="form-group" style="margin-top:5px;">
+                                <label for="inputCover">开业时间</label>
+                                <input class="ip" type="text" name="kaishishijian" id="demo1" placeholder="请选择服务开始时间" maxlength=""/>
+                              
+                            </div> 
+
+                        <div class="form-group" style="margin-top:5px;">
+                                <label for="inputCover">打烊时间</label>
+                            
+                                <input class="ip" type="text" name="jieshushijian" id="demo2" placeholder="请选择服务打烊时间" maxlength=""/>
+                            </div> 
+
+                        
+                             <div class="form-group" style=" float:left;">
+                                <label for="inputCover"style="float: left;" >服务模式</label>
+                              <div class="ip" style="float:left;position:relative;left:-1px;top: 0px;">
+
+                              <div style="float: left;margin-left:10px; ">
+                                 <input type="checkbox" style="float: left; margin-top:8px; " class="radio" name="daojia" value="1" ><font style="font-color:#dddddd;"> 到家服务</font>
+                                 </div>
+
+                                 <div style="float: left; margin-left:30px;">
+                                   <input type="checkbox" style="float: left;margin-top:8px;" class="radio" name="daodian" value="1" > 到店服务
+                                   </div>
+
+                              </div>
+        
+                            </div> 
+                        </div>
+                   </div>
+
+  
+<!-- 调用的js--> 
+ <script type="text/javascript" src="/PUBLIC/Admin/js/tinybox.js"></script>
+
+    <div class='right' style="width:450px;float:left">
+    <div id="content">
+           
+
+            <div id="preview1" style="margin-top:1px; margin-left:15px; ">
+                <a href="javascript:void(0)" id="click_pic1" onclick="click_pic(1)">
+                <img id="imghead1" style="width:140px; height:140px;"  border=0 src='/img/tx.jpg'>
+                </a>
+            </div>
+                  <font style="margin-left:15px;">上传头像</font>
+                <input type="file" class="tou-input" onchange="previewImage(this,1)"  name="avatar"  class="input" style="width:200px;margin-left:15px;"/>
+            <br>
+            <br>
+            
+             <div id="preview2" style="margin-top:15px; margin-left:15px;">
+                <a href="javascript:void(0)" id="click_pic2" onclick="click_pic(2)">
+                <img id="imghead2" style="width:140px; height:140px;" border=0 src='/img/sfz.jpg'>
+                </a>
+            </div>
+                <font style="margin-left:15px;">上传证件</font>
+                <input type="file" class="tou-input" onchange="previewImage(this,2)"  name="idpic"  class="input" style="width:200px;margin-left:15px; "/>
+            <br>
+            <br>
+                    
+            <div style="margin-top:20px;">
+            <div  style="float: left;width:200px;margin-left:15px;">
+            <div id="preview3">
+                <a href="javascript:void(0)" id="click_pic3" onclick="click_pic(3)">
+                <img id="imghead3" style="width:140px; height:140px;" border=0 src='/img/dinapu.jpg'>
+                </a><br>
+                
+            </div>
+                <font>上传店铺封面</font>
+                <input type="file" class="tou-input" onchange="previewImage(this,3)"  name="logo"  class="input" style="width:200px;"/>
+            </div>
+            
+            <div style="float: left;width:200px;padding-left:5px">
+              <div id="preview4">
+                <a href="javascript:void(0)" id="click_pic4" onclick="click_pic(4)">
+                <img id="imghead4" style="width:140px; height:140px;" border=0 src='/img/yezz.jpg'>
+                </a><br>
+                
+              </div>
+                <font>上传营业执照</font>
+                <input type="file" class="tou-input" onchange="previewImage(this,4)" name="zhizhao"  class="input" style="width:200px"/>
+            </div>
+            </div>
+            
+          </div>
+       </div>
+      <div style="clear: both;"></div>
+
+    <link href="__PUBLIC__/Admin/add/zyzn_1.css" rel="stylesheet" />
+    <script>
+            var znhycode={$fuwu};
+    </script>
+    <script src="__PUBLIC__/Admin/add/hgz_hycode.js"></script>
+          <div class="form-group" style="margin-top:25px;">
+                                <label for="inputCover">服务项目</label>
+                                <input type="text" id="xiangmutxt" name="xiangmutxt" class="nation ip" value="" data-value="" data-id="" placeholder="请选择服务项目"   onclick="appendhybar(this,'duoxuan','xiangmu')" style="width:655px;"/>
+                                <input type="hidden" id="xiangmu" name="xiangmu">
+                            </div>
+
+<div>
+
+<script>
+  function setXiangmu(id,txt){
+    $('#xiangmutxt').val(txt);
+  }
+
+  function getArea(id,value){
+    $.get("{:U('shanghu/ajax')}?id="+value,function(data,status){
+      $('#'+id).empty();
+
+      // var count=$("#"+id).get(0).options.length;
+      for (var i = 0; i <= data.length - 1; i++) {
+        // for(var ii=0;ii<count;ii++){
+        //   if($("#"+id).get(0).options[ii].val == data[i].id)  
+        //     {        
+        //       break;  
+        //     }
+            
+        // }
+        $('#'+id).append('<option value="'+data[i].id+'">'+data[i].mingcheng+'</option>');
+      }
+
+      if(data.length>0){
+        var quyu = data[0];
+        // getShequ('shequ',$('#xingzhenqu').get(0).value,$('#xingzhenqu').get(0).text);
+        getShequ('shequ',quyu.id,quyu.mingcheng);
+      }
+        // alert();
+    });
+  }
+
+  function abcs(pid,phyid,phyname,id,lithis){
+    $.get("{:U('shanghu/ajaxshequ')}?id="+id,function(data,status){
+      abcss(pid,phyid,phyname,id,lithis,data);
+    });
+  }
+  function getShequ(id,value,text){
+    $.get("{:U('shanghu/ajaxshequ')}?id="+value,function(data,status){
+      $('#'+id).empty();
+      $('#'+id).append('<option value="0">--请选择--</option>');
+      for (var i = 0; i <= data.length - 1; i++) {
+        $('#'+id).append('<option value="'+data[i].id+'" quyuid="'+value+'" quyuming="'+text+'" >'+data[i].mingcheng+'</option>');
+      }
+    });
+  }
+  var yixiaoquarr = [];
+  function xiaoqux(id,ming){
+    if(id != 0){
+      var quyuid = $('#shequ').find("option:selected").attr("quyuid");
+      var quyuming = $('#shequ').find("option:selected").attr("quyuming");
+      var abc = false;
+
+      for (var i = 0; i <= yixiaoquarr.length - 1; i++) {
+        // console.log(yixiaoquarr[i][0],yixiaoquarr[i][1],yixiaoquarr[i][2],yixiaoquarr[i][3]);
+        if(quyuid == yixiaoquarr[i][0] && yixiaoquarr[i][2] == id){
+          abc = true;
+        }
+      }
+
+      if(abc == false){
+        // $('#yixiaoqu').append('<option value="'+quyuid+'">'+quyuming+'</option>');
+        $('#yixiaoqu').append('<option>'+quyuming+'-'+ming+'</option>');
+        yixiaoquarr.push([quyuid,quyuming,id,ming]);
+
+        addsx();
+      }
+    }
+  }
+
+  function delyixiaoqu(){
+
+    var index = $('#yixiaoqu').prop('selectedIndex');
+
+    if( index != 0 ){
+      yixiaoquarr.splice(index-1,1);
+      addsx();
+      addyixiaoqu();
+    }
+
+  }
+
+  function addyixiaoqu(){
+    $('#yixiaoqu').empty();
+    $('#yixiaoqu').append('<option value="">--已选择--</option>');
+    for (var i = 0; i <= yixiaoquarr.length - 1; i++) {
+      $('#yixiaoqu').append('<option>'+yixiaoquarr[i][1]+'-'+yixiaoquarr[i][3]+'</option>');
+    }
+  }
+
+  function addsx(){
+    var shequs = '';
+    var xiaoqus = '';
+    var shequtxt = '';
+    var xiaoqutxt = '';
+      for (var i = 0; i <= yixiaoquarr.length - 1; i++) {
+        shequs = shequs + ',' + yixiaoquarr[i][0];
+        xiaoqus = xiaoqus + ',' + yixiaoquarr[i][2];
+        shequtxt = shequtxt + ',' + yixiaoquarr[i][1];
+        xiaoqutxt = xiaoqutxt + ',' + yixiaoquarr[i][3];
+      }
+
+      $('#shequs').val(shequs+',');
+      $('#xiaoqus').val(xiaoqus+',');
+      $('#shequtxt').val(shequtxt.substr(1));
+      $('#xiaoqutxt').val(xiaoqutxt.substr(1));
+  }
+</script>
+
+    <script>
+            var znhycode={$area};
+    </script>
+    <script src="__PUBLIC__/Admin/add/hgz_zncode.js"></script>
+          <div class="form-group" style="margin-top:5px;">
+                                <label for="inputCover">服务小区</label>
+                                <input type="text" class="nation ip" value="" placeholder="请选择服务小区" data-value=""  onclick="appendhyznbar(this,'duoxuan','quyu')" style="width:655px;" name="quyutxt"/>
+                                <input type="hidden" name="quyu" id="quyu">
+                            </div>
+<!-- 
+                              <div class="form-group" style="float:left; ">
+                                <label for="inputCover">服务行政区</label>
+                                <select  id="" class='ip' style="width:288px;" onChange="getArea('xingzhenqu',this.value);"> 
+                                  <option value="">请选择服务行政区</option>
+                                  <foreach name="area" item="vo">
+                                      <option value="{$vo['id']}">{$vo['mingcheng']}</option>
+                                  </foreach>
+                                </select>
+                            </div>
+                          
+
+                            <div class="form-group" style="float:left; position: relative;left: -9px;">
+                                <label for="inputCover">服务区域</label>
+                               <select id="xingzhenqu" class='ip' style="width:290px;" onChange="getShequ('shequ',this.value,this.options[this.selectedIndex].innerText);"> 
+                                  <option value="">请选择服务区域</option>
+                                </select>
+                            </div>
+     </div>
+
+     <div>
+                           <div style="clear: both;"></div>
+                            <div class="form-group" style="float:left; ">
+                                <label for="inputCover">服务小区</label>
+                                <select id="shequ" class='ip' style="width:288px;" onchange="xiaoqux(this.value,this.options[this.selectedIndex].innerText)">  -->
+                                  <!-- <option value="123" selected>请选择服务小区</option> -->
+<!--                                 </select>
+                            </div>
+
+                            <div class="form-group" style="float:left; position: relative;left: -9px;">
+                                <label for="inputCover">已选择小区</label>
+                               <select id="yixiaoqu" class='ip' style="width:290px;" onchange="delyixiaoqu()"> 
+                                  <option value="">--已选择--</option>
+                                </select>
+                            </div> -->
+
+<!--                             <input type="hidden" name="quyu" id="shequs">
+                            <input type="hidden" name="quyutxt" id="shequtxt">
+                            <input type="hidden" name="xiaoqu" id="xiaoqus">
+                            <input type="hidden" name="xiaoqutxt" id="xiaoqutxt"> -->
+    </div>
+
+                        
+          <div class="form-group" style="margin-top:5px;clear: both;">
+                                <label for="inputCover">店铺地址</label>
+                                <input class="ip" type="text" name="dizhi" id="inputPhone" placeholder="请输入店铺地址" maxlength="" style="width:655px;"/>
+                            </div>
+          <div class="form-group">
+                                <label for="inputSubject"  style="height:80px;line-height:80px; position: relative;top: 1px; ">店铺简介</label>
+                          
+                                <textarea name="jianjie" id="" cols="XX" rows="XX" style="height:80px;width:655px;position: relative;left:-8px;top: 1px;border:#dddddd solid 1px;resize: none ;color:#666; font-size:16px;" placeholder="请输入店铺简介"></textarea>
+                            </div>
+
+                            <div class="boxclearfix">
+                          
+                            <button class="btn btn-primary0"  type="submit" id = "submit" name="submit" onclick="return confirmAct();" style="width:735px;" value="publish">添加</button>
+                           
+                        </div>
+                       
+
+
+<script type="text/javascript">
+
+    function click_pic(id){
+        var a1 = document.getElementById('click_pic'+id);
+        var click_pic = "<img src='"+ a1.children[0].src +"' />";
+        TINY.box.show(click_pic,0,0,0,1);
+    }
+
+
+</script> 
+                        
+                        
+
+
+
+<!--弹出图片-->
+<style type="text/css">
+#tinybox{position:absolute; display:none; padding:10px;  z-index:2000;}
+#tinymask{position:absolute; display:none; top:0; left:0; height:100%; width:100%; z-index:1500;background:#000000;}
+#tinycontent{background:#ffffff; font-size:1.1em;}
+</style>
+<style type="text/css">
+#preview{/* width:260px;height:190px; *//*border:1px solid #000;*/overflow:hidden;}
+#imghead {filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);}
+</style>
+<script type="text/javascript">
+      //图片上传预览    IE是用了滤镜。
+        function previewImage(file,id)
+        {
+          var MAXWIDTH  = 140; 
+          var MAXHEIGHT = 140;
+          var div = document.getElementById('preview'+id);
+          if (file.files && file.files[0])
+          {
+              div.innerHTML ='<a href="javascript:void(0)" id="click_pic'+id+'" onclick="click_pic('+id+')"><img id=imghead'+id+' width=140 height=140></a>';
+              var img = document.getElementById('imghead'+id);
+              img.onload = function(){
+                var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+                img.width  =  rect.width;
+                img.height =  rect.height;
+//                 img.style.marginLeft = rect.left+'px';
+                // img.style.marginTop = rect.top+'px';
+              }
+              var reader = new FileReader();
+              reader.onload = function(evt){img.src = evt.target.result;}
+              reader.readAsDataURL(file.files[0]);
+          }
+          else //兼容IE
+          {
+            var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+            file.select();
+            var src = document.selection.createRange().text;
+            div.innerHTML = '<img id=imghead'+id+' width=140 height=140>';
+            var img = document.getElementById('imghead'+id);
+            img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
+            var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+            status =('rect:'+rect.top+','+rect.left+','+rect.width+','+rect.height);
+            div.innerHTML = "<div id=divhead style='width:"+rect.width+"px;height:"+rect.height+"px;margin-top:"+rect.top+"px;"+sFilter+src+"\"'></div>";
+          }
+        }
+        function clacImgZoomParam( maxWidth, maxHeight, width, height ){
+            var param = {top:0, left:0, width:width, height:height};
+            if( width>maxWidth || height>maxHeight )
+            {
+                rateWidth = width / maxWidth;
+                rateHeight = height / maxHeight;
+                 
+                if( rateWidth > rateHeight )
+                {
+                    param.width =  maxWidth;
+                    param.height = Math.round(height / rateWidth);
+                }else
+                {
+                    param.width = Math.round(width / rateHeight);
+                    param.height = maxHeight;
+                }
+            }
+            param.left = Math.round((maxWidth - param.width) / 2);
+            param.top = Math.round((maxHeight - param.height) / 2);
+            return param;
+        }
+</script>  
+
+
+<script type="text/javascript">
+
+    function click_pic(id){
+        var a1 = document.getElementById('click_pic'+id);
+        var click_pic = "<img src='"+ a1.children[0].src +"' />";
+        TINY.box.show(click_pic,0,0,0,1);
+    }
+
+ 
+</script> 
+
+<div class="clearfix"></div>
+
+                </div><!-- /.box -->
+                        <br>
+                        <br>
+                        <br>
+                   </form>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div>
+    </section><!-- /.content -->
+
+
+<section class="content-footer">
+        <div class="text-center">
+        </div>
+    </section><!-- /.content-footer -->
+  
+
+</aside><!-- /.right-side -->
+</block>

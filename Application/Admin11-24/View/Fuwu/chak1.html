@@ -1,0 +1,309 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/simditor/styles/simditor.css" />
+<script type="text/javascript" src="__PUBLIC__/simditor/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/simditor/scripts/module.js"></script>
+<script type="text/javascript" src="__PUBLIC__/simditor/scripts/hotkeys.js"></script>
+<script type="text/javascript" src="__PUBLIC__/simditor/scripts/uploader.js"></script>
+<script type="text/javascript" src="__PUBLIC__/simditor/scripts/simditor.js"></script>
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+         <h1>
+        <div>
+            <div style="float:left">
+            <font class="font" >待开通服务详情</font>  
+            <!-- <p style="width:81px;23px;">待审核用户 </p> -->
+            </div>
+        <div class="search" style="float:left;margin-left: 20px;">
+</div>
+        <a href="javascript:history.back(-1);" class="btn btn-default0 pull-right"  style="position:relative;bottom:8px;">返回</a>
+        </div>
+    </section>
+
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+    
+   <script type="text/javascript" language="javascript"> 
+
+            function confirmAct(status) 
+            { 
+                if(confirm('确定要执行此操作吗?')) 
+                { 
+                    $('#status').val(status);
+                    return true; 
+                } 
+                return false; 
+            } 
+     function submits()  
+     {  
+         var submitId=document.getElementById('submit');  
+         submitId.disabled=true;  
+         // document.fm.submit();  
+         // setTimeout('var submitId=document.getElementById("submit");submitId.disabled=false;',3000); //代码核心在这里，3秒还原按钮代码
+         // return false;
+    }  
+</script>
+<style>
+    select{
+        padding-left:10px;
+    }
+    input{
+              text-indent:10px;
+    }
+    textarea{
+      padding-left:10px;
+    }
+</style>
+
+<script>
+    function getAjax(id){
+    //$.ajax拼接data的异步请求
+    //alert(id);
+    $.ajax({   
+        url:"{:U('Fuwu/ajax')}",   
+        type:'post',   
+        data:'id=' + id, 
+        async : false, //默认为true 异步   
+        error:function(){   
+           alert('error');   
+        },   
+        success:function(data){
+          // console.log(data);
+
+         $('#sid').empty();
+         for(var i=0;i<data.length;i++){
+
+            $('#sid').append("<option value='"+data[i].id+"'>"+data[i].name+"</option>");
+          }
+        }
+      });
+  }
+
+</script>
+
+    <section class="content-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="div-box">
+                <div class="div-center"><!--/*居中*/-->
+
+                <div class='left' style='float:left'>
+                    <form action="{:U('chak1',array('id'=>$leibie['id'],'p'=>$_GET['p']))}" method="post" enctype="multipart/form-data" onsubmit="return submits();">
+                        <!-- <div class="box-header">
+                            <h3 class="box-title"></h3>
+                            <a href="{:U('User/list')}" class="btn btn-default pull-right">用户列表</a>
+                        </div> --><!-- /.box-header -->
+                
+                   <div class="box-body">
+                      <div  style="float:left;">
+                          <div  style="float:left;">
+                             <div class="form-group">
+                                <label for="inputbirthday">项目名称</label>
+                                <input class="ip" type="text" name="name" id="inputPhone" placeholder="请输入项目名称" maxlength="" style="width:400px;" value="{$fuwuxiangmu['name']}" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputCover">项目类别</label> 
+
+                                <select class="ip" name="yijileibie" id="aid" style="width:200px;" onchange="getAjax(this.value)">
+                                  <option value="">一级类别</option>
+                                  <volist name="leibie" id = "leibie">
+                                  <if condition=" $leibie['id'] eq $fuwuxiangmu['yijileibie']">
+                                  <option value="{$leibie['id']}" selected>{$leibie['name']}</option>
+                                  <else/>
+                                  <option value="{$leibie['id']}">{$leibie['name']}</option>
+                                  </if>
+                                  </volist>
+                                </select>
+
+                                <select class="ip" name="erjileibie" id="sid" style="position: relative;left: -16px; width:200px;">
+                                 <!--  <option value="">二级类别</option> -->
+                                 <volist name="leibie1" id ="leibie1">
+                                    <if condition="$leibie1['id'] eq $fuwuxiangmu['erjileibie']">
+                                  <option value="{$leibie1['id']}" selected>{$leibie1['name']}</option>
+                                  <else/>
+                                  <option value="{$leibie1['id']}">{$leibie1['name']}</option>
+                                  </if>
+                                  </volist>
+                                </select>
+                              </div>
+
+                            <div class="form-group" >
+                                <label for="inputCover">计价单位</label>
+                                <input class="ip" type="text"  name="danwei" id="inputPhone" placeholder="请输入计价单位" maxlength="" style="width:400px;" value="{$fuwuxiangmu['danwei']}" />
+                              </div>       
+                      </div>
+                          <script type="text/javascript" src="/Public/Admin/js/tinybox.js"></script>  
+                          <div style="float:left;margin-left:-95px;margin-top:-9px;">
+                            <div id="preview4" style="margin-top:10px;margin-left:100px;">
+                            <a href="javascript:void(0)" id="click_pic4" onclick="click_pic(4)">
+                            <img id="imghead1" width=140px; height=140px; border=0 src='__ROOT__/photo/fuwu/b_{$fuwuxiangmu["photo"]|default="fuwu.png"}'>
+                            </a><br>
+                            </div>
+                            <input class="tou-input" type="file" name="avc" id="inputCover" onchange="previewImage(this,4)" class="input" style="padding-top:10px;margin-left:100px;" />
+                          </div>
+                       </div>
+
+                       <div class="form-group" >
+                                <label for="inputSubject">项目简介</label>
+                                <!-- <input class="ip" type="text" name="nickname" id="inputname" placeholder="请输入昵称" maxlength=""   style="height:80px;width:558px;"/> -->
+                                <!-- <textarea name="jianjie" id="" cols="30" rows="10" style="height:80px;width:560px;position: relative;left:-8px;top: 1px;border:#dddddd solid 1px;resize: none ;color:#666;" >{$fuwuxiangmu['jianjie']}</textarea> -->
+                                <input type="text" class="ip" name="jianjie" placeholder="请输入项目简介" maxlength="20"  style="width:558px;" value="{$fuwuxiangmu['jianjie']}">
+                            </div>
+                            
+
+                        <div class="form-group" style=" width:639px; margin-top:8px; ">
+                              
+                                <textarea id="neirong" name="xiangqing"  >{$fuwuxiangmu['xiangqing']}</textarea>
+                            </div>
+
+                        <div class="form-group" style="margin-top:10px;">
+                                <label for="inputCover">开通时间</label>
+                                <input class="ip" type="text"  name="" id="inputPhone" placeholder="" maxlength="11" style="width:560px;background:#f9f9f9" readonly="readonly" value="{:date('Y-m-d H:i:s')}" />
+
+                                <input class="ip" type="hidden"  name="starttime" id="inputPhone" placeholder="" maxlength="11" style="width:558px;background:#f9f9f9" readonly="readonly" value="{:time()}" />
+                              </div>    
+
+                      <div class="boxclearfix">
+                      <input type="hidden" name='id' value="{$fuwuxiangmu['id']}">
+                      <input type="hidden" name="status" id="status" value="{$fuwuxiangmu['status']}">
+                      <button  class="btn btn-primary1" type="submit" id = "submit" name="" onclick="return confirmAct(2);" value="2" style="width:300px; margin-right:30px;">启用
+                      </button>
+                       <button class="btn btn-primary0"  type="submit" id = "submit" name="" onclick="return confirmAct(1);" value="1" style="width:300px;">保存</button>
+                        </div>
+
+<script>
+  $(document).ready(function() {
+    var editor = new Simditor({
+      textarea: $('#neirong'),
+      //optional options
+      defaultImage : '__PUBLIC__/simditor/images/image.png', //编辑器插入图片时使用的默认图片
+      upload : {
+                url : '{:U('Fuwu/addtupian')}', //文件上传的接口地址
+                params: null, //键值对,指定文件上传接口的额外参数,上传的时候随文件一起提交
+                fileKey: 'fileData', //服务器端获取文件数据的参数名
+                connectionCount: 3,
+                leaveConfirm: '正在上传文件'
+            },  
+    });
+  });
+</script>
+
+<!--弹出图片-->
+<style type="text/css">
+#tinybox{position:absolute; display:none; padding:10px; z-index:2000;}
+#tinymask{position:absolute; display:none; top:0; left:0; height:100%; width:100%; background:#000000; z-index:1500;}
+#tinycontent{background:#ffffff; font-size:1.1em;}
+</style>
+
+
+<style>
+.tcbg{  display:none;  position:fixed;  top: 0%;  left: 0%;  width: 100%;  height: 100%;  background-color:#000;   -moz-opacity: 0.5;  opacity:.50;  filter: alpha(opacity=50); z-index:5}
+.cccc{
+    display:none;  position:fixed;  top:200px; right:350px; margin:auto; text-align:left;   width: 100%; max-width:600px;  height: 300px;  background-color:#F8F8F8;  z-index:6; border-radius:5px;}
+
+
+    </style>
+
+
+
+<style type="text/css">
+#preview{/* width:260px;height:190px; *//*border:1px solid #000;*/overflow:hidden;}
+#imghead {filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);}
+</style>
+<script type="text/javascript">
+      //图片上传预览    IE是用了滤镜。
+        function previewImage(file,id)
+        {
+          var MAXWIDTH  = 140; 
+          var MAXHEIGHT = 140;
+          var div = document.getElementById('preview'+id);
+          if (file.files && file.files[0])
+          {
+              div.innerHTML ='<a href="javascript:void(0)" id="click_pic'+id+'" onclick="click_pic('+id+')"><img id=imghead'+id+'></a>';
+              var img = document.getElementById('imghead'+id);
+              img.onload = function(){
+                var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+                img.width  =  rect.width;
+                img.height =  rect.height;
+//                 img.style.marginLeft = rect.left+'px';
+                // img.style.marginTop = rect.top+'px';
+              }
+              var reader = new FileReader();
+              reader.onload = function(evt){img.src = evt.target.result;}
+              reader.readAsDataURL(file.files[0]);
+          }
+          else //兼容IE
+          {
+            var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+            file.select();
+            var src = document.selection.createRange().text;
+            div.innerHTML = '<img id=imghead'+id+'>';
+            var img = document.getElementById('imghead'+id);
+            img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
+            var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+            status =('rect:'+rect.top+','+rect.left+','+rect.width+','+rect.height);
+            div.innerHTML = "<div id=divhead style='width:"+rect.width+"px;height:"+rect.height+"px;margin-top:"+rect.top+"px;"+sFilter+src+"\"'></div>";
+          }
+        }
+        function clacImgZoomParam( maxWidth, maxHeight, width, height ){
+            var param = {top:0, left:0, width:width, height:height};
+            if( width>maxWidth || height>maxHeight )
+            {
+                rateWidth = width / maxWidth;
+                rateHeight = height / maxHeight;
+                 
+                if( rateWidth > rateHeight )
+                {
+                    param.width =  maxWidth;
+                    param.height = Math.round(height / rateWidth);
+                }else
+                {
+                    param.width = Math.round(width / rateHeight);
+                    param.height = maxHeight;
+                }
+            }
+            param.left = Math.round((maxWidth - param.width) / 2);
+            param.top = Math.round((maxHeight - param.height) / 2);
+            return param;
+        }
+</script>  
+
+<script type="text/javascript" >                       
+        function click_pic(id){
+                var a1 = document.getElementById('click_pic'+id);
+                var click_pic = "<img src='"+ a1.children[0].src +"' />";
+              TINY.box.show(click_pic,0,0,0,1);
+             }
+
+ 
+</script>  
+
+
+
+
+
+<div class="clearfix"></div>
+
+                </div><!-- /.box -->
+                        <br>
+                        <br>
+                        <br>
+                   </form>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div>
+    </section><!-- /.content -->
+
+<!-- <div class="cccc" id="cccc">
+    <img  id="img"  onclick="removeElement1()" src="" alt="tupian">
+</div>
+ -->
+
+  
+
+</aside><!-- /.right-side -->
+</block>

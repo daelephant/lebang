@@ -1,0 +1,80 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        <div>
+            <div style="float:left">
+            <font class="font" >待开通服务</font>  
+            <!-- <p style="width:81px;23px;">待审核用户 </p> -->
+            </div>
+        <div class="search" style="float:left;margin-left: 20px;">
+   <form id="shse_search" action='{:U('Fuwu/fetchlist1')}' method="get">
+      <input type="text" id="keyword"  class="txt1"  autocomplete="off"  name="name" />
+      <button type="submit" class="search_btn" value="" >
+      <span class="ico" id="scico"><em></em></span></button>
+      </form>
+</div>
+    <div style="float:right;">
+            <if condition ="$_GET['name'] neq ''">
+            <a href= "javascript:history.back(-1);" class="btn btn-default0 pull-right">返回</a>
+            <else/>
+            <a href="{:U('Fuwu/add')}" class="btn btn-default0 pull-right">新增服务</a>
+            </if>
+        </div>
+        </div>
+       </h1>
+    </section>
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-body">
+                         <table class="table table-bordered" >
+                            <tbody>
+                            <tr style="background: #fbfbfb;">
+                                <!-- <th style="width: 10px">#</th> -->
+                                <th style="80px;">序号</th>
+                                <th style="120px;">服务项目名称</th>
+                                <th style="100px;">服务类别</th>
+                                <th>项目简介</th>
+                                <th style="80px;">单位</th>
+                                <th style="80px;">商户数</th>
+                                <th style="80px;">预约数</th>
+                                <th style="110px;">创建时间</th>
+                                <th style="width:150px">操作</th> 
+                            </tr>
+                            <volist name="leibie" id="leibie" key="k">
+                            <tr>
+                                <td>{$leibie['id']}</td>
+                                <td>{$leibie['name']}</td>
+                                <td>{$leibie['lname']} </td>
+                                <td style="text-align:left;">{$leibie['jianjie']}</td>
+                                <!-- <td>{$xinxianshi['status']}</td> -->
+                                <td>{$leibie['danwei']}</td>
+                                <td>{$shanghu[$k-1]['shanghus']}</td>
+                                <td>{$yuyue[$k-1]['yuyues']}</a></td>         
+                                <td>{:date('Y-m-d H:i:s',$leibie['shijian'])}</td>
+                                <td><a href="{:U('chak1', array('id'=>$leibie['id'],'p'=>$_GET['p']))}" class="btn btn-default1" title="编辑">查看详情</a></td>
+                            </tr>
+                            </volist>
+
+                            </tbody>
+                        </table>
+                    </div><!-- /.box-body -->
+                </div>
+                  <!--分页的位置-->
+                    {$page_html}
+            </div>
+        </div>
+    </section><!-- /.content -->
+
+   
+
+</aside><!-- /.right-side -->
+</block>

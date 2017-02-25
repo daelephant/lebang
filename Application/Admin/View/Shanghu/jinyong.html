@@ -1,0 +1,110 @@
+
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+        <div>
+            <div style="float:left">
+            <font class="font">禁用商户</font> 
+            </div>
+        <div class="search" style="float:left;margin-left: 20px;">
+   <form id="user_search" action='{:U('Shanghu/fetch4')}' method="get">
+    <select name="sosuo" class="sosuo" >
+                                          <option name="sosuo" value="1">&nbsp;手机号</option>
+                                          <option  name="sosuo" value="2">&nbsp;姓名</option>
+                                          <option  name="sosuo" value="3">&nbsp;商户名称</option>
+        </select>
+      <input type="text" id="keyword" name="value" class="txt"  autocomplete="off" value="" />
+      <button type="submit" class="search_btn" value="" >
+      <span class="ico" id="scico"><em></em></span></button>
+</div>
+
+
+
+   </form>
+
+        <div style="float:right;">
+            <if condition ="$_GET['sosuo'] neq ''">
+            <a href= "javascript:history.back(-1);" class="btn btn-default0 pull-right">返回</a>
+            <else/>
+            <a href="{:U('Shanghu/add')}" class="btn btn-default0 pull-right">添加商户</a>
+            </if>
+        </div>
+            <!-- <small>待审核用户</small> -->
+        </div>
+       </h1>
+    </section>
+<script type="text/javascript" language="javascript"> 
+
+            function confirmAct() 
+            { 
+                if(confirm('确定要执行此操作吗?')) 
+                { 
+                    return true; 
+                } 
+                return false; 
+            } 
+</script>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-body">
+         <table class="table table-bordered">
+                            <tbody>
+                            <tr>
+                                <th style="width:80px;">序号</th>  
+                                <th style="width:100px;">真实姓名</th>
+                                <th style="width:100px;">手机号</th>
+                                <th style="width:80px;">性别</th>
+                                <th style="width:200px;">商户名称</th>
+                                <th style="width:100px;">客服电话</th>
+                                <th>禁用理由</th>
+                                <th style="width:150px;">禁用时间</th>
+                                <th style="width: 150px;">操作</th>
+                            
+                            </tr>    
+                            <volist name="shanghu" id="user" key="k">                
+                            <tr> 
+                                <td>{$k}</td>
+                                <td>{$user['name']}</td>
+                                <td>{$user['phone']}</td>
+                               <td><if condition="$user['sex'] eq '1'">男<elseif condition="$user['sex'] eq '2'"/>女</if>
+                                </td>
+                                <td>{$user['mingcheng']}</td>
+                                <td>{$user['dianhua']}</td>
+                                <td>{$user['beizhu']}</td>
+                                <td>{:date('Y-m-d H:i:s',$user['jinyongshijian'])}</td>
+                                <td> 
+                                 <input type="button" class="btn btn-default2" style="background:#009900;width:100px;"  onclick="add2({$user['id']},{:$_GET['p']|1})" value="启用">
+                                 </td>
+                            </tr>
+                            </volist>
+                            </tbody>
+                        </table>
+                    </div><!-- /.box-body -->
+                </div>
+                  <!--分页的位置-->
+                    {$page_html}
+            </div>
+        </div>
+    </section><!-- /.content -->
+
+<script>
+  function add2(xid){
+      $('#id').val(xid);
+      $('#qiyong').submit();
+  }
+</script>
+    
+<form action="{:U('shanghu/qiyong',['p'=>$_GET['p']|1])}" method="post" id="qiyong">
+    <input type="hidden" id="id" name="xid">
+</form>
+
+</aside><!-- /.right-side -->
+
+</block>

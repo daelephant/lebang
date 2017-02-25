@@ -1,0 +1,105 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <if condition="$user['status'] neq '3'">
+        <h1>
+            用户审核
+             <a href="{:U('list')}" class="btn btn-default pull-right"><font color="black">用户列表</font></a>
+        </h1>
+       <!--  <ol class="breadcrumb">
+           <li><a href="{:U('Admin/index')}"><i class="fa fa-dashboard"></i> 管理中心</a></li>
+           <li><a href="{:U('list')}">用户管理</a></li>
+           <li class="active">用户审核</li>
+       </ol> -->
+        <elseif condition= "$user['status'] eq '3'"/>
+        <h1>
+            查看用户
+            <a href="{:U('list')}" class="btn btn-default pull-right"><font color="black">用户列表</font></a>
+        </h1>
+       <!--  <ol class="breadcrumb">
+           <li><a href="{:U('Admin/index')}"><i class="fa fa-dashboard"></i> 管理中心</a></li>
+           <li><a href="{:U('list')}">用户管理</a></li>
+           <li class="active">查看用户</li>
+       </ol> -->
+        <else/>
+        </if>
+    </section>
+
+    <!-- Main content -->
+
+    <!-- <section class="content"> -->
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <form action="{:U('edit')}" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="id" value="<?=$user['id']?>"
+                        <div class="box-body">
+                           <!-- <body style="padding:20px; color:#636363;">
+ -->
+                            <table style="max-width:100%;" class="table_100">
+                            <tr>
+                            <td><img src="__ROOT__/photo/avatar/{$user['avatar']|default="avatar.png"}" height="120px;" id="touxiang" /></td>
+                            <td style="line-height:40px; width:300px; padding-left:10px;">
+                            <p>姓名：{$user['name']} （{$user['sex']==1?'男':'女'}）</p>
+                            <p>手机号：{$user['phone']}</p>
+                            <p>出生年月：{$user['birthday']= date("Y-m-d", $user['birthday'])}</p>
+                            <p>证件号：{$user['idnumber']}</p>
+                            </td>
+                            <form action="{:U('User/bianji')}" method="post" enctype="multipart/form-data">
+                             <input type="hidden" name="id" value="<?=$user['id']?>">
+                            <td>
+                            <input style="width:500px; height=200px;" type="text" name="beizhu" value="{$user['beizhu']}"  placeholder="添加备注"/><br />
+                            <button class="btn btn-primary" type="submit" name="submit" value="publish">保存备注</button>
+                            <!-- <textarea type="text" class="text" id="beizhu" style="width:100%; height:120px; min-width:300px;">{$user['beizhu']}</textarea> -->
+                            </td>
+
+                            </form>
+                            
+                            </tr>
+                            <tr>
+                            <td colspan="3">
+                            <div class="blank_15"></div>
+                            <p>证件照</p>
+                            <div class="blank_15"></div>
+                            <img src="__ROOT__/photo/idpic/{$user['idpic']|default="idpic.png"}"/>
+                            <img src="__ROOT__/photo/idpic/{$user['idpic']|default="idpic.png"}"/>
+                            <div class="blank_10"></div>
+                            <!-- <img src="__ROOT__/photo/idpic/idpic.png" />
+                            <div class="blank_10"></div>
+                            <img src="__ROOT__/photo/idpic/idpic.png"/> -->
+                            <div class="blank_15"></div>
+                            </tr>
+                            </table>
+                        <!-- </body> -->
+ 
+                    
+                    <if condition="$user['status'] neq '3'">
+                    <a id="yes" style="visibility:visible" href="{:U('success', ['user_id'=>$user['id']])}" class="btn btn-default" title="通过"><span class="fa fa-edit" >通过</span></a>
+
+                    <a id="not" style="visibility:visible" href="{:U('check', ['user_id'=>$user['id']])}" class="btn btn-default" title="不通过"><span class="fa fa-edit"></span>不通过</a>
+                    <else /> </if>
+                   
+
+                        </div><!-- /.box-body -->
+                        
+                    </form>
+
+                </div><!-- /.box -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+
+    </section><!-- /.content -->
+
+    <section class="content-footer">
+        <div class="text-center">
+            &copy;lebang，全民乐帮
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>

@@ -1,0 +1,90 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            用户编辑
+            <small>用户</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:U('Admin/index')}"><i class="fa fa-dashboard"></i> 管理中心</a></li>
+            <li><a href="{:U('list')}">用户</a></li>
+            <li class="active">用户编辑</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+
+    <section class="content">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <form action="{:U('edit')}" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="id" value="<?=$msg['id']?>">
+                        <div class="box-header">
+                            <h3 class="box-title"></h3>
+                            <a href="{:U('list')}" class="btn btn-default pull-right">用户列表</a>
+                        </div><!-- /.box-header -->
+
+                        <div class="box-body">
+                           <body style="padding:20px; color:#636363;">
+
+                        <table style="max-width:740px;" class="table_100">
+                        <tr>
+                        <td><img src="http://www.qinlinlebang.com/photo/avatar/{$msg['avatar']|default="avatar.png"}" height="120px;" id="touxiang" /></td>
+                        <td style="line-height:40px; width:300px; padding-left:10px;">
+                        <p>姓名：{$msg['name']} （{$msg['sex']==1?'男':'女'}）</p>
+                        <p>手机号：{$msg['phone']}</p>
+                        <p>出生年月：{$msg['birthday']= date("Y-m-d", $msg['birthday'])}</p>
+                        <p>证件号：{$msg['idnumber']}</p>
+                        </td>
+                        <td>
+                        <textarea type="text" class="text" id="beizhu" style="width:100%; height:120px; min-width:300px;">{$msg['beizhu']}</textarea>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td colspan="3">
+                        <div class="blank_15"></div>
+                        <p>证件照</p>
+                        <div class="blank_15"></div>
+                        <img src="http://www.qinlinlebang.com/photo/idpic/{$msg['idpic']|default="idpic.png"}"/>
+                        <img src="http://www.qinlinlebang.com/photo/idpic/{$msg['idpic']|default="idpic.png"}"/>
+                        <div class="blank_10"></div>
+                        <!-- <img src="http://www.qinlinlebang.com/photo/idpic/idpic.png" />
+                        <div class="blank_10"></div>
+                        <img src="http://www.qinlinlebang.com/photo/idpic/idpic.png"/> -->
+                        <div class="blank_15"></div>
+                        </tr>
+                        </table>
+
+
+                        </body>
+                        <input type="button" value="{$msg['idnumber']}"  onClick="{$msg['idnumber']=3}" id="tg" />
+                        <div class="blank_10"></div>
+                        <input type="button" value="不通过"  placeholder="" id="btg"  onClick="{$msg['idnumber']=3}" /></td>
+                        <div class="blank_15">
+
+                        </div><!-- /.box-body -->
+                        <div class="box-footer clearfix">
+                          
+                        </div><!-- /.box-footer -->
+                    </form>
+
+                </div><!-- /.box -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+
+    </section><!-- /.content -->
+
+    <section class="content-footer">
+        <div class="text-center">
+            &copy;lebang，亲邻乐帮
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>

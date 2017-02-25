@@ -1,0 +1,236 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            <font class="font">编辑区域</font>
+             <a href="javascript:history.back(-1);" class="btn btn-default0 pull-right"  style="position:relative;bottom:8px;">返回区域列表</a>
+        </h1>
+    </section>
+
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+    
+   <script type="text/javascript" language="javascript"> 
+
+            function confirmAct() 
+            { 
+                if(confirm('确定要执行此操作吗?')) 
+                { 
+                    return true; 
+                } 
+                return false; 
+            } 
+     function submits()  
+     {  
+         var submitId=document.getElementById('submit');  
+         submitId.disabled=true;  
+         // document.fm.submit();  
+         // setTimeout('var submitId=document.getElementById("submit");submitId.disabled=false;',3000); //代码核心在这里，3秒还原按钮代码
+         // return false;
+    }  
+</script>
+<style>
+    select{
+        text-indent:10px;
+    }
+    input{
+              text-indent:10px;
+    }
+</style>
+
+<script>
+
+function delAll(names){
+  document.getElementById(names).options.length = 0;
+}
+
+function addOne(names,values,sid){
+  var select = document.getElementById(names);
+  select.options[select.length] = new Option(values,sid);
+}
+
+var once = 0;
+
+$(document).ready(function(){
+    gzsjdz(2,'shjicity');
+});
+
+function shjiarea(){
+  $('#shjiarea').find("option[value='{$m_area['sid']}']").attr('selected',true);
+}
+
+function gzsjdz(id,names){
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function(){
+  if(this.readyState == 4){ //Ajax 请求
+      var result = this.responseText;
+      var res;
+      if( result.indexOf('<') >= 0){
+        result = result.split('<');
+        res = eval(result[0]);
+      }else{
+        res = eval(result[0]);
+      }
+      
+      delAll(names);
+      for (var i = 0; i <= res.length - 1; i++) {
+        // alert(res[i].mingcheng);
+        addOne(names,res[i].mingcheng,res[i].id);
+      }
+      gzsjcity(res[0].id,'shjiarea');
+      // if(names == 'shjicity'){
+      //   gzsjdz(res[0].id,'shjiarea');
+      //   gzsjdz(res[0].id,'shjishequ');
+      // }
+    }
+  }
+  xhr.open('get',"{:U('shequ/ajax')}?id="+id,true); //true
+  xhr.send(null);
+}
+
+
+
+function gzsjcity(id,names){
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function(){
+  if(this.readyState == 4){ //Ajax 请求
+      var result = this.responseText;
+      var res;
+      if( result.indexOf('<') >= 0){
+        result = result.split('<');
+        res = eval(result[0]);
+      }else{
+        res = eval(result[0]);
+      }
+      delAll(names);
+      for (var i = 0; i <= res.length - 1; i++) {
+        addOne(names,res[i].mingcheng,res[i].id);
+      }
+      if(once == 0){
+        shjiarea();
+        once = once + 1;
+      }
+      gzsjarea(res[0].id,'shjishequ');
+    }
+  }
+  xhr.open('get',"{:U('shequ/ajax')}?id="+id,true); //true
+  xhr.send(null);
+}
+
+function gzsjarea(id,names){
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function(){
+  if(this.readyState == 4){ //Ajax 请求
+      var result = this.responseText;
+      var res;
+      if( result.indexOf('<') >= 0){
+        result = result.split('<');
+        res = eval(result[0]);
+      }else{
+        res = eval(result[0]);
+      }
+      // delAll(names);
+      delAll2();
+      for (var i = 0; i <= res.length - 1; i++) {
+        // addOne(names,res[i].mingcheng,res[i].id);
+        addOne2(res[i].id,res[i].mingcheng);
+      }
+    }
+  }
+  xhr.open('get',"{:U('shequ/ajax')}?id="+id,true); //true
+  xhr.send(null);
+}
+function delAll2(){
+  // document.getElementById(names).options.length = 0;
+  $('#shjishequ').empty();
+}
+
+function addOne2(id,values){
+  // names,values,sid
+  // var select = document.getElementById(names);
+  // select.options[select.length] = new Option(values,sid);
+  var shjishequ = document.getElementById('shjishequ');
+  checkbox = document.createElement('input');
+  checkbox.setAttribute('type','checkbox');
+  checkbox.setAttribute('name','quyu[]');
+  checkbox.setAttribute('value',id);
+  shjishequ.appendChild(checkbox);
+  shjishequ.appendChild(document.createTextNode(values+' '));
+}
+
+</script>
+
+    <section class="content-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="div-box">
+                <div class="div-center"><!--/*居中*/-->
+
+                <div class='left' style='float:left'>
+                    <form action="{:U('Shequ/qybianji',['areas_id'=>$areas['id'],'p'=>$_GET['p']])}" method="post" enctype="multipart/form-data" onsubmit="return submits();">
+                       
+                            <div class="form-group">
+                                <label for="inputSubject">省份</label>
+                               
+                                <select class="ip"  name="mingcheng" id="shjidizhi" onChange="gzsjdz(this.options[this.options.selectedIndex].value,'shjicity');" >
+                                      <option   value="0">请选择</option>
+                                    <foreach name='area' item='area' key='k'>
+                                    <if condition = '$k eq 0'>
+                                              <option id='{$area['sid']}' value="{$area['id']}" selected>{$area['mingcheng']}</option>
+                                    <else/>
+                                              <option id='{$area['sid']}' value="{$area['id']}">{$area['mingcheng']}</option>
+                                    </if>
+                                      </foreach>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputSubject">城市</label>
+                                    <select class="ip" name="ctiy" id="shjicity" onChange="gzsjcity(this.options[this.options.selectedIndex].value,'shjiarea');">
+                                      <option  value="0">请选择</option>
+                                    </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputSubject">行政区</label>
+                                    <select class="ip" name="area" id="shjiarea" onChange="gzsjarea(this.options[this.options.selectedIndex].value,'shjishequ');" >
+                                      <option   value="0">请选择</option>
+                                    </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputSubject">区域名称</label>
+                                <input class="ip" type="text" name="quyu" id="inputname" placeholder="请输入区域名称" maxlength="" value="{$m_area['mingcheng']}"/>
+                                <input type="hidden" name ='id' value = "{$m_area['id']}"/>
+                            </div>
+                       
+
+                        <!-- /.box-body -->
+                        <div class="boxclearfix">
+                           <!--  <a href="{:U('edit', ['user_id'=>$user['id']])}" class="btn btn-default" title="编辑"><span class="fa fa-edit"></span> 编辑</a> -->
+                            <button class="btn btn-primary0"  type="submit" id = "submit" name="submit" onclick="return confirmAct();" value="publish">保存</button>
+                            <!-- <button class="btn btn-info" type="submit" name="submit" value="save">仅保存</button> -->
+                        </div><!-- /.box-footer -->
+
+                        <br>
+                        <br>
+                        </div>
+                 
+                    </div>  <!--  div-center -->
+
+
+
+<div class="clearfix"></div>
+
+            </div><!-- /.box -->
+        </div><!-- /.col -->
+    </div>   <!-- row -->
+    </section><!-- /.content -->
+  
+
+</aside><!-- /.right-side -->
+</block>

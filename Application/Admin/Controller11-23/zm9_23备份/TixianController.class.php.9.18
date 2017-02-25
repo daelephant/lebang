@@ -1,0 +1,88 @@
+<?php
+namespace Admin\Controller;
+use Think\Controller;
+use Think\Upload;
+use Think\Image;
+use Org\Util\Page;
+
+class TixianController extends Controller
+{
+	
+	public function listAction()
+		{	
+//////三表联合查询$Model = M('T1');$Model->join('t2 on t1.id = t2.uid', 'left')->join('t3 on t2.uid = t3.sid', 'left')->select();					
+					// 考虑分页
+					$pagesize = 10;
+					$page = I('get.p', '1');
+
+					$m_tixian = M('Tixian');
+					// 通用查询条件
+					// $cond['is_deleted'] = '0';
+					$tixian_list = $m_tixian
+					->table('lb_tixian')
+					->join("LEFT JOIN lb_user ON lb_tixian.openid = lb_user.openid")
+					->join("LEFT JOIN lb_bank ON lb_tixian.bankid = lb_bank.id")
+					->field('lb_tixian.*,lb_user.name as name,lb_user.phone as phone,lb_user.idnumber as idnumber,lb_bank.bank as bank,lb_bank.banknum as banknum')
+					->order('id desc')
+					->page($page, $pagesize)
+					->group('id')
+					->select();
+					// echo $m_tixian->getLastSQL();exit;
+					//var_dump($tixian_list);exit;
+		// 将日期格式化
+		foreach ($tixian_list as &$tixian) 
+		{	
+			//$moneys=sprintf("%.2f", $money);
+			$tixian['money'] = sprintf("%.2f", $tixian['money']);//将金额设置为两位浮点型
+			$tixian['addtime'] = date("Y-m-d H:s:i", $tixian['addtime']);
+			
+		}
+		$this->assign('tixian_list', $tixian_list);
+
+		$total = $m_tixian->where($cond)->count();
+		$t_page = new Page($total, $pagesize);
+		$this->assign('page_html', $t_page->show());
+
+		$this->display();
+		//var_dump($tixian_list);exit;
+
+	}
+
+	public function bianjiAction($id=0)
+	{	//s
+		if (IS_GET)
+		{	
+			var_dump($_GET);exit;
+			// $m_tixian = M('Tixian');
+   //   				$a['id']=$_GET['tixian_id'];
+   //   				$a['beizhu'] =$_GET['beizhu'];
+   //   				$a['status']=1;
+
+			// $m_tixian->save($a);
+			// $tixian = M("Tixian"); // 实例化User对象// 要修改的数据对象属性赋值
+			// $date['status']= '1';
+			// $data['beizhu'] = $_GET['beizhu'];
+			// //$date['status']= '1';
+
+			// $tixian->where('id=12')->save($data); // 根据条件更新记录sql="select * from biao where o='"+a+"'"
+
+			$Tixian = M("Tixian"); // 实例化User对象// 要修改的数据对象属性赋值
+			$map['id'] = $_GET['tixian_id'];
+			//$a=$_GET['tixian_id'];var_dump($a);
+			$Tixian->status = '1';$Tixian->beizhu = $_GET['beizhu'];
+			$Tixian->where($map)->save(); // 根据条件更新记录
+			// echo $Tixian->getLastSQL();exit;
+			$this->success('OK：' , U('Tixian/list'), 2);
+		}
+		else
+		{
+			// 展示添加表单
+			// 把分类分配给表单
+			$m_category = D('Category');
+			$category_list = $m_category->getTree();
+			$this->assign('category_list', $category_list);
+
+			$this->display();
+		}
+	}
+}

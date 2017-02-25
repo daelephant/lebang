@@ -1,0 +1,134 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            用户列表
+            <small>用户</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:U('Admin/index')}"><i class="fa fa-dashboard"></i> 管理中心</a></li>
+            <li><a href="{:U('list')}">用户</a></li>
+            <li class="active">用户列表</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title"></h3>
+                        <a href="{:U('User/add')}" class="btn btn-default pull-right">添加用户</a>
+                    </div><!-- /.box-header -->
+                    <!--  -->
+    <form action='{:U('User/fetch')}' method="get">
+        
+                <td style="text-align:right">姓名：<input id="name" name="name" class="inp_wid3" type="text" value="{$_GET['name']}"/></td>
+                <td style="text-align:right">手机号：<input id="phone" name="phone" class="inp_wid3" type="text" value="{$_GET['phone']}"/></td>
+                <td style="text-align:right">身份证号：<input id="idnumber" name="idnumber" class="inp_wid3" type="text" value="{$_GET['idnumber']}"/></td>
+                <td style="text-align:right">查询日期：<input id="starttime" placeholder="填一个即可2016-08-28" name="starttime" class="inp_wid3" type="text" value="{$_GET['starttime']}"/></td>~<input id="endtime"name="endtime" placeholder="2016-08-29" class="inp_wid3" type="text" value="{$_GET['endtime']}"/></td>
+                <input class="search_btn1" type="submit" value="搜索" id="Search" />
+      </form>
+                    <div class="box-body">
+                        <table class="table table-bordered">
+                            <tbody>
+                            <tr>
+                                <!-- <th style="width: 10px">#</th> -->
+                                <th>列表</th>
+                                <th>姓名</th>
+                                <th>手机号</th>
+                                <th>证件号</th>
+                                <!-- <th>状态</th> -->
+                                <th>用户类型</th>
+                                <th>注册时间</th>
+                                <th>最后登录</th>
+                                <th>余额</th>
+                                <th>操作</th>
+                               <!--  <th>性别</th>
+                                <th>证件号</th> -->
+                               <!--  <th style="width: 20%">操作</th> -->
+                            </tr>
+                            
+                            <volist name="user_list" id="user">
+                            <tr>
+                                <td>{$user['id']}</td>
+                                <td>{$user['name']}</td>
+                                <td>{$user['phone']}</td>
+                                <td>{$user['idnumber']}</td>
+                                <!-- <td>{$user['status']}</td> -->
+                                <td>{$user['status']}</td>
+                                <td>{$user['regtime']}</td>
+                                <td>{$user['logintimes']}</td>
+                                <td>{$user['moneys']}</td>
+                                <!-- <td>{$user['caozuo']}</td> -->
+                                <!-- <td>{$User['create_at']}</td>
+                                <td>{$User['category_title']}</td> -->
+                                <td style="width: 249px"> <!-- U('Blog/cate',array('cate_id'=>1,'status'=>1)) -->
+                                    <a href="{:U('edit', array('user_id'=>$user['id'],'status'=>1))}" class="btn btn-default" title=""  ><span class="fa fa-edit"></span> {$user['status']=='雷锋'?'查看':'审核'}</a>
+                                   <a href="{:U('bianji', ['user_id'=>$user['id']])}" class="btn btn-default" title="编辑"><span class="fa fa-edit" style="width:10px"></span> 编辑</a>
+                <form action="{:U('User/recharge')}" method="post" enctype="multipart/form-data">
+                  <input type="text" name="money" id="inputPhone" placeholder="金额" maxlength="5"/>
+                  <input type="hidden" name="user_id" value="{$user['id']}" />
+
+                  <button type="submit" value="publish" value="充值"><!-- <a href="{:U('recharge', ['user_id'=>$user['id']])}">充值</a> -->充值</button>
+                </form>
+                <!-- <form action="{:U('User/recharge')}" method="get" id="tform">
+                    <input type="text" name="value">
+                    <a href="{:U('recharge', ['user_id'=>$user['id']])}" onclick="document.getElementByid('tform').submit()">充值</a>
+                </form> -->
+                                    <!-- <a href="{:U('', ['user_id'=>$user['id']])}" class="btn btn-default" title="审查"><span class="fa fa-edit"></span> 审查</a> -->
+                                    <!-- <a href="{:U('recharge', ['user_id'=>$user['id']])}" class="btn btn-default" title="充值" onclick="disp_prompt()"> 充值</a> -->
+                <!-- <form action='{:U('User/recharge')}' method="get">
+                                    <input type="button" onClick="disp_prompt()" value="充值" type="submit"/>
+
+                                    
+                                    <script type="text/javascript">
+                                      function disp_prompt()
+                                      {
+                                        var value=prompt("请输入充值金额：","");
+                                      
+                                        if (value!=null && value != "")
+                                        {
+                                         
+                                            alert("您好！\n\n您充值的金额为:"+ value +"元。");
+                                        
+                                        }
+                                      }
+                                      </script>
+                </form> -->
+                <!--  <form action='{:U('User/recharge')}' method="get">
+                <input id="name" name="name" class="inp_wid3" type="text" value="{$_GET['name']}"/></td>
+                <input class="search_btn1" type="submit" value="搜索" id="Search" />
+                </form> -->
+
+                                   
+                                    
+                                </td>
+                            </tr>
+                            </volist>
+
+                            </tbody>
+                        </table>
+                    </div><!-- /.box-body -->
+                    <!--分页的位置-->
+                    {$page_html}
+                </div>
+
+            </div>
+        </div>
+    </section><!-- /.content -->
+
+    <section class="content-footer">
+        <div class="text-center">
+            &copy;lebang，亲邻乐帮
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>

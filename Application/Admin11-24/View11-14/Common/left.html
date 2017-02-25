@@ -1,0 +1,254 @@
+<?php
+    $url = CONTROLLER_NAME.'/'.ACTION_NAME;
+?>
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="left-side sidebar-offcanvas">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <!-- div class="user-panel">
+            <div class="pull-left image">
+                <img src="__PUBLIC__/Admin/img/avatar3.png" class="img-circle" alt="User Image" />
+            </div>
+            <if condition="$Think.session.user.username neq null">
+            <div class="pull-left info">
+                <p>Hello, {$Think.session.user.username}</p>
+        
+                <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
+            </div>
+            </if>
+        </div> -->
+        <!-- search form -->
+        <!-- <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="操作"/>
+                <span class="input-group-btn">
+                    <button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </form> -->
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu style='width:150px;'">
+            <li class="active">
+                <a href="{:U('Admin/index')}">
+                    <i class="fa fa-msg"></i> <span>控制台</span>
+                </a>
+            </li>
+             <li class="treeview <if condition='$url eq "User/list" OR $url eq "User/list1" OR $url eq "User/list2" OR $url eq "User/list3" OR $url eq "User/list4" OR $url eq "User/fetch" OR $url eq "User/add" OR $url eq "User/bianji" OR $url eq "User/edit" OR $url eq "User/recharge" OR $url eq "User/fetch2" OR $url eq "User/fetch3" OR $url eq "User/fetch1" OR $url eq "User/fetch4"'>active</if>">
+                <a href="{:U('User/list2')}">
+                    <i class="fa fa-file"></i> <span>用户管理</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="{:U('User/list2')}"><i class="fa fa-list"></i>待审核用户</a></li> 
+                  <li><a href="{:U('User/list4')}"><i class="fa fa-list"></i>审核未通过</a></li>
+                  <!--  <li><a href="{:U('User/list')}"><i class="fa fa-list"></i>所有用户</a></li> -->
+                    <li><a href="{:U('User/list1')}"><i class="fa fa-list"></i>普通用户</a></li>
+                    
+                    <li><a href="{:U('User/list3')}"><i class="fa fa-list"></i>雷锋用户</a></li>
+                    
+                   <!--  <li><a href="{:U('User/add')}"><i class="fa fa-edit"></i>添加用户</a></li> -->
+                </ul>
+            </li>
+            <!-- <li class="treeview">
+                <a href="{:U('Category/list')}">
+                    <i class="fa fa-th-large"></i> <span>分类</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{:U('Category/read')}"><i class="fa fa-list"></i>分类</a></li>
+                    <!-- <li><a href="{:U('Category/add')}"><i class="fa fa-edit"></i>分类添加</a></li> -->
+                <!-- </ul>
+            </li>  --> 
+            <li class="treeview <if condition= '$url eq "Order/list" OR $url eq "Order/nopay" OR $url eq "Order/liushi" OR $url eq "Order/edit" OR $url eq "Order/cancel" OR $url eq "Order/fetch" OR $url eq "Order/finish" OR $url eq "Order/finishk" OR $url eq "Order/nopayk" OR $url eq "Order/liushik"OR $url eq "Order/cancelk" OR $url eq "Order/fetch" OR $url eq "Order/fetch1" OR $url eq "Order/fetch2" OR $url eq "Order/fetch3" OR $url eq "Order/fetch4"'>active</if>">
+                <a href="{:U('Order/list')}">
+                    <i class="fa fa-file"></i> <span>任务管理</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{:U('Order/list')}"><i class="fa fa-list"></i>进行中任务</a></li>
+                    <li><a href="{:U('Order/nopay')}"><i class="fa fa-list"></i>未支付任务</a></li>
+                    <li><a href="{:U('Order/liushi')}"><i class="fa fa-list"></i>流单的任务</a></li>
+                    <li><a href="{:U('Order/cancel')}"><i class="fa fa-list"></i>取消的任务</a></li>
+                    <li><a href="{:U('Order/finish')}"><i class="fa fa-list"></i>完成的任务</a></li>
+                </ul>
+            </li>
+            
+            <li class="treeview <if condition= '$url eq "Shequ/list" OR $url eq "Shequ/add" OR $url eq "Shequ/bianji" OR $url eq "Shequ/started" OR $url eq "Shequ/starting" OR $url eq "Shequ/qyadd" OR $url eq "Shequ/qylist" OR $url eq "Shequ/fetch1" OR $url eq "Shequ/fetch2" OR $url eq "Shequ/fetch3"'>active</if>">
+                <a href="{:U('Shequ/started')}">
+                    <i class="fa fa-file"></i> <span>社区管理</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <!-- <li><a href="{:U('Shequ/list')}"><i class="fa fa-list"></i>社区列表</a></li> -->
+                    <li><a href="{:U('Shequ/started')}"><i class="fa fa-list"></i>启用的小区</a></li>
+                    <li><a href="{:U('Shequ/starting')}"><i class="fa fa-list"></i>待开通小区</a></li>
+                    <li><a href="{:U('Shequ/qylist')}"><i class="fa fa-list"></i>区域管理</a></li>
+                    <!-- <li><a href="{:U('Shequ/add')}"><i class="fa fa-edit"></i>添加社区</a></li> -->
+                </ul>
+            </li>
+             <li class="treeview <if condition='$url eq "Xinxianshi/list" OR $url eq "Xinxianshi/list2" OR $url eq "Xinxianshi/list3"OR $url eq "Xinxianshi/list4" OR $url eq "Xinxianshi/list5" OR $url eq "Xinxianshi/list6" OR $url eq "Xinxianshi/fetch" OR $url eq "Xinxianshi/pingluncheck" OR $url eq "Xinxianshi/fetch1" OR $url eq "Xinxianshi/fetch2" OR $url eq "Xinxianshi/fetch3"OR $url eq "Xinxianshi/fetch4" OR $url eq "Xinxianshi/zhiding" OR $url eq "Xinxianshi/zhidingk" OR $url eq "Xinxianshi/pingbik" OR $url eq "Xinxianshi/dianzanlist" OR $url eq "Xinxianshi/pinglunlist" OR $url eq "Xinxianshi/bianji1"'>active</if>">
+                <a href="{:U('Xinxianshi/list')}">
+                    <i class="fa fa-file"></i> <span>新鲜事管理</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{:U('Xinxianshi/list3')}"><i class="fa fa-list"></i>在线的新鲜事</a></li>
+                    <li><a href="{:U('Xinxianshi/list6')}"><i class="fa fa-list"></i>新鲜事评论</a></li>
+                     <li><a href="{:U('Xinxianshi/zhiding')}"><i class="fa fa-list"></i>置顶新鲜事</a></li>
+                    <li><a href="{:U('Xinxianshi/list4')}"><i class="fa fa-list"></i>屏蔽新鲜事</a></li>
+                     
+                     <li><a href="{:U('Xinxianshi/list5')}"><i class="fa fa-list"></i>屏蔽的评论</a></li>
+
+                   <!--  <li><a href="{:U('Xinxianshi/listx')}"><i class="fa fa-list"></i>置顶的新鲜事</a></li> -->
+                </ul>
+            </li>
+
+           <!--  <li class="treeview <if condition='$url eq "Xinxianshi/list" OR $url eq "Xinxianshi/list2" OR $url eq "Xinxianshi/list3"OR $url eq "Xinxianshi/list4" OR $url eq "Xinxianshi/add" OR $url eq "Xinxianshi/fetch" OR $url eq "Xinxianshi/pingluncheck"'>active</if>">
+                <a href="{:U('Xinxianshi/list')}">
+                    <i class="fa fa-file"></i> <span>新鲜事管理</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{:U('Xinxianshi/list')}"><i class="fa fa-list"></i>所有新鲜事</a></li>
+                  
+                    <li><a href="{:U('Xinxianshi/list3')}"><i class="fa fa-list"></i>在线的新鲜事</a></li>
+                    <li><a href="{:U('Xinxianshi/list4')}"><i class="fa fa-list"></i>屏蔽的新鲜事</a></li>
+                  
+                </ul>
+            </li> -->
+
+            <li class="treeview <if condition= '$url eq "Msg/list" OR $url eq "Msg/add" OR $url eq "Msg/edit"'>active</if>">
+                <a href="{:U('msg/list')}">
+                    <i class="fa fa-file"></i> <span>运营消息管理</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{:U('msg/list')}"><i class="fa fa-list"></i>消息列表</a></li>
+                    <!-- <li><a href="{:U('msg/add')}"><i class="fa fa-edit"></i>消息添加</a></li> -->
+                </ul>
+            </li>
+
+            <li class="treeview <if condition='$url eq "Shanghu/add" OR $url eq "Shanghu/daishenhe" OR $url eq "Shanghu/jinyong"OR $url eq "Shanghu/renzheng" OR $url eq "Shanghu/rzxq" OR $url eq "Shanghu/weitongguo" OR $url eq "Shanghu/tuijian" OR $url eq "Shanghu/edit" OR $url eq "Shanghu/rbianji" OR $url eq "Shanghu/rtuijian" OR $url eq "Shanghu/fetch" OR $url eq "Shanghu/fetch1" OR $url eq "Shanghu/fetch2" OR $url eq "Shanghu/fetch3" OR $url eq "Shanghu/fetch4"'>active</if>">
+                <a href="{:U('Shanghu/daishenhe')}">
+                    <i class="fa fa-file"></i> <span>商户管理</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{:U('Shanghu/daishenhe')}"><i class="fa fa-list"></i>待审核商户</a></li>
+                    <li><a href="{:U('Shanghu/weitongguo')}"><i class="fa fa-list"></i>审核未通过</a></li>
+                    <li><a href="{:U('Shanghu/renzheng')}"><i class="fa fa-list"></i>认证商户</a></li>
+                    <li><a href="{:U('Shanghu/tuijian')}"><i class="fa fa-list"></i>推荐商户</a></li>
+                    <li><a href="{:U('Shanghu/jinyong')}"><i class="fa fa-list"></i>禁用商户</a></li>
+                 
+                </ul>
+            </li>
+
+
+
+
+
+            <li class="treeview <if condition='$url eq "Fuwu/zaixian" OR $url eq "Fuwu/list" OR $url eq "Fuwu/list1"OR $url eq "Fuwu/list2" OR $url eq "fu/add" OR $url eq "fuwu/fetch" OR $url eq "fuwu/pingluncheck" OR $url eq "Fuwu/edit" OR $url eq "Fuwu/shanghufuwu" OR $url eq "Fuwu/jinyongsh" OR $url eq "Fuwu/add1" OR $url eq "Fuwu/chak" OR $url eq "Fuwu/chak1" OR $url eq "Fuwu/chaksh" OR $url eq "Fuwu/add" OR $url eq "Fuwu/fetchlist" OR $url eq "Fuwu/fetchlist1" OR $url eq "Fuwu/fetchlist2" OR $url eq "Fuwu/jinyongfetch" OR $url eq "Fuwu/shnaghufetch"'>active</if>">
+                <a href="{:U('Fuwu/shanghufuwu')}">
+                    <i class="fa fa-file"></i><span>商户服务项目</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{:U('Fuwu/shanghufuwu')}"><i class="fa fa-list"></i>商户服务</a></li>
+                    <li><a href="{:U('Fuwu/jinyongsh')}"><i class="fa fa-list"></i>禁用商户服务</a></li>
+                    <li><a href="{:U('Fuwu/list')}"><i class="fa fa-list"></i>服务项目管理</a></li>
+                    <li><a href="{:U('Fuwu/list1')}"><i class="fa fa-list"></i>待开通服务</a></li>
+                    <li><a href="{:U('Fuwu/list2')}"><i class="fa fa-list"></i>服务类别管理</a></li>
+                 
+                </ul>
+            </li>
+
+
+
+             <!-- <li class="treeview <if condition= '$url eq "Xinxianshi/list6" OR $url eq "Xinxianshi/fetch1" OR $url eq "Xinxianshi/list7" OR $url eq "Xinxianshi/list5"'>active</if>">
+                <a href="{:U('Xinxianshi/list')}">
+                    <i class="fa fa-file"></i> <span>评论管理</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu"> -->
+                    <!-- <li><a href="{:U('Xinxianshi/list')}"><i class="fa fa-list"></i>所有新鲜事</a></li> -->
+                   <!--  <li><a href="{:U('Xinxianshi/list1')}"><i class="fa fa-list"></i>待审核</a></li> -->
+                    <!-- <li><a href="{:U('Xinxianshi/list3')}"><i class="fa fa-list"></i>启用的新鲜事</a></li> -->
+                   <!--  <li><a href="{:U('Xinxianshi/list6')}"><i class="fa fa-list"></i>所有评论</a></li>
+                    <li><a href="{:U('Xinxianshi/list7')}"><i class="fa fa-list"></i>在线的评论</a></li>
+                    <li><a href="{:U('Xinxianshi/list5')}"><i class="fa fa-list"></i>已屏蔽的评论</a></li> -->
+                   <!--  <li><a href="{:U('Xinxianshi/add')}"><i class="fa fa-edit"></i>用户添加</a></li> -->
+             <!--    </ul>
+            </li> -->
+            <li class="treeview <if condition= '$url eq "Xinxianshi/listx" OR $url eq "Xinxianshi/listx"'>active</if>">
+               <a href="{:U('Xinxianshi/list')}">
+                    <i class="fa fa-file"></i> <span>举报管理</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                     <!-- <li><a href="{:U('Xinxianshi/list')}"><i class="fa fa-list"></i>所有新鲜事</a></li> -->
+                    <!-- <li><a href="{:U('Xinxianshi/list1')}"><i class="fa fa-list"></i>待审核</a></li> -->
+                    <!-- <li><a href="{:U('Xinxianshi/list3')}"><i class="fa fa-list"></i>启用的新鲜事</a></li> -->
+                   <!--  <li><a href="{:U('Xinxianshi/listx')}"><i class="fa fa-list"></i>被举报的新鲜事</a></li> -->
+                    <!-- <li><a href="{:U('Xinxianshi/listx')}"><i class="fa fa-list"></i>被举报的评论</a></li> -->
+                   <!--  <li><a href="{:U('Xinxianshi/add')}"><i class="fa fa-edit"></i>用户添加</a></li> -->
+                </ul>
+            </li>
+
+            <li class="treeview <if condition= '$url eq "Tixian/list" OR $url eq "Tixian/list1"'>active</if>">
+                <a href="{:U('Tixian/list')}">
+                    <i class="fa fa-file"></i> <span>财务管理</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{:U('Tixian/list1')}"><i class="fa fa-list"></i>提现申请</a></li>
+                    <li><a href="{:U('Tixian/list')}"><i class="fa fa-list"></i>交易记录</a></li>
+                   <!--  <li><a href="{:U('Xinxianshi/list3')}"><i class="fa fa-list"></i>体现记录</a></li>
+                    <li><a href="{:U('Xinxianshi/list4')}"><i class="fa fa-list"></i>屏蔽的新鲜事</a></li> -->
+                   <!--  <li><a href="{:U('Xinxianshi/add')}"><i class="fa fa-edit"></i>用户添加</a></li> -->
+                </ul>
+
+                </li>
+
+                <li class="treeview <if condition= '$url eq "Banben/andlist" OR $url eq "Banben/ioslist" OR $url eq "Banben/hlist" OR $url eq "Banben/andadd" OR $url eq "Banben/andedit" OR $url eq "Banben/iosadd" OR $url eq "Banben/iosedit" OR $url eq "Banben/hadd" OR $url eq "Banben/hedit" OR $url eq "Banben/fetch" OR $url eq "Banben/fetch1" OR $url eq "Banben/fetch2"'>active</if>">
+                <a href="{:U('Quanxian/list')}">
+                    <i class="fa fa-file"></i> <span>版本管理</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{:U('Banben/andlist')}"><i class="fa fa-list"></i>Android</a></li>
+                    <li><a href="{:U('Banben/ioslist')}"><i class="fa fa-list"></i>ios</a></li>
+                    <li><a href="{:U('Banben/hlist')}"><i class="fa fa-list"></i>H5</a></li>
+                    
+                </ul>
+            </li>
+
+                <li class="treeview <if condition= '$url eq "Master/list"'>active</if>">
+                <a href="{:U('Master/list')}">
+                    <i class="fa fa-file"></i> <span>网站设置</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{:U('Master/list')}"><i class="fa fa-list"></i>参数设置</a></li>
+                    <li><a href="{:U('Area/list')}"><i class="fa fa-list"></i>区域设置</a></li>
+                   <!--  <li><a href="{:U('Xinxianshi/list4')}"><i class="fa fa-list"></i>屏蔽的新鲜事</a></li> -->
+                   <!--  <li><a href="{:U('Xinxianshi/add')}"><i class="fa fa-edit"></i>用户添加</a></li> -->
+                </ul>
+            </li>
+            <li class="treeview <if condition= '$url eq "Quanxian/list" OR $url eq "Quanxian/list1" OR $url eq "Quanxian/list2" OR $url eq "Quanxian/list3" OR $url eq "Quanxian/add" OR $url eq "Quanxian/edit" OR $url eq "Quanxian/edit1" OR $url eq "Quanxian/edit2" '>active</if>">
+                <a href="{:U('Quanxian/list')}">
+                    <i class="fa fa-file"></i> <span>权限管理</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{:U('Quanxian/list')}"><i class="fa fa-list"></i>后台用户</a></li>
+                    <li><a href="{:U('Quanxian/list3')}"><i class="fa fa-list"></i>禁用用户</a></li>
+                    <li><a href="{:U('Quanxian/list1')}"><i class="fa fa-list"></i>分组管理</a></li>
+                    <li><a href="{:U('Quanxian/list2')}"><i class="fa fa-list"></i>权限管理</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <!--  /.sidebar -->
+</aside>

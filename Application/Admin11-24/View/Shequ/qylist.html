@@ -1,0 +1,98 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+        <div>
+            <div style="float:left">
+            <font class="font">区域管理</font> 
+            </div>
+        <div class="search" style="float:left;margin-left: 20px;">
+   <form id="user_search" action='{:U('Shequ/fetch3')}' method="get" onsubmit="return check()">
+      <input type="text" id="text"  class="txt1"  autocomplete="off" name="mingcheng" />
+      <button type="submit" class="search_btn" value="" >
+      <span class="ico" id="scico"><em></em></span></button>
+</div>
+<div class="search" style="float:left;margin-left: 20px;">
+
+   </form>
+</div>
+        <div style="float:right;">
+            <if condition ="$_GET['mingcheng'] neq ''">
+            <a href= "javascript:history.back(-1);" class="btn btn-default0 pull-right">返回</a>
+            <else/>
+            <a href="{:U('Shequ/qyadd')}" class="btn btn-default0 pull-right">新增区域</a>
+            </if>
+    
+        </div>
+            <!-- <small>待审核用户</small> -->
+        </div>
+       </h1>
+    </section>
+    <script>
+        function check(){
+            var text =  $('#text').val();
+           
+            if( text == ''){
+                alert('亲,请输入搜索内容!!!');
+               return false;
+            }
+
+        }
+</script>
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+</style>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-body">
+                        <table class="table table-bordered">
+                            <tbody>
+                            <tr>
+                                <th style="width:80px;">序号</a></th> 
+                                <th style="width:100px;">城市</th>
+                                <th style="width:100px;">城区</th>
+                                <th style="width:100px;">区域</th>
+                                <th >包含小区</th>
+                                <th style="width:150px;">操作</th>
+                               
+                            
+                            </tr>
+                            <volist name="area" id="areas">
+                            <tr>
+                                <td>{$areas['id']}</td>
+                                <td>北京</td>
+                                <td>{$areas['bming']}</td>
+                                <td>{$areas['mingcheng']}</td>
+                                <td style="text-align:left;">{$areas['shequ_mingcheng']}</td>
+                                
+                                
+                                <td>
+                                    <a href="{:U('qybianji', ['areas_id'=>$areas['id'],'p'=>$_GET['p']])}" class="btn btn-default1" title="编辑">查看详情</a>
+                            
+                                </td>
+                            </tr>
+                            </volist>
+
+                            </tbody>
+                        </table>
+                    </div><!-- /.box-body -->
+                </div>
+                  <!--分页的位置-->
+                    {$page_html}
+            </div>
+        </div>
+    </section><!-- /.content -->
+
+    <section class="content-footer">
+        <div class="text-center">
+
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>

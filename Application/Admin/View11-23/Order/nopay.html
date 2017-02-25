@@ -1,0 +1,86 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+        <div>
+            <div style="float:left">
+            <font class="font" >未支付任务</font>  
+            <!-- <p style="width:81px;23px;">待审核用户 </p> -->
+            </div>
+        <div class="search" style="float:left;margin-left: 20px;">
+   <form id="user_search" action='{:U('Order/fetch1')}' method="get">
+    <select name="sosuo" id="" class="sosuo">
+                                          <option  name="sosuo" value="1">&nbsp;手机号</option>
+                                          <option  name="sosuo" value="2">&nbsp;任务编号</option>
+                                          
+        </select>
+      <input type="text" id="keyword" name="value" class="txt"  autocomplete="off" name="value" />
+      <button type="submit" class="search_btn" id="Search" type="button" >
+      <span class="ico" id="scico"><em></em></span>
+      </button>
+   </form>
+</div>
+      <div style="float:right;">
+            <if condition ="$_GET['sosuo'] neq ''">
+            <a href= "javascript:history.back(-1);" class="btn btn-default0 pull-right">返回</a>
+            </if>
+        </div>
+        </div>
+       </h1>
+    </section>
+
+
+                                   
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-body">
+                        <table class="table table-bordered" >
+                            <tbody>
+                            <tr>
+                                <!-- <th style="width: 10px">#</th> -->
+                                <th style="width:80px;">序号</th>  
+                                <th style="width:100px;">任务编号</th>
+                                <th>用户需求</th>
+                                <th style="width:70px; ">发布人</th>
+                                <th style="width:100px;">手机号码</th>
+                                <th style="width:100px;">金额</th>
+                                <th style="width:150px; ">下单时间</th>
+                                <th style="width:110px;">操作</th>
+                             
+                            </tr>
+                            <volist name="order_list" id="order">
+                            <tr>
+                               <td>{$order['id']}</td>
+                                <td>{$order['ordernum']}</td>
+                                <td style="text-align:left;">{$order['demand']}</td>
+                                <td>{$order['username']}</td>
+                                <td>{$order['tel']}</td>
+                                <td>{$order['money']}</td>
+                                <td>{$order['addtime']}</td>
+                                <td>
+                                   <a href="{:U('nopayk', ['order_id'=>$order['id'],'p'=>$_GET['p']])}" class="btn btn-default1" title="">查看详情</a> 
+                                </td>
+                            </tr>
+                            </volist>
+                            </tbody>
+                        </table>
+          
+                    </div><!-- /.box-body -->
+                </div>
+                               <!--分页的位置-->
+                          {$page_html}
+                 
+            </div>
+        </div>
+    
+   
+</aside><!-- /.right-side -->
+</block>

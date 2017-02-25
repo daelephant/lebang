@@ -9,7 +9,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 <head>
 <meta charset="utf-8">
-<link href="/lebang18/Public/Admin/css/style.css" rel='stylesheet' type='text/css' />
+<link href="/lebang11-29/Public/Admin/css/style.css" rel='stylesheet' type='text/css' />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--webfonts-->
@@ -26,7 +26,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <body>
 	<div class="main">
 		<div class="user">
-			<img src="/lebang18/Public/Admin/img/user.png" alt="">
+			<img src="/lebang11-29/Public/Admin/img/user.png" alt="">
 		</div>
 		<div class="login">
 			<div class="inset">

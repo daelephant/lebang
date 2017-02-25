@@ -1,0 +1,92 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+        <div>
+            <div style="float:left">
+            <font class="font">禁用用户</font> 
+            </div>
+      <!--   <div class="search" style="float:left;margin-left: 20px;">
+   <form id="shse_search" action='{:U('Shequ/fetch1')}' method="get">
+      <input type="text" id="keyword"  class="txt1"  autocomplete="off" name="mingcheng" />
+      <button type="submit" class="search_btn" value="" >
+      <span class="ico" id="scico"><em></em></span></button>
+</div>
+<div class="search" style="float:left;margin-left: 20px;">
+
+   </form>
+</div> -->
+         <div style="float:right;">
+            <if condition ="$_GET['mingcheng'] neq ''">
+            <a href= "javascript:history.back(-1);" class="btn btn-default0 pull-right">返回</a>
+            <else/>
+            <a href="{:U('Quanxian/add')}" class="btn btn-default0 pull-right">新增后台用户</a>
+            </if>
+    
+        </div>
+        </div>
+       </h1>
+    </section>
+
+  
+        <script type="text/javascript" language="javascript"> 
+
+            function confirmAct(id,p) 
+            { 
+                if(confirm('确定要执行此操作吗?')) 
+                { 
+                    $('#xinid').val(id);
+                    $('#p').val(p);
+                    $('#ping').submit();
+                    return true; 
+                } 
+                return false; 
+            } 
+                
+          
+    </script>
+
+         <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-body">
+                        <table class="table table-bordered" >
+                            <tbody>
+                            <tr>
+                                <th style="width:80px;">序号</th>
+                                <th style="width:300px;">用户名</th>
+                                <th style="width:300px;">姓名</th>
+                                <th style="width:300px; ">用户组</th>
+                                <th style="width:150px; text-align:center;">操作</th>
+                            </tr>
+                            <volist name="user" id="user">
+                            <tr>
+                                <td>{$user['id']}</td>
+                                <td>{$user['username']}</td>
+                                <td>{$user['realname']}</td>
+                                <td>{$user['groups']}</td>  <!-- <td>100</td> -->
+                                <td>  
+                                    <input type="button" onclick='confirmAct({$user['id']},{:I('get.p')|1})' class="btn btn-default2" style="width:100px;background: #009900;" value="启用">   
+                                </td>
+                            </tr>
+                            </volist>
+                         </tbody>
+                        </table>
+                    </div>
+                </div>
+                {$page_html}
+            </div>
+        </div>
+
+
+        <form action="" method="post" id="ping">
+  <input type="hidden" id="xinid" name="xinid">
+  <input type="hidden" id="p" name="p">
+</form>
+    </section><!-- /.content -->
+</aside><!-- /.right-side -->
+</block>

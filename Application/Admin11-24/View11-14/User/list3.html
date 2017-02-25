@@ -1,0 +1,130 @@
+<extend name="Layout/Admin" />
+
+<block name="content">
+<!-- Right side column. Contains the navbar and content of the page -->
+<aside class="right-side">
+    <!-- Content Header (Page header) -->
+     <section class="content-header">
+        <h1>
+        <div>
+            <div style="float:left">
+            <font class="font">雷锋用户</font>
+            </div>
+        <div class="search" style="float:left;margin-left: 20px;">
+   <form id="user_search" action='{:U('User/fetch3')}' method="get" >
+    <select name="sosuo" id="" class="sosuo">
+                                          <option   name ="sosuo" value="1">&nbsp;手机号</option>
+                                          <option   name ="sosuo" value="2">&nbsp;姓名</option>
+                                          <option   name ="sosuo" value="3">&nbsp;昵称</option>
+                                          <option  name ="sosuo"  value="4">&nbsp;小区</option>
+        </select>
+      <input type="text" id="keyword" name="value" class="txt"  autocomplete="off" />
+      <button type="submit" id="Search" type="button" class="search_btn" >
+      <span class="ico" id="scico"><em></em></span></button>
+</div>
+<div class="search" style="float:left;margin-left: 20px;">
+  <input id="starttime" name="starttime" class="inp_wid1" type="date" value=""  />
+  <input id="endtime"name="endtime" class="inp_wid2" type="date" value="" class="date-rqkss2" />
+  <input type="submit" value="搜索" id="Search" class="inp_wid3"  />
+
+
+   </form>
+</div>
+        <div style="float:right;">
+            <if condition ="$_GET['sosuo'] neq ''">
+            <a href= "javascript:history.back(-1);" class="btn btn-default0 pull-right">返回</a>
+            <else/>
+            <a href="{:U('User/add')}" class="btn btn-default0 pull-right">添加用户</a>
+            </if>
+        </div>
+            <!-- <small>待审核用户</small> -->
+        </div>
+       </h1>
+    </section>
+    <!-- Main content -->
+    <!-- <section class="content"> -->
+
+            <div class="col-md-12">
+                <!-- <div class="box"> -->
+                    <!-- <div class="box-header">
+                        <h3 class="box-title"></h3>
+                        <a href="{:U('User/add')}" class="btn btn-default pull-right">添加用户</a>
+                    </div> --><!-- /.box-header -->
+                    <div class="box-body">
+                        <table class="table table-bordered">
+                            <tbody>
+                             <tr>
+                                <!-- <th style="width: 10px">#</th> -->
+                                <th style="width:80px;"><a href="{:U('list3')}" >序号</a></th>  
+                                <th style="width:100px;">手机号</th>
+                                <th style="width:100px;">昵称</th>
+                                <th style="width:80px;">性别</th>
+                                <th style="width:80px;">年龄</th>
+                                <th style="width:80px;">职业</th>
+                                <th>所在小区</th>
+                                <th style="width:70px;"><a href="{:U('list3Xinxianshi')}"  >新鲜事</a></th>
+                                <th style="width:70px;"><a href="{:U('list3Pinglun')}"  >被评论</a></th>
+                                <th style="width:70px;"><a href="{:U('list3Order')}"  >发任务</a></th>
+                                <th style="width:70px;"><a href="{:U('list3JdOrder')}"  >接任务</a></th>
+                                <th style="width:70px;">评价</th>
+                                <th style="width:150px;">操作</th>
+                            
+                            </tr>
+                            
+                            <volist name="user_list" id="user">
+                              <tr>
+                                <td>{$user['id']}</td>
+                                <td>{$user['phone']}</td>
+                                <td>{$user['nickname']}</td>
+                               <td><if condition="$user['sex'] eq '1'">男<elseif condition="$user['sex'] eq '2'"/>女</if>
+                                </td>
+                                <td>
+                            <?php
+                                $birthday = date("Y-m-d", $user['birthday']);
+                                list($year,$month,$day) = explode("-",$birthday);
+                                $year_diff = date("Y") - $year;
+                                
+                                $user['age']=$year_diff;
+                                if(empty($birthday)){
+                                    $user['age']='年龄不祥';
+                                }
+
+                                ?>
+                                {$user['age']}</td>
+                                <td>{$user['profession']}</td>
+                                
+                                <td style="text-align:left;">{$user['shequ']}</td>
+                                <td>{$user['xinxianshi']}</td><td>{$user['beipinglunshu']}</td>
+                                
+                                <td>{$user['order1']}</td>
+                                <td>{$user['jdorder1']}</td>
+                                <td>{$user['pinglunshu']}</td>
+                               
+                                <!-- <td>{$user['caozuo']}</td> -->
+                                <!-- <td>{$User['create_at']}</td>
+                                <td>{$User['category_title']}</td> -->
+                                <td>
+                                 
+                                    <a href="{:U('cklf', ['user_id'=>$user['id'],'p'=>$_GET['p']])}" class="btn btn-default1" title="编辑">查看详情</a>
+                            
+                                </td>
+                            </tr>
+                            </volist>
+
+                            </tbody>
+                        </table>
+                    </div><!-- /.box-body -->
+                </div>
+                  <!--分页的位置-->
+                    {$page_html}
+            </div>
+        </div>
+    </section><!-- /.content -->
+
+    <section class="content-footer">
+        <div class="text-center">
+        </div>
+    </section><!-- /.content-footer -->
+
+</aside><!-- /.right-side -->
+</block>
