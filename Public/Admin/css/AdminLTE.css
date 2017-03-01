@@ -20,18 +20,9 @@ body {
 table tbody tr th{
         background: #fbfbfb;
         text-align: center;
-        margin-right: 7px;
-    }
-    table{
-        margin-top:10px;
-        font-size: 13px;
     }
     table tbody tr{
       background: #ffffff;
-    }
-    table td{
-            text-align: center;
-            vertical-align: middle;
     }
     body{
       background-color: #fbfbfb;
@@ -39,87 +30,6 @@ table tbody tr th{
     .box{
       background: #fbfbfb;
     }
-
-.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
-    padding: 8px;
-    line-height: 1.428571429;
-    vertical-align: middle;
-    border-top: 1px solid #ddd;
-}
-
-/*搜索框 +搜索日期框*/
-* {outline: none;
-   appearance:none;
-  -moz-appearance:none;
-  -webkit-appearance:none;}
-.search {position: relative;display: inline-block;}
-.txt {/**display: block;**/width: 264px;height: 32px;line-height: 32px;text-indent: 6px;border: 1px solid #ccd1d9;background: #fff;margin-bottom: 6px;padding-left:80px;color: #999;-webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 0px;font-size:14px;}
-.txt1 {/**display: block;**/width: 264px;height: 32px;line-height: 32px;text-indent: 6px;border: 1px solid #ccd1d9;background: #fff;margin-bottom: 6px;color: #999;-webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 0px;font-size:14px;}
-.search_btn {position: absolute;background: none;right: 2px;top: 0px;z-index: 2;display: block;width: 32px;height: 32px;cursor: pointer;border: none;}
-.ico {width: 40px;height: 32px;position: absolute;top: 0px;_top: 5px;z-index: 1;display: block;cursor: pointer;border: none;right: 3px;}
-.ico em {background-image: url("/img/ss.png");z-index: 1;display: block;cursor: pointer;border: none;    width: 20px;height: 20px;background-size: 20px 20px;margin: 7px 18px;
-}
-
-.sosuo{
-  position: absolute;left:0px;top:1px;border: 1px solid #ccd1d9;font-size:14px;line-height:32px;height:32px;width:80px;
-}
-
-
-    .inp_wid1{
-        width:130px;height:32px;font-size:14px;line-height:32px;border: 1px solid #ccd1d9;
-    }
-   .inp_wid2{
-    position: absolute;left:129px;top:1px;width:130px;height:32px;font-size:14px;line-height:32px;border: 1px solid #ccd1d9;
-   }
-   .inp_wid3{
-    position: inherit;left:116px;top:-1px;height:32px;font-size:14px;border: 1px solid #ccd1d9;background: #fbfbfb;
-   }
-
- /* 标题栏文字大小*/
- .font{
-  font-size: 19px;
-
- }
-
-/*div居中*/
-
-    /*居中*/
-    .div-center {
-      width: auto;
-      display: table;
-      margin-left: auto;
-      margin-right: auto;
-      padding-top:30px;
-    }
-    .div-box{
-        background: #ffffff;
-    }
-
-    label{
-        border: 1px solid #dddddd;
-        background: #f9f9f9;
-        width: 80px;
-        line-height: 40px;
-        font-weight: normal;
-        text-align: center;
-        color:#333;
-    }
-    .ip{
-        position: relative;left:-8px;top: 1px;
-        height:42px;
-        width:300px;
-        border:#dddddd solid 1px;
-        font-size:16px;
-        line-height:34px;
-        color:#666;
-
-    }
-    .tou-input{
-     border-left:0px;border-top:0px;border-right:0px;border-bottom:1px;
-     text-indent:0px;
-    }
-
- 
 
 a {
   color: #3c8dbc;
@@ -626,12 +536,12 @@ body > .header .navbar .nav > li > a:hover > .label {
 }
 body > .header .logo {
   float: left;
-  font-size: 30px;
+  font-size: 20px;
   line-height: 50px;
   text-align: center;
   padding: 0 10px;
   width: 180px;
-  font-family: 'Microsoft YaHei',! important;
+  font-family: 'Kaushan Script', cursive;
   font-weight: 500;
   height: 50px;
   display: block;
@@ -2008,18 +1918,13 @@ Component: timeline
 .btn.btn-default1 {
   background-color: #0099FF;
     color: #FFFFFF;
-    font-size: 13px;
-    padding: 3px  6px;
-   
   /* border-color: #ddd;
   border-bottom-color: #ddd; */
 }
 .btn.btn-default2 {
   background-color: #FF9900;
-  font-size: 13px;
-  padding: 3px  6px;
+
  color: #FFFFFF;
- 
 /*  border-color: #ddd;
 border-bottom-color: #ddd; */
 }
@@ -2046,7 +1951,7 @@ border-bottom-color: #ddd; */
   border-color: #009900;
   color: #FFFFFF;
   height:40px; 
-  width:380px;
+  width:370px;
 }
 
 .btn.btn-primary0:hover,
@@ -2059,7 +1964,7 @@ border-bottom-color: #ddd; */
   border-color: #FF6600;
    color: #FFFFFF;
   height:40px; 
-  width:380px;
+  width:370px;
 }
 
 .btn.btn-primary1:hover,
@@ -2752,7 +2657,7 @@ border-bottom-color: #ddd; */
 }
 /* skin-blue content header */
 .skin-blue .right-side > .content-header {
-  /*background: #fbfbfb;*/
+  background: #fbfbfb;
   box-shadow: rgba(0, 0, 0, 0.1);
  /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 /* Skin-blue user panel */
